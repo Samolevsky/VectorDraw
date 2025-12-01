@@ -1,0 +1,18 @@
+{
+	"scripts": [
+		"randomize-item-positions",
+		"squares-grid-10x10",
+		"spiral-circles",
+		"random-stars",
+		"concentric-circles",
+		"wave-pattern",
+		"hexagon-grid",
+		"random-lines",
+		"circular-pattern",
+		"gradient-circles",
+		"triangle-mosaic",
+		"scale-selected",
+		"rotate-selected",
+		"colorize-selected"
+	]
+}

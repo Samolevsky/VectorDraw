@@ -1,0 +1,3448 @@
+pg.sidebar = function() {
+
+	var $sidebar;
+	var $sidebarToggle;
+	var isOpen = true;
+	var wasCodeEditorInit = false;
+	var defaultScript = 'console.log(\'Hello World!\')';
+	var expandedLayers = {};
+	var isHoveringLayerItems = false;
+	var updateLayerValuesThrottle = null;
+	
+	var init = function() {
+		createSidebar();
+		setupEventListeners();
+		setupEnhancedNumericInputs();
+		updateCanvasSize();
+		setupPanelReordering();
+		
+		// Restore panel collapsed/expanded states
+		restorePanelStates();
+		
+		// Initialize floating panels after sidebar is created
+		if (pg.floatingPanels) {
+			pg.floatingPanels.init();
+		}
+	};
+	
+	var createSidebar = function() {
+		// Create toggle button
+		$sidebarToggle = jQuery('<div class="sidebarToggle">').html(
+			'<svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>'
+		);
+		
+		// Create sidebar
+		$sidebar = jQuery('<div class="rightSidebar">');
+		
+		var $content = jQuery('<div class="sidebarContent">');
+		
+		// Create all sections
+		var sections = {
+			'view': createViewSection(),
+			'tool-properties': createToolPropertiesSection(),
+			'properties': createPropertiesSection(),
+			'boolean': createBooleanSection(),
+			'export': createExportSection(),
+			'swatches': createSwatchesSection(),
+			'brushes': createBrushesSection(),
+			'layers': createLayersSection(),
+			'script': createScriptEditorSection()
+		};
+		
+		// Load saved order or use default
+		var savedOrder = getSavedPanelOrder();
+		var defaultOrder = ['view', 'tool-properties', 'properties', 'boolean', 'export', 'swatches', 'brushes', 'layers', 'script'];
+		var order = savedOrder && savedOrder.length === defaultOrder.length ? savedOrder : defaultOrder;
+		
+		// Append sections in the saved order
+		order.forEach(function(sectionId) {
+			if(sections[sectionId]) {
+				$content.append(sections[sectionId]);
+			}
+		});
+		
+		// Create footer inside the scrollable content
+		var $footer = jQuery('<div class="sidebarFooter">').html(
+			'<p class="sidebarFooterText">Created by <a href="https://samolevsky.com" target="_blank" rel="noopener noreferrer" class="sidebarFooterLink">Samolevsky.com</a></p>' +
+			'<div class="sidebarFooterTooltip">Discover more design tools</div>'
+		);
+		
+		$content.append($footer);
+		$sidebar.append($content);
+		
+		jQuery('body').append($sidebarToggle, $sidebar);
+		jQuery('body').addClass('sidebar-open');
+	};
+	
+	var createViewSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="view">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><path d="M30.94,15.66A16.69,16.69,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A16.69,16.69,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,25c-5.3,0-10.9-3.93-12.93-9C5.1,10.93,10.7,7,16,7s10.9,3.93,12.93,9C26.9,21.07,21.3,25,16,25Z" transform="translate(0 0)"/><path d="M16,10a6,6,0,1,0,6,6A6,6,0,0,0,16,10Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" transform="translate(0 0)"/></svg>' +
+			'<h3>View</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarViewPanel">');
+		
+		// Grid Type Section
+		var $gridTypeSection = jQuery('<div class="viewGroup">');
+		$gridTypeSection.append('<label class="viewLabel">Grid Type</label>');
+		
+		var $gridTypeControl = jQuery('<div class="segmented-control" id="grid-type-control">');
+		
+		// None button
+		$gridTypeControl.append(
+			'<button class="segment-button segment-icon-button" data-grid-type="none" title="No Grid">' +
+			'<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+			'<path d="M1 0H0V16H1V0Z" fill="currentColor"/>' +
+			'<path d="M16 0H15V16H16V0Z" fill="currentColor"/>' +
+			'<path d="M0 15L0 16L16 16L16 15L0 15Z" fill="currentColor"/>' +
+			'<path d="M0 0L0 1L16 1L16 0L0 0Z" fill="currentColor"/>' +
+			'</svg>' +
+			'</button>'
+		);
+		
+		// Square button
+		$gridTypeControl.append(
+			'<button class="segment-button segment-icon-button active" data-grid-type="square" title="Square Grid">' +
+			'<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+			'<path d="M1 0H0V16H1V0Z" fill="currentColor"/>' +
+			'<path d="M6 0H5V16H6V0Z" fill="currentColor"/>' +
+			'<path d="M11 0H10V16H11V0Z" fill="currentColor"/>' +
+			'<path d="M16 0H15V16H16V0Z" fill="currentColor"/>' +
+			'<path d="M0 15L0 16L16 16L16 15L0 15Z" fill="currentColor"/>' +
+			'<path d="M0 10L0 11L16 11L16 10L0 10Z" fill="currentColor"/>' +
+			'<path d="M0 5L0 6L16 6L16 5L0 5Z" fill="currentColor"/>' +
+			'<path d="M0 0L0 1L16 1L16 0L0 0Z" fill="currentColor"/>' +
+			'</svg>' +
+			'</button>'
+		);
+		
+		// Dot button
+		$gridTypeControl.append(
+			'<button class="segment-button segment-icon-button" data-grid-type="dot" title="Dot Grid">' +
+			'<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+			'<path d="M0 0L0 1L1 1L1 0L0 0Z" fill="currentColor"/>' +
+			'<path d="M5 0L5 1L6 1L6 0L5 0Z" fill="currentColor"/>' +
+			'<path d="M10 0L10 1L11 1L11 0L10 0Z" fill="currentColor"/>' +
+			'<path d="M15 0L15 1L16 1L16 0L15 0Z" fill="currentColor"/>' +
+			'<path d="M0 5L0 6L1 6L1 5L0 5Z" fill="currentColor"/>' +
+			'<path d="M5 5L5 6L6 6L6 5L5 5Z" fill="currentColor"/>' +
+			'<path d="M10 5L10 6L11 6L11 5L10 5Z" fill="currentColor"/>' +
+			'<path d="M15 5L15 6L16 6L16 5L15 5Z" fill="currentColor"/>' +
+			'<path d="M0 10L0 11L1 11L1 10L0 10Z" fill="currentColor"/>' +
+			'<path d="M5 10L5 11L6 11L6 10L5 10Z" fill="currentColor"/>' +
+			'<path d="M10 10L10 11L11 11L11 10L10 10Z" fill="currentColor"/>' +
+			'<path d="M15 10L15 11L16 11L16 10L15 10Z" fill="currentColor"/>' +
+			'<path d="M0 15L0 16L1 16L1 15L0 15Z" fill="currentColor"/>' +
+			'<path d="M5 15L5 16L6 16L6 15L5 15Z" fill="currentColor"/>' +
+			'<path d="M10 15L10 16L11 16L11 15L10 15Z" fill="currentColor"/>' +
+			'<path d="M15 15L15 16L16 16L16 15L15 15Z" fill="currentColor"/>' +
+			'</svg>' +
+			'</button>'
+		);
+		
+		// Transparency button
+		$gridTypeControl.append(
+			'<button class="segment-button segment-icon-button" data-grid-type="transparency" title="Transparency Grid">' +
+			'<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+			'<path d="M12.8 0L12.8 3.2L16 3.2L16 0L12.8 0Z" fill="currentColor"/>' +
+			'<path d="M12.8 6.4L12.8 9.6L16 9.6L16 6.4L12.8 6.4Z" fill="currentColor"/>' +
+			'<path d="M0 12.8L0 16L3.2 16L3.2 12.8L0 12.8Z" fill="currentColor"/>' +
+			'<path d="M6.4 12.8L6.4 16L9.6 16L9.6 12.8L6.4 12.8Z" fill="currentColor"/>' +
+			'<path d="M12.8 12.8L12.8 16L16 16L16 12.8L12.8 12.8Z" fill="currentColor"/>' +
+			'<path d="M0 0L0 3.2L3.2 3.2L3.2 0L0 0Z" fill="currentColor"/>' +
+			'<path d="M6.4 0L6.4 3.2L9.6 3.2L9.6 0L6.4 0Z" fill="currentColor"/>' +
+			'<path d="M3.2 3.2L3.2 6.4L6.4 6.4L6.4 3.2L3.2 3.2Z" fill="currentColor"/>' +
+			'<path d="M9.6 3.2L9.6 6.4L12.8 6.4L12.8 3.2L9.6 3.2Z" fill="currentColor"/>' +
+			'<path d="M0 6.4L0 9.6L3.2 9.6L3.2 6.4L0 6.4Z" fill="currentColor"/>' +
+			'<path d="M6.4 6.4L6.4 9.6L9.6 9.6L9.6 6.4L6.4 6.4Z" fill="currentColor"/>' +
+			'<path d="M3.2 9.6L3.2 12.8L6.4 12.8L6.4 9.6L3.2 9.6Z" fill="currentColor"/>' +
+			'<path d="M9.6 9.6L9.6 12.8L12.8 12.8L12.8 9.6L9.6 9.6Z" fill="currentColor"/>' +
+			'</svg>' +
+			'</button>'
+		);
+		
+		$gridTypeSection.append($gridTypeControl);
+		
+		// Snap to Grid Checkbox
+		var $snapSection = jQuery('<div class="viewGroup" id="snap-to-grid-container" style="margin-top: 12px;">');
+		var $snapCheckbox = jQuery('<div class="sidebar-checkbox">');
+		$snapCheckbox.append('<input type="checkbox" id="snap-to-grid-checkbox">');
+		$snapCheckbox.append('<label for="snap-to-grid-checkbox">Snap to Grid</label>');
+		$snapSection.append($snapCheckbox);
+		
+		// Grid Color Section
+		var $gridColorSection = jQuery('<div class="viewGroup" id="grid-color-container" style="margin-top: 12px;">');
+		$gridColorSection.append('<label class="viewLabel">Grid Color</label>');
+		var $gridColorControl = jQuery('<div class="grid-color-control">');
+		var $gridColorPicker = jQuery('<input type="color" id="grid-color-picker" value="#e6e6e6">');
+		var $gridColorReset = jQuery('<button class="grid-color-reset" title="Reset to theme default">Reset</button>');
+		$gridColorControl.append($gridColorPicker, $gridColorReset);
+		$gridColorSection.append($gridColorControl);
+		
+		// Grid Opacity Section
+		var $gridOpacitySection = jQuery('<div class="viewGroup" id="grid-opacity-container" style="margin-top: 12px;">');
+		$gridOpacitySection.append('<label class="viewLabel">Grid Opacity</label>');
+		var $gridOpacityControl = jQuery('<div class="grid-opacity-control">');
+		var $gridOpacitySlider = jQuery('<input type="range" id="grid-opacity-slider" min="0" max="100" value="100">');
+		var $gridOpacityValue = jQuery('<span class="grid-opacity-value">100%</span>');
+		$gridOpacityControl.append($gridOpacitySlider, $gridOpacityValue);
+		$gridOpacitySection.append($gridOpacityControl);
+		
+		// Grid In Front Checkbox
+		var $gridInFrontSection = jQuery('<div class="viewGroup" id="grid-in-front-container" style="margin-top: 12px;">');
+		var $gridInFrontCheckbox = jQuery('<div class="sidebar-checkbox">');
+		$gridInFrontCheckbox.append('<input type="checkbox" id="grid-in-front-checkbox">');
+		$gridInFrontCheckbox.append('<label for="grid-in-front-checkbox">Display Grid in Front</label>');
+		$gridInFrontSection.append($gridInFrontCheckbox);
+		
+		$panel.append($gridTypeSection, $snapSection, $gridColorSection, $gridOpacitySection, $gridInFrontSection);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createToolPropertiesSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="tool-properties">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><path d="M30,8h-4.1c-0.5-2.3-2.5-4-4.9-4s-4.4,1.7-4.9,4H2v2h14.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H30V8z M21,12c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S22.7,12,21,12z"/><path d="M2,24h4.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H30v-2H15.9c-0.5-2.3-2.5-4-4.9-4s-4.4,1.7-4.9,4H2V24z M11,20c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S9.3,20,11,20z"/></svg>' +
+			'<h3>Properties</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarToolPropertiesPanel">');
+		
+		// Empty state message
+		var $emptyState = jQuery('<div class="toolPropertiesEmpty">');
+		$emptyState.html('<p>Select a tool to view its properties</p>');
+		$panel.append($emptyState);
+		
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createPropertiesSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="properties">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><path d="M20,6a9.9272,9.9272,0,0,0-3.9968.8394,9.9758,9.9758,0,0,1,2.2451,1.36,8,8,0,1,1,0,15.6016,9.9758,9.9758,0,0,1-2.2451,1.36A9.9976,9.9976,0,1,0,20,6Z"/><path d="M12,16a8.01,8.01,0,0,0,6.2483,7.8008,9.9858,9.9858,0,0,0,0-15.6016A8.01,8.01,0,0,0,12,16Z"/><path d="M10,16a10.0105,10.0105,0,0,1,6.0032-9.1606,10,10,0,1,0,0,18.3212A10.0105,10.0105,0,0,1,10,16Z"/></svg>' +
+			'<h3>Appearance</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarPropertiesPanel">');
+		
+		// Opacity Section
+		var $opacitySection = jQuery('<div class="propertyGroup">');
+		$opacitySection.append('<label class="propertyLabel">Opacity</label>');
+		var $opacityControls = jQuery('<div class="propertyControls">');
+		$opacityControls.append(jQuery('#opacityInput').detach());
+		$opacityControls.append(jQuery('#opacitySelect').detach());
+		$opacitySection.append($opacityControls);
+		
+		// Blending Section
+		var $blendSection = jQuery('<div class="propertyGroup">');
+		$blendSection.append('<label class="propertyLabel">Blending</label>');
+		var $blendControls = jQuery('<div class="propertyControls">');
+		$blendControls.append(jQuery('#blendModeSelect').detach());
+		$blendSection.append($blendControls);
+		
+		// Stroke Section
+		var $strokeSection = jQuery('<div class="propertyGroup">');
+		$strokeSection.append('<label class="propertyLabel">Stroke</label>');
+		var $strokeControls = jQuery('<div class="propertyControls">');
+		$strokeControls.append(jQuery('#strokeInput').detach());
+		var $strokeButtons = jQuery('<div class="strokeButtons">');
+		$strokeButtons.append(jQuery('#increaseStrokeWidthButton').detach());
+		$strokeButtons.append(jQuery('#decreaseStrokeWidthButton').detach());
+		$strokeControls.append($strokeButtons);
+		$strokeSection.append($strokeControls);
+		
+		// Dash Pattern Section
+		var $dashSection = jQuery('<div class="propertyGroup">');
+		var $dashHeader = jQuery('<div class="propertyHeader">');
+		$dashHeader.append('<label class="propertyLabel">Dash Pattern</label>');
+		
+		// Add toggle checkbox
+		var $dashToggle = jQuery('<div class="sidebar-checkbox-inline">');
+		$dashToggle.append('<input type="checkbox" id="dashEnabledCheckbox" />');
+		$dashToggle.append('<label for="dashEnabledCheckbox">Enable</label>');
+		$dashHeader.append($dashToggle);
+		
+		$dashSection.append($dashHeader);
+		
+		var $dashControls = jQuery('<div class="propertyControls dashControls">');
+		var $dashInput = jQuery('<input type="number" min="0" step="1" id="dashInput" value="10" class="dashInput" placeholder="Dash" title="Dash length" />');
+		
+		// Link/Unlink button
+		var $linkButton = jQuery('<button class="dashLinkButton" id="dashLinkButton" title="Unlinked - Click to link" data-linked="false">');
+		$linkButton.html(
+			'<svg class="unlink-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+			'<rect x="5" y="3.59" width="2" height="4.83" transform="translate(-2.49 6) rotate(-45.01)"/>' +
+			'<rect x="25" y="23.58" width="2" height="4.83" transform="translate(-10.77 25.99) rotate(-44.99)"/>' +
+			'<rect x="11" y="2" width="2" height="4"/>' +
+			'<rect x="2" y="11" width="4" height="2"/>' +
+			'<rect x="26" y="19" width="4" height="2"/>' +
+			'<rect x="19" y="26" width="2" height="4"/>' +
+			'<path d="M16.58,21.07l-3.71,3.72a4,4,0,1,1-5.66-5.66l3.72-3.72L9.51,14,5.8,17.72a6,6,0,0,0-.06,8.54A6,6,0,0,0,10,28a6.07,6.07,0,0,0,4.32-1.8L18,22.49Z"/>' +
+			'<path d="M15.41,10.93l3.72-3.72a4,4,0,1,1,5.66,5.66l-3.72,3.72L22.49,18l3.71-3.72a6,6,0,0,0,.06-8.54A6,6,0,0,0,22,4a6.07,6.07,0,0,0-4.32,1.8L14,9.51Z"/>' +
+			'</svg>' +
+			'<svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:none;">' +
+			'<path d="M29.25,6.76a6,6,0,0,0-8.5,0l1.42,1.42a4,4,0,1,1,5.67,5.67l-8,8a4,4,0,1,1-5.67-5.66l1.41-1.42-1.41-1.42-1.42,1.42a6,6,0,0,0,0,8.5A6,6,0,0,0,17,25a6,6,0,0,0,4.27-1.76l8-8A6,6,0,0,0,29.25,6.76Z"/>' +
+			'<path d="M4.19,24.82a4,4,0,0,1,0-5.67l8-8a4,4,0,0,1,5.67,0A3.94,3.94,0,0,1,19,14a4,4,0,0,1-1.17,2.85L15.71,19l1.42,1.42,2.12-2.12a6,6,0,0,0-8.51-8.51l-8,8a6,6,0,0,0,0,8.51A6,6,0,0,0,7,28a6.07,6.07,0,0,0,4.28-1.76L9.86,24.82A4,4,0,0,1,4.19,24.82Z"/>' +
+			'</svg>'
+		);
+		
+		var $gapInput = jQuery('<input type="number" min="0" step="1" id="gapInput" value="5" class="gapInput" placeholder="Gap" title="Gap length" />');
+		
+		$dashControls.append($dashInput, $linkButton, $gapInput);
+		$dashSection.append($dashControls);
+		
+		// Link button click handler
+		$linkButton.click(function(e) {
+			e.preventDefault();
+			var isLinked = jQuery(this).attr('data-linked') === 'true';
+			
+			if(isLinked) {
+				// Unlink
+				jQuery(this).attr('data-linked', 'false');
+				jQuery(this).attr('title', 'Unlinked - Click to link');
+				jQuery(this).find('.unlink-icon').show();
+				jQuery(this).find('.link-icon').hide();
+			} else {
+				// Link
+				jQuery(this).attr('data-linked', 'true');
+				jQuery(this).attr('title', 'Linked - Click to unlink');
+				jQuery(this).find('.unlink-icon').hide();
+				jQuery(this).find('.link-icon').show();
+				
+				// Sync gap to dash value
+				var dashValue = jQuery('#dashInput').val();
+				jQuery('#gapInput').val(dashValue);
+				
+				// Trigger change if dash is enabled
+				if(jQuery('#dashEnabledCheckbox').is(':checked')) {
+					jQuery('#gapInput').trigger('change');
+				}
+			}
+		});
+		
+		$panel.append($opacitySection, $blendSection, $strokeSection, $dashSection);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createBooleanSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="boolean">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><path d="M30,12v16c0,1.0999756-.9000244,2-2,2H12c-1.0999756,0-2-.9000244-2-2v-4h2v4h16V12h-4v-2h4c1.0999756,0,2,.9000244,2,2Z"/><path d="M22,4v4h-2v-4H4v16h4v2h-4c-1.0999756,0-2-.9000244-2-2V4c0-1.0999756.9000244-2,2-2h16c1.0999756,0,2,.9000244,2,2Z"/><rect x="10" y="10" width="12" height="12"/></svg>' +
+			'<h3>Boolean</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarBooleanPanel">');
+		
+		// Boolean operations buttons
+		var $operations = jQuery('<div class="booleanOperations">');
+		
+		// Unite button
+		var $uniteBtn = jQuery('<button class="booleanBtn" data-operation="unite" title="Unite">').html(
+			'<svg viewBox="0 0 32 32"><path d="M28,10H22V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2h6v6a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V12A2,2,0,0,0,28,10Z"/></svg>'
+		);
+		
+		// Intersect button
+		var $intersectBtn = jQuery('<button class="booleanBtn" data-operation="intersect" title="Intersect">').html(
+			'<svg viewBox="0 0 32 32"><path d="M28,10H22V4a2.0025,2.0025,0,0,0-2-2H4A2.0025,2.0025,0,0,0,2,4V20a2.0025,2.0025,0,0,0,2,2h6v6a2.0025,2.0025,0,0,0,2,2H28a2.0025,2.0025,0,0,0,2-2V12A2.0025,2.0025,0,0,0,28,10ZM4,20V4H20v6H12a2.0025,2.0025,0,0,0-2,2v8Zm8,8V22h8a2.0025,2.0025,0,0,0,2-2V12h6V28Z"/></svg>'
+		);
+		
+		// Subtract button
+		var $subtractBtn = jQuery('<button class="booleanBtn" data-operation="subtract" title="Subtract">').html(
+			'<svg viewBox="0 0 32 32"><polygon points="12 14 10 14 10 16 12 16 12 15 12 14"/><rect x="14" y="10" width="2" height="2"/><path d="M12,10c-1.1040649.0012817-1.9987183.8959351-2,2h2v-2Z"/><path d="M28,10h-6v-6c-.0012817-1.1040649-.8959351-1.9987183-2-2H4c-1.1040039.0014038-1.9985962.8959961-2,2v16c.0014038,1.1040039.8959961,1.9985962,2,2h6v6c0,1.1045532.8954468,2,2,2h16c1.1045532,0,2-.8954468,2-2V12c0-1.1045532-.8954468-2-2-2ZM20,10h-2v2h2v8h-8v-2h-2v2h-6l-.0012207-16h16.0012207v6Z"/></svg>'
+		);
+		
+		// Exclude button
+		var $excludeBtn = jQuery('<button class="booleanBtn" data-operation="exclude" title="Exclude">').html(
+			'<svg viewBox="0 0 32 32"><path d="M12,10H22V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2h6V12A2,2,0,0,1,12,10Z"/><path d="M28,10H22V20a2,2,0,0,1-2,2H10v6a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V12A2,2,0,0,0,28,10Z"/></svg>'
+		);
+		
+		// Divide button
+		var $divideBtn = jQuery('<button class="booleanBtn" data-operation="divide" title="Divide">').html(
+			'<svg viewBox="0 0 32 32"><path d="M12,10h10v-6c0-1.1045694-.8954296-2-2-2H4c-1.1045694,0-2,.8954306-2,2v16c0,1.1045704.8954306,2,2,2h6v-10c0-1.1045694.8954306-2,2-2Z"/><path d="M28,10h-6v10c0,1.1045704-.8954296,2-2,2h-10v6c0,1.1045704.8954306,2,2,2h16c1.1045704,0,2-.8954296,2-2V12c0-1.1045694-.8954296-2-2-2Z"/><rect x="12" y="12" width="8" height="8"/></svg>'
+		);
+		
+		// Add click handlers - call boolean operations directly
+		$uniteBtn.click(function() {
+			pg.boolean.booleanUnite();
+		});
+		
+		$intersectBtn.click(function() {
+			pg.boolean.booleanIntersect();
+		});
+		
+		$subtractBtn.click(function() {
+			pg.boolean.booleanSubtract();
+		});
+		
+		$excludeBtn.click(function() {
+			pg.boolean.booleanExclude();
+		});
+		
+		$divideBtn.click(function() {
+			pg.boolean.booleanDivide();
+		});
+		
+		$operations.append($uniteBtn, $intersectBtn, $subtractBtn, $excludeBtn, $divideBtn);
+		
+		$panel.append($operations);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createExportSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="export">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><polygon points="13 21 26.17 21 23.59 23.59 25 25 30 20 25 15 23.59 16.41 26.17 19 13 19 13 21"/><path d="M22,14V10a1,1,0,0,0-.29-.71l-7-7A1,1,0,0,0,14,2H4A2,2,0,0,0,2,4V28a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V26H20v2H4V4h8v6a2,2,0,0,0,2,2h6v2Zm-8-4V4.41L19.59,10Z"/></svg>' +
+			'<h3>Export</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarExportPanel">');
+		
+		// Export Image Section
+		var $imageSection = jQuery('<div class="exportGroup">');
+		$imageSection.append('<label class="exportLabel">Export Image (PNG)</label>');
+		
+		var $imageControls = jQuery('<div class="exportControls">');
+		var $imageInput = jQuery('<input type="text" id="exportImageFilename" class="exportFilenameInput" placeholder="filename" value="export">');
+		var $imageBtn = jQuery('<button class="exportBtn" id="exportImageBtn" title="Export as PNG">').html(
+			'<svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M26,24v4H6V24H4v4H4a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2h0V24Z"/><polygon fill="currentColor" points="21 14 16 9 11 14 12.41 15.41 15 12.83 15 22 17 22 17 12.83 19.59 15.41 21 14"/></svg>' +
+			'<span>Export</span>'
+		);
+		
+		$imageControls.append($imageInput, $imageBtn);
+		$imageSection.append($imageControls);
+		
+		// Export SVG Section
+		var $svgSection = jQuery('<div class="exportGroup">');
+		$svgSection.append('<label class="exportLabel">Export SVG</label>');
+		
+		var $svgControls = jQuery('<div class="exportControls">');
+		var $svgInput = jQuery('<input type="text" id="exportSVGFilename" class="exportFilenameInput" placeholder="filename" value="export">');
+		var $svgBtn = jQuery('<button class="exportBtn" id="exportSVGBtn" title="Export as SVG">').html(
+			'<svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M26,24v4H6V24H4v4H4a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2h0V24Z"/><polygon fill="currentColor" points="21 14 16 9 11 14 12.41 15.41 15 12.83 15 22 17 22 17 12.83 19.59 15.41 21 14"/></svg>' +
+			'<span>Export</span>'
+		);
+		
+		$svgControls.append($svgInput, $svgBtn);
+		$svgSection.append($svgControls);
+		
+		// Add click handlers
+		$imageBtn.click(function() {
+			var fileName = jQuery('#exportImageFilename').val() || 'export';
+			pg.export.exportImage(fileName);
+		});
+		
+		$svgBtn.click(function() {
+			var fileName = jQuery('#exportSVGFilename').val() || 'export';
+			pg.export.exportSVG(fileName);
+		});
+		
+		// Allow Enter key to trigger export
+		$imageInput.on('keypress', function(e) {
+			if (e.which === 13) {
+				$imageBtn.click();
+			}
+		});
+		
+		$svgInput.on('keypress', function(e) {
+			if (e.which === 13) {
+				$svgBtn.click();
+			}
+		});
+		
+		$panel.append($imageSection, $svgSection);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createSwatchesSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="swatches">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><circle cx="10" cy="12" r="2"/><circle cx="16" cy="9" r="2"/><circle cx="22" cy="12" r="2"/><circle cx="23" cy="18" r="2"/><circle cx="19" cy="23" r="2"/><path d="M16.54,2A14,14,0,0,0,2,16a4.82,4.82,0,0,0,6.09,4.65l1.12-.31A3,3,0,0,1,13,23.24V27a3,3,0,0,0,3,3A14,14,0,0,0,30,15.46,14.05,14.05,0,0,0,16.54,2Zm8.11,22.31A11.93,11.93,0,0,1,16,28a1,1,0,0,1-1-1V23.24a5,5,0,0,0-5-5,5.07,5.07,0,0,0-1.33.18l-1.12.31A2.82,2.82,0,0,1,4,16,12,12,0,0,1,16.47,4,12.18,12.18,0,0,1,28,15.53,11.89,11.89,0,0,1,24.65,24.32Z"/></svg>' +
+			'<h3>Swatches</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarSwatchesPanel">');
+		
+		// Swatches header with view switcher and buttons
+		var $swatchesHeader = jQuery('<div class="swatchesPanelHeader">');
+		
+		// Left side - View switcher
+		var $viewSwitcher = jQuery('<div class="swatchesViewSwitcher segmented-control">');
+		
+		var $gridBtn = jQuery('<button class="segment-button segment-icon-button active" data-view="grid" title="Grid View (5 columns)">').html(
+			'<svg viewBox="0 0 18 18"><rect height="7" rx="0.5" width="7" x="1" y="1"/><rect height="7" rx="0.5" width="7" x="10" y="1"/><rect height="7" rx="0.5" width="7" x="1" y="10"/><rect height="7" rx="0.5" width="7" x="10" y="10"/></svg>'
+		);
+		
+		var $compactBtn = jQuery('<button class="segment-button segment-icon-button" data-view="compact" title="Compact Grid (10 columns)">').html(
+			'<svg viewBox="0 0 18 18"><path d="M5,5H1V1.5A.5.5,0,0,1,1.5,1H5Z"/><rect height="4" width="4" x="7" y="1"/><path d="M17,5H13V1h3.5a.5.5,0,0,1,.5.5Z"/><rect height="4" width="4" x="1" y="7"/><rect height="4" width="4" x="7" y="7"/><rect height="4" width="4" x="13" y="7"/><path d="M5,17H1.5a.5.5,0,0,1-.5-.5V13H5Z"/><rect height="4" width="4" x="7" y="13"/><path d="M16.5,17H13V13h4v3.5A.5.5,0,0,1,16.5,17Z"/></svg>'
+		);
+		
+		var $listBtn = jQuery('<button class="segment-button segment-icon-button" data-view="list" title="List View">').html(
+			'<svg viewBox="0 0 18 18"><path d="M17,5H1V1.5A.5.5,0,0,1,1.5,1h15a.5.5,0,0,1,.5.5Z"/><rect height="4" width="16" x="1" y="7"/><path d="M16.5,17H1.5a.5.5,0,0,1-.5-.5V13H17v3.5A.5.5,0,0,1,16.5,17Z"/></svg>'
+		);
+		
+		$viewSwitcher.append($gridBtn, $compactBtn, $listBtn);
+		
+		// Right side - Action buttons
+		var $actionButtons = jQuery('<div class="swatchesActionButtons">');
+		
+		var $resetButton = jQuery('<button class="resetSwatchesBtn" title="Reset to Default Colors">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<path d="M4,18c0,6.6274166,5.3725834,12,12,12s12-5.3725834,12-12-5.3725834-12-12-12h-6.2000008l3.6000004-3.5999999-1.3999996-1.4000001-6,6,6,6,1.3999996-1.3999996-3.6000004-3.6000004h6.2000008c5.5228472,0,10,4.4771528,10,10s-4.4771528,10-10,10-10-4.4771519-10-10h-2Z"/>' +
+			'</svg>'
+		);
+		
+		var $addButton = jQuery('<button class="addSwatchBtn" title="Add Current Color">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<polygon points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15 "/>' +
+			'</svg>' +
+			'<span>Add Swatch</span>'
+		);
+		
+		$actionButtons.append($resetButton, $addButton);
+		
+		// View switcher click handlers
+		$viewSwitcher.find('button').click(function() {
+			var view = jQuery(this).attr('data-view');
+			$viewSwitcher.find('button').removeClass('active');
+			jQuery(this).addClass('active');
+			setSwatchesView(view);
+		});
+		
+		$addButton.click(function() {
+			addCurrentColorToSwatches();
+		});
+		
+		$resetButton.click(function() {
+			resetSwatchesToDefaults();
+		});
+		
+		$swatchesHeader.append($viewSwitcher, $actionButtons);
+		
+		// Search bar
+		var $searchWrapper = jQuery('<div class="swatchesSearchWrapper">');
+		var $searchInput = jQuery('<input type="text" class="swatchesSearchInput" placeholder="Search swatches...">');
+		var $searchIcon = jQuery('<button class="swatchesSearchIcon" title="Search">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"/>' +
+			'</svg>'
+		);
+		var $clearButton = jQuery('<button class="swatchesSearchClear" style="display: none;" title="Clear search">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16"/>' +
+			'</svg>'
+		);
+		
+		$searchWrapper.append($searchIcon, $searchInput, $clearButton);
+		
+		// Search functionality
+		$searchInput.on('input', function() {
+			var searchTerm = jQuery(this).val();
+			if (searchTerm.length > 0) {
+				$clearButton.show();
+			} else {
+				$clearButton.hide();
+			}
+			filterSwatches(searchTerm);
+		});
+		
+		$clearButton.click(function() {
+			$searchInput.val('').trigger('input');
+			$searchInput.focus();
+		});
+		
+		// Swatches grid
+		var $swatchesGrid = jQuery('<div class="swatchesGrid">');
+		
+		// No results message
+		var $noResults = jQuery('<div class="swatchesNoResults" style="display: none;">No swatches found</div>');
+		
+		$panel.append($swatchesHeader, $searchWrapper, $swatchesGrid, $noResults);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		// Load saved swatches
+		setTimeout(function() {
+			loadSwatches();
+		}, 100);
+		
+		return $section;
+	};
+	
+	var createBrushesSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="brushes">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><path d="M28.8281,3.1719a4.0941,4.0941,0,0,0-5.6562,0L4.05,22.292A6.9537,6.9537,0,0,0,2,27.2412V30H4.7559a6.9523,6.9523,0,0,0,4.95-2.05L28.8281,8.8286a3.999,3.999,0,0,0,0-5.6567ZM10.91,18.26l2.8286,2.8286L11.6172,23.21,8.7886,20.3818ZM8.2915,26.5356A4.9665,4.9665,0,0,1,4.7559,28H4v-.7588a4.9669,4.9669,0,0,1,1.4644-3.5351l1.91-1.91,2.8286,2.8281ZM27.4141,7.4141,15.1528,19.6748l-2.8286-2.8286,12.2617-12.26a2.0473,2.0473,0,0,1,2.8282,0,1.9995,1.9995,0,0,1,0,2.8282Z"/><path d="M6.5,15A3.4994,3.4994,0,0,1,4.0249,9.026l3.5005-3.5a1.5019,1.5019,0,0,0,0-2.121,1.537,1.537,0,0,0-2.1216,0L3.415,5.3936,2,3.98,3.99,1.9915a3.5849,3.5849,0,0,1,4.95,0,3.5039,3.5039,0,0,1,0,4.949L5.439,10.44a1.5019,1.5019,0,0,0,0,2.121,1.5369,1.5369,0,0,0,2.1215,0l4.0249-4.0243L13,9.9507,8.9746,13.975A3.4754,3.4754,0,0,1,6.5,15Z"/></svg>' +
+			'<h3>Brushes</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarBrushesPanel">');
+		
+		// Brushes search bar
+		var $brushSearchContainer = jQuery('<div class="brushSearchContainer">');
+		var $brushSearchInput = jQuery('<input type="text" class="brushSearchInput" placeholder="Search brushes...">');
+		$brushSearchContainer.append($brushSearchInput);
+		
+		// Brushes list
+		var $brushesList = jQuery('<div class="brushesList">');
+		
+		// Default brush presets (alphabetically sorted)
+		var defaultBrushes = [
+			{
+				id: 'dither',
+				name: 'Bitmap Dither',
+				type: 'ditherbrush',
+				pixelSize: 6,
+				threshold: 0.5,
+				spread: 50,
+				pattern: 0
+			},
+			{
+				id: 'blend',
+				name: 'Blend',
+				type: 'circlebrush',
+				threshold: 50,
+				circleSize: 20,
+				gap: 3,
+				useGradient: true,
+				useStroke: false,
+				strokeMin: 0.5,
+				strokeMax: 3,
+				speedRadius: false
+			},
+			{
+				id: 'charcoal',
+				name: 'Charcoal',
+				type: 'stipplebrush',
+				density: 20,
+				minSize: 0.5,
+				maxSize: 3,
+				spread: 15
+			},
+			{
+				id: 'circuit',
+				name: 'Circuit',
+				type: 'circuitbrush',
+				nodeSize: 6,
+				lineWidth: 2,
+				complexity: 3
+			},
+			{
+				id: 'ink',
+				name: 'Ink Splatter',
+				type: 'inkbrush',
+				splats: 5,
+				size: 20,
+				chaos: 0.7
+			},
+			{
+				id: 'organicmaze',
+				name: 'Organic Maze',
+				type: 'organicmazebrush',
+				size: 70,
+				strokeWidth: 2,
+				branches: 8,
+				curviness: 0.5,
+				density: 3
+			},
+			{
+				id: 'particles',
+				name: 'Particles',
+				type: 'particlebrush',
+				particleSize: 3,
+				spawnRate: 5,
+				maxSpeed: 5,
+				friction: 0.95,
+				lifetime: 30,
+				minOpacity: 0,
+				maxOpacity: 1
+			},
+			{
+				id: 'pixel',
+				name: 'Pixel Brush',
+				type: 'pixelbrush',
+				pixelSize: 8,
+				pixelShape: 'square'
+			},
+			{
+				id: 'scratchy',
+				name: 'Scratchy',
+				type: 'scratchybrush',
+				scratches: 20,
+				length: 25,
+				spread: 30,
+				thickness: 1
+			},
+			{
+				id: 'scribble',
+				name: 'Scribble',
+				type: 'scribblebrush',
+				intensity: 20,
+				size: 30,
+				speed: 5,
+				thickness: 2
+			}
+		];
+		
+		// Render brush presets
+		defaultBrushes.forEach(function(brush, index) {
+			var $brushItem = jQuery('<div class="brushItem" data-brush-id="' + brush.id + '" data-brush-type="' + brush.type + '">');
+			// Set Charcoal as default active
+			if(brush.id === 'charcoal') $brushItem.addClass('active');
+			
+			// Brush preview (simple visual representation)
+			var $preview = jQuery('<div class="brushPreview">');
+			var $previewStroke = jQuery('<svg viewBox="0 0 80 40" class="brushPreviewSvg">');
+			
+			// Create preview based on brush type
+			if(brush.type === 'particlebrush') {
+				// Particle brush preview - show scattered dots
+				var particlesSvg = '';
+				for(var i = 0; i < 15; i++) {
+					var x = 10 + Math.random() * 60;
+					var y = 10 + Math.random() * 20;
+					var size = 1 + Math.random() * 2;
+					particlesSvg += '<circle cx="' + x + '" cy="' + y + '" r="' + size + '" fill="currentColor" opacity="' + (0.3 + Math.random() * 0.7) + '"/>';
+				}
+				$previewStroke.html(particlesSvg);
+			} else if(brush.type === 'circlebrush') {
+				// Blend brush preview - show gradient circles
+				var circlesSvg = '';
+				var positions = [15, 25, 35, 45, 55, 65];
+				for(var i = 0; i < positions.length; i++) {
+					var x = positions[i];
+					var y = 20;
+					var size = 3 + (i * 0.5);
+					var opacity = 0.4 + (i * 0.1);
+					circlesSvg += '<circle cx="' + x + '" cy="' + y + '" r="' + size + '" fill="currentColor" opacity="' + opacity + '"/>';
+				}
+				$previewStroke.html(circlesSvg);
+			} else if(brush.type === 'pixelbrush') {
+				// Pixel brush preview - show pixelated squares
+				var pixelsSvg = '';
+				var positions = [10, 18, 26, 34, 42, 50, 58, 66];
+				for(var i = 0; i < positions.length; i++) {
+					var x = positions[i];
+					var y = 16 + (Math.random() * 8 - 4);
+					pixelsSvg += '<rect x="' + x + '" y="' + y + '" width="6" height="6" fill="currentColor"/>';
+				}
+				$previewStroke.html(pixelsSvg);
+			} else if(brush.type === 'circuitbrush') {
+				// Circuit brush preview - show circuit pattern
+				var circuitSvg = '';
+				// Central nodes
+				circuitSvg += '<circle cx="20" cy="20" r="3" fill="currentColor"/>';
+				circuitSvg += '<circle cx="40" cy="20" r="3" fill="currentColor"/>';
+				circuitSvg += '<circle cx="60" cy="20" r="3" fill="currentColor"/>';
+				// Lines
+				circuitSvg += '<line x1="20" y1="20" x2="20" y2="10" stroke="currentColor" stroke-width="2"/>';
+				circuitSvg += '<line x1="20" y1="10" x2="30" y2="10" stroke="currentColor" stroke-width="2"/>';
+				circuitSvg += '<circle cx="30" cy="10" r="2" fill="currentColor"/>';
+				circuitSvg += '<line x1="40" y1="20" x2="40" y2="30" stroke="currentColor" stroke-width="2"/>';
+				circuitSvg += '<line x1="40" y1="30" x2="50" y2="30" stroke="currentColor" stroke-width="2"/>';
+				circuitSvg += '<circle cx="50" cy="30" r="2" fill="currentColor"/>';
+				circuitSvg += '<line x1="60" y1="20" x2="60" y2="15" stroke="currentColor" stroke-width="2"/>';
+				circuitSvg += '<line x1="60" y1="15" x2="70" y2="15" stroke="currentColor" stroke-width="2"/>';
+				circuitSvg += '<circle cx="70" cy="15" r="2" fill="currentColor"/>';
+				$previewStroke.html(circuitSvg);
+			} else if(brush.type === 'stipplebrush') {
+				// Stipple brush preview - show stippled dots
+				var stippleSvg = '';
+				for(var i = 0; i < 40; i++) {
+					var x = 10 + Math.random() * 60;
+					var y = 15 + Math.random() * 10;
+					var size = 0.5 + Math.random() * 2.5;
+					stippleSvg += '<circle cx="' + x + '" cy="' + y + '" r="' + size + '" fill="currentColor"/>';
+				}
+				$previewStroke.html(stippleSvg);
+			} else if(brush.type === 'inkbrush') {
+				// Ink brush preview - show ink splatter
+				var inkSvg = '';
+				// Main splats
+				var splatPositions = [20, 40, 60];
+				for(var i = 0; i < splatPositions.length; i++) {
+					var x = splatPositions[i];
+					var y = 20;
+					var size = 4 + Math.random() * 3;
+					// Main splat (irregular)
+					inkSvg += '<circle cx="' + x + '" cy="' + y + '" r="' + size + '" fill="currentColor" opacity="0.7"/>';
+					// Droplets
+					for(var d = 0; d < 3; d++) {
+						var angle = Math.random() * Math.PI * 2;
+						var dist = size + Math.random() * size;
+						var dx = x + Math.cos(angle) * dist;
+						var dy = y + Math.sin(angle) * dist;
+						var dropSize = Math.random() * size * 0.3;
+						inkSvg += '<circle cx="' + dx + '" cy="' + dy + '" r="' + dropSize + '" fill="currentColor" opacity="0.6"/>';
+					}
+				}
+				$previewStroke.html(inkSvg);
+			} else if(brush.type === 'scratchybrush') {
+				// Scratchy brush preview - show scratchy lines
+				var scratchySvg = '';
+				for(var i = 0; i < 15; i++) {
+					var x = 10 + Math.random() * 60;
+					var y = 10 + Math.random() * 20;
+					var angle = Math.random() * Math.PI * 2;
+					var length = 5 + Math.random() * 15;
+					var x2 = x + Math.cos(angle) * length;
+					var y2 = y + Math.sin(angle) * length;
+					var opacity = 0.3 + Math.random() * 0.4;
+					// Create scratchy path with jitter
+					var pathData = 'M' + x + ',' + y;
+					var segments = 3;
+					for(var s = 1; s <= segments; s++) {
+						var ratio = s / segments;
+						var px = x + (x2 - x) * ratio + (Math.random() - 0.5) * length * 0.2;
+						var py = y + (y2 - y) * ratio + (Math.random() - 0.5) * length * 0.2;
+						pathData += ' L' + px + ',' + py;
+					}
+					scratchySvg += '<path d="' + pathData + '" stroke="currentColor" fill="none" stroke-width="0.8" opacity="' + opacity + '"/>';
+				}
+				$previewStroke.html(scratchySvg);
+			} else if(brush.type === 'scribblebrush') {
+				// Scribble brush preview - show chaotic scribbles
+				var scribbleSvg = '';
+				for(var i = 0; i < 3; i++) {
+					var startX = 15 + i * 20;
+					var startY = 20;
+					var pathData = 'M' + startX + ',' + startY;
+					var currentX = startX;
+					var currentY = startY;
+					var angle = 0;
+					// Create chaotic scribble
+					for(var s = 0; s < 10; s++) {
+						angle += (Math.random() - 0.5) * 180;
+						var distance = Math.random() * 3;
+						currentX += Math.cos(angle * Math.PI / 180) * distance;
+						currentY += Math.sin(angle * Math.PI / 180) * distance;
+						pathData += ' L' + currentX + ',' + currentY;
+					}
+					scribbleSvg += '<path d="' + pathData + '" stroke="currentColor" fill="none" stroke-width="1.5" opacity="0.6"/>';
+				}
+				$previewStroke.html(scribbleSvg);
+			} else if(brush.type === 'ditherbrush') {
+				// Dither brush preview - show bitmap dither pattern
+				var ditherSvg = '';
+				var pixelSize = 3;
+				for(var x = 0; x < 80 / pixelSize; x++) {
+					for(var y = 0; y < 40 / pixelSize; y++) {
+						var centerX = 40;
+						var centerY = 20;
+						var dx = (x * pixelSize + pixelSize/2) - centerX;
+						var dy = (y * pixelSize + pixelSize/2) - centerY;
+						var distance = Math.sqrt(dx * dx + dy * dy) / 30;
+						
+						// Random dither pattern
+						if(Math.random() > distance * 0.7) {
+							ditherSvg += '<rect x="' + (x * pixelSize) + '" y="' + (y * pixelSize) + '" width="' + pixelSize + '" height="' + pixelSize + '" fill="currentColor"/>';
+						}
+					}
+				}
+				$previewStroke.html(ditherSvg);
+			} else {
+				// Regular brush preview
+				var strokePath = 'M10,20 Q30,' + (20 - brush.brushWidth/4) + ' 50,20 T70,20';
+				$previewStroke.html('<path d="' + strokePath + '" stroke="currentColor" fill="none" stroke-width="' + (brush.brushWidth/5) + '" stroke-linecap="round"/>');
+			}
+			$preview.append($previewStroke);
+			
+			// Brush info
+			var $info = jQuery('<div class="brushInfo">');
+			$info.append('<div class="brushName">' + brush.name + '</div>');
+			
+			// Show relevant details based on brush type
+			if(brush.type === 'particlebrush') {
+				$info.append('<div class="brushDetails">Particles: ' + brush.spawnRate + '/frame</div>');
+			} else if(brush.type === 'circlebrush') {
+				$info.append('<div class="brushDetails">Blend: ' + brush.circleSize + 'px</div>');
+			} else if(brush.type === 'pixelbrush') {
+				$info.append('<div class="brushDetails">Pixel: ' + brush.pixelSize + 'px</div>');
+			} else if(brush.type === 'circuitbrush') {
+				$info.append('<div class="brushDetails">Nodes: ' + brush.nodeSize + 'px</div>');
+			} else if(brush.type === 'stipplebrush') {
+				$info.append('<div class="brushDetails">Density: ' + brush.density + '</div>');
+			} else if(brush.type === 'inkbrush') {
+				$info.append('<div class="brushDetails">Splats: ' + brush.splats + '</div>');
+			} else if(brush.type === 'scratchybrush') {
+				$info.append('<div class="brushDetails">Scratches: ' + brush.scratches + '</div>');
+			} else if(brush.type === 'scribblebrush') {
+				$info.append('<div class="brushDetails">Intensity: ' + brush.intensity + '</div>');
+			} else if(brush.type === 'ditherbrush') {
+				$info.append('<div class="brushDetails">Pixel: ' + brush.pixelSize + 'px</div>');
+			} else {
+				$info.append('<div class="brushDetails">Width: ' + brush.brushWidth + 'px</div>');
+			}
+			
+			$brushItem.append($preview, $info);
+			
+			// Click handler
+			$brushItem.click(function() {
+				jQuery('.brushItem').removeClass('active');
+				jQuery(this).addClass('active');
+				
+				var brushType = jQuery(this).attr('data-brush-type');
+				
+				// Always switch to brush tool
+				pg.toolbar.switchTool('brush');
+				
+				// Apply brush preset based on type
+				var activeTool = pg.toolbar.getActiveTool();
+				if(activeTool) {
+					if(brushType === 'particlebrush') {
+						// Apply particle brush settings to brush tool
+						if(activeTool.applyParticlePreset) {
+							activeTool.applyParticlePreset(brush);
+						}
+					} else if(brushType === 'circlebrush') {
+						// Apply circle brush settings to brush tool
+						if(activeTool.applyCirclePreset) {
+							activeTool.applyCirclePreset(brush);
+						}
+					} else if(brushType === 'pixelbrush') {
+						// Apply pixel brush settings to brush tool
+						if(activeTool.applyPixelPreset) {
+							activeTool.applyPixelPreset(brush);
+						}
+					} else if(brushType === 'circuitbrush') {
+						// Apply circuit brush settings to brush tool
+						if(activeTool.applyCircuitPreset) {
+							activeTool.applyCircuitPreset(brush);
+						}
+					} else if(brushType === 'stipplebrush') {
+						// Apply stipple brush settings to brush tool
+						if(activeTool.applyStipplePreset) {
+							activeTool.applyStipplePreset(brush);
+						}
+					} else if(brushType === 'inkbrush') {
+						// Apply ink brush settings to brush tool
+						if(activeTool.applyInkPreset) {
+							activeTool.applyInkPreset(brush);
+						}
+					} else if(brushType === 'scratchybrush') {
+						// Apply scratchy brush settings to brush tool
+						if(activeTool.applyScratchyPreset) {
+							activeTool.applyScratchyPreset(brush);
+						}
+					} else if(brushType === 'scribblebrush') {
+						// Apply scribble brush settings to brush tool
+						if(activeTool.applyScribblePreset) {
+							activeTool.applyScribblePreset(brush);
+						}
+					} else if(brushType === 'ditherbrush') {
+						// Apply dither brush settings to brush tool
+						if(activeTool.applyDitherPreset) {
+							activeTool.applyDitherPreset(brush);
+						}
+					} else if(activeTool.applyPreset) {
+						// Apply regular brush preset
+						activeTool.applyPreset(brush);
+					}
+				}
+			});
+			
+			// Double-click handler to open tool properties panel
+			$brushItem.dblclick(function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				
+				// Make sure this brush is active
+				jQuery('.brushItem').removeClass('active');
+				jQuery(this).addClass('active');
+				
+				var brushType = jQuery(this).attr('data-brush-type');
+				
+				// Switch to brush tool
+				pg.toolbar.switchTool('brush');
+				
+				// Apply brush preset based on type
+				var activeTool = pg.toolbar.getActiveTool();
+				if(activeTool) {
+					if(brushType === 'particlebrush') {
+						if(activeTool.applyParticlePreset) {
+							activeTool.applyParticlePreset(brush);
+						}
+					} else if(brushType === 'circlebrush') {
+						if(activeTool.applyCirclePreset) {
+							activeTool.applyCirclePreset(brush);
+						}
+					} else if(brushType === 'pixelbrush') {
+						if(activeTool.applyPixelPreset) {
+							activeTool.applyPixelPreset(brush);
+						}
+					} else if(brushType === 'circuitbrush') {
+						if(activeTool.applyCircuitPreset) {
+							activeTool.applyCircuitPreset(brush);
+						}
+					} else if(brushType === 'stipplebrush') {
+						if(activeTool.applyStipplePreset) {
+							activeTool.applyStipplePreset(brush);
+						}
+					} else if(brushType === 'inkbrush') {
+						if(activeTool.applyInkPreset) {
+							activeTool.applyInkPreset(brush);
+						}
+					} else if(brushType === 'scratchybrush') {
+						if(activeTool.applyScratchyPreset) {
+							activeTool.applyScratchyPreset(brush);
+						}
+					} else if(brushType === 'scribblebrush') {
+						if(activeTool.applyScribblePreset) {
+							activeTool.applyScribblePreset(brush);
+						}
+					} else if(brushType === 'ditherbrush') {
+						if(activeTool.applyDitherPreset) {
+							activeTool.applyDitherPreset(brush);
+						}
+					} else if(activeTool.applyPreset) {
+						activeTool.applyPreset(brush);
+					}
+				}
+				
+				// Open tool properties panel in center
+				var centerX = window.innerWidth / 2;
+				var centerY = window.innerHeight / 2;
+				pg.floatingPanels.createCenteredPanel('tool-properties', centerX, centerY);
+			});
+			
+			$brushesList.append($brushItem);
+		});
+		
+		// Add search functionality
+		$brushSearchInput.on('input', function() {
+			var searchTerm = jQuery(this).val().toLowerCase();
+			
+			if (!searchTerm || searchTerm.trim() === '') {
+				// Show all brushes
+				jQuery('.brushItem').show();
+				return;
+			}
+			
+			// Filter brushes by name
+			jQuery('.brushItem').each(function() {
+				var $brush = jQuery(this);
+				var brushName = $brush.find('.brushName').text().toLowerCase();
+				
+				if (brushName.indexOf(searchTerm) !== -1) {
+					$brush.show();
+				} else {
+					$brush.hide();
+				}
+			});
+		});
+		
+		$panel.append($brushSearchContainer, $brushesList);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createLayersSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="layers">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><path d="M16,24a.9967.9967,0,0,1-.4741-.12l-13-7L3.4741,15.12,16,21.8643,28.5259,15.12l.9482,1.7607-13,7A.9967.9967,0,0,1,16,24Z"/><path d="M16,30a.9967.9967,0,0,1-.4741-.12l-13-7L3.4741,21.12,16,27.8643,28.5259,21.12l.9482,1.7607-13,7A.9967.9967,0,0,1,16,30Z"/><path d="M16,18a.9967.9967,0,0,1-.4741-.12l-13-7a1,1,0,0,1,0-1.7607l13-7a.9982.9982,0,0,1,.9482,0l13,7a1,1,0,0,1,0,1.7607l-13,7A.9967.9967,0,0,1,16,18ZM5.1094,10,16,15.8643,26.8906,10,16,4.1358Z"/></svg>' +
+			'<h3>Layers</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $panel = jQuery('<div class="sidebarLayersPanel">');
+		
+		var $panelHeader = jQuery('<div class="layersPanelHeader">');
+		
+		// Search container (left side)
+		var $searchWrapper = jQuery('<div class="layerSearchWrapper">');
+		var $searchInput = jQuery('<input type="text" class="layerSearchInput" placeholder="Search layers...">');
+		var $searchIcon = jQuery('<button class="layerSearchIcon" title="Search">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"/>' +
+			'</svg>'
+		);
+		var $clearButton = jQuery('<button class="layerSearchClear" style="display: none;" title="Clear search">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16"/>' +
+			'</svg>'
+		);
+		
+		$searchInput.on('input', function() {
+			var searchTerm = jQuery(this).val();
+			if(searchTerm.length > 0) {
+				$clearButton.show();
+			} else {
+				$clearButton.hide();
+			}
+			filterLayers(searchTerm);
+		});
+		
+		$clearButton.click(function() {
+			$searchInput.val('').trigger('input').focus();
+		});
+		
+		$searchWrapper.append($searchInput, $clearButton, $searchIcon);
+		
+		// Add button (right side)
+		var $addButton = jQuery('<button class="addLayerBtn" title="Add Layer">').html(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+			'<polygon points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15 "/>' +
+			'</svg>' +
+			'<span>Add Layer</span>'
+		);
+		
+		$addButton.click(function() {
+			var newLayer = pg.layer.addNewLayer();
+			newLayer.activate();
+			updateLayers();
+		});
+		
+		$panelHeader.append($addButton, $searchWrapper);
+		
+		var $layersList = jQuery('<div class="layerEntries">');
+		
+		// Make layers sortable
+		$layersList.sortable({
+			items: '.layerEntry',
+			containment: 'parent',
+			forcePlaceholderSize: true,
+			tolerance: 'pointer',
+			delay: 300,
+			stop: function(event, ui) {
+				handleLayerOrderChange();
+			}
+		});
+		
+		$panel.append($panelHeader, $layersList);
+		$content.append($panel);
+		$section.append($header, $content);
+		
+		return $section;
+	};
+	
+	var createScriptEditorSection = function() {
+		var $section = jQuery('<div class="sidebarSection" data-section="script">');
+		
+		var $header = jQuery('<div class="sidebarSectionHeader">').html(
+			'<div class="sectionTitleGroup">' +
+			'<svg class="sectionIcon" viewBox="0 0 32 32"><polygon points="31 16 24 23 22.59 21.59 28.17 16 22.59 10.41 24 9 31 16"/><polygon points="1 16 8 9 9.41 10.41 3.83 16 9.41 21.59 8 23 1 16"/><rect x="5.91" y="15" width="20.17" height="2" transform="translate(-3.6 27.31) rotate(-75)"/></svg>' +
+			'<h3>Script Editor</h3>' +
+			'</div>' +
+			'<svg class="sectionToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>'
+		);
+		
+		var $content = jQuery('<div class="sidebarSectionContent">');
+		var $editor = jQuery('<div class="sidebarScriptEditor">');
+		
+		// Toolbar with Run button and Examples dropdown
+		var $toolbar = jQuery('<div class="scriptEditorToolbar">');
+		var $runButton = jQuery('<button class="runScriptBtn"><svg viewBox="0 0 32 32" width="14" height="14"><path d="M7,28a1,1,0,0,1-1-1V5a1,1,0,0,1,1.4819-.8763l20,11a1,1,0,0,1,0,1.7525l-20,11A1.0005,1.0005,0,0,1,7,28ZM8,6.6909V25.3088L24.9248,16Z"/></svg>Run</button>');
+		var $examplesSelect = jQuery('<select class="scriptExamplesSelect" title="Script examples">');
+		var $defaultOption = jQuery('<option value="default-script" selected>Examples</option>');
+		$examplesSelect.append($defaultOption);
+		
+		$toolbar.append($runButton, $examplesSelect);
+		
+		// Code editor wrapper with line numbers and syntax highlighting
+		var $editorWrapper = jQuery('<div class="codeEditorWrapper">');
+		var $lineNumbers = jQuery('<div class="codeEditorLineNumbers" id="sidebarLineNumbers"></div>');
+		var $contentWrapper = jQuery('<div class="codeEditorContent">');
+		var $highlight = jQuery('<div class="codeEditorHighlight" id="sidebarHighlight"></div>');
+		var $textarea = jQuery('<textarea class="scriptEditorArea codeEditorArea" id="sidebarCodeArea" placeholder="// Write your Paper.js script here"></textarea>');
+		
+		$contentWrapper.append($highlight, $textarea);
+		$editorWrapper.append($lineNumbers, $contentWrapper);
+		
+		// Status bar
+		var $statusBar = jQuery('<div class="codeEditorStatus">');
+		$statusBar.html(
+			'<div><span class="status-item">Line <span id="sidebarStatusLine">1</span>, Col <span id="sidebarStatusCol">1</span></span>' +
+			'<span class="status-item">Lines: <span id="sidebarStatusLines">1</span></span></div>' +
+			'<div><span class="status-item">JavaScript</span></div>'
+		);
+		
+		// Console section with collapsible header
+		var $consoleSection = jQuery('<div class="consoleSection collapsed">');
+		var $consoleHeader = jQuery('<div class="consoleHeader">');
+		$consoleHeader.html(
+			'<span>Console</span>' +
+			'<div class="consoleHeaderButtons">' +
+			'<button class="clearConsoleBtn" title="Clear console">Clear</button>' +
+			'<svg class="consoleToggleIcon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>' +
+			'</div>'
+		);
+		var $console = jQuery('<div class="scriptConsole consoleOutput" id="sidebarConsole">');
+		
+		$consoleSection.append($consoleHeader, $console);
+		$editor.append($toolbar, $editorWrapper, $statusBar, $consoleSection);
+		$content.append($editor);
+		$section.append($header, $content);
+		
+		// Setup event handlers
+		$runButton.click(function() {
+			runScript($textarea.val());
+		});
+		
+		$consoleHeader.click(function() {
+			$consoleSection.toggleClass('collapsed');
+		});
+		
+		jQuery(document).on('click', '.clearConsoleBtn', function(e) {
+			e.stopPropagation();
+			$console.find('.message, .error').remove();
+		});
+		
+		// Load examples
+		jQuery.getJSON('user/scripts/scripts.json', function(data) {
+			jQuery.each(data.scripts, function(index, scriptID) {
+				var $option = jQuery('<option value="'+scriptID+'">'+scriptID+'.js</option>');
+				$examplesSelect.append($option);
+			});
+		}).fail(function() {
+			// If scripts.json doesn't exist, just use default
+		});
+		
+		$examplesSelect.on('change', function() {
+			var val = jQuery(this).val();
+			loadScriptByID(val, $textarea);
+		});
+		
+		// Initialize with default script
+		loadScriptByID('default-script', $textarea);
+		
+		// Setup syntax highlighting and line numbers
+		setTimeout(function() {
+			setupCodeEditorFeatures($textarea, $lineNumbers, $highlight);
+		}, 100);
+		
+		// Intercept console.log
+		setupConsoleIntercept($console);
+		
+		return $section;
+	};
+	
+	var setupCodeEditorFeatures = function($textarea, $lineNumbers, $highlight) {
+		var updateLineNumbers = function() {
+			var code = $textarea.val();
+			var lines = code.split('\n');
+			var lineCount = lines.length;
+			
+			var lineNumbersHTML = '';
+			for (var i = 1; i <= lineCount; i++) {
+				lineNumbersHTML += i + '\n';
+			}
+			$lineNumbers.text(lineNumbersHTML);
+		};
+		
+		var getCurrentLine = function() {
+			var cursorPos = $textarea[0].selectionStart;
+			var textBeforeCursor = $textarea.val().substring(0, cursorPos);
+			return textBeforeCursor.split('\n').length;
+		};
+		
+		var getCurrentColumn = function() {
+			var cursorPos = $textarea[0].selectionStart;
+			var textBeforeCursor = $textarea.val().substring(0, cursorPos);
+			var lastNewline = textBeforeCursor.lastIndexOf('\n');
+			return cursorPos - lastNewline;
+		};
+		
+		var updateStatusBar = function() {
+			var line = getCurrentLine();
+			var col = getCurrentColumn();
+			var lines = $textarea.val().split('\n').length;
+			
+			jQuery('#sidebarStatusLine').text(line);
+			jQuery('#sidebarStatusCol').text(col);
+			jQuery('#sidebarStatusLines').text(lines);
+		};
+		
+		var updateHighlight = function() {
+			var code = $textarea.val();
+			var lines = code.split('\n');
+			var currentLine = getCurrentLine();
+			
+			var highlightedLines = lines.map(function(line, index) {
+				var highlighted = highlightJS(line);
+				var lineClass = (index + 1 === currentLine) ? 'line current-line' : 'line';
+				return '<div class="' + lineClass + '">' + (highlighted || '&nbsp;') + '</div>';
+			});
+			
+			$highlight.html(highlightedLines.join(''));
+		};
+		
+		var syncScroll = function() {
+			$highlight.scrollTop($textarea.scrollTop());
+			$highlight.scrollLeft($textarea.scrollLeft());
+			$lineNumbers.scrollTop($textarea.scrollTop());
+		};
+		
+		$textarea.on('input', function() {
+			updateLineNumbers();
+			updateHighlight();
+			updateStatusBar();
+		});
+		
+		$textarea.on('scroll', syncScroll);
+		
+		$textarea.on('click keyup', function() {
+			updateHighlight();
+			updateStatusBar();
+		});
+		
+		// Load tab override library if available
+		try {
+			if (typeof tabOverride !== 'undefined') {
+				$textarea.tabOverride(true);
+				jQuery.fn.tabOverride.autoIndent(true);
+			}
+		} catch(e) {
+			// Tab override not available, that's ok
+		}
+		
+		updateLineNumbers();
+		updateHighlight();
+		updateStatusBar();
+	};
+	
+	var highlightJS = function(code) {
+		// Escape HTML
+		code = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		
+		// Comments
+		code = code.replace(/(\/\/.*$)/gm, '<span class="syntax-comment">$1</span>');
+		code = code.replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="syntax-comment">$1</span>');
+		
+		// Strings
+		code = code.replace(/(`(?:\\.|[^`\\])*`)/g, '<span class="syntax-string">$1</span>');
+		code = code.replace(/('(?:\\.|[^'\\])*')/g, '<span class="syntax-string">$1</span>');
+		code = code.replace(/("(?:\\.|[^"\\])*")/g, '<span class="syntax-string">$1</span>');
+		
+		// Keywords
+		var keywords = /\b(var|let|const|function|return|if|else|for|while|do|switch|case|break|continue|try|catch|finally|throw|new|typeof|instanceof|this|class|extends|super|static|async|await|yield|import|export|from|default|null|undefined|true|false|in|of|delete|void|with)\b/g;
+		code = code.replace(keywords, '<span class="syntax-keyword">$1</span>');
+		
+		// Numbers
+		code = code.replace(/\b(\d+\.?\d*)\b/g, '<span class="syntax-number">$1</span>');
+		
+		// Functions
+		code = code.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\s*(?=\()/g, '<span class="syntax-function">$1</span>');
+		
+		// Properties
+		code = code.replace(/\.([a-zA-Z_$][a-zA-Z0-9_$]*)/g, '.<span class="syntax-property">$1</span>');
+		
+		// Brackets
+		code = code.replace(/([(){}\[\]])/g, '<span class="syntax-bracket">$1</span>');
+		
+		return code;
+	};
+	
+	var loadScriptByID = function(scriptID, $textarea) {
+		if(scriptID === 'default-script') {
+			$textarea.val(defaultScript).trigger('input');
+		} else {
+			jQuery.ajax({
+				url: 'user/scripts/'+scriptID+'.js',
+				dataType: 'text',
+				success: function(data) {
+					$textarea.val(data).trigger('input');
+				}
+			});
+		}
+	};
+	
+	var setupConsoleIntercept = function($console) {
+		if (wasCodeEditorInit) return; // Only intercept once
+		wasCodeEditorInit = true;
+		
+		var originalLog = console.log;
+		var originalError = console.error;
+		
+		console.log = function() {
+			var args = Array.prototype.slice.call(arguments);
+			if(args[0] !== 'key') { // Filter out internal logs
+				$console.append('<span class="message">' + args.join(' ') + '</span>');
+				$console.scrollTop($console[0].scrollHeight);
+			}
+			originalLog.apply(console, arguments);
+		};
+		
+		console.error = function() {
+			var args = Array.prototype.slice.call(arguments);
+			$console.append('<span class="error">Error: ' + args.join(' ') + '</span>');
+			$console.scrollTop($console[0].scrollHeight);
+			originalError.apply(console, arguments);
+		};
+	};
+	
+	var runScript = function(code) {
+		try {
+			// Remove any previous user script
+			jQuery('#sidebarUserScript').remove();
+			
+			// Execute in Paper.js context
+			var script = jQuery('<script id="sidebarUserScript">with(paper) {' + code + '}</script>');
+			jQuery('body').append(script);
+			
+			pg.undo.snapshot('scriptEditor');
+			paper.view.update();
+		} catch(error) {
+			console.error(error.message);
+		}
+	};
+	
+	// Shared keyboard handler function for numeric inputs
+	var handleNumericInputKeydown = function(e) {
+		var $input = jQuery(this);
+		
+		// Check for arrow keys (keyCode 38 = Up, 40 = Down)
+		var isArrowUp = e.key === 'ArrowUp' || e.keyCode === 38;
+		var isArrowDown = e.key === 'ArrowDown' || e.keyCode === 40;
+		var isEnter = e.key === 'Enter' || e.keyCode === 13;
+		var isEscape = e.key === 'Escape' || e.keyCode === 27;
+		
+		if (isArrowUp || isArrowDown) {
+			// Prevent default browser behavior and stop propagation
+			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
+			
+			var currentValue = parseFloat($input.val()) || 0;
+			var min = parseFloat($input.attr('min')) || -Infinity;
+			var max = parseFloat($input.attr('max')) || Infinity;
+			var step = parseFloat($input.attr('step')) || 1;
+			var dataType = $input.attr('data-type');
+			
+			// Determine if we support decimals based on step or data-type
+			var supportsDecimals = (step < 1 || step % 1 !== 0) || dataType === 'float';
+			
+			var direction = isArrowUp ? 1 : -1;
+			var increment = 1;
+			
+			// Shift key: increment by 10
+			if (e.shiftKey) {
+				increment = 10;
+			}
+			// Cmd/Ctrl key: increment by 0.1 (only for decimal values)
+			else if ((e.metaKey || e.ctrlKey) && supportsDecimals) {
+				increment = 0.1;
+			}
+			// Default: increment by 1
+			else {
+				increment = 1;
+			}
+			
+			var newValue = currentValue + (direction * increment);
+			
+			// Clamp value to min/max bounds
+			newValue = Math.max(min, Math.min(max, newValue));
+			
+			// Round to appropriate decimal places
+			if (supportsDecimals) {
+				newValue = Math.round(newValue * 10) / 10;
+			} else {
+				newValue = Math.round(newValue);
+			}
+			
+			$input.val(newValue);
+			$input.trigger('change');
+			
+			return false;
+		}
+		else if (isEnter) {
+			// Confirm value and blur
+			$input.blur();
+		}
+		else if (isEscape) {
+			// Revert to original value
+			var originalValue = $input.data('original-value');
+			if (originalValue !== undefined) {
+				$input.val(originalValue);
+			}
+			$input.blur();
+		}
+	};
+	
+	var setupEnhancedNumericInputs = function() {
+		// Selector for all numeric inputs in sidebar
+		var inputSelector = '.propertyControls input[type="number"], .toolPropertiesOptions input[type="number"], #opacityInput, #strokeInput';
+		
+		// Attach handlers directly to existing inputs
+		jQuery(inputSelector).each(function() {
+			jQuery(this).off('keydown.enhanced').on('keydown.enhanced', handleNumericInputKeydown);
+		});
+		
+		// Also use delegation for dynamically added inputs (tool properties)
+		jQuery(document).on('keydown.enhanced', inputSelector, handleNumericInputKeydown);
+		
+		// Store original value on focus for Escape key functionality
+		jQuery(document).on('focus', inputSelector, function() {
+			var $input = jQuery(this);
+			$input.data('original-value', $input.val());
+			$input.select(); // Auto-select text for easy replacement
+		});
+		
+		// Validate and clamp values on blur
+		jQuery(document).on('blur', '.propertyControls input[type="number"], #opacityInput, #strokeInput', function() {
+			var $input = jQuery(this);
+			var value = parseFloat($input.val());
+			var min = parseFloat($input.attr('min')) || -Infinity;
+			var max = parseFloat($input.attr('max')) || Infinity;
+			
+			// Handle invalid input
+			if (isNaN(value)) {
+				var originalValue = $input.data('original-value');
+				$input.val(originalValue || min);
+			} else {
+				// Clamp to bounds
+				value = Math.max(min, Math.min(max, value));
+				$input.val(value);
+			}
+			
+			$input.trigger('change');
+			$input.removeData('original-value');
+		});
+	};
+	
+	// Helper function to attach keyboard handlers to tool property inputs
+	var attachKeyboardHandlersToToolInputs = function() {
+		jQuery('.toolPropertiesOptions input[type="number"]').each(function() {
+			jQuery(this).off('keydown.enhanced').on('keydown.enhanced', handleNumericInputKeydown);
+		});
+	};
+	
+	var setupEventListeners = function() {
+		// Toggle sidebar
+		$sidebarToggle.click(function() {
+			toggleSidebar();
+		});
+		
+		// Section collapse/expand
+		jQuery(document).on('click', '.sidebarSectionHeader', function(e) {
+			var $section = jQuery(this).parent();
+			
+			// Check if Command (Mac) or Ctrl (Windows/Linux) key is pressed
+			if (e.metaKey || e.ctrlKey) {
+				// Toggle all sections at once
+				var isCurrentlyCollapsed = $section.hasClass('collapsed');
+				jQuery('.sidebarSection').toggleClass('collapsed', !isCurrentlyCollapsed);
+				
+				// Save all panel states
+				savePanelStates();
+			} else {
+				// Toggle only this section
+				$section.toggleClass('collapsed');
+				
+				// Save panel state
+				savePanelStates();
+			}
+		});
+		
+		// Grid type controls
+		jQuery(document).on('click', '[data-grid-type]', function() {
+			var gridType = jQuery(this).attr('data-grid-type');
+			
+			// Update active state
+			jQuery('[data-grid-type]').removeClass('active');
+			jQuery(this).addClass('active');
+			
+			// Update grid
+			if (pg.grid) {
+				pg.grid.setGridType(gridType);
+			}
+			
+			// Show/hide snap to grid checkbox and color/opacity controls
+			var $snapContainer = jQuery('#snap-to-grid-container');
+			var $colorContainer = jQuery('#grid-color-container');
+			var $opacityContainer = jQuery('#grid-opacity-container');
+			var $inFrontContainer = jQuery('#grid-in-front-container');
+			
+			if (gridType === 'none') {
+				$snapContainer.hide();
+				$colorContainer.hide();
+				$opacityContainer.hide();
+				$inFrontContainer.hide();
+			} else {
+				$snapContainer.show();
+				$colorContainer.show();
+				$opacityContainer.show();
+				// Only show "Grid in Front" for square and dot grids
+				if (gridType === 'square' || gridType === 'dot') {
+					$inFrontContainer.show();
+				} else {
+					$inFrontContainer.hide();
+				}
+			}
+		});
+
+		jQuery(document).on('click', '.sidebarLayersPanel .layerVisibilityToggle', function(e) {
+			e.stopPropagation();
+			var $entry = jQuery(this).closest('.layerEntry');
+			var id = parseInt($entry.attr('data-layer-id'));
+			var layer = pg.layer.getLayerByID(id);
+			if(!layer) return;
+			layer.visible = !layer.visible;
+			var svg = layer.visible
+				? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4" fill="currentColor"/><path fill="currentColor" d="M30.94,15.66A16.69,16.69,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A16.69,16.69,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,22.5A6.5,6.5,0,1,1,22.5,16,6.51,6.51,0,0,1,16,22.5Z"/></svg>'
+				: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M30.94,15.66a16.4,16.4,0,0,0-5.73-7.45L30,3.41,28.59,2,2,28.59,3.41,30l5.1-5.09A15.38,15.38,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,22.5a6.46,6.46,0,0,1-3.83-1.26L14,19.43A4,4,0,0,0,19.43,14l1.81-1.81A6.49,6.49,0,0,1,16,22.5Z"/><path fill="currentColor" d="M4.53,21.81l5-5A6.84,6.84,0,0,1,9.5,16,6.51,6.51,0,0,1,16,9.5a6.84,6.84,0,0,1,.79.05l3.78-3.77A14.39,14.39,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A15.86,15.86,0,0,0,4.53,21.81Z"/></svg>';
+			jQuery(this).html(svg).attr('data-visible', layer.visible);
+			$entry.toggleClass('layer-hidden', !layer.visible);
+			paper.view.update();
+		});
+
+		jQuery(document).on('click', '.sidebarLayersPanel .layerLockToggle', function(e) {
+			e.stopPropagation();
+			var $entry = jQuery(this).closest('.layerEntry');
+			var id = parseInt($entry.attr('data-layer-id'));
+			var layer = pg.layer.getLayerByID(id);
+			if(!layer) return;
+			layer.data.locked = !layer.data.locked;
+			for(var i=0;i<layer.children.length;i++){ layer.children[i].locked = layer.data.locked; }
+			var lockSvg = layer.data.locked
+				? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M24,14H22V8A6,6,0,0,0,10,8v6H8a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V16A2,2,0,0,0,24,14ZM12,8a4,4,0,0,1,8,0v6H12ZM24,28H8V16H24Z"/></svg>'
+				: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M24,14H12V8a4,4,0,0,1,8,0h2A6,6,0,0,0,10,8v6H8a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V16A2,2,0,0,0,24,14Zm0,14H8V16H24Z"/></svg>';
+			jQuery(this).html(lockSvg).attr('data-locked', layer.data.locked);
+			$entry.toggleClass('layer-locked', !!layer.data.locked);
+			if(layer.data.locked) { pg.selection.clearSelection(); }
+		});
+
+		jQuery(document).on('click', '.sidebarLayersPanel .layerDeleteButton', function(e){
+			e.stopPropagation();
+			var id = parseInt(jQuery(this).attr('data-layer-id'));
+			if(confirm('Delete this layer and all its children?')) {
+				pg.layer.deleteLayer(id);
+				updateLayers();
+				updateLayerValues();
+			}
+		});
+
+		jQuery(document).on('click', '.sidebarLayersPanel .layerExpandToggle', function(e){
+			e.stopPropagation();
+			var $entry = jQuery(this).closest('.layerEntry');
+			var id = parseInt($entry.attr('data-layer-id'));
+			var layer = pg.layer.getLayerByID(id);
+			if(!layer) return;
+			var $itemsContainer = jQuery('.sidebarLayersPanel .layerItemList[data-parent-layer="'+id+'"]');
+			var isExpanded = expandedLayers[id] === true;
+			if(isExpanded){
+				expandedLayers[id] = false;
+				$itemsContainer.hide();
+				jQuery(this).attr('data-expanded','false').attr('title','Show items');
+			}else{
+				expandedLayers[id] = true;
+				renderLayerItemsList(layer, $itemsContainer);
+				$itemsContainer.show();
+				jQuery(this).attr('data-expanded','true').attr('title','Hide items');
+			}
+		});
+
+		jQuery(document).on('click', '.sidebarLayersPanel .layerSelectToggle', function(e){
+			e.stopPropagation();
+			var $entry = jQuery(this).closest('.layerEntry');
+			var id = parseInt($entry.attr('data-layer-id'));
+			var items = pg.helper.getPaperItemsByLayerID(id);
+			if(jQuery(this).attr('checked')) {
+				pg.selection.clearSelection();
+				jQuery(this).removeAttr('checked');
+			} else {
+				pg.selection.clearSelection();
+				jQuery.each(items, function(index, item) { pg.selection.setItemSelection(item, true); });
+				jQuery(this).attr('checked', items.length > 0);
+			}
+		});
+		
+		// Snap to grid checkbox
+		jQuery(document).on('change', '#snap-to-grid-checkbox', function() {
+			if (pg.grid) {
+				pg.grid.setSnapToGrid(jQuery(this).is(':checked'));
+			}
+		});
+		
+		// Grid color picker
+		jQuery(document).on('input change', '#grid-color-picker', function() {
+			if (pg.grid) {
+				pg.grid.setGridColor(jQuery(this).val());
+			}
+		});
+		
+		// Grid color reset button
+		jQuery(document).on('click', '.grid-color-reset', function() {
+			if (pg.grid) {
+				pg.grid.setGridColor(null); // Reset to theme default
+				jQuery('#grid-color-picker').val('#e6e6e6'); // Reset picker to default light gray
+			}
+		});
+		
+		// Grid opacity slider
+		jQuery(document).on('input change', '#grid-opacity-slider', function() {
+			if (pg.grid) {
+				var opacity = parseInt(jQuery(this).val()) / 100;
+				pg.grid.setGridOpacity(opacity);
+				jQuery('.grid-opacity-value').text(jQuery(this).val() + '%');
+			}
+		});
+		
+		// Grid in front checkbox
+		jQuery(document).on('change', '#grid-in-front-checkbox', function() {
+			if (pg.grid) {
+				pg.grid.setGridInFront(jQuery(this).is(':checked'));
+			}
+		});
+		
+		// Update layers on document changes
+		jQuery(document).on('LayerAdded LayerRemoved', function() {
+			updateLayers();
+		});
+		
+		// Use SelectionChanged event for immediate updates
+		jQuery(document).on('SelectionChanged', function() {
+			// Clear any pending throttled updates
+			if(updateLayerValuesThrottle) {
+				clearTimeout(updateLayerValuesThrottle);
+				updateLayerValuesThrottle = null;
+			}
+			// Skip updates if hovering over layer items to prevent flicker
+			if(isHoveringLayerItems) {
+				return;
+			}
+			// Use requestAnimationFrame for smooth updates
+			requestAnimationFrame(function() {
+				updateLayerValues();
+			});
+		});
+		
+		// Fallback to DocumentUpdate but with heavy throttling
+		jQuery(document).on('DocumentUpdate', function() {
+			// Skip updates if hovering over layer items to prevent flicker
+			if(isHoveringLayerItems) {
+				return;
+			}
+			
+			// Throttle updates significantly to reduce frequency
+			if(updateLayerValuesThrottle) {
+				return; // Skip if already scheduled
+			}
+			updateLayerValuesThrottle = setTimeout(function() {
+				updateLayerValues();
+				updateLayerValuesThrottle = null;
+			}, 500); // Update at most every 500ms as fallback
+			// Refresh item lists for expanded layers to reflect real-time changes
+			jQuery('.sidebarLayersPanel .layerItemList').each(function(){
+				var $list = jQuery(this);
+				var parentId = parseInt($list.attr('data-parent-layer'));
+				if(expandedLayers[parentId] === true) {
+					var layer = pg.layer.getLayerByID(parentId);
+					if(layer) {
+						renderLayerItemsList(layer, $list);
+					}
+				}
+			});
+		});
+		
+		// Initial layer update
+		setTimeout(function() {
+			updateLayers();
+			updateLayerValues();
+		}, 100);
+		
+		// Initialize grid with default square grid
+		setTimeout(function() {
+			if (pg.grid) {
+				pg.grid.showGrid('square');
+			}
+		}, 200);
+		
+		// Footer tooltip with delay
+		var tooltipTimeout;
+		jQuery(document).on('mouseenter', '.sidebarFooterLink', function() {
+			var $tooltip = jQuery('.sidebarFooterTooltip');
+			tooltipTimeout = setTimeout(function() {
+				$tooltip.addClass('show');
+			}, 1200);
+		});
+		
+		jQuery(document).on('mouseleave', '.sidebarFooterLink', function() {
+			clearTimeout(tooltipTimeout);
+			jQuery('.sidebarFooterTooltip').removeClass('show');
+		});
+	};
+	
+	var toggleSidebar = function() {
+		isOpen = !isOpen;
+		$sidebar.toggleClass('collapsed');
+		
+		if (isOpen) {
+			jQuery('body').addClass('sidebar-open');
+		} else {
+			jQuery('body').removeClass('sidebar-open');
+		}
+		
+		updateCanvasSize();
+	};
+	
+	var updateCanvasSize = function() {
+		setTimeout(function() {
+			if (isOpen) {
+				paper.view.viewSize.width = jQuery(window).width() - 320;
+			} else {
+				paper.view.viewSize.width = jQuery(window).width();
+			}
+			paper.view.update();
+		}, 50);
+	};
+	
+	var handleLayerOrderChange = function() {
+		var order = [];
+		jQuery('.sidebarLayersPanel .layerEntries .layerEntry').each(function() {
+			order.push(jQuery(this).attr('data-layer-id'));
+		});
+		pg.layer.changeLayerOrderByIDArray(order);
+	};
+	
+	var setupLayerEntry = function(layer) {
+		if(!(layer.data && layer.data.isGuideLayer)) {
+			var $activeClass = '';
+			if(pg.layer.isActiveLayer(layer)) {
+				$activeClass= ' active';
+			}
+			var $layerEntry = jQuery('<ul class="layerEntry'+$activeClass+'" data-layer-id="'+layer.data.id+'">');
+			var $layerVisSection = jQuery('<li class="layerVisSection">');
+			var $layerVisButton = jQuery('<button class="layerVisibilityToggle" title="Layer visibility">');
+			var visIconSvg = layer.visible 
+				? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4" fill="currentColor"/><path fill="currentColor" d="M30.94,15.66A16.69,16.69,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A16.69,16.69,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,22.5A6.5,6.5,0,1,1,22.5,16,6.51,6.51,0,0,1,16,22.5Z"/></svg>'
+				: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M30.94,15.66a16.4,16.4,0,0,0-5.73-7.45L30,3.41,28.59,2,2,28.59,3.41,30l5.1-5.09A15.38,15.38,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,22.5a6.46,6.46,0,0,1-3.83-1.26L14,19.43A4,4,0,0,0,19.43,14l1.81-1.81A6.49,6.49,0,0,1,16,22.5Z"/><path fill="currentColor" d="M4.53,21.81l5-5A6.84,6.84,0,0,1,9.5,16,6.51,6.51,0,0,1,16,9.5a6.84,6.84,0,0,1,.79.05l3.78-3.77A14.39,14.39,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A15.86,15.86,0,0,0,4.53,21.81Z"/></svg>';
+			$layerVisButton.html(visIconSvg);
+			$layerVisButton.attr('data-visible', layer.visible);
+			
+			var $layerLockSection = jQuery('<li class="layerLockSection">');
+			var $layerLockButton = jQuery('<button class="layerLockToggle" title="Layer lock">');
+			var isLocked = layer.data.locked || false;
+			var lockIconSvg = isLocked
+				? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M24,14H22V8A6,6,0,0,0,10,8v6H8a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V16A2,2,0,0,0,24,14ZM12,8a4,4,0,0,1,8,0v6H12ZM24,28H8V16H24Z"/></svg>'
+				: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M24,14H12V8a4,4,0,0,1,8,0h2A6,6,0,0,0,10,8v6H8a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V16A2,2,0,0,0,24,14Zm0,14H8V16H24Z"/></svg>';
+			$layerLockButton.html(lockIconSvg);
+			$layerLockButton.attr('data-locked', isLocked);
+			
+			var $layerNameSection = jQuery('<li class="layerName" title="">');
+			var $layerNameGroup = jQuery('<div class="layerNameGroup">');
+			var $expandToggle = jQuery('<button class="layerExpandToggle" data-expanded="false" title="Show items">').html(
+				'<svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M9 6l6 6-6 6"/></svg>'
+			);
+			var $layerNameInput = jQuery('<input type="text">').val(layer.name);
+			var $layerActionSection = jQuery('<li class="layerActions">');
+			var $layerDeleteButton = jQuery('<button class="layerDeleteButton" data-layer-id="'+layer.data.id+'" title="Delete layer">&times;</button>');
+			var $layerSelectSection = jQuery('<li class="layerSelectSection">');
+			var $layerSelectButton = jQuery('<input type="radio" class="layerSelectToggle" title="Selected 0/0 Total">');
+			
+			$layerEntry.click(function() {
+				setActiveLayerEntry(layer);
+			});
+			
+			$layerVisButton.click(function(e) {
+				e.stopPropagation();
+				layer.visible = !layer.visible;
+				var newIconSvg = layer.visible 
+					? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="4" fill="currentColor"/><path fill="currentColor" d="M30.94,15.66A16.69,16.69,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A16.69,16.69,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,22.5A6.5,6.5,0,1,1,22.5,16,6.51,6.51,0,0,1,16,22.5Z"/></svg>'
+					: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M30.94,15.66a16.4,16.4,0,0,0-5.73-7.45L30,3.41,28.59,2,2,28.59,3.41,30l5.1-5.09A15.38,15.38,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,22.5a6.46,6.46,0,0,1-3.83-1.26L14,19.43A4,4,0,0,0,19.43,14l1.81-1.81A6.49,6.49,0,0,1,16,22.5Z"/><path fill="currentColor" d="M4.53,21.81l5-5A6.84,6.84,0,0,1,9.5,16,6.51,6.51,0,0,1,16,9.5a6.84,6.84,0,0,1,.79.05l3.78-3.77A14.39,14.39,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A15.86,15.86,0,0,0,4.53,21.81Z"/></svg>';
+				jQuery(this).html(newIconSvg);
+				jQuery(this).attr('data-visible', layer.visible);
+				paper.view.update();
+			});
+			
+			$layerLockButton.click(function(e) {
+				e.stopPropagation();
+				layer.data.locked = !layer.data.locked;
+				var newLockIconSvg = layer.data.locked
+					? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M24,14H22V8A6,6,0,0,0,10,8v6H8a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V16A2,2,0,0,0,24,14ZM12,8a4,4,0,0,1,8,0v6H12ZM24,28H8V16H24Z"/></svg>'
+					: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M24,14H12V8a4,4,0,0,1,8,0h2A6,6,0,0,0,10,8v6H8a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V16A2,2,0,0,0,24,14Zm0,14H8V16H24Z"/></svg>';
+				jQuery(this).html(newLockIconSvg);
+				jQuery(this).attr('data-locked', layer.data.locked);
+				console.log('Layer "' + layer.name + '" locked state:', layer.data.locked);
+				// Deselect all items on this layer if locking
+				if(layer.data.locked) {
+					pg.selection.clearSelection();
+				}
+			});
+			
+			$layerNameInput.on('change', function() {
+				layer.name = jQuery(this).val();
+			});
+			
+			$layerNameInput.on('click', function(e) {
+				e.stopPropagation();
+			});
+
+			var $itemsContainer = jQuery('<ul class="layerItemList" data-parent-layer="'+layer.data.id+'" style="display:none;">');
+			
+			// Track hover state to prevent flicker
+			$itemsContainer.on('mouseenter', function() {
+				isHoveringLayerItems = true;
+			});
+			$itemsContainer.on('mouseleave', function() {
+				isHoveringLayerItems = false;
+				// Clear any pending throttled updates
+				if(updateLayerValuesThrottle) {
+					clearTimeout(updateLayerValuesThrottle);
+					updateLayerValuesThrottle = null;
+				}
+				// Trigger an immediate update when leaving to sync state
+				setTimeout(function() {
+					updateLayerValues();
+				}, 10);
+			});
+
+			$expandToggle.click(function(e) {
+				e.stopPropagation();
+				var isExpanded = expandedLayers[layer.data.id] === true;
+				if(isExpanded) {
+					expandedLayers[layer.data.id] = false;
+					$itemsContainer.hide();
+					$expandToggle.attr('data-expanded', 'false');
+					$expandToggle.attr('title', 'Show items');
+				} else {
+					expandedLayers[layer.data.id] = true;
+					renderLayerItemsList(layer, $itemsContainer);
+					$itemsContainer.show();
+					$expandToggle.attr('data-expanded', 'true');
+					$expandToggle.attr('title', 'Hide items');
+				}
+			});
+			
+			$layerDeleteButton.click(function(e) {
+				e.stopPropagation();
+				if(confirm('Delete this layer and all its children?')) {
+					pg.layer.deleteLayer(jQuery(this).attr('data-layer-id'));
+					updateLayers();
+				}
+			});
+
+			$layerSelectButton.click(function(e) {
+				e.stopPropagation();
+				if(jQuery(this).attr('checked')) {
+					pg.selection.clearSelection();
+					jQuery(this).removeAttr('checked');
+				} else {
+					pg.selection.clearSelection();
+					var items = pg.helper.getPaperItemsByLayerID(layer.data.id);
+					jQuery.each(items, function(index, item) {
+						pg.selection.setItemSelection(item, true);
+					});
+					jQuery(this).attr('checked', items.length > 0);
+				}
+			});
+
+			$layerVisSection.append($layerVisButton);
+			$layerLockSection.append($layerLockButton);
+			$layerNameGroup.append($expandToggle, $layerNameInput);
+			$layerNameSection.append($layerNameGroup);
+			$layerActionSection.append($layerDeleteButton);
+			$layerSelectSection.append($layerSelectButton);
+			$layerEntry.append($layerVisSection, $layerLockSection, $layerNameSection, $layerActionSection, $layerSelectSection);
+			jQuery('.sidebarLayersPanel .layerEntries').prepend($layerEntry);
+			$layerEntry.after($itemsContainer);
+
+			if(expandedLayers[layer.data.id]) {
+				$expandToggle.attr('data-expanded', 'true');
+				$itemsContainer.show();
+				renderLayerItemsList(layer, $itemsContainer);
+			}
+		}
+	};
+
+	var renderLayerItemsList = function(layer, $container) {
+		$container.empty();
+		if(!layer) {
+			$container.append('<li class="layerItemRow" style="pointer-events:none;opacity:0.6;">No items</li>');
+			return;
+		}
+		var items = [];
+		if(layer.children && layer.children.length) {
+			items = layer.children.slice();
+		} else {
+			// Some layers may not have children attached yet; use robust queries by id
+			var id = layer.data && layer.data.id;
+			if(typeof id !== 'undefined') {
+				items = pg.helper.getPaperItemsByLayerID(id) || [];
+			}
+		}
+		if(items.length === 0) {
+			$container.append('<li class="layerItemRow" style="pointer-events:none;opacity:0.6;">No items</li>');
+			return;
+		}
+		if(items.length === 0) {
+			$container.append('<li class="layerItemRow" style="pointer-events:none;opacity:0.6;">No items</li>');
+			return;
+		}
+		for(var i=0; i<items.length; i++) {
+			var item = items[i];
+			if(item.guide) continue;
+			var info = getItemTypeInfo(item, i);
+			var isSelected = !!(item.selected || item.fullySelected);
+			var $row = jQuery('<li class="layerItemRow" data-item-id="'+(item.id || item._id)+'" data-selected="'+(isSelected ? 'true' : 'false')+'">');
+			var $icon = jQuery('<span class="itemIcon">').html(info.icon);
+			var $name = jQuery('<span class="itemName">').text(info.name);
+			$row.append($icon, $name);
+			$row.data('paperItem', item);
+			$row.click(function(e) {
+				e.stopPropagation();
+				var it = jQuery(this).data('paperItem');
+				var currentlySelected = !!(it.selected || it.fullySelected);
+				pg.selection.setItemSelection(it, !currentlySelected);
+				updateLayerValues();
+			});
+			$container.append($row);
+		}
+	};
+
+	var getItemTypeInfo = function(item, idx) {
+		var name = item.name || '';
+		var icon = '';
+		var typeLabel = '';
+		if((item.data && item.data.isPGTextItem) || pg.item.isPointTextItem(item)) {
+			typeLabel = 'Text';
+			icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M10 8h12v2h-5v14h-2V10h-5z"/></svg>';
+		} else if(pg.item.isGroupItem(item)) {
+			typeLabel = 'Group';
+			icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16"><rect x="6" y="6" width="8" height="8" fill="currentColor"/><rect x="18" y="18" width="8" height="8" fill="currentColor"/></svg>';
+		} else if(pg.item.isCompoundPathItem(item)) {
+			typeLabel = 'Compound';
+			icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16"><circle cx="10" cy="16" r="5" fill="currentColor"/><circle cx="22" cy="16" r="5" fill="currentColor"/></svg>';
+		} else if(pg.item.isPathItem(item)) {
+			typeLabel = 'Path';
+			icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M6 24c6-12 14-12 20 0"/></svg>';
+		} else {
+			typeLabel = item.className || 'Item';
+			icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16"><rect x="8" y="8" width="16" height="16" fill="currentColor"/></svg>';
+		}
+		var displayName = name && name.length > 0 ? name : (typeLabel+' '+(idx+1));
+		return { name: displayName, icon: icon };
+	};
+	
+	var setActiveLayerEntry = function(layer) {
+		jQuery('.sidebarLayersPanel .layerEntry').removeClass('active');
+		pg.layer.setActiveLayer(layer);
+		jQuery('.sidebarLayersPanel .layerEntry[data-layer-id="'+layer.data.id+'"]').addClass('active');
+	};
+	
+	var filterLayers = function(searchTerm) {
+		var $noResultsMsg = jQuery('.layerNoResults');
+		
+		if(!searchTerm || searchTerm.trim() === '') {
+			jQuery('.sidebarLayersPanel .layerEntry').show();
+			jQuery('.sidebarLayersPanel .layerItemList').each(function(){
+				var $list = jQuery(this);
+				var parentId = parseInt($list.attr('data-parent-layer'));
+				var isVisible = jQuery('.sidebarLayersPanel .layerEntry[data-layer-id="'+parentId+'"]').is(':visible');
+				$list.toggle(isVisible && expandedLayers[parentId] === true);
+			});
+			$noResultsMsg.remove();
+			return;
+		}
+		
+		var lowerSearchTerm = searchTerm.toLowerCase();
+		var visibleCount = 0;
+		
+		jQuery('.sidebarLayersPanel .layerEntry').each(function() {
+			var $entry = jQuery(this);
+			var layerName = $entry.find('.layerName input').val().toLowerCase();
+			
+			if(layerName.indexOf(lowerSearchTerm) !== -1) {
+				$entry.show();
+				visibleCount++;
+			} else {
+				$entry.hide();
+			}
+		});
+
+		jQuery('.sidebarLayersPanel .layerItemList').each(function(){
+			var $list = jQuery(this);
+			var parentId = parseInt($list.attr('data-parent-layer'));
+			var isVisible = jQuery('.sidebarLayersPanel .layerEntry[data-layer-id="'+parentId+'"]').is(':visible');
+			$list.toggle(isVisible && expandedLayers[parentId] === true);
+		});
+		
+		// Show "No layers found" message if no matches
+		if(visibleCount === 0) {
+			if($noResultsMsg.length === 0) {
+				$noResultsMsg = jQuery('<div class="layerNoResults">No layers found</div>');
+				jQuery('.sidebarLayersPanel .layerEntries').append($noResultsMsg);
+			}
+		} else {
+			$noResultsMsg.remove();
+		}
+	};
+	
+	var updateLayers = function() {
+		var $layersList = jQuery('.sidebarLayersPanel .layerEntries');
+		$layersList.empty();
+		
+		if (!paper.project || !paper.project.layers) return;
+		// Ensure every user layer has a valid data.id before building UI
+		pg.layer.ensureUserLayerIDs();
+		
+		jQuery.each(paper.project.layers, function(index, layer) {
+			setupLayerEntry(layer);
+		});
+		
+		// Re-apply search filter if there's a search term
+		var searchTerm = jQuery('.layerSearchInput').val();
+		if(searchTerm && searchTerm.length > 0) {
+			filterLayers(searchTerm);
+		}
+	};
+	
+	var updateLayerValues = function() {
+		jQuery('.sidebarLayersPanel .layerEntry').each(function() {
+			var id = parseInt(jQuery(this).attr('data-layer-id'));
+			var layer = pg.layer.getLayerByID(id);
+			if(layer) {
+				var selectedItems = 0;
+				jQuery.each(layer.children, function(index, child) {
+					if(child.selected || child.fullySelected) {
+						selectedItems++;
+					}
+				});
+
+				var $entry = jQuery(this);
+				var $toggle = $entry.find('.layerSelectToggle');
+				var newTitle = 'Selected '+selectedItems+'/'+layer.children.length+' Total';
+				var shouldBeChecked = layer.children.length > 0 && selectedItems === layer.children.length;
+				
+				// Only update if changed
+				if($toggle.attr('title') !== newTitle) {
+					$toggle.attr('title', newTitle);
+				}
+				if($toggle.prop('checked') !== shouldBeChecked) {
+					$toggle.prop('checked', shouldBeChecked);
+				}
+			}
+		});
+
+		jQuery('.sidebarLayersPanel .layerItemList .layerItemRow').each(function(){
+			var $row = jQuery(this);
+			var it = $row.data('paperItem');
+			if(!it) return;
+			var isSel = !!(it.selected || it.fullySelected);
+			var currentAttr = $row.attr('data-selected');
+			var newAttr = isSel ? 'true' : 'false';
+			// Only update if the state actually changed
+			if(currentAttr !== newAttr) {
+				$row.attr('data-selected', newAttr);
+			}
+		});
+	};
+	
+	var open = function() {
+		if (!isOpen) {
+			toggleSidebar();
+		}
+	};
+	
+	var close = function() {
+		if (isOpen) {
+			toggleSidebar();
+		}
+	};
+	
+	var updateToolProperties = function(toolName, options, components, changeCallback) {
+		var $panel = jQuery('.sidebarToolPropertiesPanel');
+		$panel.empty();
+		
+		// Create tool properties content
+		var $title = jQuery('<div class="toolPropertiesTitle">');
+		$title.html('<h4>' + toolName + '</h4>');
+		
+		var $resetButton = jQuery('<button class="toolOptionResetButton" title="Reset Tool Settings"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4,18c0,6.6274166,5.3725834,12,12,12s12-5.3725834,12-12-5.3725834-12-12-12h-6.2000008l3.6000004-3.5999999-1.3999996-1.4000001-6,6,6,6,1.3999996-1.3999996-3.6000004-3.6000004h6.2000008c5.5228472,0,10,4.4771528,10,10s-4.4771528,10-10,10-10-4.4771519-10-10h-2Z"/></svg></button>').click(function() {
+			if(confirm('Reset tool options to default?')) {
+				pg.tools.deleteLocalOptions(options.id);
+				pg.toolbar.switchTool(options.id, true);
+			}
+		});
+		$title.append($resetButton);
+		
+		var $options = jQuery('<div class="toolPropertiesOptions">');
+		
+		jQuery.each(components, function(key, comp) {
+			var $optionSection = jQuery('<div class="option-section" data-id="'+key+'">');
+			var $label = jQuery('<label for="'+key+'">'+comp.label+'</label>');
+			var $input;
+			var $button;
+			var $sectionTitle;
+			
+			if(comp.type == 'boolean') {
+				$input = jQuery('<input type="checkbox" name="'+key+'" id="'+key+'">');
+				if(options[key]) {
+					$input.attr('checked', true);
+				}
+
+			} else if(comp.type == 'int' || comp.type == 'float') {
+				var minAttr = '';
+				if(comp.min != undefined && comp.type == 'int') {
+					minAttr = ' min="'+parseInt(comp.min)+'"';
+				} else if(comp.min != undefined && comp.type == 'float') {
+					minAttr = ' min="'+parseFloat(comp.min)+'"';
+				}
+				$input = jQuery('<input type="number" data-type="'+comp.type+'" name="'+key+'" id="'+key+'" value="'+options[key]+'"'+minAttr+'>');
+				
+			} else if(comp.type == 'list') {
+				// Use scrollable list for fontFamily, regular select for others
+				if(key === 'fontFamily') {
+					// Create wrapper for search + listbox
+					var $wrapper = jQuery('<div class="font-list-wrapper">');
+					
+					// Create search bar
+					var $searchWrapper = jQuery('<div class="font-search-wrapper">');
+					var $searchIcon = jQuery('<span class="font-search-icon">').html(
+						'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+						'<path d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"/>' +
+						'</svg>'
+					);
+					var $searchInput = jQuery('<input type="text" class="font-search-input" placeholder="Search fonts...">');
+					var $clearButton = jQuery('<button type="button" class="font-search-clear" style="display: none;" title="Clear search">').html(
+						'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">' +
+						'<polygon points="17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16"/>' +
+						'</svg>'
+					);
+					$searchWrapper.append($searchIcon, $searchInput, $clearButton);
+					
+					// Create custom scrollable listbox (always visible)
+					var $container = jQuery('<div class="font-list-container" data-option-key="'+key+'" data-tool-id="'+options.id+'">');
+					
+					// Create no results message
+					var $noResults = jQuery('<div class="font-list-no-results" style="display: none;">No fonts found</div>');
+					
+					jQuery.each(comp.options, function(index, value) {
+						var $item = jQuery('<div class="font-list-item" data-value="'+value+'">'+value+'</div>');
+						if(value == options[key]) {
+							$item.addClass('selected');
+						}
+						$container.append($item);
+					});
+					
+					// Search functionality
+					$searchInput.on('input', function() {
+						var searchTerm = jQuery(this).val().toLowerCase();
+						if (searchTerm.length > 0) {
+							$clearButton.show();
+						} else {
+							$clearButton.hide();
+						}
+						
+						var visibleCount = 0;
+						$container.find('.font-list-item').each(function() {
+							var fontName = jQuery(this).attr('data-value').toLowerCase();
+							if (fontName.indexOf(searchTerm) !== -1) {
+								jQuery(this).show();
+								visibleCount++;
+							} else {
+								jQuery(this).hide();
+							}
+						});
+						
+						// Show/hide no results message
+						if (visibleCount === 0) {
+							$noResults.show();
+						} else {
+							$noResults.hide();
+						}
+					});
+					
+					$clearButton.on('click', function() {
+						$searchInput.val('').trigger('input');
+						$searchInput.focus();
+					});
+					
+					// Select item
+					$container.on('click', '.font-list-item', function(e) {
+						e.stopPropagation();
+						var value = jQuery(this).attr('data-value');
+						
+						// Update UI
+						$container.find('.font-list-item').removeClass('selected');
+						jQuery(this).addClass('selected');
+						
+						// Update options
+						var activeTool = pg.toolbar.getActiveTool();
+						if(activeTool && activeTool.options.id === options.id) {
+							activeTool.options[key] = value;
+							pg.tools.setLocalOptions(activeTool.options);
+							if(changeCallback) changeCallback();
+						}
+					});
+					
+					$wrapper.append($searchWrapper, $container, $noResults);
+					$input = $wrapper;
+					
+				} else {
+					// Regular select dropdown for other lists
+					$input = jQuery('<select data-type="'+comp.type+'" name="'+key+'" id="'+key+'">');
+					jQuery.each(comp.options, function(index, value) {
+						var $opt = jQuery('<option value="'+value+'">'+value+'</option>');
+						if(value == options[key]) {
+							$opt.attr('selected', true);
+						}
+						$input.append($opt);
+					});
+					if(comp.maxWidth) {
+						$input.css({'maxWidth': comp.maxWidth+'px'});
+					}
+				}
+				
+			} else if(comp.type == 'text') {
+				// Special handling for text tool input - needs specific ID
+				var inputId = (key === 'fontTextInput') ? 'textToolInput' : key;
+				$input = jQuery('<input type="text" data-type="'+comp.type+'" name="'+key+'" id="'+inputId+'" value="">');
+				
+			} else if(comp.type == 'segmented') {
+				// Create segmented control for alignment
+				var $segmentedControl = jQuery('<div class="segmented-control" data-option-key="'+key+'" data-tool-id="'+options.id+'">');
+				
+				// Inline SVG icons for text alignment
+				var alignmentIcons = {
+					'left': '<svg viewBox="0 0 32 32" width="24" height="24"><rect x="12" y="6" width="14" height="2" fill="currentColor"/><rect x="12" y="12" width="10" height="2" fill="currentColor"/><rect x="12" y="18" width="14" height="2" fill="currentColor"/><rect x="12" y="24" width="10" height="2" fill="currentColor"/><rect x="6" y="4" width="2" height="24" fill="currentColor"/></svg>',
+					'center': '<svg viewBox="0 0 32 32" width="24" height="24"><rect x="6" y="6" width="20" height="2" fill="currentColor"/><rect x="10" y="12" width="12" height="2" fill="currentColor"/><rect x="6" y="18" width="20" height="2" fill="currentColor"/><rect x="10" y="24" width="12" height="2" fill="currentColor"/></svg>',
+					'right': '<svg viewBox="0 0 32 32" width="24" height="24"><rect x="6" y="6" width="14" height="2" fill="currentColor"/><rect x="10" y="12" width="10" height="2" fill="currentColor"/><rect x="6" y="18" width="14" height="2" fill="currentColor"/><rect x="10" y="24" width="10" height="2" fill="currentColor"/><rect x="24" y="4" width="2" height="24" fill="currentColor"/></svg>',
+					'justify': '<svg viewBox="0 0 32 32" width="24" height="24"><rect x="6" y="6" width="20" height="2" fill="currentColor"/><rect x="6" y="12" width="20" height="2" fill="currentColor"/><rect x="6" y="18" width="20" height="2" fill="currentColor"/><rect x="6" y="24" width="20" height="2" fill="currentColor"/></svg>'
+				};
+				
+				jQuery.each(comp.options, function(index, value) {
+					var $button = jQuery('<button type="button" class="segment-button segment-icon-button" data-value="'+value+'" title="Align '+value+'">');
+					
+					// Add icon HTML
+					if(key === 'textAlign' && alignmentIcons[value]) {
+						$button.html(alignmentIcons[value]);
+					} else {
+						$button.text(value);
+					}
+					
+					$segmentedControl.append($button);
+				});
+				
+				// Set active state after all buttons are created
+				var currentValue = options[key];
+				$segmentedControl.find('button[data-value="'+currentValue+'"]').addClass('active');
+				
+				// Handle segmented control clicks
+				$segmentedControl.on('click', 'button', function(e) {
+					e.preventDefault();
+					var $btn = jQuery(this);
+					
+					// Only proceed if not already active
+					if($btn.hasClass('active')) {
+						return;
+					}
+					
+					var value = $btn.attr('data-value');
+					var key = $segmentedControl.attr('data-option-key');
+					var toolId = $segmentedControl.attr('data-tool-id');
+					
+					// Update active state - remove from all buttons in this control
+					$segmentedControl.find('button').removeClass('active');
+					$btn.addClass('active');
+					
+					// Get the current tool's options
+					var activeTool = pg.toolbar.getActiveTool();
+					if(!activeTool || activeTool.options.id !== toolId) return;
+					
+					var options = activeTool.options;
+					options[key] = value;
+					pg.tools.setLocalOptions(options);
+					
+					// Sync to all instances (both sidebar and floating panels)
+					jQuery('.sidebarToolPropertiesPanel .segmented-control[data-option-key="'+key+'"], .floatingPanel .segmented-control[data-option-key="'+key+'"]').each(function() {
+						jQuery(this).find('button').removeClass('active');
+						jQuery(this).find('button[data-value="'+value+'"]').addClass('active');
+					});
+					
+					if(changeCallback) changeCallback();
+				});
+				
+				// Add the segmented control directly to the option section
+				$optionSection.append($label);
+				$optionSection.append($segmentedControl);
+				$options.append($optionSection);
+				
+				// Skip the normal input handling below
+				$input = null;
+				$button = null;
+				
+			} else if(comp.type == 'button') {
+				var buttonContent = comp.label;
+				if(comp.icon) {
+					buttonContent = comp.icon + comp.label;
+				}
+				$button = jQuery('<button data-click="'+comp.click+'">'+buttonContent+'</button>');
+				if(comp.secondary) {
+					$button.addClass('secondary');
+				}
+				if(comp.checkDisabled) {
+					$button.attr('data-check-disabled', comp.checkDisabled);
+				}
+				
+			} else if(comp.type == 'title') {
+				$sectionTitle = jQuery('<h4>'+comp.text+'</h4>');
+				$optionSection.addClass('titleSection');
+			}
+			
+			if($input) {
+				// Store the key and options reference as data attributes for event delegation
+				// Skip for font-list-wrapper and font-list-container as they handle their own events
+				if(!$input.hasClass('font-list-wrapper') && !$input.hasClass('font-list-container')) {
+					$input.attr('data-option-key', key);
+					$input.attr('data-tool-id', options.id);
+				}
+			}
+			
+			if($button) {
+				$button.click(function() {
+					if(!jQuery(this).prop('disabled')) {
+						var func = jQuery(this).attr('data-click');
+						pg.helper.executeFunctionByName(func, window);
+					}
+				});
+			}
+			
+			if($sectionTitle) {
+				$optionSection.append($sectionTitle);
+			}
+			if($input) {
+				// For font-list-wrapper, add label separately
+				if($input.hasClass('font-list-wrapper') || $input.hasClass('font-list-container')) {
+					$optionSection.append($label);
+					$optionSection.append($input);
+				} else {
+					$optionSection.append($label, $input);
+				}
+			} else if($button) {
+				$optionSection.append($button);
+			}
+			$options.append($optionSection);
+		});
+		
+		// Use delegated event handlers so they work on cloned elements in floating panels
+		jQuery(document).off('keyup.toolProps blur.toolProps change.toolProps mousewheel.toolProps', '.sidebarToolPropertiesPanel input, .sidebarToolPropertiesPanel select, .floatingPanel input, .floatingPanel select');
+		jQuery(document).on('keyup.toolProps blur.toolProps change.toolProps mousewheel.toolProps', '.sidebarToolPropertiesPanel input, .sidebarToolPropertiesPanel select, .floatingPanel input, .floatingPanel select', function(e) {
+			var key = jQuery(this).attr('data-option-key');
+			var toolId = jQuery(this).attr('data-tool-id');
+			
+			if(!key || !toolId) return;
+			
+			// Get the current tool's options
+			var activeTool = pg.toolbar.getActiveTool();
+			if(!activeTool || activeTool.options.id !== toolId) return;
+			
+			var options = activeTool.options;
+			
+			var val;
+			if(e.target.type == 'checkbox') {
+				val = e.target.checked;
+
+			} else if(e.target.type == 'number') {
+				var dataType = e.target.dataset.type;
+
+				if(dataType == 'int') {
+					val = parseInt(e.target.value);
+					var min = parseInt(jQuery(this).attr('min'));
+
+					if(!jQuery.isNumeric(val)) {
+						val = min;
+					} else if(min != undefined && min > val) {
+						val = min;
+						jQuery(this).val(min);
+					}
+
+				} else if(dataType == 'float') {
+					val = parseFloat(e.target.value);
+					var min = parseFloat(jQuery(this).attr('min'));
+					if(!jQuery.isNumeric(val)) {
+						val = min;
+					} if(min != undefined && min > val) {
+						val = min;
+						jQuery(this).val(min);
+					}
+				}
+
+			} else if(e.target.type == 'select-one') {
+				val = e.target.value;
+			} else if(e.target.type == 'text') {
+				val = e.target.value;
+			}
+
+			// set values for tool and save in local options
+			options[key] = val;
+			pg.tools.setLocalOptions(options);
+
+			// Sync the value to all instances (sidebar and floating panels)
+			jQuery('.sidebarToolPropertiesPanel [name="'+key+'"], .floatingPanel [name="'+key+'"]').each(function() {
+				if(this !== e.target) {
+					if(this.type === 'checkbox') {
+						this.checked = val;
+					} else {
+						jQuery(this).val(val);
+					}
+				}
+			});
+
+			processInputRequirements();
+			if(changeCallback) changeCallback();
+		});
+		
+		// Remove the old inline event handler code
+		/*
+		if($input) {
+			// handle input changes by the user
+			$input.on('keyup blur change mousewheel', function(e) {
+					var val;
+					if(e.target.type == 'checkbox') {
+						val = e.target.checked;
+
+					} else if(e.target.type == 'number') {
+						var dataType = e.target.dataset.type;
+
+						if(dataType == 'int') {
+							val = parseInt(e.target.value);
+							var min = parseInt(jQuery(this).attr('min'));
+
+							if(!jQuery.isNumeric(val)) {
+								val = min;
+							} else if(min != undefined && min > val) {
+								val = min;
+								jQuery(this).val(min);
+							}
+
+						} else if(dataType == 'float') {
+							val = parseFloat(e.target.value);
+							var min = parseFloat(jQuery(this).attr('min'));
+							if(!jQuery.isNumeric(val)) {
+								val = min;
+							} if(min != undefined && min > val) {
+								val = min;
+								jQuery(this).val(min);
+							}
+						}
+
+					} else if(e.target.type == 'select-one') {
+						val = e.target.value;
+					}
+
+					// This code is now handled by delegated events above
+				});
+			}
+		*/
+		
+		$panel.append($title, $options);
+		
+		// Group buttons that should be in a row
+		groupButtonRows($options, components);
+		
+		// Update button disabled states
+		updateButtonStates();
+		
+		// Listen for selection changes to update button states
+		jQuery(document).off('SelectionChanged.toolProps').on('SelectionChanged.toolProps', function() {
+			updateButtonStates();
+		});
+		
+		processInputRequirements();
+		
+		// Attach keyboard handlers to newly created inputs
+		attachKeyboardHandlersToToolInputs();
+		
+		// shows/hides option-sections based on predefined requirements
+		function processInputRequirements() {
+			jQuery.each(components, function(reqid, comp){
+				if(comp.requirements) {
+					jQuery.each(comp.requirements, function(reqkey, req){
+						var $el = jQuery('.sidebarToolPropertiesPanel .option-section[data-id="'+reqid+'"]');
+						if(options[reqkey] == req) {
+							$el.removeClass('hidden');
+						} else {
+							$el.addClass('hidden');
+						}
+					});
+				}
+			});
+		}
+		
+		function updateButtonStates() {
+			jQuery('.sidebarToolPropertiesPanel button[data-check-disabled]').each(function() {
+				var checkFunc = jQuery(this).attr('data-check-disabled');
+				try {
+					var shouldDisable = pg.helper.executeFunctionByName(checkFunc, window);
+					jQuery(this).prop('disabled', shouldDisable);
+				} catch(e) {
+					// If function doesn't exist, don't disable
+				}
+			});
+		}
+	};
+	
+	var groupButtonRows = function($container, components) {
+		var buttonRowGroups = {};
+		var buttonGridGroups = {};
+		var currentRowGroup = null;
+		var currentGridGroup = null;
+		
+		// First pass: identify button row and grid groups
+		jQuery.each(components, function(key, comp) {
+			if(comp.type === 'button' && comp.buttonRow) {
+				if(!currentRowGroup) {
+					currentRowGroup = [];
+					buttonRowGroups[key] = currentRowGroup;
+				}
+				currentRowGroup.push(key);
+				currentGridGroup = null;
+			} else if(comp.type === 'button' && comp.buttonGrid) {
+				if(!currentGridGroup) {
+					currentGridGroup = [];
+					buttonGridGroups[key] = currentGridGroup;
+				}
+				currentGridGroup.push(key);
+				currentRowGroup = null;
+			} else {
+				currentRowGroup = null;
+				currentGridGroup = null;
+			}
+		});
+		
+		// Second pass: group the row buttons
+		jQuery.each(buttonRowGroups, function(firstKey, keys) {
+			if(keys.length > 1) {
+				var $firstSection = $container.find('.option-section[data-id="'+firstKey+'"]');
+				var $buttonRow = jQuery('<div class="button-row">');
+				
+				jQuery.each(keys, function(index, key) {
+					var $section = $container.find('.option-section[data-id="'+key+'"]');
+					var $button = $section.find('button').detach();
+					$buttonRow.append($button);
+					if(index > 0) {
+						$section.remove();
+					}
+				});
+				
+				$firstSection.empty().append($buttonRow);
+			}
+		});
+		
+		// Third pass: group the grid buttons
+		jQuery.each(buttonGridGroups, function(firstKey, keys) {
+			if(keys.length > 1) {
+				var $firstSection = $container.find('.option-section[data-id="'+firstKey+'"]');
+				var $buttonGrid = jQuery('<div class="button-grid">');
+				
+				jQuery.each(keys, function(index, key) {
+					var $section = $container.find('.option-section[data-id="'+key+'"]');
+					var $button = $section.find('button').detach();
+					$buttonGrid.append($button);
+					if(index > 0) {
+						$section.remove();
+					}
+				});
+				
+				$firstSection.empty().append($buttonGrid);
+			}
+		});
+	};
+	
+	var clearToolProperties = function() {
+		var $panel = jQuery('.sidebarToolPropertiesPanel');
+		$panel.empty();
+		
+		var $emptyState = jQuery('<div class="toolPropertiesEmpty">');
+		$emptyState.html('<p>Select a tool to view its properties</p>');
+		$panel.append($emptyState);
+	};
+	
+	var getSavedPanelOrder = function() {
+		try {
+			var saved = localStorage.getItem('pg.sidebar.panelOrder');
+			return saved ? JSON.parse(saved) : null;
+		} catch(e) {
+			return null;
+		}
+	};
+	
+	var savePanelOrder = function() {
+		var order = [];
+		jQuery('.sidebarSection').each(function() {
+			var sectionId = jQuery(this).attr('data-section');
+			if(sectionId) {
+				order.push(sectionId);
+			}
+		});
+		try {
+			localStorage.setItem('pg.sidebar.panelOrder', JSON.stringify(order));
+		} catch(e) {
+			console.warn('Could not save panel order:', e);
+		}
+	};
+	
+	var setupPanelReordering = function() {
+		// Make sidebar sections sortable
+		jQuery('.sidebarContent').sortable({
+			items: '.sidebarSection',
+			handle: '.sectionIcon',
+			axis: 'y',
+			tolerance: 'pointer',
+			cursor: 'move',
+			placeholder: 'sidebarSectionPlaceholder',
+			forcePlaceholderSize: true,
+			start: function(event, ui) {
+				ui.placeholder.height(ui.item.height());
+			},
+			stop: function(event, ui) {
+				savePanelOrder();
+			}
+		});
+	};
+	
+	// Swatches Management - Open Color Palette (Complete)
+	var currentSwatchView = 'grid'; // 'grid', 'compact', or 'list'
+	
+	var defaultSwatches = [
+		// Grayscale (10) - corrected order from light to dark
+		{ color: '#f8f9fa', name: 'gray 0' },
+		{ color: '#f1f3f5', name: 'gray 1' },
+		{ color: '#e9ecef', name: 'gray 2' },
+		{ color: '#dee2e6', name: 'gray 3' },
+		{ color: '#ced4da', name: 'gray 4' },
+		{ color: '#adb5bd', name: 'gray 5' },
+		{ color: '#868e96', name: 'gray 6' },
+		{ color: '#495057', name: 'gray 7' },
+		{ color: '#343a40', name: 'gray 8' },
+		{ color: '#212529', name: 'gray 9' },
+		// Red (10)
+		{ color: '#fff5f5', name: 'red 0' },
+		{ color: '#ffe3e3', name: 'red 1' },
+		{ color: '#ffc9c9', name: 'red 2' },
+		{ color: '#ffa8a8', name: 'red 3' },
+		{ color: '#ff8787', name: 'red 4' },
+		{ color: '#ff6b6b', name: 'red 5' },
+		{ color: '#fa5252', name: 'red 6' },
+		{ color: '#f03e3e', name: 'red 7' },
+		{ color: '#e03131', name: 'red 8' },
+		{ color: '#c92a2a', name: 'red 9' },
+		// Pink (10)
+		{ color: '#fff0f6', name: 'pink 0' },
+		{ color: '#ffdeeb', name: 'pink 1' },
+		{ color: '#fcc2d7', name: 'pink 2' },
+		{ color: '#faa2c1', name: 'pink 3' },
+		{ color: '#f783ac', name: 'pink 4' },
+		{ color: '#f06595', name: 'pink 5' },
+		{ color: '#e64980', name: 'pink 6' },
+		{ color: '#d6336c', name: 'pink 7' },
+		{ color: '#c2255c', name: 'pink 8' },
+		{ color: '#a61e4d', name: 'pink 9' },
+		// Grape (10)
+		{ color: '#f8f0fc', name: 'grape 0' },
+		{ color: '#f3d9fa', name: 'grape 1' },
+		{ color: '#eebefa', name: 'grape 2' },
+		{ color: '#e599f7', name: 'grape 3' },
+		{ color: '#da77f2', name: 'grape 4' },
+		{ color: '#cc5de8', name: 'grape 5' },
+		{ color: '#be4bdb', name: 'grape 6' },
+		{ color: '#ae3ec9', name: 'grape 7' },
+		{ color: '#9c36b5', name: 'grape 8' },
+		{ color: '#862e9c', name: 'grape 9' },
+		// Violet (10)
+		{ color: '#f3f0ff', name: 'violet 0' },
+		{ color: '#e5dbff', name: 'violet 1' },
+		{ color: '#d0bfff', name: 'violet 2' },
+		{ color: '#b197fc', name: 'violet 3' },
+		{ color: '#9775fa', name: 'violet 4' },
+		{ color: '#845ef7', name: 'violet 5' },
+		{ color: '#7950f2', name: 'violet 6' },
+		{ color: '#7048e8', name: 'violet 7' },
+		{ color: '#6741d9', name: 'violet 8' },
+		{ color: '#5f3dc4', name: 'violet 9' },
+		// Indigo (10)
+		{ color: '#edf2ff', name: 'indigo 0' },
+		{ color: '#dbe4ff', name: 'indigo 1' },
+		{ color: '#bac8ff', name: 'indigo 2' },
+		{ color: '#91a7ff', name: 'indigo 3' },
+		{ color: '#748ffc', name: 'indigo 4' },
+		{ color: '#5c7cfa', name: 'indigo 5' },
+		{ color: '#4c6ef5', name: 'indigo 6' },
+		{ color: '#4263eb', name: 'indigo 7' },
+		{ color: '#3b5bdb', name: 'indigo 8' },
+		{ color: '#364fc7', name: 'indigo 9' },
+		// Blue (10)
+		{ color: '#e7f5ff', name: 'blue 0' },
+		{ color: '#d0ebff', name: 'blue 1' },
+		{ color: '#a5d8ff', name: 'blue 2' },
+		{ color: '#74c0fc', name: 'blue 3' },
+		{ color: '#4dabf7', name: 'blue 4' },
+		{ color: '#339af0', name: 'blue 5' },
+		{ color: '#228be6', name: 'blue 6' },
+		{ color: '#1c7ed6', name: 'blue 7' },
+		{ color: '#1971c2', name: 'blue 8' },
+		{ color: '#1864ab', name: 'blue 9' },
+		// Cyan (10)
+		{ color: '#e3fafc', name: 'cyan 0' },
+		{ color: '#c5f6fa', name: 'cyan 1' },
+		{ color: '#99e9f2', name: 'cyan 2' },
+		{ color: '#66d9e8', name: 'cyan 3' },
+		{ color: '#3bc9db', name: 'cyan 4' },
+		{ color: '#22b8cf', name: 'cyan 5' },
+		{ color: '#15aabf', name: 'cyan 6' },
+		{ color: '#1098ad', name: 'cyan 7' },
+		{ color: '#0c8599', name: 'cyan 8' },
+		{ color: '#0b7285', name: 'cyan 9' },
+		// Teal (10)
+		{ color: '#e6fcf5', name: 'teal 0' },
+		{ color: '#c3fae8', name: 'teal 1' },
+		{ color: '#96f2d7', name: 'teal 2' },
+		{ color: '#63e6be', name: 'teal 3' },
+		{ color: '#38d9a9', name: 'teal 4' },
+		{ color: '#20c997', name: 'teal 5' },
+		{ color: '#12b886', name: 'teal 6' },
+		{ color: '#0ca678', name: 'teal 7' },
+		{ color: '#099268', name: 'teal 8' },
+		{ color: '#087f5b', name: 'teal 9' },
+		// Green (10)
+		{ color: '#ebfbee', name: 'green 0' },
+		{ color: '#d3f9d8', name: 'green 1' },
+		{ color: '#b2f2bb', name: 'green 2' },
+		{ color: '#8ce99a', name: 'green 3' },
+		{ color: '#69db7c', name: 'green 4' },
+		{ color: '#51cf66', name: 'green 5' },
+		{ color: '#40c057', name: 'green 6' },
+		{ color: '#37b24d', name: 'green 7' },
+		{ color: '#2f9e44', name: 'green 8' },
+		{ color: '#2b8a3e', name: 'green 9' },
+		// Lime (10)
+		{ color: '#f4fce3', name: 'lime 0' },
+		{ color: '#e9fac8', name: 'lime 1' },
+		{ color: '#d8f5a2', name: 'lime 2' },
+		{ color: '#c0eb75', name: 'lime 3' },
+		{ color: '#a9e34b', name: 'lime 4' },
+		{ color: '#94d82d', name: 'lime 5' },
+		{ color: '#82c91e', name: 'lime 6' },
+		{ color: '#74b816', name: 'lime 7' },
+		{ color: '#66a80f', name: 'lime 8' },
+		{ color: '#5c940d', name: 'lime 9' },
+		// Yellow (10)
+		{ color: '#fff9db', name: 'yellow 0' },
+		{ color: '#fff3bf', name: 'yellow 1' },
+		{ color: '#ffec99', name: 'yellow 2' },
+		{ color: '#ffe066', name: 'yellow 3' },
+		{ color: '#ffd43b', name: 'yellow 4' },
+		{ color: '#fcc419', name: 'yellow 5' },
+		{ color: '#fab005', name: 'yellow 6' },
+		{ color: '#f59f00', name: 'yellow 7' },
+		{ color: '#f08c00', name: 'yellow 8' },
+		{ color: '#e67700', name: 'yellow 9' },
+		// Orange (10)
+		{ color: '#fff4e6', name: 'orange 0' },
+		{ color: '#ffe8cc', name: 'orange 1' },
+		{ color: '#ffd8a8', name: 'orange 2' },
+		{ color: '#ffc078', name: 'orange 3' },
+		{ color: '#ffa94d', name: 'orange 4' },
+		{ color: '#ff922b', name: 'orange 5' },
+		{ color: '#fd7e14', name: 'orange 6' },
+		{ color: '#f76707', name: 'orange 7' },
+		{ color: '#e8590c', name: 'orange 8' },
+		{ color: '#d9480f', name: 'orange 9' }
+	];
+	
+	var loadSwatches = function() {
+		var swatches = getSavedSwatches();
+		var savedView = getSavedSwatchView();
+		currentSwatchView = savedView;
+		
+		// Update active button
+		jQuery('.swatchesViewSwitcher button').removeClass('active');
+		jQuery('.swatchesViewSwitcher button[data-view="'+savedView+'"]').addClass('active');
+		
+		// Show/hide search bar based on initial view
+		var $searchWrapper = jQuery('.swatchesSearchWrapper');
+		if (savedView === 'list') {
+			$searchWrapper.show();
+		} else {
+			$searchWrapper.hide();
+		}
+		
+		renderSwatches(swatches);
+	};
+	
+	var getSavedSwatchView = function() {
+		try {
+			var saved = localStorage.getItem('pg.swatches.view');
+			return saved || 'grid';
+		} catch(e) {
+			return 'grid';
+		}
+	};
+	
+	var setSwatchesView = function(view) {
+		currentSwatchView = view;
+		try {
+			localStorage.setItem('pg.swatches.view', view);
+		} catch(e) {
+			console.warn('Could not save view preference:', e);
+		}
+		
+		// Show/hide search bar based on view (only show in list view)
+		var $searchWrapper = jQuery('.swatchesSearchWrapper');
+		if (view === 'list') {
+			$searchWrapper.show();
+		} else {
+			$searchWrapper.hide();
+			// Clear search when hiding
+			jQuery('.swatchesSearchInput').val('');
+			jQuery('.swatchesSearchClear').hide();
+		}
+		
+		var swatches = getSavedSwatches();
+		renderSwatches(swatches);
+	};
+	
+	var getSavedSwatches = function() {
+		try {
+			var saved = localStorage.getItem('pg.swatches');
+			var version = localStorage.getItem('pg.swatches.version');
+			
+			// Force update to new Open Color palette with names if old version or no version
+			if (!version || version !== '4.0') {
+				localStorage.setItem('pg.swatches.version', '4.0');
+				saveSwatches(defaultSwatches);
+				return defaultSwatches;
+			}
+			
+			return saved ? JSON.parse(saved) : defaultSwatches;
+		} catch(e) {
+			return defaultSwatches;
+		}
+	};
+	
+	var saveSwatches = function(swatches) {
+		try {
+			localStorage.setItem('pg.swatches', JSON.stringify(swatches));
+		} catch(e) {
+			console.warn('Could not save swatches:', e);
+		}
+	};
+	
+	var renderSwatches = function(swatches) {
+		var $grid = jQuery('.swatchesGrid');
+		$grid.empty();
+		
+		// Update grid class based on view
+		$grid.removeClass('view-grid view-compact view-list');
+		$grid.addClass('view-' + currentSwatchView);
+		
+		jQuery.each(swatches, function(index, swatch) {
+			// Support both old format (string) and new format (object)
+			var color = typeof swatch === 'string' ? swatch : swatch.color;
+			var name = typeof swatch === 'object' && swatch.name ? swatch.name : null;
+			
+			var $swatch = jQuery('<div class="swatchItem" data-index="'+index+'" data-color="'+color+'">');
+			var $colorBox = jQuery('<div class="swatchColor">').css('background-color', color);
+			var $actions = jQuery('<div class="swatchActions">');
+			
+			var $deleteBtn = jQuery('<button class="swatchDeleteBtn">').html(
+				currentSwatchView === 'list' 
+					? '<svg viewBox="0 0 32 32" width="16" height="16"><path fill="currentColor" d="M17.4141 16 24 9.4141 22.5859 8 16 14.5859 9.4143 8 8 9.4141 14.5859 16 8 22.5859 9.4143 24 16 17.4141 22.5859 24 24 22.5859 17.4141 16z"/></svg>'
+					: '<svg viewBox="0 0 32 32" width="14" height="14"><path fill="currentColor" d="M12 12h2v12h-2zm6 0h2v12h-2z"/><path fill="currentColor" d="M4 6v2h2v20a2 2 0 002 2h16a2 2 0 002-2V8h2V6zm4 22V8h16v20zm4-26h8v2h-8z"/></svg>'
+			);
+			
+			$deleteBtn.attr('title', currentSwatchView === 'list' ? 'Delete' : 'Cmd/Ctrl + Hover to Delete');
+			
+			$actions.append($deleteBtn);
+			
+			// Add color name for list view
+			if (currentSwatchView === 'list') {
+				var displayName = name || color.toUpperCase();
+				var $colorName = jQuery('<div class="swatchName" contenteditable="false">').text(displayName);
+				$colorName.attr('data-original-name', displayName);
+				$swatch.append($colorBox, $colorName, $actions);
+				
+				// Double-click to rename
+				$colorName.on('dblclick', function(e) {
+					e.stopPropagation();
+					var $this = jQuery(this);
+					$this.attr('contenteditable', 'true');
+					$this.focus();
+					
+					// Select all text
+					var range = document.createRange();
+					range.selectNodeContents($this[0]);
+					var sel = window.getSelection();
+					sel.removeAllRanges();
+					sel.addRange(range);
+				});
+				
+				// Save on blur or Enter key
+				$colorName.on('blur keydown', function(e) {
+					if (e.type === 'blur' || (e.type === 'keydown' && e.key === 'Enter')) {
+						if (e.key === 'Enter') {
+							e.preventDefault();
+						}
+						
+						var $this = jQuery(this);
+						var newName = $this.text().trim();
+						
+						// Revert if empty
+						if (!newName) {
+							newName = $this.attr('data-original-name');
+							$this.text(newName);
+						}
+						
+						$this.attr('contenteditable', 'false');
+						$this.blur();
+						
+						// Save the new name
+						var savedSwatches = getSavedSwatches();
+						var swatchData = savedSwatches[index];
+						
+						// Convert to object format if needed
+						if (typeof swatchData === 'string') {
+							swatchData = { color: swatchData };
+						}
+						
+						// Update name (or remove if it's the same as color)
+						if (newName.toUpperCase() === color.toUpperCase()) {
+							delete swatchData.name;
+						} else {
+							swatchData.name = newName;
+						}
+						
+						savedSwatches[index] = swatchData;
+						saveSwatches(savedSwatches);
+						$this.attr('data-original-name', newName);
+					}
+					
+					// Cancel on Escape
+					if (e.type === 'keydown' && e.key === 'Escape') {
+						var $this = jQuery(this);
+						$this.text($this.attr('data-original-name'));
+						$this.attr('contenteditable', 'false');
+						$this.blur();
+					}
+				});
+			} else {
+				$swatch.append($colorBox, $actions);
+			}
+			
+			$grid.append($swatch);
+			
+			// Show delete button only when Cmd/Ctrl is pressed and hovering
+			$swatch.on('mouseenter', function(e) {
+				if (e.metaKey || e.ctrlKey) {
+					$swatch.addClass('show-delete');
+				}
+			});
+			
+			$swatch.on('mouseleave', function() {
+				$swatch.removeClass('show-delete');
+			});
+			
+			// Click to apply color
+			$colorBox.click(function(e) {
+				if (e.detail === 1) {
+					// Single click - apply color
+					applySwatchColor(color);
+				}
+			});
+			
+			// Double-click to edit color with color picker
+			$colorBox.dblclick(function(e) {
+				e.stopPropagation();
+				editSwatchWithPicker(index, color, $swatch);
+			});
+			
+			// Delete swatch
+			$deleteBtn.click(function(e) {
+				e.stopPropagation();
+				deleteSwatch(index);
+			});
+		});
+		
+		// Global key event handlers for showing/hiding delete buttons
+		jQuery(document).off('keydown.swatches keyup.swatches');
+		
+		jQuery(document).on('keydown.swatches', function(e) {
+			if (e.metaKey || e.ctrlKey) {
+				jQuery('.swatchItem:hover').addClass('show-delete');
+			}
+		});
+		
+		jQuery(document).on('keyup.swatches', function(e) {
+			if (!e.metaKey && !e.ctrlKey) {
+				jQuery('.swatchItem').removeClass('show-delete');
+			}
+		});
+		
+		// Make swatches sortable for reordering
+		if ($grid.hasClass('ui-sortable')) {
+			$grid.sortable('destroy');
+		}
+		
+		$grid.sortable({
+			items: '.swatchItem',
+			tolerance: 'pointer',
+			cursor: 'move',
+			placeholder: 'ui-sortable-placeholder',
+			forcePlaceholderSize: true,
+			stop: function() {
+				var newOrder = [];
+				jQuery('.swatchItem').each(function() {
+					var index = jQuery(this).attr('data-index');
+					newOrder.push(swatches[index]);
+				});
+				saveSwatches(newOrder);
+				loadSwatches();
+			}
+		});
+	};
+	
+	var addCurrentColorToSwatches = function() {
+		var fillColor = jQuery('#fillColorInput').spectrum('get');
+		var color = fillColor ? fillColor.toHexString() : '#000000';
+		
+		var swatches = getSavedSwatches();
+		
+		// Check if color already exists (support both string and object format)
+		var colorExists = swatches.some(function(swatch) {
+			var swatchColor = typeof swatch === 'string' ? swatch : swatch.color;
+			return swatchColor.toUpperCase() === color.toUpperCase();
+		});
+		
+		if (!colorExists) {
+			swatches.push(color);
+			saveSwatches(swatches);
+			renderSwatches(swatches);
+		}
+	};
+	
+	var applySwatchColor = function(color) {
+		// Apply to fill color
+		jQuery('#fillColorInput').spectrum('set', color);
+		jQuery('#fillColorInput').trigger('change');
+	};
+	
+	var editSwatchWithPicker = function(index, currentColor, $swatch) {
+		// Create a temporary color input for the picker
+		var $tempInput = jQuery('<input type="text" class="temp-swatch-picker">');
+		$tempInput.css({
+			position: 'absolute',
+			opacity: 0,
+			pointerEvents: 'none'
+		});
+		jQuery('body').append($tempInput);
+		
+		// Initialize spectrum color picker
+		$tempInput.spectrum({
+			color: currentColor,
+			showInput: true,
+			showInitial: true,
+			showAlpha: false,
+			preferredFormat: 'hex',
+			showButtons: true,
+			cancelText: 'Cancel',
+			chooseText: 'Save',
+			move: function(color) {
+				// Live preview
+				$swatch.find('.swatchColor').css('background-color', color.toHexString());
+			},
+			change: function(color) {
+				// Save the new color
+				var newColor = color.toHexString();
+				var swatches = getSavedSwatches();
+				var swatchData = swatches[index];
+				
+				// Preserve name if it exists
+				if (typeof swatchData === 'object' && swatchData.name) {
+					swatches[index] = { color: newColor, name: swatchData.name };
+				} else {
+					swatches[index] = newColor;
+				}
+				
+				saveSwatches(swatches);
+				renderSwatches(swatches);
+				$tempInput.spectrum('destroy');
+				$tempInput.remove();
+			},
+			hide: function() {
+				// Restore original color if cancelled
+				$swatch.find('.swatchColor').css('background-color', currentColor);
+				$tempInput.spectrum('destroy');
+				$tempInput.remove();
+			}
+		});
+		
+		// Show the picker
+		$tempInput.spectrum('show');
+	};
+	
+	var deleteSwatch = function(index) {
+		if (confirm('Delete this swatch?')) {
+			var swatches = getSavedSwatches();
+			swatches.splice(index, 1);
+			saveSwatches(swatches);
+			renderSwatches(swatches);
+		}
+	};
+	
+	var resetSwatchesToDefaults = function() {
+		if (confirm('Reset all swatches to default Open Color palette? This will remove any custom swatches you have added.')) {
+			saveSwatches(defaultSwatches);
+			renderSwatches(defaultSwatches);
+		}
+	};
+	
+	var filterSwatches = function(searchTerm) {
+		var $noResultsMsg = jQuery('.swatchesNoResults');
+		
+		if (!searchTerm || searchTerm.trim() === '') {
+			// Show all swatches
+			jQuery('.swatchItem').show();
+			$noResultsMsg.hide();
+			return;
+		}
+		
+		var lowerSearchTerm = searchTerm.toLowerCase();
+		var visibleCount = 0;
+		
+		jQuery('.swatchItem').each(function() {
+			var $swatch = jQuery(this);
+			var color = $swatch.attr('data-color').toLowerCase();
+			var $nameEl = $swatch.find('.swatchName');
+			var name = $nameEl.length ? $nameEl.text().toLowerCase() : '';
+			
+			// Search in both color hex and name
+			if (color.indexOf(lowerSearchTerm) !== -1 || name.indexOf(lowerSearchTerm) !== -1) {
+				$swatch.show();
+				visibleCount++;
+			} else {
+				$swatch.hide();
+			}
+		});
+		
+		// Show/hide no results message
+		if (visibleCount === 0) {
+			$noResultsMsg.show();
+		} else {
+			$noResultsMsg.hide();
+		}
+	};
+	
+	var getActiveBrushPreset = function() {
+		var $activeItem = jQuery('.brushItem.active');
+		
+		// If no brush is selected, default to Charcoal
+		if($activeItem.length === 0) {
+			// Activate Charcoal brush
+			jQuery('.brushItem[data-brush-id="charcoal"]').addClass('active');
+			$activeItem = jQuery('.brushItem.active');
+		}
+		
+		var brushId = $activeItem.attr('data-brush-id');
+		
+		// Return the brush data (alphabetically sorted)
+		var defaultBrushes = [
+			{
+				id: 'dither',
+				name: 'Bitmap Dither',
+				type: 'ditherbrush',
+				pixelSize: 6,
+				threshold: 0.5,
+				spread: 50,
+				pattern: 0
+			},
+			{
+				id: 'blend',
+				name: 'Blend',
+				type: 'circlebrush',
+				threshold: 50,
+				circleSize: 20,
+				gap: 3,
+				useGradient: true,
+				useStroke: false,
+				strokeMin: 0.5,
+				strokeMax: 3,
+				speedRadius: false
+			},
+			{
+				id: 'charcoal',
+				name: 'Charcoal',
+				type: 'stipplebrush',
+				density: 20,
+				minSize: 0.5,
+				maxSize: 3,
+				spread: 15
+			},
+			{
+				id: 'circuit',
+				name: 'Circuit',
+				type: 'circuitbrush',
+				nodeSize: 6,
+				lineWidth: 2,
+				complexity: 3
+			},
+			{
+				id: 'ink',
+				name: 'Ink Splatter',
+				type: 'inkbrush',
+				splats: 5,
+				size: 20,
+				chaos: 0.7
+			},
+			{
+				id: 'particles',
+				name: 'Particles',
+				type: 'particlebrush',
+				particleSize: 3,
+				spawnRate: 5,
+				maxSpeed: 5,
+				friction: 0.95,
+				lifetime: 30,
+				minOpacity: 0,
+				maxOpacity: 1
+			},
+			{
+				id: 'pixel',
+				name: 'Pixel Brush',
+				type: 'pixelbrush',
+				pixelSize: 8,
+				pixelShape: 'square'
+			},
+			{
+				id: 'scratchy',
+				name: 'Scratchy',
+				type: 'scratchybrush',
+				scratches: 20,
+				length: 25,
+				spread: 30,
+				thickness: 1
+			},
+			{
+				id: 'scribble',
+				name: 'Scribble',
+				type: 'scribblebrush',
+				intensity: 20,
+				size: 30,
+				speed: 5,
+				thickness: 2
+			}
+		];
+		
+		return defaultBrushes.find(function(b) { return b.id === brushId; });
+	};
+	
+	var activateBrushPreset = function(brushId) {
+		// Find and click the brush item
+		var $brushItem = jQuery('.brushItem[data-brush-id="' + brushId + '"]');
+		if($brushItem.length > 0) {
+			$brushItem.click();
+		}
+	};
+	
+	var savePanelStates = function() {
+		var panelStates = {};
+		jQuery('.sidebarSection').each(function() {
+			var $section = jQuery(this);
+			var sectionId = $section.attr('data-section');
+			if(sectionId) {
+				panelStates[sectionId] = $section.hasClass('collapsed');
+			}
+		});
+		localStorage.setItem('sidebarPanelStates', JSON.stringify(panelStates));
+	};
+	
+	var restorePanelStates = function() {
+		try {
+			var savedStates = localStorage.getItem('sidebarPanelStates');
+			if(savedStates) {
+				var panelStates = JSON.parse(savedStates);
+				jQuery('.sidebarSection').each(function() {
+					var $section = jQuery(this);
+					var sectionId = $section.attr('data-section');
+					if(sectionId && panelStates.hasOwnProperty(sectionId)) {
+						if(panelStates[sectionId]) {
+							$section.addClass('collapsed');
+						} else {
+							$section.removeClass('collapsed');
+						}
+					}
+				});
+			}
+		} catch(e) {
+			console.warn('Failed to restore panel states:', e);
+		}
+	};
+	
+	var resetPanelStates = function() {
+		// Remove saved states
+		localStorage.removeItem('sidebarPanelStates');
+		// Expand all panels
+		jQuery('.sidebarSection').removeClass('collapsed');
+	};
+	
+	return {
+		init: init,
+		toggle: toggleSidebar,
+		open: open,
+		close: close,
+		updateLayers: updateLayers,
+		updateToolProperties: updateToolProperties,
+		clearToolProperties: clearToolProperties,
+		setupPanelReordering: setupPanelReordering,
+		loadSwatches: loadSwatches,
+		getActiveBrushPreset: getActiveBrushPreset,
+		activateBrushPreset: activateBrushPreset,
+		resetPanelStates: resetPanelStates
+	};
+	
+}();

@@ -1,0 +1,604 @@
+/* ===== MODERN COLOR PICKER - Based on colorpicker.dev ===== */
+
+/* Color Picker Popup Container */
+.modern-colorpicker-popup {
+	position: absolute;
+	background-color: var(--bg-primary);
+	border: 1px solid var(--border-medium);
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	padding: 12px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	z-index: 9999995;
+	display: none;
+}
+
+.modern-colorpicker-popup.sp-active {
+	display: block;
+}
+
+/* Drag handle */
+.colorpicker-drag-handle {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 8px;
+	margin-left: auto;
+	cursor: move;
+	border-radius: 6px;
+	opacity: 1;
+	transition: all 0.2s ease;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+.colorpicker-drag-handle:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.colorpicker-drag-handle::before {
+	content: '';
+	width: 16px;
+	height: 16px;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="10" y="6" width="4" height="4" fill="%23868e96"/><rect x="18" y="6" width="4" height="4" fill="%23868e96"/><rect x="10" y="14" width="4" height="4" fill="%23868e96"/><rect x="18" y="14" width="4" height="4" fill="%23868e96"/><rect x="10" y="22" width="4" height="4" fill="%23868e96"/><rect x="18" y="22" width="4" height="4" fill="%23868e96"/></svg>');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px;
+	opacity: 0.7;
+}
+
+/* Clear color button */
+.colorpicker-clear-btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 8px;
+	margin-right: 4px;
+	cursor: pointer;
+	border-radius: 6px;
+	opacity: 1;
+	transition: all 0.2s ease;
+	background-color: transparent;
+	border: 1px solid transparent;
+	width: auto;
+	height: auto;
+}
+
+.colorpicker-clear-btn:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.colorpicker-clear-btn::before {
+	content: '';
+	width: 16px;
+	height: 16px;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30,3.4142l-1.4142-1.4142-3.4317,3.4317c-2.4572-2.1313-5.6536-3.4317-9.1541-3.4317-7.7197,0-14,6.2803-14,14,0,3.5005,1.3004,6.6969,3.4317,9.1541l-3.4317,3.4317,1.4142,1.4142,3.4317-3.4317c2.4572,2.1313,5.6536,3.4317,9.1541,3.4317,7.7197,0,14-6.2803,14-14,0-3.5005-1.3004-6.6969-3.4317-9.1541,0,0,3.4317-3.4317,3.4317-3.4317ZM4,16c0-6.6167,5.3833-12,12-12,2.9492,0,5.649,1.0739,7.7406,2.8452L6.8452,23.7406c-1.7713-2.0916-2.8452-4.7914-2.8452-7.7406ZM28,16c0,6.6172-5.3828,12-12,12-2.9491,0-5.6489-1.074-7.7405-2.8453L25.1547,8.2595c1.7713,2.0916,2.8453,4.7914,2.8453,7.7405Z" fill="%23868e96"/></svg>');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px;
+	opacity: 0.7;
+}
+
+.modern-colorpicker-popup.dragging {
+	transition: none;
+	user-select: none;
+}
+
+.modern-colorpicker-popup.dragging .colorpicker-drag-handle {
+	opacity: 1;
+}
+
+/* Embedded Color Picker */
+.colorpicker-embed {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.colorpicker-content {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+/* Slider Choices (Segmented Button Control) */
+.slider-choices {
+	position: relative;
+	display: flex;
+	gap: 2px;
+	margin: 0 0 16px 0;
+	padding: 2px;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: 8px;
+}
+
+.slider-choices .mode-btn {
+	flex: 1;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	background: transparent;
+	border: none;
+	border-radius: 6px;
+	padding: 6px 4px;
+	text-align: center;
+	transition: all 0.15s ease;
+	cursor: pointer;
+	color: var(--text-secondary);
+	user-select: none;
+	white-space: nowrap;
+}
+
+.slider-choices .mode-btn:hover {
+	background-color: var(--bg-hover);
+	color: var(--text-primary);
+}
+
+.slider-choices .mode-btn.active {
+	background-color: var(--accent-primary);
+	color: white;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.slider-choices .mode-btn:focus {
+	outline: 2px solid var(--accent-primary);
+	outline-offset: 2px;
+}
+
+/* Main Layout */
+.main {
+	display: grid;
+	gap: 12px;
+	grid-auto-columns: 125px 1fr;
+	grid-auto-flow: column;
+}
+
+/* Color Swatch */
+.color-swatch {
+	position: relative;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	height: 136px;
+	margin-bottom: 8px;
+	border-radius: 12px;
+	text-align: center;
+	background-color: currentColor;
+}
+
+/* Show checkerboard only when there's transparency */
+.color-swatch.has-transparency {
+	background-image:
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)),
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+	background-size: 20px 20px;
+	background-position: 0px 0px, 10px 10px;
+}
+
+/* Color Code Input */
+.modern-colorpicker-popup .color-code {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.modern-colorpicker-popup .color-code input {
+	width: 100%;
+	text-align: center;
+	padding: 8px 0.6em;
+	font-size: 1em;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	color: var(--text-primary);
+	border-radius: 5px;
+	transition: all 0.15s ease;
+}
+
+.modern-colorpicker-popup .color-code input:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.modern-colorpicker-popup .color-code input:active {
+	background-color: var(--bg-active);
+	transform: scale(0.99);
+}
+
+.modern-colorpicker-popup .color-code input:focus {
+	outline: 1px solid var(--accent-primary);
+	outline-offset: 0px;
+	border-color: var(--accent-primary);
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.15);
+	background-color: var(--bg-primary);
+}
+
+button.copy-code {
+	position: absolute;
+	right: -1px;
+	top: 0;
+	bottom: 0;
+	background: transparent;
+	padding: 0 10px;
+	font-size: 1.6em;
+	border: transparent;
+	cursor: pointer;
+}
+
+button.copy-code:focus {
+	outline: 1px solid var(--accent-primary);
+	border-radius: 5px;
+	outline-offset: 0px;
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.15);
+}
+
+button.copy-code svg {
+	opacity: 0.5;
+	fill: currentColor;
+	transition: opacity 0.2s;
+	transform: translateZ(0);
+	display: block;
+	position: relative;
+}
+
+button.copy-code:hover svg {
+	opacity: 1;
+}
+
+/* Copy icon states */
+button.copy-code .copy-success-icon {
+	display: none;
+}
+
+button.copy-code.copied .copy-icon {
+	display: none;
+}
+
+button.copy-code.copied .copy-success-icon {
+	display: block;
+	opacity: 1;
+	fill: var(--accent-primary);
+}
+
+/* Color Pickers Container */
+.color-pickers {
+	display: grid;
+	gap: 25px;
+	position: relative;
+	z-index: 10;
+}
+
+/* Individual Color Picker */
+.color-picker {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-columns: minmax(100px, 500px);
+	gap: 8px;
+}
+
+/* Color Slider */
+.modern-colorpicker-popup .color-slider {
+	display: grid;
+	grid-auto-columns: minmax(180px, 500px) 65px;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 8px;
+	max-width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+/* Slider Track */
+.modern-colorpicker-popup .slider-track {
+	height: 20px;
+	border-radius: 15px;
+	position: relative;
+	background: transparent;
+	pointer-events: none;
+}
+
+/* Alpha slider gets checkerboard pattern */
+.modern-colorpicker-popup .color-slider:has(input[name*="alpha"]) .slider-track {
+	background-image:
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)),
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+	background-size: 20px 20px;
+	background-position: 0px 0px, 10px 10px;
+}
+
+body.dark-theme .modern-colorpicker-popup .color-slider:has(input[name*="alpha"]) .slider-track {
+	background-image:
+		linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)),
+		linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
+	background-size: 20px 20px;
+	background-position: 0px 0px, 10px 10px;
+}
+
+.modern-colorpicker-popup .slider-track:after {
+	content: "";
+	z-index: -1;
+	background: rgba(0, 0, 0, 0.05);
+	position: absolute;
+	inset: -3px -4px;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px inset, rgba(255, 255, 255, 0.2) 0 1px;
+}
+
+body.dark-theme .modern-colorpicker-popup .slider-track:after {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/* Range Input */
+.modern-colorpicker-popup input[type="range"] {
+	height: 20px;
+	-webkit-appearance: none;
+	appearance: none;
+	box-shadow: 0 1px 1px inset rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.6);
+	border-radius: 8px;
+	width: 100%;
+	margin: 0;
+	touch-action: pan-y pinch-zoom;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+	pointer-events: auto !important;
+	cursor: ew-resize;
+	position: relative;
+	z-index: 5;
+}
+
+.modern-colorpicker-popup input[type="range"]:focus {
+	outline: none;
+}
+
+.modern-colorpicker-popup input[type="range"]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	appearance: none;
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	cursor: ew-resize;
+}
+
+.modern-colorpicker-popup input[type="range"]::-moz-range-track {
+	-webkit-appearance: none;
+	appearance: none;
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	cursor: ew-resize;
+}
+
+.modern-colorpicker-popup input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 20px;
+	width: 1px;
+	opacity: 0.01;
+	cursor: ew-resize;
+	position: relative;
+	z-index: 20;
+}
+
+.modern-colorpicker-popup input[type="range"]::-moz-range-thumb {
+	-moz-appearance: none;
+	height: 20px;
+	width: 1px;
+	opacity: 0.01;
+	cursor: ew-resize;
+	position: relative;
+	z-index: 20;
+	border: none;
+	background: transparent;
+}
+
+/* Custom Slider Handle */
+.modern-colorpicker-popup .custom-slider-handle {
+	position: absolute;
+	top: 50%;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	z-index: 10;
+	cursor: ew-resize;
+	transition: transform 0.2s;
+}
+
+.modern-colorpicker-popup .custom-slider-handle:after {
+	content: "";
+	position: absolute;
+	height: 20px;
+	top: -10px;
+	width: 8px;
+	left: -4px;
+	border-radius: 4px;
+	scale: 1.3;
+	transition: scale 0.2s, box-shadow 0.2s, border-radius 0.2s, width 0.2s, left 0.2s;
+	box-shadow:
+		0 0 0 3px rgba(255, 255, 255, 0.3) inset,
+		0 0 0 3px rgba(255, 255, 255, 1) inset,
+		0 0 0 4px rgb(0 0 0 / 0.5) inset,
+		0 0 0 1px rgb(0 0 0 / 0.5),
+		0 0 0 1px rgb(0 0 0 / 0.3);
+}
+
+.modern-colorpicker-popup input[type="range"]:hover+.custom-slider-handle:after,
+.modern-colorpicker-popup input[type="range"]:focus+.custom-slider-handle:after,
+.modern-colorpicker-popup input[type="range"]:active+.custom-slider-handle:after {
+	width: 20px;
+	height: 20px;
+	top: -10px;
+	left: -10px;
+	border-radius: 50%;
+	scale: 1.1;
+}
+
+.modern-colorpicker-popup input[type="range"]:hover+.custom-slider-handle:after {
+	box-shadow:
+		0 0 0 3px rgba(255, 255, 255, 0.1) inset,
+		0 0 0 3px rgba(255, 255, 255, 1) inset,
+		0 0 0 4px rgb(0 0 0 / 0.5) inset,
+		0 0 0 1px rgb(0 0 0 / 0.5);
+}
+
+.modern-colorpicker-popup input[type="range"]:focus+.custom-slider-handle:after {
+	box-shadow:
+		0 0 0 3px rgba(255, 255, 255, 0.1) inset,
+		0 0 0 3px rgba(255, 255, 255, 1) inset,
+		0 0 0 4px rgb(0 0 0 / 0.5) inset,
+		0 0 0 1px rgb(0 0 0 / 0.5),
+		0 0 0 1px rgb(0 0 0 / 1),
+		0 0 0 4px var(--accent-primary),
+		0 0 0 5px rgb(0 0 0 / 0.3);
+	transition-duration: 0s;
+}
+
+/* Number Input */
+.modern-colorpicker-popup input[type="number"] {
+	text-align: right;
+	padding: 2.5px 4px;
+	font-size: 1em;
+	width: 65px;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	color: var(--text-primary);
+	border-radius: 4px;
+	transition: all 0.15s ease;
+}
+
+.modern-colorpicker-popup input[type="number"]:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.modern-colorpicker-popup input[type="number"]:active {
+	background-color: var(--bg-active);
+	transform: scale(0.99);
+}
+
+.modern-colorpicker-popup input[type="number"]:focus {
+	border-color: var(--accent-primary);
+	outline: 1px solid var(--accent-primary);
+	outline-offset: 0px;
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.15);
+	background-color: var(--bg-primary);
+}
+
+/* Mode Color Input */
+.modern-colorpicker-popup .mode-color-input {
+	text-align: center;
+	padding: 6px 8px;
+	font-size: 13px;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	color: var(--text-primary);
+	border-radius: 4px;
+	transition: all 0.15s ease;
+}
+
+.modern-colorpicker-popup .mode-color-input:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.modern-colorpicker-popup .mode-color-input:active {
+	background-color: var(--bg-active);
+	transform: scale(0.99);
+}
+
+.modern-colorpicker-popup .mode-color-input:focus {
+	border-color: var(--accent-primary);
+	outline: 1px solid var(--accent-primary);
+	outline-offset: 0px;
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.15);
+	background-color: var(--bg-primary);
+}
+
+/* Buttons */
+.colorpicker-buttons {
+	display: flex;
+	gap: 8px;
+	margin-top: 12px;
+	justify-content: center;
+}
+
+.colorpicker-buttons button {
+	flex: 0 0 auto;
+	width: 100px;
+	padding: 8px 24px;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	text-align: center;
+	border: 1px solid var(--border-medium);
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
+}
+
+.colorpicker-buttons button:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.sp-choose {
+	background-color: var(--accent-primary) !important;
+	border-color: var(--accent-primary) !important;
+	color: white !important;
+}
+
+.sp-choose:hover {
+	background-color: var(--accent-hover) !important;
+	border-color: var(--accent-hover) !important;
+}
+
+.sp-clear {
+	background-color: #dc3545 !important;
+	border-color: #dc3545 !important;
+	color: white !important;
+}
+
+.sp-clear:hover {
+	background-color: #c82333 !important;
+	border-color: #bd2130 !important;
+}
+
+/* Dark Theme Adjustments */
+body.dark-theme .slider-choices {
+	background-color: var(--bg-tertiary);
+}
+
+body.dark-theme .modern-colorpicker-popup .color-code input,
+body.dark-theme .modern-colorpicker-popup .mode-color-input,
+body.dark-theme .modern-colorpicker-popup input[type="number"] {
+	background-color: var(--bg-tertiary);
+	border-color: var(--border-medium);
+}
+
+body.dark-theme .modern-colorpicker-popup .color-code input:hover,
+body.dark-theme .modern-colorpicker-popup .mode-color-input:hover,
+body.dark-theme .modern-colorpicker-popup input[type="number"]:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+body.dark-theme .modern-colorpicker-popup .color-code input:active,
+body.dark-theme .modern-colorpicker-popup .mode-color-input:active,
+body.dark-theme .modern-colorpicker-popup input[type="number"]:active {
+	background-color: var(--bg-active);
+	transform: scale(0.99);
+}
+
+body.dark-theme .modern-colorpicker-popup .color-code input:focus,
+body.dark-theme .modern-colorpicker-popup .mode-color-input:focus,
+body.dark-theme .modern-colorpicker-popup input[type="number"]:focus {
+	background-color: var(--bg-secondary);
+	outline: 1px solid var(--accent-primary);
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.2);
+}
+
+body.dark-theme .modern-colorpicker-popup input[type="range"] {
+	box-shadow: 0 1px 1px inset rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.8);
+}

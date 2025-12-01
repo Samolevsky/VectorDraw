@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .3;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #999;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M22,11v-6h-10.5c-3.59,0-6.5,2.91-6.5,6.5s2.91,6.5,6.5,6.5h10.5v-6h-8v2h-5v-5h5v2h8Z"/>
+  <path class="cls-1" d="M0,0v23h23V0H0ZM22,22H1V1h21v21Z"/>
+</svg>

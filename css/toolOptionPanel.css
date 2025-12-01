@@ -1,0 +1,244 @@
+
+.toolOptionPanel {
+	position: absolute;
+	top: 56px;
+	left: 96px;
+	background-color: var(--bg-primary);
+	padding: var(--spacing-md) var(--spacing-lg);
+	border-radius: var(--radius-md);
+	min-width: 180px;
+	box-shadow: var(--shadow-md);
+	border: 1px solid var(--border-light);
+}
+
+.toolOptionPanel .options {
+	margin: var(--spacing-md) 0 0 0;
+	clear: both;
+}
+
+.toolOptionPanel .option-section {
+	position: relative;
+	margin-bottom: var(--spacing-md);
+}
+
+.toolOptionPanel .option-section:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.toolOptionPanel .titleSection {
+	margin-top: var(--spacing-lg);
+	padding-top: var(--spacing-lg);
+	border-top: 1px solid var(--border-light);
+}
+
+.toolOptionPanel h3 {
+	font-size: 13px;
+	margin: calc(-1 * var(--spacing-md)) calc(-1 * var(--spacing-lg)) var(--spacing-md) calc(-1 * var(--spacing-lg));
+	padding: var(--spacing-md) var(--spacing-lg);
+	cursor: move;
+	color: var(--text-primary);
+	display: block;
+	background-color: var(--bg-secondary);
+	border-bottom: 1px solid var(--border-light);
+	font-weight: 600;
+	border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.toolOptionPanel h4 {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--text-secondary);
+	margin-bottom: var(--spacing-sm);
+}
+
+.toolOptionPanel input[type=number] {
+	width: 60px;
+	margin: 0;
+	font-size: 12px;
+}
+
+.toolOptionPanel input[type=checkbox] {
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.toolOptionPanel input[type=text] {
+	width: 120px;
+	font-size: 12px;
+}
+
+.toolOptionPanel input[type=file] {
+	width: 100px;
+	border: none;
+	opacity: 0;
+}
+
+.toolOptionPanel label {
+	margin-right: var(--spacing-md);
+	display: block;
+	float: left;
+	line-height: 2;
+	color: var(--text-secondary);
+	font-weight: 500;
+}
+
+.toolOptionPanel label,
+.toolOptionPanel input,
+.toolOptionPanel select,
+.toolOptionPanel button {
+	font-size: 12px;
+}
+
+.toolOptionPanel input,
+.toolOptionPanel select {
+	text-align: right;
+	display: inline-block;
+	float: right;
+}
+
+.toolOptionPanel .option-section button {
+	width: 100%;
+	padding: 6px 10px;
+	font-size: 12px;
+}
+
+.toolOptionPanel .option-section button.secondary {
+	background-color: transparent;
+	color: var(--text-primary);
+	border: 1px solid var(--border-medium);
+	padding: 5px 10px;
+	outline: none;
+	transition: all 0.15s ease;
+}
+
+.toolOptionPanel .option-section button.secondary:hover {
+	background-color: var(--bg-tertiary) !important;
+	border-color: var(--border-dark) !important;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+	transform: none !important;
+	outline: none;
+}
+
+.toolOptionPanel .option-section button.secondary:active {
+	background-color: var(--bg-hover);
+	box-shadow: none;
+	transform: none !important;
+	outline: none;
+}
+
+.toolOptionPanel .option-section button.secondary:focus {
+	outline: none;
+}
+
+.toolOptionPanel .option-section button.secondary:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+	border-color: var(--border-medium);
+}
+
+.toolOptionPanel .option-section button.secondary:disabled:hover {
+	background-color: transparent;
+	transform: none;
+	box-shadow: none;
+	border-color: var(--border-medium);
+}
+
+.toolOptionPanel .option-section button svg {
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+	vertical-align: text-bottom;
+	fill: currentColor;
+	display: inline-block;
+	position: relative;
+	top: 1px;
+}
+
+.toolOptionPanel .button-row {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.toolOptionPanel .button-row button {
+	flex: 1;
+}
+
+.toolOptionPanel .button-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.toolOptionPanel .button-grid button {
+	width: 100%;
+}
+
+.toolOptionPanel .toolOptionResetButton {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: var(--spacing-md);
+	right: var(--spacing-lg);
+	text-align: center;
+	padding: var(--spacing-xs);
+	line-height: 0;
+	border-radius: var(--radius-sm);
+	color: var(--text-tertiary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.toolOptionPanel .toolOptionResetButton svg {
+	width: 16px;
+	height: 16px;
+	fill: currentColor;
+	transition: transform 0.2s ease;
+}
+
+.toolOptionPanel .toolOptionResetButton:hover {
+	background-color: var(--bg-hover);
+	color: var(--text-primary);
+}
+
+.toolOptionPanel .toolOptionResetButton:hover svg {
+	transform: rotate(-45deg);
+}
+
+.toolOptionPanel .toolOptionResetButton:active svg {
+	transform: rotate(-90deg);
+}
+
+.toolOptionPanel .note,
+.toolOptionPanel .warning {
+	margin: var(--spacing-md) 0 0 0;
+	color: var(--text-tertiary);
+	font-size: 11px;
+	max-width: 200px;
+	line-height: 1.5;
+}
+
+.toolOptionPanel .warning {
+	color: #e03131;
+	background-color: #fff5f5;
+	padding: var(--spacing-sm);
+	border-radius: var(--radius-sm);
+	border-left: 3px solid #e03131;
+}
+
+.toolOptionPanel .option-section .fontImportFakeButton {
+	position: absolute;
+	width: 100px;
+	right: 0;
+	pointer-events: none;
+}
+
+.toolOptionPanel .segmented-control {
+	margin-top: 4px;
+}

@@ -1,0 +1,506 @@
+/* ===== MODERN COLOR PICKER - OVERLAPPING SWATCHES DESIGN ===== */
+
+/* ===== REMOVE SQUARE CONTAINERS COMPLETELY ===== */
+
+/* Override Spectrum's default replacer styling */
+.colorContainer .sp-replacer,
+.fillColorSpec .sp-replacer,
+.strokeColorSpec .sp-replacer {
+	border: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	background: none !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	width: 32px !important;
+	height: 32px !important;
+	min-width: 32px !important;
+	min-height: 32px !important;
+	max-width: 32px !important;
+	max-height: 32px !important;
+	overflow: visible !important;
+	border-radius: 0 !important;
+	display: block !important;
+}
+
+.sp-replacer::before,
+.sp-replacer::after {
+	content: none !important;
+	display: none !important;
+}
+
+/* Remove ALL backgrounds and borders from container elements */
+.fillColorSpec,
+.strokeColorSpec {
+	background: none !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	width: 32px !important;
+	height: 32px !important;
+	overflow: visible !important;
+	outline: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* Hide the dropdown arrow completely */
+.sp-dd {
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* Ensure only the preview circle is visible */
+.sp-replacer>*:not(.sp-preview) {
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+
+.sp-replacer .sp-preview {
+	display: block !important;
+	margin: 0 !important;
+}
+
+/* Fill Color Swatch - Solid Circle */
+.fillColorSpec .sp-preview {
+	width: 40px !important;
+	height: 40px !important;
+	border: 3px solid white !important;
+	border-radius: 50% !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+	cursor: pointer !important;
+	transition: all 0.2s ease !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative !important;
+	background-color: white !important;
+	background-image:
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)),
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)) !important;
+	background-size: 10px 10px !important;
+	background-position: 0px 0px, 5px 5px !important;
+}
+
+body.dark-theme .fillColorSpec .sp-preview {
+	border-color: var(--bg-primary) !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+.fillColorSpec .sp-preview:hover {
+	border-color: var(--accent-primary) !important;
+	transform: scale(1.05) !important;
+	box-shadow: 0 3px 12px rgba(76, 110, 245, 0.3), 0 0 0 2px var(--accent-primary) !important;
+	z-index: 100 !important;
+}
+
+body.dark-theme .fillColorSpec .sp-preview:hover {
+	box-shadow: 0 3px 12px rgba(76, 110, 245, 0.3), 0 0 0 2px var(--accent-primary) !important;
+}
+
+/* No fill state - white background with red diagonal line */
+.fillColorSpec .sp-preview.sp-clear-display {
+	background: white !important;
+}
+
+body.dark-theme .fillColorSpec .sp-preview.sp-clear-display {
+	background: var(--bg-secondary) !important;
+}
+
+.fillColorSpec .sp-preview.sp-clear-display .sp-preview-inner {
+	opacity: 0 !important;
+	display: none !important;
+}
+
+.fillColorSpec .sp-preview.sp-clear-display::after {
+	content: '' !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	width: 70% !important;
+	height: 2.5px !important;
+	background: #ff3b30 !important;
+	transform: translate(-50%, -50%) rotate(-45deg) !important;
+	border-radius: 2px !important;
+	pointer-events: none !important;
+	z-index: 10 !important;
+}
+
+/* Stroke Color Swatch - Ring/Donut Shape */
+.strokeColorSpec .sp-preview {
+	width: 40px !important;
+	height: 40px !important;
+	border-width: 5px !important;
+	border-style: solid !important;
+	border-radius: 50% !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), inset 0 0 0 2px white !important;
+	cursor: pointer !important;
+	transition: all 0.2s ease !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative !important;
+	background-color: white !important;
+	background-image:
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)),
+		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)) !important;
+	background-size: 10px 10px !important;
+	background-position: 0px 0px, 5px 5px !important;
+}
+
+body.dark-theme .strokeColorSpec .sp-preview {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 0 0 2px var(--bg-primary) !important;
+}
+
+.strokeColorSpec .sp-preview:hover {
+	transform: scale(1.05) !important;
+	box-shadow: 0 3px 12px rgba(76, 110, 245, 0.3), inset 0 0 0 2px white, 0 0 0 2px var(--accent-primary) !important;
+	z-index: 100 !important;
+}
+
+body.dark-theme .strokeColorSpec .sp-preview:hover {
+	box-shadow: 0 3px 12px rgba(76, 110, 245, 0.3), inset 0 0 0 2px var(--bg-primary), 0 0 0 2px var(--accent-primary) !important;
+}
+
+/* Red diagonal line for no stroke */
+.strokeColorSpec .sp-preview.sp-clear-display::after {
+	content: '' !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	width: 70% !important;
+	height: 2.5px !important;
+	background: #ff3b30 !important;
+	transform: translate(-50%, -50%) rotate(-45deg) !important;
+	border-radius: 2px !important;
+	pointer-events: none !important;
+	z-index: 100 !important;
+	/* Very high to ensure it's on top */
+}
+
+/* Stroke preview inner - create the ring effect with transparent center */
+.strokeColorSpec .sp-preview-inner {
+	border-radius: 50% !important;
+	opacity: 1 !important;
+	background-color: var(--bg-primary) !important;
+}
+
+.sp-preview-inner {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50% !important;
+}
+
+.sp-dd {
+	display: none !important;
+}
+
+/* ===== COLOR PICKER POPUP ===== */
+
+.sp-container {
+	background-color: var(--bg-primary) !important;
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 8px !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+	padding: 12px !important;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.sp-container.sp-light {
+	background-color: var(--bg-primary) !important;
+	border-color: var(--border-medium) !important;
+}
+
+/* Color Picker Area */
+.sp-picker-container {
+	border-radius: 6px !important;
+}
+
+.sp-top {
+	margin-bottom: 8px !important;
+}
+
+.sp-color,
+.sp-hue {
+	border: 1px solid var(--border-light) !important;
+	border-radius: 6px !important;
+}
+
+.sp-fill {
+	border-radius: 6px !important;
+}
+
+.sp-dragger {
+	width: 10px !important;
+	height: 10px !important;
+	border: 2px solid white !important;
+	border-radius: 50% !important;
+	background: transparent !important;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.sp-slider {
+	width: 6px !important;
+	height: 6px !important;
+	border: 2px solid white !important;
+	border-radius: 50% !important;
+	background: transparent !important;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Alpha Channel */
+.sp-alpha,
+.sp-alpha-inner {
+	border-radius: 4px !important;
+}
+
+.sp-alpha {
+	border: 1px solid var(--border-light) !important;
+}
+
+/* Initial/Current Color */
+.sp-initial {
+	border-radius: 4px !important;
+	border: 1px solid var(--border-light) !important;
+}
+
+.sp-initial span {
+	border-radius: 4px !important;
+}
+
+/* Palette */
+.sp-palette-container {
+	border-top: 1px solid var(--border-light) !important;
+	padding-top: 8px !important;
+	margin-top: 8px !important;
+}
+
+.sp-palette {
+	max-width: 220px !important;
+}
+
+.sp-palette .sp-thumb-el {
+	width: 20px !important;
+	height: 20px !important;
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 4px !important;
+	margin: 2px !important;
+	transition: all 0.15s ease !important;
+}
+
+.sp-palette .sp-thumb-el:hover,
+.sp-palette .sp-thumb-el.sp-thumb-active {
+	border-color: var(--accent-primary) !important;
+	transform: scale(1.1) !important;
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.2) !important;
+}
+
+/* Input Field */
+.sp-input-container {
+	margin-top: 8px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 8px !important;
+}
+
+/* Color Format Segmented Button */
+.sp-format-toggle {
+	display: flex !important;
+	background-color: var(--bg-secondary) !important;
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 6px !important;
+	padding: 2px !important;
+	gap: 2px !important;
+	margin-bottom: 8px !important;
+}
+
+.sp-format-btn {
+	flex: 1 !important;
+	padding: 6px 4px !important;
+	border: none !important;
+	background: transparent !important;
+	color: var(--text-secondary) !important;
+	font-size: 10px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.3px !important;
+	border-radius: 4px !important;
+	cursor: pointer !important;
+	transition: all 0.15s ease !important;
+	text-shadow: none !important;
+}
+
+.sp-format-btn:hover {
+	background-color: var(--bg-hover) !important;
+	color: var(--text-primary) !important;
+}
+
+.sp-format-btn.active {
+	background-color: var(--accent-primary) !important;
+	color: white !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hide default color picker when using custom sliders */
+.sp-container.sp-custom-sliders .sp-top {
+	display: none !important;
+}
+
+/* Custom slider container */
+.sp-custom-slider-container {
+	padding: 8px 0 !important;
+}
+
+.sp-slider-group {
+	margin-bottom: 12px !important;
+}
+
+.sp-slider-group:last-child {
+	margin-bottom: 0 !important;
+}
+
+.sp-slider-label {
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	margin-bottom: 6px !important;
+	font-size: 11px !important;
+	font-weight: 500 !important;
+	color: var(--text-secondary) !important;
+}
+
+.sp-slider-label-text {
+	text-transform: uppercase !important;
+	letter-spacing: 0.5px !important;
+}
+
+.sp-slider-value {
+	font-family: monospace !important;
+	color: var(--text-primary) !important;
+	font-size: 12px !important;
+}
+
+.sp-custom-slider {
+	width: 100% !important;
+	height: 8px !important;
+	border-radius: 4px !important;
+	background: var(--bg-secondary) !important;
+	border: 1px solid var(--border-light) !important;
+	position: relative !important;
+	cursor: pointer !important;
+}
+
+.sp-custom-slider-track {
+	height: 100% !important;
+	border-radius: 3px !important;
+	position: relative !important;
+}
+
+.sp-custom-slider-handle {
+	position: absolute !important;
+	top: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	width: 14px !important;
+	height: 14px !important;
+	border-radius: 50% !important;
+	background: white !important;
+	border: 2px solid var(--accent-primary) !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+	cursor: grab !important;
+	z-index: 2 !important;
+}
+
+.sp-custom-slider-handle:active {
+	cursor: grabbing !important;
+	transform: translate(-50%, -50%) scale(1.1) !important;
+}
+
+.sp-input {
+	width: 100% !important;
+	background-color: var(--bg-secondary) !important;
+	border: 1px solid var(--border-medium) !important;
+	color: var(--text-primary) !important;
+	border-radius: 4px !important;
+	padding: 6px 8px !important;
+	font-size: 13px !important;
+	box-sizing: border-box !important;
+	transition: all 0.15s ease !important;
+}
+
+.sp-input:focus {
+	border-color: var(--accent-primary) !important;
+	outline: none !important;
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1) !important;
+}
+
+/* Buttons */
+.sp-button-container {
+	margin-top: 12px !important;
+	display: flex !important;
+	gap: 8px !important;
+}
+
+.sp-cancel,
+.sp-choose {
+	flex: 1 !important;
+	padding: 8px 12px !important;
+	border-radius: 4px !important;
+	font-size: 13px !important;
+	font-weight: 500 !important;
+	cursor: pointer !important;
+	transition: all 0.15s ease !important;
+	text-align: center !important;
+	border: 1px solid var(--border-medium) !important;
+	background-color: var(--bg-secondary) !important;
+	color: var(--text-primary) !important;
+	text-shadow: none !important;
+}
+
+.sp-cancel:hover {
+	background-color: var(--bg-hover) !important;
+	border-color: var(--border-dark) !important;
+}
+
+.sp-choose {
+	background-color: var(--accent-primary) !important;
+	border-color: var(--accent-primary) !important;
+	color: white !important;
+}
+
+.sp-choose:hover {
+	background-color: var(--accent-hover) !important;
+	border-color: var(--accent-hover) !important;
+}
+
+/* Clear Button */
+.sp-clear-display {
+	background-image: none !important;
+}
+
+/* Prevent checkerboard on color swatches when no color */
+.strokeColorSpec .sp-preview.sp-clear-display,
+.fillColorSpec .sp-preview.sp-clear-display {
+	background-image: none !important;
+}
+
+.sp-clear.sp-clear-display {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==) !important;
+	background-repeat: repeat !important;
+	border-radius: 4px !important;
+}
+
+/* Hide transparency spec elements */
+.transSpec .sp-preview {
+	height: 18px !important;
+}
+
+.transSpecContainer .sp-top-inner,
+.transSpecContainer .sp-fill {
+	display: none !important;
+}

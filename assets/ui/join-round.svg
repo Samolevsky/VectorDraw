@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .3;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #999;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-2" points="14 14 12 14 12 22 17 22 17 17 22 17 22 12 14 12 14 14"/>
+    <path class="cls-2" d="M22,5v6h-8v-2h-5v5h2v8h-6v-10.5c0-3.59,2.91-6.5,6.5-6.5h10.5Z"/>
+  </g>
+  <path class="cls-1" d="M0,0v23h23V0H0ZM22,22H1V1h21v21Z"/>
+</svg>

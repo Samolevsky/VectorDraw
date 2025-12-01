@@ -1,0 +1,284 @@
+
+.codeEditorContainer {
+	position: absolute;
+	top: 48px;
+	right: 0;
+	z-index: 80;
+	border-radius: 0;
+	width: 50%;
+	min-width: 320px;
+	height: calc(100vh - 48px);
+	background-color: var(--bg-primary);
+	border-left: 1px solid var(--border-light);
+	box-shadow: var(--shadow-md);
+	display: flex;
+	flex-direction: column;
+}
+
+.codeEditorContainer.hidden {
+	display: none;
+}
+
+.codeEditorButtons {
+	position: relative;
+	border-bottom: 1px solid var(--border-light);
+}
+
+.codeEditorWrapper {
+	position: relative;
+	flex: 1;
+	overflow: hidden;
+	background-color: var(--bg-secondary);
+	display: flex;
+}
+
+.codeEditorLineNumbers {
+	position: relative;
+	width: 50px;
+	background-color: var(--bg-tertiary);
+	border-right: 1px solid var(--border-light);
+	overflow: hidden;
+	user-select: none;
+	padding: var(--spacing-xl) var(--spacing-sm);
+	font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', 'Courier New', monospace;
+	font-size: 13px;
+	line-height: 1.6;
+	color: var(--text-tertiary);
+	text-align: right;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	white-space: pre;
+	z-index: 3;
+}
+
+.codeEditorContent {
+	position: relative;
+	flex: 1;
+	overflow: hidden;
+}
+
+.codeEditorContent .codeEditorArea,
+.codeEditorContent .codeEditorHighlight {
+	padding-left: var(--spacing-md);
+}
+
+.codeEditorArea {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: var(--spacing-xl);
+	border: 0;
+	background-color: transparent;
+	font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', 'Courier New', monospace;
+	font-size: 13px;
+	line-height: 1.6;
+	outline: none;
+	resize: none;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	color: transparent;
+	caret-color: var(--text-primary);
+	z-index: 2;
+}
+
+.codeEditorArea::selection {
+	background-color: rgba(76, 110, 245, 0.3);
+}
+
+body.dark-theme .codeEditorArea::selection {
+	background-color: rgba(92, 124, 250, 0.3);
+}
+
+/* Syntax Highlighting Container */
+.codeEditorHighlight {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: var(--spacing-xl);
+	font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Droid Sans Mono', 'Source Code Pro', 'Courier New', monospace;
+	font-size: 13px;
+	line-height: 1.6;
+	pointer-events: none;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow: hidden;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	z-index: 1;
+	background-color: var(--bg-secondary);
+}
+
+.codeEditorHighlight .line {
+	min-height: 1.6em;
+	line-height: 1.6;
+}
+
+.codeEditorHighlight .line.current-line {
+	background-color: rgba(76, 110, 245, 0.05);
+}
+
+body.dark-theme .codeEditorHighlight .line.current-line {
+	background-color: rgba(92, 124, 250, 0.08);
+}
+
+/* Light Theme Syntax Colors */
+:root {
+	--syntax-keyword: #d73a49;
+	--syntax-string: #032f62;
+	--syntax-number: #005cc5;
+	--syntax-comment: #6a737d;
+	--syntax-function: #6f42c1;
+	--syntax-operator: #d73a49;
+	--syntax-property: #005cc5;
+	--syntax-punctuation: #24292e;
+}
+
+/* Dark Theme Syntax Colors */
+body.dark-theme {
+	--syntax-keyword: #ff7b72;
+	--syntax-string: #a5d6ff;
+	--syntax-number: #79c0ff;
+	--syntax-comment: #8b949e;
+	--syntax-function: #d2a8ff;
+	--syntax-operator: #ff7b72;
+	--syntax-property: #79c0ff;
+	--syntax-punctuation: #c9d1d9;
+}
+
+/* Syntax Highlighting Styles */
+.syntax-keyword {
+	color: var(--syntax-keyword);
+	font-weight: 600;
+}
+
+.syntax-string {
+	color: var(--syntax-string);
+}
+
+.syntax-number {
+	color: var(--syntax-number);
+}
+
+.syntax-comment {
+	color: var(--syntax-comment);
+	font-style: italic;
+}
+
+.syntax-function {
+	color: var(--syntax-function);
+}
+
+.syntax-operator {
+	color: var(--syntax-operator);
+}
+
+.syntax-property {
+	color: var(--syntax-property);
+}
+
+.syntax-punctuation {
+	color: var(--syntax-punctuation);
+}
+
+.syntax-bracket {
+	color: var(--text-primary);
+	font-weight: 600;
+}
+
+/* Status bar for editor info */
+.codeEditorStatus {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-xs) var(--spacing-lg);
+	background-color: var(--bg-tertiary);
+	border-top: 1px solid var(--border-light);
+	font-size: 11px;
+	color: var(--text-tertiary);
+	font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+}
+
+.codeEditorStatus .status-item {
+	margin-right: var(--spacing-lg);
+}
+
+.closeScriptButton {
+	float: right;
+}
+
+.consoleOutput {
+	position: relative;
+	display: block;
+	height: 200px;
+	overflow-y: auto;
+	background-color: var(--bg-tertiary);
+	border-top: 1px solid var(--border-light);
+}
+
+.consoleOutput::-webkit-scrollbar {
+	width: 6px;
+}
+
+.consoleOutput::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.consoleOutput::-webkit-scrollbar-thumb {
+	background: var(--border-medium);
+	border-radius: 3px;
+}
+
+.consoleOutput span {
+	display: block;
+	padding: var(--spacing-sm) var(--spacing-lg);
+	font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
+	font-size: 12px;
+	color: var(--text-tertiary);
+	border-bottom: 1px solid var(--border-light);
+}
+
+.consoleOutput span.error {
+	background-color: #fff5f5;
+	color: #e03131;
+	border-left: 3px solid #e03131;
+	border-bottom-color: #fcc;
+}
+
+.clearConsoleButton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: var(--spacing-sm) var(--spacing-lg);
+	color: var(--text-tertiary);
+	cursor: default;
+	background-color: var(--bg-tertiary);
+	font-size: 12px;
+	font-weight: 500;
+	border: none;
+	border-radius: 0;
+	transition: all 0.15s ease;
+}
+
+.clearConsoleButton:hover {
+	color: var(--text-primary);
+	background-color: var(--bg-hover);
+}
+
+.appNav .topMenu>li.scriptExamplesDropdown {
+	padding: 0 var(--spacing-lg);
+}
+
+.scriptExamplesDropdown select {
+	text-align: right;
+	max-width: 50vw;
+}

@@ -1,0 +1,92 @@
+// functions related to initializing pg
+
+var pg = function () {
+
+	var init = function () {
+
+		// Fix for canvas misalignment on high DPI screens or when resized
+		var canvas = document.getElementById('paperCanvas');
+		var resizeCanvas = function () {
+			var width = canvas.clientWidth;
+			var height = canvas.clientHeight;
+			var pixelRatio = window.devicePixelRatio || 1;
+
+			// Resize the canvas element (backing store)
+			canvas.width = width * pixelRatio;
+			canvas.height = height * pixelRatio;
+
+			// Ensure CSS size matches logical size (container size)
+			canvas.style.width = width + 'px';
+			canvas.style.height = height + 'px';
+
+			// If paper is already set up, update view size
+			if (paper.view) {
+				paper.view.viewSize = new paper.Size(width, height);
+				paper.view.update();
+			}
+		};
+
+		// Initial resize BEFORE paper setup
+		resizeCanvas();
+
+		paper.setup('paperCanvas');
+
+		// Configure Paper.js settings for larger handles and better visibility
+		paper.settings.handleSize = 10;  // Increased from default 4 to 10
+		paper.settings.hitTolerance = 8;  // Increased from default 0 to 8 for easier grabbing
+
+		// Disable image smoothing for crisp raster rendering (grids)
+		var ctx = canvas.getContext('2d');
+		if (ctx) {
+			ctx.imageSmoothingEnabled = false;
+			ctx.mozImageSmoothingEnabled = false;
+			ctx.webkitImageSmoothingEnabled = false;
+			ctx.msImageSmoothingEnabled = false;
+		}
+		canvas.style.imageRendering = 'pixelated';
+		canvas.style.imageRendering = '-moz-crisp-edges';
+		canvas.style.imageRendering = 'crisp-edges';
+
+		// Explicitly set view size after setup to ensure it matches logical size
+		var width = canvas.clientWidth;
+		var height = canvas.clientHeight;
+		paper.view.viewSize = new paper.Size(width, height);
+
+		pg.settings.setup();
+
+		pg.document.setup();
+
+		pg.layer.setup();
+
+		pg.export.setup();
+
+		pg.undo.setup();
+
+		pg.codeEditor.setup();
+
+		pg.sidebar.init();
+
+		// Bind resize event
+		jQuery(window).resize(resizeCanvas);
+
+	};
+
+	return {
+		init: init
+	};
+
+}();
+
+jQuery.ajaxSetup({ cache: false });
+
+// set pg up on window load
+jQuery(window).load(function () {
+	pg.init();
+
+	// fade out loading screen and reveal ui
+	jQuery('#loadingScreen').addClass('disabled').on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
+		function () {
+			jQuery(this).remove();
+		});
+	;
+});

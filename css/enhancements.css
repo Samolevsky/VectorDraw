@@ -1,0 +1,247 @@
+/* Modern UI Enhancements */
+
+/* Smooth transitions for theme switching */
+* {
+	transition-property: background-color, border-color, color, box-shadow;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+
+/* Preserve specific transitions */
+.tool,
+button,
+input,
+select,
+.layerEntry,
+.appNav .topMenu>li,
+.appNav .subMenu>li {
+	transition-duration: 0.15s;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+	outline: 2px solid var(--accent-primary);
+	outline-offset: 2px;
+}
+
+/* Improved scrollbar styling for all scrollable areas */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border-dark);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--text-tertiary);
+}
+
+/* Selection styling */
+::selection {
+	background-color: rgba(76, 110, 245, 0.2);
+	color: var(--text-primary);
+}
+
+/* Improved input placeholder */
+input::placeholder,
+textarea::placeholder {
+	color: var(--text-disabled);
+	opacity: 1;
+}
+
+/* Better checkbox and radio styling */
+input[type="checkbox"],
+input[type="radio"] {
+	accent-color: var(--accent-primary);
+}
+
+/* Disabled state */
+button:disabled,
+input:disabled,
+select:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Loading animation enhancement */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.appNav .subMenu {
+	animation: fadeIn 0.2s ease;
+}
+
+.modal.floater,
+.modal>div.container {
+	animation: fadeIn 0.3s ease;
+}
+
+/* Tooltip base styling (if tooltips are added) */
+[title] {
+	position: relative;
+}
+
+/* Enhanced button states */
+button:active:not(:disabled) {
+	transform: translateY(1px);
+}
+
+/* Card-like containers */
+.toolbarSection {
+	background-color: transparent;
+	border-radius: var(--radius-md);
+	transition: background-color 0.2s ease;
+}
+
+/* Improved visual hierarchy */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	color: var(--text-primary);
+	letter-spacing: -0.01em;
+}
+
+/* Better form field grouping */
+.toolbarSection.opacitySection,
+.toolbarSection.blendModeSection,
+.toolbarSection.strokeSection {
+	padding: var(--spacing-md);
+	background-color: var(--bg-secondary);
+	border-radius: var(--radius-md);
+	border: 1px solid var(--border-light);
+}
+
+/* Refined shadows for elevation */
+.toolbar,
+.layerPanel,
+.appNav>.topMenu {
+	position: relative;
+}
+
+/* Subtle gradient overlays for depth */
+.appNav>.topMenu::after {
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, 
+		transparent 0%, 
+		var(--border-medium) 50%, 
+		transparent 100%);
+	opacity: 0.5;
+}
+
+/* Improved color picker integration */
+.sp-replacer {
+	border: 1px solid var(--border-medium) !important;
+	background-color: var(--bg-primary) !important;
+	border-radius: var(--radius-sm) !important;
+	padding: 4px !important;
+	transition: all 0.15s ease !important;
+}
+
+.sp-replacer:hover {
+	border-color: var(--border-dark) !important;
+}
+
+.sp-preview {
+	border: 1px solid var(--border-light) !important;
+	border-radius: var(--radius-sm) !important;
+}
+
+/* Dark theme specific adjustments */
+body.dark-theme .sp-container {
+	background-color: var(--bg-secondary) !important;
+	border-color: var(--border-medium) !important;
+}
+
+body.dark-theme .sp-input {
+	background-color: var(--bg-tertiary) !important;
+	color: var(--text-primary) !important;
+	border-color: var(--border-medium) !important;
+}
+
+/* Refined spacing for better breathing room */
+.toolbarSection + .toolbarSection {
+	margin-top: var(--spacing-xl);
+}
+
+/* Micro-interactions */
+@keyframes pulse {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
+}
+
+.tool.active {
+	animation: none;
+}
+
+/* Better visual feedback for draggable items */
+[draggable="true"] {
+	cursor: move;
+}
+
+/* Improved layer panel header */
+.layerPanel>header {
+	backdrop-filter: blur(10px);
+}
+
+/* Smooth canvas background */
+#paperCanvas {
+	transition: background-color 0.3s ease;
+}
+
+/* Better modal backdrop */
+.modal.fader {
+	animation: fadeIn 0.2s ease;
+}
+
+/* Refined button groups */
+.strokeButtons {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	background-color: var(--border-medium);
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+}
+
+/* Enhanced combo inputs */
+.comboInput {
+	padding-right: 32px !important;
+}
+
+/* Better visual separation */
+.toolbarSection.extraSpace::after {
+	content: '';
+	display: block;
+	height: 1px;
+	background: var(--border-light);
+	margin-top: var(--spacing-xl);
+	margin-bottom: calc(-1 * var(--spacing-xl));
+}
+
+/* Remove after pseudo-element for last section */
+.toolbarSection:last-child::after {
+	display: none;
+}

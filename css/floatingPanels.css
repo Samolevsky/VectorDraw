@@ -1,0 +1,356 @@
+/* Floating Panels */
+.floatingPanel {
+	position: fixed;
+	background-color: var(--bg-primary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-xl), 0 10px 40px rgba(0, 0, 0, 0.15);
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition: box-shadow 0.2s ease;
+}
+
+.floatingPanel.dragging {
+	box-shadow: var(--shadow-xl), 0 20px 60px rgba(0, 0, 0, 0.25);
+	cursor: move;
+}
+
+.floatingPanel.resizing {
+	user-select: none;
+}
+
+.floatingPanel.minimized {
+	height: auto !important;
+}
+
+.floatingPanel.minimized .floatingPanelContent {
+	display: none;
+}
+
+.floatingPanel.minimized .panelResizeHandle {
+	display: none;
+}
+
+.floatingPanelHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--spacing-md) var(--spacing-lg);
+	background-color: var(--bg-secondary);
+	border-bottom: 1px solid var(--border-light);
+	cursor: move;
+	user-select: none;
+	flex-shrink: 0;
+}
+
+.floatingPanelHeader:hover {
+	background-color: var(--bg-hover);
+}
+
+.panelTitleGroup {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+	flex: 1;
+}
+
+.panelDragHandle {
+	display: flex;
+	align-items: center;
+	cursor: grab;
+	padding: var(--spacing-xs);
+	border-radius: var(--radius-sm);
+	transition: background-color 0.15s ease;
+}
+
+.panelDragHandle:hover {
+	background-color: var(--bg-hover);
+}
+
+.panelDragHandle:active {
+	cursor: grabbing;
+}
+
+.panelDragHandle:hover::after {
+	content: 'Drag to dock';
+	position: absolute;
+	left: calc(100% + 8px);
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 4px 8px;
+	background-color: var(--bg-tertiary);
+	color: var(--text-secondary);
+	font-size: 11px;
+	white-space: nowrap;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--border-medium);
+	box-shadow: var(--shadow-md);
+	z-index: 10001;
+	pointer-events: none;
+	animation: fadeInTooltip 0.2s ease;
+}
+
+@keyframes fadeInTooltip {
+	from {
+		opacity: 0;
+		transform: translateY(-50%) translateX(-5px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(-50%) translateX(0);
+	}
+}
+
+.panelDragHandle .sectionIcon {
+	width: 18px;
+	height: 18px;
+	fill: var(--text-secondary);
+	padding: 0;
+}
+
+.panelTitleGroup h3 {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-primary);
+	margin: 0;
+	letter-spacing: 0.01em;
+}
+
+.panelHeaderButtons {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-xs);
+}
+
+.panelMinimizeBtn,
+.panelCloseBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	background: transparent;
+	border: none;
+	border-radius: var(--radius-sm);
+	color: var(--text-secondary);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.panelMinimizeBtn:hover {
+	background-color: var(--bg-hover);
+	color: var(--text-primary);
+}
+
+.panelCloseBtn:hover {
+	background-color: rgba(255, 0, 0, 0.1);
+	color: #ff4444;
+}
+
+.floatingPanelContent {
+	flex: 1;
+	overflow: auto;
+	min-height: 0;
+}
+
+.floatingPanelContent::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.floatingPanelContent::-webkit-scrollbar-track {
+	background: var(--bg-secondary);
+}
+
+.floatingPanelContent::-webkit-scrollbar-thumb {
+	background: var(--border-dark);
+	border-radius: 4px;
+}
+
+.floatingPanelContent::-webkit-scrollbar-thumb:hover {
+	background: var(--text-tertiary);
+}
+
+/* Resize Handle */
+.panelResizeHandle {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 16px;
+	height: 16px;
+	cursor: nwse-resize;
+	z-index: 10;
+}
+
+.panelResizeHandle::after {
+	content: '';
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 12px 12px;
+	border-color: transparent transparent var(--border-medium) transparent;
+	opacity: 0.5;
+	transition: opacity 0.15s ease;
+}
+
+.panelResizeHandle:hover::after {
+	opacity: 1;
+	border-color: transparent transparent var(--accent-primary) transparent;
+}
+
+/* Dragging States */
+body.panel-dragging {
+	cursor: grabbing !important;
+	user-select: none;
+}
+
+body.panel-dragging * {
+	cursor: grabbing !important;
+}
+
+.draggingGhost {
+	pointer-events: none;
+	transition: none;
+	border: 1px solid var(--border-medium);
+	background-color: var(--bg-primary);
+}
+
+.draggingGhost .sectionToggleIcon,
+.draggingGhost .panelHeaderButtons {
+	opacity: 0.5;
+}
+
+.draggingGhost .sectionIcon {
+	opacity: 1;
+	fill: var(--accent-primary);
+}
+
+.sidebarSection.dragging {
+	opacity: 0.3;
+}
+
+.sidebarSection.floated {
+	display: none;
+}
+
+/* Drop Zones */
+.dropZone {
+	border: 2px dashed transparent;
+	border-radius: var(--radius-md);
+	background-color: transparent;
+	transition: all 0.2s ease;
+}
+
+.dropZone.active {
+	border-color: var(--accent-primary);
+	background-color: rgba(76, 110, 245, 0.05);
+}
+
+.dropIndicator {
+	background-color: transparent;
+	transition: all 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.dropIndicator::before {
+	content: '';
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 2px;
+	background-color: transparent;
+	border-radius: 1px;
+	transition: all 0.15s ease;
+}
+
+.dropIndicator.active::before {
+	background-color: var(--accent-primary);
+	box-shadow: 0 0 8px rgba(76, 110, 245, 0.5);
+}
+
+/* Sidebar Section Drag Handle */
+.sidebarSectionHeader .sectionIcon {
+	cursor: grab;
+	padding: var(--spacing-xs);
+	margin: calc(var(--spacing-xs) * -1);
+	border-radius: var(--radius-sm);
+}
+
+.sidebarSectionHeader .sectionIcon:hover {
+	background-color: var(--bg-hover);
+}
+
+.sidebarSectionHeader .sectionIcon:active {
+	cursor: grabbing;
+}
+
+/* Reordering within sidebar */
+.sidebarSection.reordering {
+	opacity: 0.5;
+	transition: transform 0.2s ease;
+}
+
+.sidebarSection.dropTarget {
+	border-top: 3px solid var(--accent-primary);
+}
+
+/* Floating panel content adjustments */
+.floatingPanel .sidebarSectionContent {
+	display: block !important;
+}
+
+.floatingPanel .sidebarPropertiesPanel,
+.floatingPanel .sidebarLayersPanel,
+.floatingPanel .sidebarScriptEditor {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.floatingPanel .sidebarBooleanPanel {
+	height: auto;
+}
+
+.floatingPanel .layerEntries {
+	max-height: none;
+	flex: 1;
+}
+
+.floatingPanel .sidebarScriptEditor .codeEditorWrapper {
+	flex: 1;
+	min-height: 0;
+}
+
+.floatingPanel .scriptConsole {
+	height: 120px;
+	min-height: 120px;
+	max-height: 120px;
+}
+
+/* Dark theme adjustments */
+.dark-theme .floatingPanel {
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .floatingPanel.dragging {
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .dropZone.active {
+	background-color: rgba(76, 110, 245, 0.15);
+}
+
+.dark-theme .dropIndicator.active {
+	background-color: rgba(76, 110, 245, 0.2);
+}
