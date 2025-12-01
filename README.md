@@ -1,6 +1,6 @@
 # VectorDraw
 
-A powerful, browser-based vector graphics editor built with Paper.js. VectorDraw provides a comprehensive set of drawing tools and features for creating vector artwork, illustrations, and designs directly in your web browser.
+A powerful, browser-based vector graphics editor. VectorDraw provides a comprehensive set of drawing tools and features for creating vector artwork, illustrations, and designs directly in your web browser.
 
 ## Features
 
