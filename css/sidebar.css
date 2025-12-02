@@ -5021,3 +5021,233 @@ body.dark-theme .helpToolIcon {
 .alignBtn:hover svg {
 	fill: var(--accent-primary);
 }
+
+/* Fill Color Controls in Appearance Panel */
+.fill-color-controls {
+	display: flex;
+	gap: var(--spacing-sm);
+	align-items: center;
+}
+
+/* Fill Color Swatch - matches grid-color-swatch styling */
+.sidebar-fill-swatch {
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	width: 36px !important;
+	height: 36px !important;
+	max-width: 36px !important;
+	flex: 0 0 auto !important;
+	border: none !important;
+	background: none !important;
+	padding: 0 !important;
+	cursor: pointer !important;
+	border-radius: 4px !important;
+	transition: transform 0.1s ease, box-shadow 0.1s ease;
+	vertical-align: middle;
+}
+
+.sidebar-fill-swatch:hover {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	outline: 2px solid var(--accent-primary) !important;
+	outline-offset: 2px;
+}
+
+.sidebar-fill-swatch::-webkit-color-swatch-wrapper {
+	padding: 0 !important;
+}
+
+.sidebar-fill-swatch::-webkit-color-swatch {
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 4px !important;
+	box-sizing: border-box !important;
+}
+
+.sidebar-fill-swatch::-moz-color-swatch {
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 4px !important;
+	box-sizing: border-box !important;
+}
+
+/* Fill Hex Input */
+.fill-hex-input {
+	flex: 1;
+	min-width: 0;
+	height: 36px;
+	padding: 0 var(--spacing-md);
+	font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+	font-size: 13px;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	color: var(--text-primary);
+	border-radius: var(--radius-sm);
+	transition: all 0.15s ease;
+	text-transform: uppercase;
+}
+
+.fill-hex-input::placeholder {
+	color: var(--text-tertiary);
+	opacity: 0.6;
+	text-transform: none;
+}
+
+.fill-hex-input:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+}
+
+.fill-hex-input:focus {
+	border-color: var(--accent-primary);
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1);
+}
+
+/* Fill Color Reset Button */
+.fill-color-reset {
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: 4px;
+	color: var(--text-secondary);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	flex-shrink: 0;
+}
+
+.fill-color-reset:hover {
+	background-color: var(--bg-hover);
+	color: var(--text-primary);
+	border-color: var(--border-dark);
+}
+
+.fill-color-reset svg {
+	width: 16px;
+	height: 16px;
+	fill: currentColor;
+}
+
+/* Dark theme adjustments */
+:root.dark-theme .fill-hex-input:hover,
+body.dark-theme .fill-hex-input:hover {
+	background-color: var(--bg-hover);
+	border-color: rgba(76, 110, 245, 0.4);
+}
+
+/* Stroke Color Controls in Appearance Panel */
+.stroke-color-controls {
+	display: flex;
+	gap: var(--spacing-sm);
+	align-items: center;
+}
+
+/* Stroke Color Swatch - matches grid-color-swatch styling */
+.sidebar-stroke-swatch {
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	width: 36px !important;
+	height: 36px !important;
+	max-width: 36px !important;
+	flex: 0 0 auto !important;
+	border: none !important;
+	background: none !important;
+	padding: 0 !important;
+	cursor: pointer !important;
+	border-radius: 4px !important;
+	transition: transform 0.1s ease, box-shadow 0.1s ease;
+	vertical-align: middle;
+}
+
+.sidebar-stroke-swatch:hover {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	outline: 2px solid var(--accent-primary) !important;
+	outline-offset: 2px;
+}
+
+.sidebar-stroke-swatch::-webkit-color-swatch-wrapper {
+	padding: 0 !important;
+}
+
+.sidebar-stroke-swatch::-webkit-color-swatch {
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 4px !important;
+	box-sizing: border-box !important;
+}
+
+.sidebar-stroke-swatch::-moz-color-swatch {
+	border: 1px solid var(--border-medium) !important;
+	border-radius: 4px !important;
+	box-sizing: border-box !important;
+}
+
+/* Stroke Hex Input */
+.stroke-hex-input {
+	flex: 1;
+	min-width: 0;
+	height: 36px;
+	padding: 0 var(--spacing-md);
+	font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+	font-size: 13px;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	color: var(--text-primary);
+	border-radius: var(--radius-sm);
+	transition: all 0.15s ease;
+	text-transform: uppercase;
+}
+
+.stroke-hex-input::placeholder {
+	color: var(--text-tertiary);
+	opacity: 0.6;
+	text-transform: none;
+}
+
+.stroke-hex-input:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+}
+
+.stroke-hex-input:focus {
+	border-color: var(--accent-primary);
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1);
+}
+
+/* Stroke Color Reset Button */
+.stroke-color-reset {
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: 4px;
+	color: var(--text-secondary);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	flex-shrink: 0;
+}
+
+.stroke-color-reset:hover {
+	background-color: var(--bg-hover);
+	color: var(--text-primary);
+	border-color: var(--border-dark);
+}
+
+.stroke-color-reset svg {
+	width: 16px;
+	height: 16px;
+	fill: currentColor;
+}
+
+/* Dark theme adjustments */
+:root.dark-theme .stroke-hex-input:hover,
+body.dark-theme .stroke-hex-input:hover {
+	background-color: var(--bg-hover);
+	border-color: rgba(76, 110, 245, 0.4);
+}
