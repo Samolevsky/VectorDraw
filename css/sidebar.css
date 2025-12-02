@@ -4951,3 +4951,73 @@ body.dark-theme .helpToolIcon {
 	height: 16px;
 	fill: currentColor;
 }
+
+/* Align Panel in Sidebar */
+.sidebarAlignPanel {
+	padding: var(--spacing-lg);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-lg);
+}
+
+.alignGroup {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-sm);
+}
+
+.alignLabel {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--text-secondary);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.alignButtons {
+	display: flex;
+	gap: var(--spacing-xs);
+	align-items: center;
+}
+
+.alignBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacing-sm);
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	min-height: 40px;
+	flex: 1;
+}
+
+.alignDivider {
+	width: 1px;
+	height: 32px;
+	background-color: var(--border-medium);
+	margin: 0 var(--spacing-xs);
+	flex-shrink: 0;
+}
+
+.alignBtn:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+}
+
+.alignBtn:active {
+	background-color: var(--bg-tertiary);
+}
+
+.alignBtn svg {
+	width: 24px;
+	height: 24px;
+	fill: var(--text-primary);
+	transition: fill 0.15s ease;
+}
+
+.alignBtn:hover svg {
+	fill: var(--accent-primary);
+}
