@@ -1,0 +1,467 @@
+/* Live Effects Panel Styles */
+
+.sidebarLiveEffectsPanel {
+	padding: var(--spacing-lg);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.liveEffectsEmpty {
+	padding: var(--spacing-xl) var(--spacing-md);
+	text-align: center;
+	color: var(--text-tertiary);
+	font-size: 13px;
+	font-style: italic;
+}
+
+.liveEffectsList {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.liveEffectItem {
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	overflow: hidden;
+	transition: all 0.15s ease;
+}
+
+.liveEffectItem:hover {
+	border-color: var(--accent-primary);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.liveEffectHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-md);
+	background-color: var(--bg-tertiary);
+	border-bottom: 1px solid var(--border-light);
+}
+
+.liveEffectTitle {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.liveEffectTitle .effectIcon {
+	width: 20px;
+	height: 20px;
+	stroke: var(--accent-primary);
+	stroke-width: 2;
+	fill: none;
+	flex-shrink: 0;
+}
+
+.liveEffectActions {
+	display: flex;
+	gap: var(--spacing-xs);
+}
+
+.liveEffectToggle,
+.liveEffectExpand,
+.liveEffectRemove {
+	width: 28px;
+	height: 28px;
+	padding: 4px;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.liveEffectToggle svg,
+.liveEffectExpand svg,
+.liveEffectRemove svg {
+	width: 16px;
+	height: 16px;
+}
+
+.liveEffectToggle {
+	color: var(--text-secondary);
+}
+
+.liveEffectToggle:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+	color: var(--accent-primary);
+}
+
+.liveEffectExpand {
+	color: var(--text-secondary);
+}
+
+.liveEffectExpand:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+	color: var(--accent-primary);
+}
+
+.liveEffectRemove {
+	color: var(--text-tertiary);
+}
+
+.liveEffectRemove:hover {
+	background-color: rgba(255, 0, 0, 0.1);
+	border-color: rgba(255, 0, 0, 0.3);
+	color: #ff4444;
+}
+
+.liveEffectParams {
+	padding: var(--spacing-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.liveEffectsAddSection {
+	margin-top: var(--spacing-sm);
+}
+
+.liveEffectsAddBtn {
+	width: 100%;
+	padding: var(--spacing-sm) var(--spacing-md);
+	font-size: 13px;
+	font-weight: 500;
+	background-color: var(--accent-primary);
+	color: white;
+	border: none;
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing-sm);
+}
+
+.liveEffectsAddBtn:hover {
+	background-color: var(--accent-hover);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 8px rgba(76, 110, 245, 0.3);
+}
+
+.liveEffectsAddBtn svg {
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
+.liveEffectsDropdown {
+	position: relative;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	margin-top: var(--spacing-sm);
+	max-height: 300px;
+	overflow-y: auto;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.liveEffectsDropdown::-webkit-scrollbar {
+	width: 6px;
+}
+
+.liveEffectsDropdown::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.liveEffectsDropdown::-webkit-scrollbar-thumb {
+	background: var(--border-medium);
+	border-radius: 3px;
+}
+
+.liveEffectOption {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-md);
+	padding: var(--spacing-md);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	border-bottom: 1px solid var(--border-light);
+}
+
+.liveEffectOption:last-child {
+	border-bottom: none;
+}
+
+.liveEffectOption:hover {
+	background-color: var(--bg-hover);
+}
+
+.liveEffectOption .effectIcon {
+	width: 24px;
+	height: 24px;
+	stroke: var(--accent-primary);
+	stroke-width: 2;
+	fill: none;
+	flex-shrink: 0;
+}
+
+.liveEffectOption span {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--text-primary);
+}
+
+.liveEffectsExpandSection {
+	margin-top: var(--spacing-sm);
+}
+
+.liveEffectsExpandBtn {
+	width: 100%;
+	padding: var(--spacing-sm) var(--spacing-md);
+	font-size: 13px;
+	font-weight: 500;
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing-sm);
+}
+
+.liveEffectsExpandBtn:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+	transform: translateY(-1px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.liveEffectsExpandBtn svg {
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
+/* Effect parameter sliders - match sidebar slider style */
+.effectParamSlider {
+	-webkit-appearance: none;
+	appearance: none;
+	flex: 1;
+	height: 36px;
+	min-height: 36px;
+	background: transparent;
+	border: 1px solid var(--border-light);
+	border-radius: var(--radius-sm);
+	box-sizing: border-box;
+	outline: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0 12px;
+	--progress: 1%;
+	align-self: center;
+	margin-right: var(--spacing-sm);
+}
+
+/* Webkit Track */
+.effectParamSlider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(to right,
+			var(--accent-primary) 0%,
+			var(--accent-primary) var(--progress),
+			var(--bg-tertiary) var(--progress),
+			var(--bg-tertiary) 100%);
+	border: 1px solid var(--border-medium);
+	border-radius: 2px;
+	transition: all 0.2s ease;
+}
+
+/* Firefox Track */
+.effectParamSlider::-moz-range-track {
+	width: 100%;
+	height: 4px;
+	background: var(--bg-tertiary);
+	border: 1px solid var(--border-medium);
+	border-radius: 2px;
+	transition: all 0.2s ease;
+}
+
+/* Firefox Progress */
+.effectParamSlider::-moz-range-progress {
+	height: 4px;
+	border-radius: 2px 0 0 2px;
+	background: var(--accent-primary);
+}
+
+/* Webkit Thumb */
+.effectParamSlider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: white;
+	border: 2px solid var(--accent-primary);
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	transition: all 0.15s ease;
+	margin-top: -7px;
+}
+
+/* Firefox Thumb */
+.effectParamSlider::-moz-range-thumb {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: white;
+	border: 2px solid var(--accent-primary);
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	transition: all 0.15s ease;
+}
+
+/* Hover effects */
+.effectParamSlider:hover::-webkit-slider-thumb {
+	transform: scale(1.15);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.effectParamSlider:hover::-moz-range-thumb {
+	transform: scale(1.15);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.effectParamSlider:hover::-webkit-slider-runnable-track {
+	border-color: var(--accent-primary);
+}
+
+.effectParamSlider:hover::-moz-range-track {
+	border-color: var(--accent-primary);
+}
+
+/* Active/dragging state */
+.effectParamSlider:active::-webkit-slider-thumb {
+	transform: scale(1.05);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.effectParamSlider:active::-moz-range-thumb {
+	transform: scale(1.05);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus state */
+.effectParamSlider:focus {
+	outline: none;
+}
+
+.effectParamSlider:focus::-webkit-slider-thumb {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(76, 110, 245, 0.25);
+}
+
+.effectParamSlider:focus::-moz-range-thumb {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 0 0 3px rgba(76, 110, 245, 0.25);
+}
+
+/* Dark theme adjustments */
+:root.dark-theme .effectParamSlider::-webkit-slider-thumb,
+body.dark-theme .effectParamSlider::-webkit-slider-thumb {
+	background: var(--bg-secondary);
+	border-color: var(--accent-primary);
+}
+
+:root.dark-theme .effectParamSlider::-moz-range-thumb,
+body.dark-theme .effectParamSlider::-moz-range-thumb {
+	background: var(--bg-secondary);
+	border-color: var(--accent-primary);
+}
+
+:root.dark-theme .effectParamSlider:hover::-webkit-slider-thumb,
+body.dark-theme .effectParamSlider:hover::-webkit-slider-thumb {
+	background: var(--bg-hover);
+}
+
+:root.dark-theme .effectParamSlider:hover::-moz-range-thumb,
+body.dark-theme .effectParamSlider:hover::-moz-range-thumb {
+	background: var(--bg-hover);
+}
+
+.effectParam {
+	flex: 1;
+	padding: var(--spacing-sm) var(--spacing-md);
+	font-size: 13px;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	color: var(--text-primary);
+	border-radius: var(--radius-sm);
+	transition: all 0.15s ease;
+	line-height: 1.5;
+	height: 36px;
+	min-height: 36px;
+}
+
+.effectParam:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+}
+
+.effectParam:focus {
+	border-color: var(--accent-primary);
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1);
+}
+
+/* Color picker for effects */
+.effectColorPicker {
+	width: 100%;
+	cursor: pointer;
+}
+
+.effectColorPicker.sp-replacer {
+	width: 100%;
+	padding: var(--spacing-sm) var(--spacing-md);
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-sm);
+	transition: all 0.15s ease;
+}
+
+.effectColorPicker.sp-replacer:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+}
+
+.effectColorPicker .sp-preview {
+	width: 24px;
+	height: 24px;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--border-medium);
+}
+
+.effectColorPicker .sp-dd {
+	display: none;
+}
+
+/* Dark theme adjustments */
+:root.dark-theme .liveEffectItem,
+body.dark-theme .liveEffectItem {
+	background-color: rgba(44, 46, 51, 0.8);
+	border-color: rgba(76, 110, 245, 0.15);
+}
+
+:root.dark-theme .liveEffectItem:hover,
+body.dark-theme .liveEffectItem:hover {
+	border-color: rgba(76, 110, 245, 0.4);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+:root.dark-theme .liveEffectHeader,
+body.dark-theme .liveEffectHeader {
+	background-color: rgba(55, 58, 64, 0.9);
+}
