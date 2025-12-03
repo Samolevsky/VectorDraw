@@ -1,1 +1,489 @@
-function a35_0xdc96(){var _0x563ce8=['isSameDomain','2IUoIhL','2660850gXunHr','length','1113436OvjZBX','message','indexOf','stack','called\x20from\x20line','fileName','opera#sourceloc','Microsoft.XMLHTTP','open','global\x20code','(?)','#object','call','13064xnnCXI','replace','getSource','send','exec','other','Cannot\x20access\x20arguments:\x20','getSource\x20failed\x20with\x20url:\x20','\x20at\x20','Msxml3.XMLHTTP','createException','number','opera10a','stacktrace','join','1934640ChZJpB','()@','safari','217934VZUpHu','_instrumented','min','\x20--\x20','...','hostname','chrome','undef','push','test','run','Cannot\x20access\x20caller:\x20','stringifyArguments','sourceCache','5vyocMP','guess','split','implementation','arguments','GET','opera9','printStackTrace','apply','1308252wSbhrS','createXMLHTTPObject',',\x20exception:\x20','234312cVrkUO','responseText','{anonymous}()\x20($1)','prototype','$1@$2','null','ajax','function','sourceURL','object','undefined','Msxml2.XMLHTTP','caller','slice','{anonymous}','525FklxEP','{anonymous}($1)@','constructor','toString','{anonymous}()\x20','firefox','#function','mode'];a35_0xdc96=function(){return _0x563ce8;};return a35_0xdc96();}function a35_0x34fb(_0x540825,_0x2487dd){_0x540825=_0x540825-0x1ed;var _0xdc9689=a35_0xdc96();var _0x34fbb3=_0xdc9689[_0x540825];return _0x34fbb3;}(function(_0x57e80f,_0x102604){var _0x162d7f=a35_0x34fb,_0x196180=_0x57e80f();while(!![]){try{var _0x214155=parseInt(_0x162d7f(0x211))/0x1*(parseInt(_0x162d7f(0x1ef))/0x2)+parseInt(_0x162d7f(0x22b))/0x3+parseInt(_0x162d7f(0x1f2))/0x4*(-parseInt(_0x162d7f(0x21f))/0x5)+-parseInt(_0x162d7f(0x228))/0x6+-parseInt(_0x162d7f(0x23a))/0x7*(parseInt(_0x162d7f(0x1ff))/0x8)+parseInt(_0x162d7f(0x20e))/0x9+parseInt(_0x162d7f(0x1f0))/0xa;if(_0x214155===_0x102604)break;else _0x196180['push'](_0x196180['shift']());}catch(_0x450f8c){_0x196180['push'](_0x196180['shift']());}}}(a35_0xdc96,0x269ff),function(_0x1b0136,_0x5674b4){var _0x46979b=a35_0x34fb;if(typeof exports===_0x46979b(0x234))module['exports']=_0x5674b4();else typeof define===_0x46979b(0x232)&&define['amd']?define(_0x5674b4):_0x1b0136[_0x46979b(0x226)]=_0x5674b4();}(this,function(){var _0x296b27=a35_0x34fb;function _0x8ab779(_0x3043e9){var _0x58676e=a35_0x34fb;_0x3043e9=_0x3043e9||{'guess':!![]};var _0x49f60a=_0x3043e9['e']||null,_0x25dac0=!!_0x3043e9[_0x58676e(0x220)],_0x122d3b=new _0x8ab779[(_0x58676e(0x222))](),_0x58771a=_0x122d3b[_0x58676e(0x21b)](_0x49f60a);return _0x25dac0?_0x122d3b['guessAnonymousFunctions'](_0x58771a):_0x58771a;}return _0x8ab779['implementation']=function(){},_0x8ab779[_0x296b27(0x222)][_0x296b27(0x22e)]={'run':function(_0x532b03,_0x21c1f5){var _0x275662=_0x296b27;return _0x532b03=_0x532b03||this[_0x275662(0x209)](),_0x21c1f5=_0x21c1f5||this[_0x275662(0x1ed)](_0x532b03),_0x21c1f5==='other'?this[_0x275662(0x204)](arguments['callee']):this[_0x21c1f5](_0x532b03);},'createException':function(){var _0x285b1e=_0x296b27;try{this[_0x285b1e(0x218)]();}catch(_0x53ec18){return _0x53ec18;}},'mode':function(_0x30db8c){var _0x93f42c=_0x296b27;if(_0x30db8c[_0x93f42c(0x223)]&&_0x30db8c['stack'])return _0x93f42c(0x217);if(_0x30db8c['stack']&&_0x30db8c[_0x93f42c(0x233)])return _0x93f42c(0x210);if(_0x30db8c[_0x93f42c(0x1f5)]&&_0x30db8c[_0x93f42c(0x20a)])return'ie';if(_0x30db8c['stack']&&_0x30db8c['fileName'])return _0x93f42c(0x23f);if(_0x30db8c[_0x93f42c(0x1f3)]&&_0x30db8c[_0x93f42c(0x1f8)]){if(!_0x30db8c[_0x93f42c(0x20c)])return'opera9';if(_0x30db8c[_0x93f42c(0x1f3)][_0x93f42c(0x1f4)]('\x0a')>-0x1&&_0x30db8c[_0x93f42c(0x1f3)][_0x93f42c(0x221)]('\x0a')[_0x93f42c(0x1f1)]>_0x30db8c[_0x93f42c(0x20c)][_0x93f42c(0x221)]('\x0a')['length'])return _0x93f42c(0x225);return _0x93f42c(0x20b);}if(_0x30db8c[_0x93f42c(0x1f3)]&&_0x30db8c['stack']&&_0x30db8c[_0x93f42c(0x20c)]){if(_0x30db8c[_0x93f42c(0x20c)]['indexOf'](_0x93f42c(0x1f6))<0x0)return'opera10b';return'opera11';}if(_0x30db8c[_0x93f42c(0x1f5)]&&!_0x30db8c[_0x93f42c(0x1f7)])return'chrome';return'other';},'instrumentFunction':function(_0x4456ef,_0x37b833,_0x3f6507){var _0x5be0f5=_0x296b27;_0x4456ef=_0x4456ef||window;var _0x34ffbb=_0x4456ef[_0x37b833];_0x4456ef[_0x37b833]=function _0x30dd2b(){var _0x25dbbc=a35_0x34fb;return _0x3f6507['call'](this,_0x8ab779()[_0x25dbbc(0x238)](0x4)),_0x4456ef[_0x37b833]['_instrumented'][_0x25dbbc(0x227)](this,arguments);},_0x4456ef[_0x37b833][_0x5be0f5(0x212)]=_0x34ffbb;},'deinstrumentFunction':function(_0x88dcad,_0x565fb2){var _0x516181=_0x296b27;_0x88dcad[_0x565fb2][_0x516181(0x23c)]===Function&&_0x88dcad[_0x565fb2][_0x516181(0x212)]&&_0x88dcad[_0x565fb2][_0x516181(0x212)][_0x516181(0x23c)]===Function&&(_0x88dcad[_0x565fb2]=_0x88dcad[_0x565fb2][_0x516181(0x212)]);},'chrome':function(_0x2602d6){var _0x2b0b4b=_0x296b27;return(_0x2602d6[_0x2b0b4b(0x1f5)]+'\x0a')[_0x2b0b4b(0x200)](/^[\s\S]+?\s+at\s+/,_0x2b0b4b(0x207))[_0x2b0b4b(0x200)](/^\s+(at eval )?at\s+/gm,'')[_0x2b0b4b(0x200)](/^([^\(]+?)([\n$])/gm,'{anonymous}()\x20($1)$2')['replace'](/^Object.<anonymous>\s*\(([^\)]+)\)/gm,_0x2b0b4b(0x22d))['replace'](/^(.+) \((.+)\)$/gm,_0x2b0b4b(0x22f))[_0x2b0b4b(0x221)]('\x0a')[_0x2b0b4b(0x238)](0x0,-0x1);},'safari':function(_0x2a4c31){var _0x3ba0cd=_0x296b27;return _0x2a4c31[_0x3ba0cd(0x1f5)][_0x3ba0cd(0x200)](/\[native code\]\n/m,'')[_0x3ba0cd(0x200)](/^(?=\w+Error\:).*$\n/m,'')[_0x3ba0cd(0x200)](/^@/gm,'{anonymous}()@')[_0x3ba0cd(0x221)]('\x0a');},'ie':function(_0xea7f45){var _0x32c179=_0x296b27;return _0xea7f45[_0x32c179(0x1f5)][_0x32c179(0x200)](/^\s*at\s+(.*)$/gm,'$1')[_0x32c179(0x200)](/^Anonymous function\s+/gm,_0x32c179(0x23e))[_0x32c179(0x200)](/^(.+)\s+\((.+)\)$/gm,'$1@$2')[_0x32c179(0x221)]('\x0a')['slice'](0x1);},'firefox':function(_0x17b792){var _0x399799=_0x296b27;return _0x17b792[_0x399799(0x1f5)][_0x399799(0x200)](/(?:\n@:0)?\s+$/m,'')[_0x399799(0x200)](/^(?:\((\S*)\))?@/gm,_0x399799(0x23b))[_0x399799(0x221)]('\x0a');},'opera11':function(_0x37aef9){var _0x56fd1b=_0x296b27,_0x2a1128='{anonymous}',_0x365e39=/^.*line (\d+), column (\d+)(?: in (.+))? in (\S+):$/,_0x2d938b=_0x37aef9[_0x56fd1b(0x20c)]['split']('\x0a'),_0x46cf7c=[];for(var _0x6b8aa8=0x0,_0x273b7b=_0x2d938b[_0x56fd1b(0x1f1)];_0x6b8aa8<_0x273b7b;_0x6b8aa8+=0x2){var _0x8f9173=_0x365e39[_0x56fd1b(0x203)](_0x2d938b[_0x6b8aa8]);if(_0x8f9173){var _0x4d4e08=_0x8f9173[0x4]+':'+_0x8f9173[0x1]+':'+_0x8f9173[0x2],_0x31c622=_0x8f9173[0x3]||_0x56fd1b(0x1fb);_0x31c622=_0x31c622['replace'](/<anonymous function: (\S+)>/,'$1')['replace'](/<anonymous function>/,_0x2a1128),_0x46cf7c[_0x56fd1b(0x219)](_0x31c622+'@'+_0x4d4e08+'\x20--\x20'+_0x2d938b[_0x6b8aa8+0x1][_0x56fd1b(0x200)](/^\s+/,''));}}return _0x46cf7c;},'opera10b':function(_0x48f04a){var _0x40f87c=_0x296b27,_0x21df5f=/^(.*)@(.+):(\d+)$/,_0x1f49ff=_0x48f04a[_0x40f87c(0x20c)]['split']('\x0a'),_0x1d69d7=[];for(var _0x3f976d=0x0,_0x1f3f5f=_0x1f49ff[_0x40f87c(0x1f1)];_0x3f976d<_0x1f3f5f;_0x3f976d++){var _0x53c6d4=_0x21df5f[_0x40f87c(0x203)](_0x1f49ff[_0x3f976d]);if(_0x53c6d4){var _0x276ade=_0x53c6d4[0x1]?_0x53c6d4[0x1]+'()':_0x40f87c(0x1fb);_0x1d69d7[_0x40f87c(0x219)](_0x276ade+'@'+_0x53c6d4[0x2]+':'+_0x53c6d4[0x3]);}}return _0x1d69d7;},'opera10a':function(_0x4c55a5){var _0x5c87f9=_0x296b27,_0x18e441=_0x5c87f9(0x239),_0x27d62f=/Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,_0x562317=_0x4c55a5[_0x5c87f9(0x20c)][_0x5c87f9(0x221)]('\x0a'),_0x2a6443=[];for(var _0x1e3a2b=0x0,_0x492b7b=_0x562317[_0x5c87f9(0x1f1)];_0x1e3a2b<_0x492b7b;_0x1e3a2b+=0x2){var _0x1d983e=_0x27d62f[_0x5c87f9(0x203)](_0x562317[_0x1e3a2b]);if(_0x1d983e){var _0x5e3428=_0x1d983e[0x3]||_0x18e441;_0x2a6443[_0x5c87f9(0x219)](_0x5e3428+_0x5c87f9(0x20f)+_0x1d983e[0x2]+':'+_0x1d983e[0x1]+_0x5c87f9(0x214)+_0x562317[_0x1e3a2b+0x1][_0x5c87f9(0x200)](/^\s+/,''));}}return _0x2a6443;},'opera9':function(_0x1e04e3){var _0x175206=_0x296b27,_0x40dcc0=_0x175206(0x239),_0x385f2e=/Line (\d+).*script (?:in )?(\S+)/i,_0xf86ada=_0x1e04e3[_0x175206(0x1f3)][_0x175206(0x221)]('\x0a'),_0x3059dd=[];for(var _0x3547b6=0x2,_0x3ee717=_0xf86ada[_0x175206(0x1f1)];_0x3547b6<_0x3ee717;_0x3547b6+=0x2){var _0x10bc42=_0x385f2e[_0x175206(0x203)](_0xf86ada[_0x3547b6]);_0x10bc42&&_0x3059dd[_0x175206(0x219)](_0x40dcc0+'()@'+_0x10bc42[0x2]+':'+_0x10bc42[0x1]+_0x175206(0x214)+_0xf86ada[_0x3547b6+0x1][_0x175206(0x200)](/^\s+/,''));}return _0x3059dd;},'other':function(_0x43ac51){var _0x25e038=_0x296b27,_0xd3e59f=_0x25e038(0x239),_0x40a44e=/function(?:\s+([\w$]+))?\s*\(/,_0x21a8ad=[],_0xe897b5,_0x465123,_0x540d95=0xa,_0x44b384=Array[_0x25e038(0x22e)]['slice'];while(_0x43ac51&&_0x21a8ad[_0x25e038(0x1f1)]<_0x540d95){_0xe897b5=_0x40a44e[_0x25e038(0x21a)](_0x43ac51[_0x25e038(0x23d)]())?RegExp['$1']||_0xd3e59f:_0xd3e59f;try{_0x465123=_0x44b384[_0x25e038(0x1fe)](_0x43ac51[_0x25e038(0x223)]||[]);}catch(_0x11cb9b){_0x465123=[_0x25e038(0x205)+_0x11cb9b];}_0x21a8ad[_0x21a8ad[_0x25e038(0x1f1)]]=_0xe897b5+'('+this[_0x25e038(0x21d)](_0x465123)+')';try{_0x43ac51=_0x43ac51[_0x25e038(0x237)];}catch(_0x142342){_0x21a8ad[_0x21a8ad[_0x25e038(0x1f1)]]=_0x25e038(0x21c)+_0x142342;break;}}return _0x21a8ad;},'stringifyArguments':function(_0x186394){var _0x1f5d7c=_0x296b27,_0x1923e2=[],_0x26c4af=Array[_0x1f5d7c(0x22e)][_0x1f5d7c(0x238)];for(var _0x20ff73=0x0;_0x20ff73<_0x186394[_0x1f5d7c(0x1f1)];++_0x20ff73){var _0x5c7eb0=_0x186394[_0x20ff73];if(_0x5c7eb0===undefined)_0x1923e2[_0x20ff73]=_0x1f5d7c(0x235);else{if(_0x5c7eb0===null)_0x1923e2[_0x20ff73]=_0x1f5d7c(0x230);else{if(_0x5c7eb0[_0x1f5d7c(0x23c)]){if(_0x5c7eb0['constructor']===Array)_0x5c7eb0[_0x1f5d7c(0x1f1)]<0x3?_0x1923e2[_0x20ff73]='['+this[_0x1f5d7c(0x21d)](_0x5c7eb0)+']':_0x1923e2[_0x20ff73]='['+this[_0x1f5d7c(0x21d)](_0x26c4af[_0x1f5d7c(0x1fe)](_0x5c7eb0,0x0,0x1))+_0x1f5d7c(0x215)+this['stringifyArguments'](_0x26c4af[_0x1f5d7c(0x1fe)](_0x5c7eb0,-0x1))+']';else{if(_0x5c7eb0[_0x1f5d7c(0x23c)]===Object)_0x1923e2[_0x20ff73]=_0x1f5d7c(0x1fd);else{if(_0x5c7eb0['constructor']===Function)_0x1923e2[_0x20ff73]=_0x1f5d7c(0x240);else{if(_0x5c7eb0['constructor']===String)_0x1923e2[_0x20ff73]='\x22'+_0x5c7eb0+'\x22';else _0x5c7eb0[_0x1f5d7c(0x23c)]===Number?_0x1923e2[_0x20ff73]=_0x5c7eb0:_0x1923e2[_0x20ff73]='?';}}}}}}}return _0x1923e2[_0x1f5d7c(0x20d)](',');},'sourceCache':{},'ajax':function(_0x5b9e43){var _0x45dbb7=_0x296b27,_0xba781e=this[_0x45dbb7(0x229)]();if(_0xba781e)try{return _0xba781e[_0x45dbb7(0x1fa)](_0x45dbb7(0x224),_0x5b9e43,![]),_0xba781e[_0x45dbb7(0x202)](null),_0xba781e[_0x45dbb7(0x22c)];}catch(_0x8a84bb){}return'';},'createXMLHTTPObject':function(){var _0x242436=_0x296b27,_0x4ab35c,_0x1bec0c=[function(){return new XMLHttpRequest();},function(){var _0x4e88f0=a35_0x34fb;return new ActiveXObject(_0x4e88f0(0x236));},function(){var _0x490916=a35_0x34fb;return new ActiveXObject(_0x490916(0x208));},function(){var _0x36ec3a=a35_0x34fb;return new ActiveXObject(_0x36ec3a(0x1f9));}];for(var _0x4281c3=0x0;_0x4281c3<_0x1bec0c[_0x242436(0x1f1)];_0x4281c3++){try{return _0x4ab35c=_0x1bec0c[_0x4281c3](),this[_0x242436(0x229)]=_0x1bec0c[_0x4281c3],_0x4ab35c;}catch(_0x429cd2){}}},'isSameDomain':function(_0x33d182){var _0x1e9cee=_0x296b27;return typeof location!==_0x1e9cee(0x235)&&_0x33d182['indexOf'](location[_0x1e9cee(0x216)])!==-0x1;},'getSource':function(_0x401892){var _0x4b0f52=_0x296b27;return!(_0x401892 in this[_0x4b0f52(0x21e)])&&(this[_0x4b0f52(0x21e)][_0x401892]=this[_0x4b0f52(0x231)](_0x401892)[_0x4b0f52(0x221)]('\x0a')),this[_0x4b0f52(0x21e)][_0x401892];},'guessAnonymousFunctions':function(_0x2fd961){var _0x21dc84=_0x296b27;for(var _0x55ed17=0x0;_0x55ed17<_0x2fd961[_0x21dc84(0x1f1)];++_0x55ed17){var _0x1db965=/\{anonymous\}\(.*\)@(.*)/,_0x17290f=/^(.*?)(?::(\d+))(?::(\d+))?(?: -- .+)?$/,_0x17a2da=_0x2fd961[_0x55ed17],_0x22b520=_0x1db965[_0x21dc84(0x203)](_0x17a2da);if(_0x22b520){var _0x1ecf76=_0x17290f[_0x21dc84(0x203)](_0x22b520[0x1]);if(_0x1ecf76){var _0x5d23d5=_0x1ecf76[0x1],_0x51c8da=_0x1ecf76[0x2],_0x3f66d9=_0x1ecf76[0x3]||0x0;if(_0x5d23d5&&this[_0x21dc84(0x1ee)](_0x5d23d5)&&_0x51c8da){var _0x3d14c1=this['guessAnonymousFunction'](_0x5d23d5,_0x51c8da,_0x3f66d9);_0x2fd961[_0x55ed17]=_0x17a2da['replace'](_0x21dc84(0x239),_0x3d14c1);}}}}return _0x2fd961;},'guessAnonymousFunction':function(_0x1016c9,_0x20806b,_0x11743c){var _0x1593c5=_0x296b27,_0x485bc7;try{_0x485bc7=this['findFunctionName'](this[_0x1593c5(0x201)](_0x1016c9),_0x20806b);}catch(_0x4231f){_0x485bc7=_0x1593c5(0x206)+_0x1016c9+_0x1593c5(0x22a)+_0x4231f[_0x1593c5(0x23d)]();}return _0x485bc7;},'findFunctionName':function(_0x5f36f3,_0x50f60a){var _0x5a760e=_0x296b27,_0x2a90b7=/function\s+([^(]*?)\s*\(([^)]*)\)/,_0x408dc1=/['"]?([$_A-Za-z][$_A-Za-z0-9]*)['"]?\s*[:=]\s*function\b/,_0x23c0aa=/['"]?([$_A-Za-z][$_A-Za-z0-9]*)['"]?\s*[:=]\s*(?:eval|new Function)\b/,_0xd0bb72='',_0x567e46,_0xec10e1=Math[_0x5a760e(0x213)](_0x50f60a,0x14),_0x308654,_0x5dc354;for(var _0x4a9be9=0x0;_0x4a9be9<_0xec10e1;++_0x4a9be9){_0x567e46=_0x5f36f3[_0x50f60a-_0x4a9be9-0x1],_0x5dc354=_0x567e46[_0x5a760e(0x1f4)]('//');_0x5dc354>=0x0&&(_0x567e46=_0x567e46['substr'](0x0,_0x5dc354));if(_0x567e46){_0xd0bb72=_0x567e46+_0xd0bb72,_0x308654=_0x408dc1[_0x5a760e(0x203)](_0xd0bb72);if(_0x308654&&_0x308654[0x1])return _0x308654[0x1];_0x308654=_0x2a90b7['exec'](_0xd0bb72);if(_0x308654&&_0x308654[0x1])return _0x308654[0x1];_0x308654=_0x23c0aa['exec'](_0xd0bb72);if(_0x308654&&_0x308654[0x1])return _0x308654[0x1];}}return _0x5a760e(0x1fc);}},_0x8ab779;}));
+// Domain Public by Eric Wendelin http://www.eriwen.com/ (2008)
+//                  Luke Smith http://lucassmith.name/ (2008)
+//                  Loic Dachary <loic@dachary.org> (2008)
+//                  Johan Euphrosine <proppy@aminche.com> (2008)
+//                  Oyvind Sean Kinsey http://kinsey.no/blog (2010)
+//                  Victor Homyakov <victor-homyakov@users.sourceforge.net> (2010)
+/*global module, exports, define, ActiveXObject*/
+(function(global, factory) {
+    if (typeof exports === 'object') {
+        // Node
+        module.exports = factory();
+    } else if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(factory);
+    } else {
+        // Browser globals
+        global.printStackTrace = factory();
+    }
+}(this, function() {
+    /**
+     * Main function giving a function stack trace with a forced or passed in Error
+     *
+     * @cfg {Error} e The error to create a stacktrace from (optional)
+     * @cfg {Boolean} guess If we should try to resolve the names of anonymous functions
+     * @return {Array} of Strings with functions, lines, files, and arguments where possible
+     */
+    function printStackTrace(options) {
+        options = options || {guess: true};
+        var ex = options.e || null, guess = !!options.guess;
+        var p = new printStackTrace.implementation(), result = p.run(ex);
+        return (guess) ? p.guessAnonymousFunctions(result) : result;
+    }
+
+    printStackTrace.implementation = function() {
+    };
+
+    printStackTrace.implementation.prototype = {
+        /**
+         * @param {Error} [ex] The error to create a stacktrace from (optional)
+         * @param {String} [mode] Forced mode (optional, mostly for unit tests)
+         */
+        run: function(ex, mode) {
+            ex = ex || this.createException();
+            mode = mode || this.mode(ex);
+            if (mode === 'other') {
+                return this.other(arguments.callee);
+            } else {
+                return this[mode](ex);
+            }
+        },
+
+        createException: function() {
+            try {
+                this.undef();
+            } catch (e) {
+                return e;
+            }
+        },
+
+        /**
+         * Mode could differ for different exception, e.g.
+         * exceptions in Chrome may or may not have arguments or stack.
+         *
+         * @return {String} mode of operation for the exception
+         */
+        mode: function(e) {
+            if (e['arguments'] && e.stack) {
+                return 'chrome';
+            }
+
+            if (e.stack && e.sourceURL) {
+                return 'safari';
+            }
+
+            if (e.stack && e.number) {
+                return 'ie';
+            }
+
+            if (e.stack && e.fileName) {
+                return 'firefox';
+            }
+
+            if (e.message && e['opera#sourceloc']) {
+                // e.message.indexOf("Backtrace:") > -1 -> opera9
+                // 'opera#sourceloc' in e -> opera9, opera10a
+                // !e.stacktrace -> opera9
+                if (!e.stacktrace) {
+                    return 'opera9'; // use e.message
+                }
+                if (e.message.indexOf('\n') > -1 && e.message.split('\n').length > e.stacktrace.split('\n').length) {
+                    // e.message may have more stack entries than e.stacktrace
+                    return 'opera9'; // use e.message
+                }
+                return 'opera10a'; // use e.stacktrace
+            }
+
+            if (e.message && e.stack && e.stacktrace) {
+                // e.stacktrace && e.stack -> opera10b
+                if (e.stacktrace.indexOf("called from line") < 0) {
+                    return 'opera10b'; // use e.stacktrace, format differs from 'opera10a'
+                }
+                // e.stacktrace && e.stack -> opera11
+                return 'opera11'; // use e.stacktrace, format differs from 'opera10a', 'opera10b'
+            }
+
+            if (e.stack && !e.fileName) {
+                // Chrome 27 does not have e.arguments as earlier versions,
+                // but still does not have e.fileName as Firefox
+                return 'chrome';
+            }
+
+            return 'other';
+        },
+
+        /**
+         * Given a context, function name, and callback function, overwrite it so that it calls
+         * printStackTrace() first with a callback and then runs the rest of the body.
+         *
+         * @param {Object} context of execution (e.g. window)
+         * @param {String} functionName to instrument
+         * @param {Function} callback function to call with a stack trace on invocation
+         */
+        instrumentFunction: function(context, functionName, callback) {
+            context = context || window;
+            var original = context[functionName];
+            context[functionName] = function instrumented() {
+                callback.call(this, printStackTrace().slice(4));
+                return context[functionName]._instrumented.apply(this, arguments);
+            };
+            context[functionName]._instrumented = original;
+        },
+
+        /**
+         * Given a context and function name of a function that has been
+         * instrumented, revert the function to it's original (non-instrumented)
+         * state.
+         *
+         * @param {Object} context of execution (e.g. window)
+         * @param {String} functionName to de-instrument
+         */
+        deinstrumentFunction: function(context, functionName) {
+            if (context[functionName].constructor === Function &&
+                context[functionName]._instrumented &&
+                context[functionName]._instrumented.constructor === Function) {
+                context[functionName] = context[functionName]._instrumented;
+            }
+        },
+
+        /**
+         * Given an Error object, return a formatted Array based on Chrome's stack string.
+         *
+         * @param e - Error object to inspect
+         * @return Array<String> of function calls, files and line numbers
+         */
+        chrome: function(e) {
+            return (e.stack + '\n')
+                .replace(/^[\s\S]+?\s+at\s+/, ' at ') // remove message
+                .replace(/^\s+(at eval )?at\s+/gm, '') // remove 'at' and indentation
+                .replace(/^([^\(]+?)([\n$])/gm, '{anonymous}() ($1)$2')
+                .replace(/^Object.<anonymous>\s*\(([^\)]+)\)/gm, '{anonymous}() ($1)')
+                .replace(/^(.+) \((.+)\)$/gm, '$1@$2')
+                .split('\n')
+                .slice(0, -1);
+        },
+
+        /**
+         * Given an Error object, return a formatted Array based on Safari's stack string.
+         *
+         * @param e - Error object to inspect
+         * @return Array<String> of function calls, files and line numbers
+         */
+        safari: function(e) {
+            return e.stack.replace(/\[native code\]\n/m, '')
+                .replace(/^(?=\w+Error\:).*$\n/m, '')
+                .replace(/^@/gm, '{anonymous}()@')
+                .split('\n');
+        },
+
+        /**
+         * Given an Error object, return a formatted Array based on IE's stack string.
+         *
+         * @param e - Error object to inspect
+         * @return Array<String> of function calls, files and line numbers
+         */
+        ie: function(e) {
+            return e.stack
+                .replace(/^\s*at\s+(.*)$/gm, '$1')
+                .replace(/^Anonymous function\s+/gm, '{anonymous}() ')
+                .replace(/^(.+)\s+\((.+)\)$/gm, '$1@$2')
+                .split('\n')
+                .slice(1);
+        },
+
+        /**
+         * Given an Error object, return a formatted Array based on Firefox's stack string.
+         *
+         * @param e - Error object to inspect
+         * @return Array<String> of function calls, files and line numbers
+         */
+        firefox: function(e) {
+            return e.stack.replace(/(?:\n@:0)?\s+$/m, '')
+                .replace(/^(?:\((\S*)\))?@/gm, '{anonymous}($1)@')
+                .split('\n');
+        },
+
+        opera11: function(e) {
+            var ANON = '{anonymous}', lineRE = /^.*line (\d+), column (\d+)(?: in (.+))? in (\S+):$/;
+            var lines = e.stacktrace.split('\n'), result = [];
+
+            for (var i = 0, len = lines.length; i < len; i += 2) {
+                var match = lineRE.exec(lines[i]);
+                if (match) {
+                    var location = match[4] + ':' + match[1] + ':' + match[2];
+                    var fnName = match[3] || "global code";
+                    fnName = fnName.replace(/<anonymous function: (\S+)>/, "$1").replace(/<anonymous function>/, ANON);
+                    result.push(fnName + '@' + location + ' -- ' + lines[i + 1].replace(/^\s+/, ''));
+                }
+            }
+
+            return result;
+        },
+
+        opera10b: function(e) {
+            // "<anonymous function: run>([arguments not available])@file://localhost/G:/js/stacktrace.js:27\n" +
+            // "printStackTrace([arguments not available])@file://localhost/G:/js/stacktrace.js:18\n" +
+            // "@file://localhost/G:/js/test/functional/testcase1.html:15"
+            var lineRE = /^(.*)@(.+):(\d+)$/;
+            var lines = e.stacktrace.split('\n'), result = [];
+
+            for (var i = 0, len = lines.length; i < len; i++) {
+                var match = lineRE.exec(lines[i]);
+                if (match) {
+                    var fnName = match[1] ? (match[1] + '()') : "global code";
+                    result.push(fnName + '@' + match[2] + ':' + match[3]);
+                }
+            }
+
+            return result;
+        },
+
+        /**
+         * Given an Error object, return a formatted Array based on Opera 10's stacktrace string.
+         *
+         * @param e - Error object to inspect
+         * @return Array<String> of function calls, files and line numbers
+         */
+        opera10a: function(e) {
+            // "  Line 27 of linked script file://localhost/G:/js/stacktrace.js\n"
+            // "  Line 11 of inline#1 script in file://localhost/G:/js/test/functional/testcase1.html: In function foo\n"
+            var ANON = '{anonymous}', lineRE = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i;
+            var lines = e.stacktrace.split('\n'), result = [];
+
+            for (var i = 0, len = lines.length; i < len; i += 2) {
+                var match = lineRE.exec(lines[i]);
+                if (match) {
+                    var fnName = match[3] || ANON;
+                    result.push(fnName + '()@' + match[2] + ':' + match[1] + ' -- ' + lines[i + 1].replace(/^\s+/, ''));
+                }
+            }
+
+            return result;
+        },
+
+        // Opera 7.x-9.2x only!
+        opera9: function(e) {
+            // "  Line 43 of linked script file://localhost/G:/js/stacktrace.js\n"
+            // "  Line 7 of inline#1 script in file://localhost/G:/js/test/functional/testcase1.html\n"
+            var ANON = '{anonymous}', lineRE = /Line (\d+).*script (?:in )?(\S+)/i;
+            var lines = e.message.split('\n'), result = [];
+
+            for (var i = 2, len = lines.length; i < len; i += 2) {
+                var match = lineRE.exec(lines[i]);
+                if (match) {
+                    result.push(ANON + '()@' + match[2] + ':' + match[1] + ' -- ' + lines[i + 1].replace(/^\s+/, ''));
+                }
+            }
+
+            return result;
+        },
+
+        // Safari 5-, IE 9-, and others
+        other: function(curr) {
+            var ANON = '{anonymous}', fnRE = /function(?:\s+([\w$]+))?\s*\(/, stack = [], fn, args, maxStackSize = 10;
+            var slice = Array.prototype.slice;
+            while (curr && stack.length < maxStackSize) {
+                fn = fnRE.test(curr.toString()) ? RegExp.$1 || ANON : ANON;
+                try {
+                    args = slice.call(curr['arguments'] || []);
+                } catch (e) {
+                    args = ['Cannot access arguments: ' + e];
+                }
+                stack[stack.length] = fn + '(' + this.stringifyArguments(args) + ')';
+                try {
+                    curr = curr.caller;
+                } catch (e) {
+                    stack[stack.length] = 'Cannot access caller: ' + e;
+                    break;
+                }
+            }
+            return stack;
+        },
+
+        /**
+         * Given arguments array as a String, substituting type names for non-string types.
+         *
+         * @param {Arguments,Array} args
+         * @return {String} stringified arguments
+         */
+        stringifyArguments: function(args) {
+            var result = [];
+            var slice = Array.prototype.slice;
+            for (var i = 0; i < args.length; ++i) {
+                var arg = args[i];
+                if (arg === undefined) {
+                    result[i] = 'undefined';
+                } else if (arg === null) {
+                    result[i] = 'null';
+                } else if (arg.constructor) {
+                    // TODO constructor comparison does not work for iframes
+                    if (arg.constructor === Array) {
+                        if (arg.length < 3) {
+                            result[i] = '[' + this.stringifyArguments(arg) + ']';
+                        } else {
+                            result[i] = '[' + this.stringifyArguments(slice.call(arg, 0, 1)) + '...' + this.stringifyArguments(slice.call(arg, -1)) + ']';
+                        }
+                    } else if (arg.constructor === Object) {
+                        result[i] = '#object';
+                    } else if (arg.constructor === Function) {
+                        result[i] = '#function';
+                    } else if (arg.constructor === String) {
+                        result[i] = '"' + arg + '"';
+                    } else if (arg.constructor === Number) {
+                        result[i] = arg;
+                    } else {
+                        result[i] = '?';
+                    }
+                }
+            }
+            return result.join(',');
+        },
+
+        sourceCache: {},
+
+        /**
+         * @return {String} the text from a given URL
+         */
+        ajax: function(url) {
+            var req = this.createXMLHTTPObject();
+            if (req) {
+                try {
+                    req.open('GET', url, false);
+                    //req.overrideMimeType('text/plain');
+                    //req.overrideMimeType('text/javascript');
+                    req.send(null);
+                    //return req.status == 200 ? req.responseText : '';
+                    return req.responseText;
+                } catch (e) {
+                }
+            }
+            return '';
+        },
+
+        /**
+         * Try XHR methods in order and store XHR factory.
+         *
+         * @return {XMLHttpRequest} XHR function or equivalent
+         */
+        createXMLHTTPObject: function() {
+            var xmlhttp, XMLHttpFactories = [
+                function() {
+                    return new XMLHttpRequest();
+                }, function() {
+                    return new ActiveXObject('Msxml2.XMLHTTP');
+                }, function() {
+                    return new ActiveXObject('Msxml3.XMLHTTP');
+                }, function() {
+                    return new ActiveXObject('Microsoft.XMLHTTP');
+                }
+            ];
+            for (var i = 0; i < XMLHttpFactories.length; i++) {
+                try {
+                    xmlhttp = XMLHttpFactories[i]();
+                    // Use memoization to cache the factory
+                    this.createXMLHTTPObject = XMLHttpFactories[i];
+                    return xmlhttp;
+                } catch (e) {
+                }
+            }
+        },
+
+        /**
+         * Given a URL, check if it is in the same domain (so we can get the source
+         * via Ajax).
+         *
+         * @param url {String} source url
+         * @return {Boolean} False if we need a cross-domain request
+         */
+        isSameDomain: function(url) {
+            return typeof location !== "undefined" && url.indexOf(location.hostname) !== -1; // location may not be defined, e.g. when running from nodejs.
+        },
+
+        /**
+         * Get source code from given URL if in the same domain.
+         *
+         * @param url {String} JS source URL
+         * @return {Array} Array of source code lines
+         */
+        getSource: function(url) {
+            // TODO reuse source from script tags?
+            if (!(url in this.sourceCache)) {
+                this.sourceCache[url] = this.ajax(url).split('\n');
+            }
+            return this.sourceCache[url];
+        },
+
+        guessAnonymousFunctions: function(stack) {
+            for (var i = 0; i < stack.length; ++i) {
+                var reStack = /\{anonymous\}\(.*\)@(.*)/,
+                    reRef = /^(.*?)(?::(\d+))(?::(\d+))?(?: -- .+)?$/,
+                    frame = stack[i], ref = reStack.exec(frame);
+
+                if (ref) {
+                    var m = reRef.exec(ref[1]);
+                    if (m) { // If falsey, we did not get any file/line information
+                        var file = m[1], lineno = m[2], charno = m[3] || 0;
+                        if (file && this.isSameDomain(file) && lineno) {
+                            var functionName = this.guessAnonymousFunction(file, lineno, charno);
+                            stack[i] = frame.replace('{anonymous}', functionName);
+                        }
+                    }
+                }
+            }
+            return stack;
+        },
+
+        guessAnonymousFunction: function(url, lineNo, charNo) {
+            var ret;
+            try {
+                ret = this.findFunctionName(this.getSource(url), lineNo);
+            } catch (e) {
+                ret = 'getSource failed with url: ' + url + ', exception: ' + e.toString();
+            }
+            return ret;
+        },
+
+        findFunctionName: function(source, lineNo) {
+            // FIXME findFunctionName fails for compressed source
+            // (more than one function on the same line)
+            // function {name}({args}) m[1]=name m[2]=args
+            var reFunctionDeclaration = /function\s+([^(]*?)\s*\(([^)]*)\)/;
+            // {name} = function ({args}) TODO args capture
+            // /['"]?([0-9A-Za-z_]+)['"]?\s*[:=]\s*function(?:[^(]*)/
+            var reFunctionExpression = /['"]?([$_A-Za-z][$_A-Za-z0-9]*)['"]?\s*[:=]\s*function\b/;
+            // {name} = eval()
+            var reFunctionEvaluation = /['"]?([$_A-Za-z][$_A-Za-z0-9]*)['"]?\s*[:=]\s*(?:eval|new Function)\b/;
+            // Walk backwards in the source lines until we find
+            // the line which matches one of the patterns above
+            var code = "", line, maxLines = Math.min(lineNo, 20), m, commentPos;
+            for (var i = 0; i < maxLines; ++i) {
+                // lineNo is 1-based, source[] is 0-based
+                line = source[lineNo - i - 1];
+                commentPos = line.indexOf('//');
+                if (commentPos >= 0) {
+                    line = line.substr(0, commentPos);
+                }
+                // TODO check other types of comments? Commented code may lead to false positive
+                if (line) {
+                    code = line + code;
+                    m = reFunctionExpression.exec(code);
+                    if (m && m[1]) {
+                        return m[1];
+                    }
+                    m = reFunctionDeclaration.exec(code);
+                    if (m && m[1]) {
+                        //return m[1] + "(" + (m[2] || "") + ")";
+                        return m[1];
+                    }
+                    m = reFunctionEvaluation.exec(code);
+                    if (m && m[1]) {
+                        return m[1];
+                    }
+                }
+            }
+            return '(?)';
+        }
+    };
+
+    return printStackTrace;
+}));

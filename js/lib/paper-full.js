@@ -1,1 +1,73 @@
-function a32_0xd5c5(){var _0x34b9b3=['object','script','load','\x22></script>','<script\x20src=\x22','write','../src/constants.js','match','include','-load','2322BESOoG','nativeClasses','18984999JyASUv','90993yvIyfy','41715GUGJLJ','src/load.js','1454175AdhTLd','node_modules/prepro/lib/browser.js','36hjnync','options.js','MouseEvent','5784kYDSWn','10104MGIjOg','276clIdHQ','788VEsVkC','version','constants.js','8225310gpPqaj','getElementsByTagName','undefined','paper.js'];a32_0xd5c5=function(){return _0x34b9b3;};return a32_0xd5c5();}var a32_0x27fe74=a32_0xe4d0;function a32_0xe4d0(_0x2e46e1,_0x359ecb){_0x2e46e1=_0x2e46e1-0x8c;var _0xd5c506=a32_0xd5c5();var _0xe4d088=_0xd5c506[_0x2e46e1];return _0xe4d088;}(function(_0x74470,_0x510aa6){var _0x3855fd=a32_0xe4d0,_0x7ad74a=_0x74470();while(!![]){try{var _0x89024e=parseInt(_0x3855fd(0x8d))/0x1+-parseInt(_0x3855fd(0x8f))/0x2*(parseInt(_0x3855fd(0x93))/0x3)+parseInt(_0x3855fd(0x95))/0x4*(parseInt(_0x3855fd(0xaa))/0x5)+parseInt(_0x3855fd(0x94))/0x6*(parseInt(_0x3855fd(0xa9))/0x7)+parseInt(_0x3855fd(0x92))/0x8*(-parseInt(_0x3855fd(0xa6))/0x9)+-parseInt(_0x3855fd(0x98))/0xa+-parseInt(_0x3855fd(0xa8))/0xb;if(_0x89024e===_0x510aa6)break;else _0x7ad74a['push'](_0x7ad74a['shift']());}catch(_0x5bf32c){_0x7ad74a['push'](_0x7ad74a['shift']());}}}(a32_0xd5c5,0xdbc06));if(typeof window===a32_0x27fe74(0x9c)){if(!window[a32_0x27fe74(0xa4)]){var scripts=document[a32_0x27fe74(0x99)](a32_0x27fe74(0x9d)),src=scripts[scripts['length']-0x1]['getAttribute']('src'),root=src[a32_0x27fe74(0xa3)](/^(.*\/)\w*\//)[0x1],load=function(_0x4c64e8){var _0x1bedf3=a32_0x27fe74;document[_0x1bedf3(0xa1)](_0x1bedf3(0xa0)+_0x4c64e8+_0x1bedf3(0x9f));};load(root+a32_0x27fe74(0x8e)),load(root+a32_0x27fe74(0x8c));}else this[a32_0x27fe74(0xa7)]={'Event':window['Event'],'MouseEvent':window[a32_0x27fe74(0x91)]},include(a32_0x27fe74(0x90)),include(a32_0x27fe74(0x97)),include('../node_modules/stats.js/build/stats.min.js'),include(a32_0x27fe74(0x9b));}else{if(typeof require!==a32_0x27fe74(0x9a)){var prepro=require('prepro/lib/node'),options=require('../src/options.js');options[a32_0x27fe74(0x9e)]=!![],options[a32_0x27fe74(0x96)]+=a32_0x27fe74(0xa5),prepro['setup'](function(){return{'__options':options,'self':undefined};}),prepro[a32_0x27fe74(0xa4)](a32_0x27fe74(0xa2)),prepro[a32_0x27fe74(0xa4)]('../src/paper.js');}}
+/*
+ * Paper.js - The Swiss Army Knife of Vector Graphics Scripting.
+ * http://paperjs.org/
+ *
+ * Copyright (c) 2011 - 2020, Jürg Lehni & Jonathan Puckey
+ * http://juerglehni.com/ & https://puckey.studio/
+ *
+ * Distributed under the MIT license. See LICENSE file for details.
+ *
+ * All rights reserved.
+ */
+
+// This file uses Prepro.js to preprocess the paper.js source code on the fly in
+// the browser, avoiding the step of having to manually preprocess it after each
+// change. This is very useful during development of the library itself.
+if (typeof window === 'object') {
+    // Browser based loading through Prepro.js:
+    if (!window.include) {
+        // Get the last script tag and assume it's the one that loaded this file
+        // then get its src attribute and figure out the location of our root.
+        var scripts = document.getElementsByTagName('script'),
+            src = scripts[scripts.length - 1].getAttribute('src'),
+            // Assume that we're loading from a non-root folder, either through
+            // ../../dist/paper-full.js, or directly through ../../src/load.js,
+            // and match root as all the path's parts that lead to that folder,
+            // exclude the last bit (dist|src), as that's a sub-folder of paper.
+            root = src.match(/^(.*\/)\w*\//)[1],
+            load = function(src) {
+                document.write('<script src="' + src + '"></script>');
+            };
+        // First load the prepro's browser.js file, which provides the include()
+        // function for the browser.
+        load(root + 'node_modules/prepro/lib/browser.js');
+        // Now that we will have window.include() through browser.js, trigger
+        // the loading of this file again, which will execute the lower part of
+        // the code the 2nd time around.
+        load(root + 'src/load.js');
+    } else {
+        // Some native javascript classes have name collisions with Paper.js
+        // classes. Store them to be able to use them later in tests.
+        this.nativeClasses = {
+            Event: window.Event,
+            MouseEvent: window.MouseEvent
+        };
+        include('options.js');
+        // Load constants.js, required by the on-the-fly preprocessing:
+        include('constants.js');
+        // Automatically load stats.js while developing.
+        include('../node_modules/stats.js/build/stats.min.js');
+        include('paper.js');
+    }
+} else if (typeof require !== 'undefined') {
+    // Node.js based loading through Prepro.js:
+    var prepro = require('prepro/lib/node'),
+        // Load the default browser-based options for further amendments.
+        // Step out and back into src, in case this is loaded from
+        // dist/paper-node.js
+        options = require('../src/options.js');
+    // Override Node.js specific options.
+    options.load = true;
+    options.version += '-load';
+    prepro.setup(function() {
+        // Return objects to be defined in the preprocess-scope.
+        // Note that this would be merge in with already existing objects.
+        // We're defining self here since the paper-scope argument is only
+        // available in the included scripts when the library is actually built.
+        return { __options: options, self: undefined };
+    });
+    // Load constants.js, required by the on-the-fly preprocessing:
+    prepro.include('../src/constants.js');
+    // Load Paper.js library files.
+    prepro.include('../src/paper.js');
+}

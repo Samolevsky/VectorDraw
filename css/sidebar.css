@@ -3842,21 +3842,20 @@ body.dark-theme .exportBtn:hover {
 }
 
 .brushItem {
-	display: flex;
-	align-items: center;
-	gap: var(--spacing-md);
-	padding: var(--spacing-md);
-	border: 1px solid var(--border-light);
-	border-radius: var(--radius-md);
-	background-color: var(--bg-secondary);
-	cursor: pointer;
-	transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
 }
 
 .brushItem:hover {
-	background-color: var(--bg-hover);
-	border-color: var(--border-medium);
-	transform: translateX(2px);
+    background-color: var(--bg-hover);
+    border-color: var(--border-medium);
 }
 
 .brushItem.active {
@@ -3875,7 +3874,60 @@ body.dark-theme .exportBtn:hover {
 }
 
 .brushItem.active .brushPreviewSvg {
-	color: white;
+    color: white;
+}
+
+.brushActions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.brushItem:hover .brushActions,
+.brushItem.active .brushActions {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.brushPropertiesBtn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.15s ease;
+}
+
+.brushPropertiesBtn:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--border-medium);
+    color: var(--accent-primary);
+}
+
+.brushPropertiesBtn img,
+.brushPropertiesBtn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.brushItem.active .brushPropertiesBtn {
+    color: white;
+}
+
+.brushItem.active .brushPropertiesBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
 }
 
 .brushPreview {

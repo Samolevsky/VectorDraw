@@ -1,1 +1,122 @@
-const a22_0x4f5d56=a22_0x18ce;function a22_0x18ce(_0x727176,_0x5629d0){_0x727176=_0x727176-0x171;const _0x2ce403=a22_0x2ce4();let _0x18ceb6=_0x2ce403[_0x727176];return _0x18ceb6;}(function(_0x2220e9,_0x36f916){const _0x342ad3=a22_0x18ce,_0x336c4a=_0x2220e9();while(!![]){try{const _0x4e56d1=-parseInt(_0x342ad3(0x17b))/0x1+-parseInt(_0x342ad3(0x180))/0x2+parseInt(_0x342ad3(0x179))/0x3*(parseInt(_0x342ad3(0x17c))/0x4)+-parseInt(_0x342ad3(0x184))/0x5*(-parseInt(_0x342ad3(0x172))/0x6)+-parseInt(_0x342ad3(0x181))/0x7*(-parseInt(_0x342ad3(0x174))/0x8)+parseInt(_0x342ad3(0x185))/0x9+parseInt(_0x342ad3(0x189))/0xa*(-parseInt(_0x342ad3(0x17f))/0xb);if(_0x4e56d1===_0x36f916)break;else _0x336c4a['push'](_0x336c4a['shift']());}catch(_0x1b4f94){_0x336c4a['push'](_0x336c4a['shift']());}}}(a22_0x2ce4,0xd7c19));function a22_0x2ce4(){const _0x5610cc=['bestMark','777517uEkySo','18628QDmfsf','renderSvg','bestDist','11BcNpBT','704302YuVhnH','7YalYLP','sqrt','lineto','45145vlMjRv','2103327icKwzR','accumLine','min','push','5635510ZYDLGY','curveto','486MNUeGn','mark','11963832hpIpIf','hypot','closepath','cmds','moveto','75RQiIzz'];a22_0x2ce4=function(){return _0x5610cc;};return a22_0x2ce4();}const MOVETO='m',LINETO='l',CURVETO='c',CLOSEPATH='z',MARK='#';class BezPath{constructor(){const _0xe8b56=a22_0x18ce;this[_0xe8b56(0x177)]=[];}[a22_0x4f5d56(0x178)](_0x3d13f0,_0x335fce){const _0x380e36=a22_0x4f5d56;this[_0x380e36(0x177)][_0x380e36(0x188)]([MOVETO,_0x3d13f0,_0x335fce]);}[a22_0x4f5d56(0x183)](_0x3513a5,_0x5968fb){const _0x457fba=a22_0x4f5d56;this[_0x457fba(0x177)][_0x457fba(0x188)]([LINETO,_0x3513a5,_0x5968fb]);}[a22_0x4f5d56(0x171)](_0xa65f92,_0xec8c97,_0x3684f7,_0x2ca7d4,_0x3ebc44,_0x2eeb5e){const _0x4614a2=a22_0x4f5d56;this[_0x4614a2(0x177)][_0x4614a2(0x188)]([CURVETO,_0xa65f92,_0xec8c97,_0x3684f7,_0x2ca7d4,_0x3ebc44,_0x2eeb5e]);}[a22_0x4f5d56(0x176)](){const _0x1da4cc=a22_0x4f5d56;this[_0x1da4cc(0x177)][_0x1da4cc(0x188)]([CLOSEPATH]);}[a22_0x4f5d56(0x173)](_0x5f61e5){const _0x50e6a7=a22_0x4f5d56;this['cmds'][_0x50e6a7(0x188)]([MARK,_0x5f61e5]);}[a22_0x4f5d56(0x17d)](){const _0x3844e9=a22_0x4f5d56;let _0x1964f4='';for(let _0x3c84bf of this[_0x3844e9(0x177)]){let _0x3148c7=_0x3c84bf[0x0];if(_0x3148c7===MOVETO)_0x1964f4+='M'+_0x3c84bf[0x1]+'\x20'+_0x3c84bf[0x2];else{if(_0x3148c7===LINETO)_0x1964f4+='L'+_0x3c84bf[0x1]+'\x20'+_0x3c84bf[0x2];else{if(_0x3148c7===CURVETO)_0x1964f4+='C'+_0x3c84bf[0x1]+'\x20'+_0x3c84bf[0x2]+'\x20'+_0x3c84bf[0x3]+'\x20'+_0x3c84bf[0x4]+'\x20'+_0x3c84bf[0x5]+'\x20'+_0x3c84bf[0x6];else _0x3148c7===CLOSEPATH&&(_0x1964f4+='Z');}}}return _0x1964f4;}['hitTest'](_0x23aa43,_0x43fb98){const _0x4abedb=a22_0x4f5d56;let _0x20d3b1=new HitTestResult(_0x23aa43,_0x43fb98),_0xaa3b48,_0x164eaf,_0x554522=null;for(let _0x40ec88 of this['cmds']){let _0x535efb=_0x40ec88[0x0];if(_0x535efb===MOVETO)_0xaa3b48=_0x40ec88[0x1],_0x164eaf=_0x40ec88[0x2];else{if(_0x535efb===LINETO)_0x20d3b1[_0x4abedb(0x186)](_0xaa3b48,_0x164eaf,_0x40ec88[0x1],_0x40ec88[0x2],_0x554522),_0xaa3b48=_0x40ec88[0x1],_0x164eaf=_0x40ec88[0x2];else{if(_0x535efb===CURVETO)_0x20d3b1['accumCurve'](_0xaa3b48,_0x164eaf,_0x40ec88[0x1],_0x40ec88[0x2],_0x40ec88[0x3],_0x40ec88[0x4],_0x40ec88[0x5],_0x40ec88[0x6],_0x554522),_0xaa3b48=_0x40ec88[0x5],_0x164eaf=_0x40ec88[0x6];else _0x535efb===MARK&&(_0x554522=_0x40ec88[0x1]);}}}return _0x20d3b1;}}class HitTestResult{constructor(_0x19ac81,_0x44c86e){const _0x153b1c=a22_0x4f5d56;this['x']=_0x19ac81,this['y']=_0x44c86e,this[_0x153b1c(0x17e)]=0xe8d4a51000,this[_0x153b1c(0x17a)]=null;}[a22_0x4f5d56(0x186)](_0x219bec,_0x149d64,_0x309fc8,_0x54fe0a,_0x1df197){const _0x407815=a22_0x4f5d56;let _0x4c00d3=_0x309fc8-_0x219bec,_0x96797d=_0x54fe0a-_0x149d64,_0xbdabe4=(this['x']-_0x219bec)*_0x4c00d3+(this['y']-_0x149d64)*_0x96797d,_0x195315=_0x4c00d3*_0x4c00d3+_0x96797d*_0x96797d,_0x5e6340=Math[_0x407815(0x175)](this['x']-_0x219bec,this['y']-_0x149d64),_0x204d59=_0x5e6340;_0x5e6340=Math[_0x407815(0x175)](this['x']-_0x309fc8,this['y']-_0x54fe0a),_0x204d59=Math[_0x407815(0x187)](_0x204d59,_0x5e6340);if(_0xbdabe4>0x0&&_0xbdabe4<_0x195315){let _0x257445=(this['x']-_0x219bec)*_0x96797d-(this['y']-_0x149d64)*_0x4c00d3;_0x5e6340=Math['abs'](_0x257445/Math[_0x407815(0x182)](_0x195315)),_0x204d59=Math[_0x407815(0x187)](_0x204d59,_0x5e6340);}_0x204d59<this[_0x407815(0x17e)]&&(this[_0x407815(0x17e)]=_0x204d59,this[_0x407815(0x17a)]=_0x1df197);}['accumCurve'](_0x4c7200,_0x29bff6,_0x28e8b2,_0x49e632,_0x93fea8,_0x41f37b,_0x19c513,_0x42f537,_0x2c0cbb){const _0x18fb07=a22_0x4f5d56;let _0x3e2821=0x20,_0x14ab36=0x1/_0x3e2821,_0x1ea8c9=_0x4c7200,_0x48c070=_0x29bff6;for(let _0x373ccd=0x0;_0x373ccd<_0x3e2821;_0x373ccd++){let _0x14f38f=(_0x373ccd+0x1)*_0x14ab36,_0xb570d2=0x1-_0x14f38f,_0x493fdb=(_0x4c7200*_0xb570d2*_0xb570d2+0x3*(_0x28e8b2*_0xb570d2*_0x14f38f+_0x93fea8*_0x14f38f*_0x14f38f))*_0xb570d2+_0x19c513*_0x14f38f*_0x14f38f*_0x14f38f,_0x59feb0=(_0x29bff6*_0xb570d2*_0xb570d2+0x3*(_0x49e632*_0xb570d2*_0x14f38f+_0x41f37b*_0x14f38f*_0x14f38f))*_0xb570d2+_0x42f537*_0x14f38f*_0x14f38f*_0x14f38f;this[_0x18fb07(0x186)](_0x1ea8c9,_0x48c070,_0x493fdb,_0x59feb0,_0x2c0cbb),_0x1ea8c9=_0x493fdb,_0x48c070=_0x59feb0;}}}
+// Copyright 2018 Raph Levien
+// Licensed under the Apache License, Version 2.0
+
+//! Utilities for representing and manipulating bezier paths.
+
+const MOVETO = "m";
+const LINETO = "l";
+const CURVETO = "c";
+const CLOSEPATH = "z";
+const MARK = "#";
+
+class BezPath {
+	constructor() {
+		this.cmds = [];
+	}
+
+	moveto(x, y) {
+		this.cmds.push([MOVETO, x, y]);
+	}
+
+	lineto(x, y) {
+		this.cmds.push([LINETO, x, y]);
+	}
+
+	curveto(x1, y1, x2, y2, x3, y3) {
+		this.cmds.push([CURVETO, x1, y1, x2, y2, x3, y3]);
+	}
+
+	closepath() {
+		this.cmds.push([CLOSEPATH]);
+	}
+
+	mark(i) {
+		this.cmds.push([MARK, i]);
+	}
+
+	renderSvg() {
+		let path = "";
+		for (let cmd of this.cmds) {
+			let op = cmd[0];
+			if (op === MOVETO) {
+				path += `M${cmd[1]} ${cmd[2]}`;
+			} else if (op === LINETO) {
+				path += `L${cmd[1]} ${cmd[2]}`;
+			} else if (op === CURVETO) {
+				path += `C${cmd[1]} ${cmd[2]} ${cmd[3]} ${cmd[4]} ${cmd[5]} ${cmd[6]}`;
+			} else if (op === CLOSEPATH) {
+				path += "Z";
+			}
+		}
+		return path;
+	}
+
+	hitTest(x, y) {
+		let result = new HitTestResult(x, y);
+		let curX, curY, curMark = null;
+		for (let cmd of this.cmds) {
+			let op = cmd[0];
+			if (op === MOVETO) {
+				curX = cmd[1];
+				curY = cmd[2];
+			} else if (op === LINETO) {
+				result.accumLine(curX, curY, cmd[1], cmd[2], curMark);
+				curX = cmd[1];
+				curY = cmd[2];
+			} else if (op === CURVETO) {
+				result.accumCurve(curX, curY, cmd[1], cmd[2], cmd[3], cmd[4],
+					cmd[5], cmd[6], curMark);
+				curX = cmd[5];
+				curY = cmd[6];
+			} else if (op === MARK) {
+				curMark = cmd[1];
+			}
+		}
+		return result;
+	}
+}
+
+class HitTestResult {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+		this.bestDist = 1e12;
+		this.bestMark = null;
+	}
+
+	accumLine(x0, y0, x1, y1, mark) {
+		let dx = x1 - x0;
+		let dy = y1 - y0;
+		let dotp = (this.x - x0) * dx + (this.y - y0) * dy;
+		let linDotp = dx * dx + dy * dy;
+		let r = Math.hypot(this.x - x0, this.y - y0);
+		let rMin = r;
+		r = Math.hypot(this.x - x1, this.y - y1);
+		rMin = Math.min(rMin, r);
+		if (dotp > 0 && dotp < linDotp) {
+			let norm = (this.x - x0) * dy - (this.y - y0) * dx;
+			r = Math.abs(norm / Math.sqrt(linDotp));
+			rMin = Math.min(rMin, r);
+		}
+		if (rMin < this.bestDist) {
+			this.bestDist = rMin;
+			this.bestMark = mark;
+		}
+	}
+
+	accumCurve(x0, y0, x1, y1, x2, y2, x3, y3, mark) {
+		let n = 32;
+		let dt = 1.0 / n;
+		let lastX = x0;
+		let lastY = y0;
+		for (let i = 0; i < n; i++) {
+			let t = (i + 1) * dt;
+			let mt = 1 - t;
+			let x = (x0 * mt * mt + 3 * (x1 * mt * t + x2 * t * t)) * mt + x3 * t * t * t;
+			let y = (y0 * mt * mt + 3 * (y1 * mt * t + y2 * t * t)) * mt + y3 * t * t * t;
+			this.accumLine(lastX, lastY, x, y, mark);
+			lastX = x;
+			lastY = y;
+		}
+	}
+}

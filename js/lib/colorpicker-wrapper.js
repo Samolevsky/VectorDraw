@@ -1,1 +1,1342 @@
-(function(_0x4ac8b7,_0x27c1cd){const _0x505bbb=a24_0x51cc,_0x444682=_0x4ac8b7();while(!![]){try{const _0x327fa9=-parseInt(_0x505bbb(0x278))/0x1+-parseInt(_0x505bbb(0x23e))/0x2+parseInt(_0x505bbb(0x277))/0x3*(-parseInt(_0x505bbb(0x1b1))/0x4)+parseInt(_0x505bbb(0x1f3))/0x5*(-parseInt(_0x505bbb(0x27a))/0x6)+parseInt(_0x505bbb(0x249))/0x7*(-parseInt(_0x505bbb(0x1f6))/0x8)+parseInt(_0x505bbb(0x1d7))/0x9*(parseInt(_0x505bbb(0x193))/0xa)+-parseInt(_0x505bbb(0x266))/0xb*(-parseInt(_0x505bbb(0x1b3))/0xc);if(_0x327fa9===_0x27c1cd)break;else _0x444682['push'](_0x444682['shift']());}catch(_0x2d279e){_0x444682['push'](_0x444682['shift']());}}}(a24_0x5158,0x5ad8c),function(_0x1817f1,_0xcc3267){'use strict';const _0x55dcf0=a24_0x51cc;if(!_0xcc3267){console[_0x55dcf0(0x208)](_0x55dcf0(0x1a2));return;}const {rgb:_0x7a66dc,hsl:_0x4c7811,hsv:_0x38475b,hwb:_0x3f40c3,oklch:_0x3e8403,formatHex:_0x5a0552,clampChroma:_0x4904d7,inGamut:_0x41fb66}=_0xcc3267,_0x27f81d=(_0x289b59,_0xbc13ed=0x1)=>{const _0x3e05e1=_0x55dcf0,_0x32a39f=Math[_0x3e05e1(0x25e)](0xa,_0xbc13ed);return Math['round'](_0x289b59*_0x32a39f)/_0x32a39f;};function _0x4e3fa5(_0x45285a){const _0x2b361d=_0x55dcf0;if(typeof _0x45285a===_0x2b361d(0x196))try{const _0x288d83=_0xcc3267[_0x2b361d(0x1cb)](_0x45285a);if(!_0x288d83)throw new Error(_0x2b361d(0x234));const _0x4daad9=_0x7a66dc(_0x288d83);this['r']=Math[_0x2b361d(0x1d8)](_0x4daad9['r']*0xff),this['g']=Math['round'](_0x4daad9['g']*0xff),this['b']=Math[_0x2b361d(0x1d8)](_0x4daad9['b']*0xff),this['a']=_0x4daad9[_0x2b361d(0x22c)]!==undefined?_0x4daad9[_0x2b361d(0x22c)]:0x1;}catch(_0x2291f3){this['r']=0x0,this['g']=0x0,this['b']=0x0,this['a']=0x1;}else this['r']=_0x45285a['r']||0x0,this['g']=_0x45285a['g']||0x0,this['b']=_0x45285a['b']||0x0,this['a']=_0x45285a['a']!==undefined?_0x45285a['a']:0x1;}_0x4e3fa5[_0x55dcf0(0x1fe)][_0x55dcf0(0x250)]=function(){const _0xdbebb7=_0x55dcf0;if(this['a']<0x1)return _0xdbebb7(0x288)+this['r']+',\x20'+this['g']+',\x20'+this['b']+',\x20'+this['a']+')';return'rgb('+this['r']+',\x20'+this['g']+',\x20'+this['b']+')';},_0x4e3fa5['prototype'][_0x55dcf0(0x1b6)]=function(){const _0x1a606c=_0x55dcf0,_0x545774=_0x5a0552({'mode':_0x1a606c(0x1c7),'r':this['r']/0xff,'g':this['g']/0xff,'b':this['b']/0xff});return _0x545774;};function _0x2258fd(_0x53e71d,_0x57c3c9,_0x20c8a8,_0x1f959e,_0x51c238){const _0x4dd124=_0x55dcf0,_0x2806d0={'mode':_0x4dd124(0x1c7),'r':_0x53e71d/0xff,'g':_0x57c3c9/0xff,'b':_0x20c8a8/0xff,'alpha':_0x1f959e},_0x22343a=_0x4c7811(_0x2806d0),_0x5902cf=_0x22343a['h']!==undefined?_0x27f81d(_0x22343a['h'],0x0):_0x51c238?.['hue']!==undefined?_0x51c238[_0x4dd124(0x20b)]:0x0,_0x464090=_0x27f81d((_0x22343a['s']||0x0)*0x64,0x1),_0x2b1b1a=_0x27f81d((_0x22343a['l']||0x0)*0x64,0x1),_0xdf6541=_0x38475b(_0x2806d0),_0x1a31df=_0x27f81d((_0xdf6541['s']||0x0)*0x64,0x1),_0x347d41=_0x27f81d((_0xdf6541['v']||0x0)*0x64,0x1),_0x2d1be5=_0x3f40c3(_0x2806d0),_0x4a4f6b=_0x27f81d((_0x2d1be5['w']||0x0)*0x64,0x1),_0x13b0b6=_0x27f81d((_0x2d1be5['b']||0x0)*0x64,0x1),_0x452b7e=_0x3e8403(_0x2806d0),_0x32f8b1=_0x27f81d(_0x452b7e['l']||0x0,0x3),_0xfbfd9=_0x27f81d(_0x452b7e['c']||0x0,0x3),_0x417924=_0x452b7e['h']!==undefined?_0x27f81d(_0x452b7e['h'],0x0):_0x51c238?.[_0x4dd124(0x1f1)]!==undefined?_0x51c238[_0x4dd124(0x1f1)]:0x0;return{'red':_0x53e71d,'green':_0x57c3c9,'blue':_0x20c8a8,'hue':_0x5902cf,'saturation':_0x464090,'luminosity':_0x2b1b1a,'hsvSaturation':_0x1a31df,'value':_0x347d41,'whiteness':_0x4a4f6b,'blackness':_0x13b0b6,'oklchLightness':_0x32f8b1,'oklchChroma':_0xfbfd9,'oklchHue':_0x417924,'alpha':_0x1f959e};}function _0xd90e4c(_0x35e703,_0x2b95a5,_0x5ec05b){const _0x10612e=_0x55dcf0,_0x3c41ad=_0x2b95a5===_0x10612e(0x20b)?0x24:0xa,_0x39b9ae=[];for(let _0x2fbb55=0x0;_0x2fbb55<=_0x3c41ad;_0x2fbb55++){let _0x11d70d;const _0x2073e8=_0x2fbb55/_0x3c41ad;switch(_0x35e703){case _0x10612e(0x1e5):if(_0x2b95a5==='hue')_0x11d70d=_0x4c7811({'h':_0x2073e8*0x168,'s':_0x5ec05b[_0x10612e(0x220)]/0x64,'l':_0x5ec05b[_0x10612e(0x20d)]/0x64});else{if(_0x2b95a5===_0x10612e(0x220))_0x11d70d=_0x4c7811({'h':_0x5ec05b[_0x10612e(0x20b)],'s':_0x2073e8,'l':_0x5ec05b[_0x10612e(0x20d)]/0x64});else{if(_0x2b95a5==='luminosity')_0x11d70d=_0x4c7811({'h':_0x5ec05b[_0x10612e(0x20b)],'s':_0x5ec05b[_0x10612e(0x220)]/0x64,'l':_0x2073e8});else{if(_0x2b95a5===_0x10612e(0x22c)){_0x39b9ae[_0x10612e(0x19d)](_0x10612e(0x1cf)+_0x5ec05b[_0x10612e(0x20b)]+'\x20'+_0x5ec05b['saturation']+'%\x20'+_0x5ec05b[_0x10612e(0x20d)]+_0x10612e(0x275)+_0x2073e8+')');continue;}}}}break;case _0x10612e(0x27d):if(_0x2b95a5==='hue')_0x11d70d=_0x38475b({'h':_0x2073e8*0x168,'s':_0x5ec05b[_0x10612e(0x226)]/0x64,'v':_0x5ec05b[_0x10612e(0x24c)]/0x64});else{if(_0x2b95a5===_0x10612e(0x226))_0x11d70d=_0x38475b({'h':_0x5ec05b[_0x10612e(0x20b)],'s':_0x2073e8,'v':_0x5ec05b[_0x10612e(0x24c)]/0x64});else{if(_0x2b95a5==='value')_0x11d70d=_0x38475b({'h':_0x5ec05b[_0x10612e(0x20b)],'s':_0x5ec05b[_0x10612e(0x226)]/0x64,'v':_0x2073e8});else{if(_0x2b95a5===_0x10612e(0x22c)){const _0x4227c5=_0x38475b({'h':_0x5ec05b['hue'],'s':_0x5ec05b[_0x10612e(0x226)]/0x64,'v':_0x5ec05b[_0x10612e(0x24c)]/0x64}),_0x1e3641=_0x7a66dc(_0x4227c5),_0x17e18b=Math[_0x10612e(0x1d8)](_0x1e3641['r']*0xff),_0x5b7789=Math['round'](_0x1e3641['g']*0xff),_0x473b64=Math[_0x10612e(0x1d8)](_0x1e3641['b']*0xff);_0x39b9ae[_0x10612e(0x19d)](_0x10612e(0x288)+_0x17e18b+'\x20'+_0x5b7789+'\x20'+_0x473b64+'\x20/\x20'+_0x2073e8+')');continue;}}}}break;case _0x10612e(0x18d):if(_0x2b95a5==='hue')_0x11d70d=_0x3f40c3({'h':_0x2073e8*0x168,'w':_0x5ec05b['whiteness']/0x64,'b':_0x5ec05b['blackness']/0x64});else{if(_0x2b95a5===_0x10612e(0x280))_0x11d70d=_0x3f40c3({'h':_0x5ec05b['hue'],'w':_0x2073e8,'b':_0x5ec05b[_0x10612e(0x257)]/0x64});else{if(_0x2b95a5===_0x10612e(0x257))_0x11d70d=_0x3f40c3({'h':_0x5ec05b['hue'],'w':_0x5ec05b[_0x10612e(0x280)]/0x64,'b':_0x2073e8});else{if(_0x2b95a5===_0x10612e(0x22c)){_0x39b9ae[_0x10612e(0x19d)](_0x10612e(0x1f7)+_0x5ec05b[_0x10612e(0x20b)]+'\x20'+_0x5ec05b[_0x10612e(0x280)]+'%\x20'+_0x5ec05b[_0x10612e(0x257)]+_0x10612e(0x275)+_0x2073e8+')');continue;}}}}break;case _0x10612e(0x1c7):if(_0x2b95a5===_0x10612e(0x26d))_0x11d70d=_0x7a66dc({'r':_0x2073e8,'g':_0x5ec05b[_0x10612e(0x1aa)]/0xff,'b':_0x5ec05b[_0x10612e(0x21d)]/0xff});else{if(_0x2b95a5===_0x10612e(0x1aa))_0x11d70d=_0x7a66dc({'r':_0x5ec05b['red']/0xff,'g':_0x2073e8,'b':_0x5ec05b[_0x10612e(0x21d)]/0xff});else{if(_0x2b95a5==='blue')_0x11d70d=_0x7a66dc({'r':_0x5ec05b['red']/0xff,'g':_0x5ec05b[_0x10612e(0x1aa)]/0xff,'b':_0x2073e8});else{if(_0x2b95a5==='alpha'){const _0x28ff55=Math[_0x10612e(0x1d8)](_0x5ec05b[_0x10612e(0x26d)]||0x0),_0x15b339=Math[_0x10612e(0x1d8)](_0x5ec05b[_0x10612e(0x1aa)]||0x0),_0x48a2d9=Math['round'](_0x5ec05b[_0x10612e(0x21d)]||0x0);_0x39b9ae['push'](_0x10612e(0x288)+_0x28ff55+'\x20'+_0x15b339+'\x20'+_0x48a2d9+_0x10612e(0x204)+_0x2073e8+')');continue;}}}}break;case _0x10612e(0x21e):if(_0x2b95a5===_0x10612e(0x1b5))_0x11d70d=_0x3e8403({'l':_0x2073e8,'c':_0x5ec05b['oklchChroma'],'h':_0x5ec05b[_0x10612e(0x1f1)]});else{if(_0x2b95a5===_0x10612e(0x1b2))_0x11d70d=_0x3e8403({'l':_0x5ec05b[_0x10612e(0x1b5)],'c':_0x2073e8*0.37,'h':_0x5ec05b[_0x10612e(0x1f1)]});else{if(_0x2b95a5===_0x10612e(0x1f1))_0x11d70d=_0x3e8403({'l':_0x5ec05b[_0x10612e(0x1b5)],'c':_0x5ec05b[_0x10612e(0x1b2)],'h':_0x2073e8*0x168});else{if(_0x2b95a5===_0x10612e(0x22c)){_0x39b9ae[_0x10612e(0x19d)]('oklch('+_0x5ec05b[_0x10612e(0x1b5)]+'\x20'+_0x5ec05b['oklchChroma']+'\x20'+_0x5ec05b['oklchHue']+'\x20/\x20'+_0x2073e8+')');continue;}}}}break;}if(_0x11d70d){const _0x36b4fe=_0x7a66dc(_0x11d70d),_0x46f9c0=Math[_0x10612e(0x1d8)](_0x36b4fe['r']*0xff),_0x47ba49=Math[_0x10612e(0x1d8)](_0x36b4fe['g']*0xff),_0x5b083b=Math[_0x10612e(0x1d8)](_0x36b4fe['b']*0xff);_0x39b9ae[_0x10612e(0x19d)]('rgb('+_0x46f9c0+'\x20'+_0x47ba49+'\x20'+_0x5b083b+')');}}return'linear-gradient(to\x20right,\x20'+_0x39b9ae[_0x10612e(0x259)](',\x20')+')';}_0x1817f1['fn'][_0x55dcf0(0x247)]=function(_0x34328e){const _0x5621d0=_0x55dcf0;if(typeof _0x34328e===_0x5621d0(0x196)){const _0x21e2bf=_0x34328e,_0x5bbbaa=Array[_0x5621d0(0x1fe)][_0x5621d0(0x19e)]['call'](arguments,0x1);let _0x2b83d2;return this[_0x5621d0(0x246)](function(){const _0x349fff=_0x5621d0,_0x33d919=_0x1817f1(this)[_0x349fff(0x218)](_0x349fff(0x263));_0x33d919&&typeof _0x33d919[_0x21e2bf]===_0x349fff(0x23b)&&(_0x2b83d2=_0x33d919[_0x21e2bf][_0x349fff(0x1ce)](_0x33d919,_0x5bbbaa));}),_0x2b83d2!==undefined?_0x2b83d2:this;}return this[_0x5621d0(0x246)](function(){const _0x19abdf=_0x5621d0,_0x3466cf=_0x1817f1(this),_0x22593f=_0x19abdf(0x1ab)+Math[_0x19abdf(0x20c)]()['toString'](0x24)[_0x19abdf(0x1fa)](0x2,0x9);if(!_0x3466cf[_0x19abdf(0x218)](_0x19abdf(0x1df))){_0x3466cf['data']('spectrum-id',_0x22593f);const _0x3ffde9={'opts':_0x1817f1[_0x19abdf(0x211)]({},{'color':'#000000','showInput':!![],'allowEmpty':![],'clickoutFiresChange':!![],'chooseText':'OK','cancelText':'Cancel','preferredFormat':_0x19abdf(0x1c7),'replacerClassName':'','containerClassName':''},_0x34328e),'currentColor':null,'originalColor':null,'currentValues':null,'isOpen':![],'$container':null,'$replacer':null,'$input':_0x3466cf,'get':function(){const _0x1fb6b6=_0x19abdf;return this[_0x1fb6b6(0x20e)];},'set':function(_0x45281d){const _0x4f1400=_0x19abdf;this['currentColor']=new _0x4e3fa5(_0x45281d),this[_0x4f1400(0x25b)]=_0x2258fd(this['currentColor']['r'],this[_0x4f1400(0x20e)]['g'],this[_0x4f1400(0x20e)]['b'],this[_0x4f1400(0x20e)]['a'],this[_0x4f1400(0x25b)]),_0x26382(this),this['$container']&&this[_0x4f1400(0x200)]&&_0x2a650b(this);},'show':function(){_0x5cbff3(this);},'hide':function(){_0x57d5a3(this);},'destroy':function(){const _0x2f0145=_0x19abdf;this[_0x2f0145(0x19c)]&&this['$container'][_0x2f0145(0x1ef)](),this['$replacer']&&this[_0x2f0145(0x241)][_0x2f0145(0x1ef)](),_0x1817f1(document)[_0x2f0145(0x1ec)]('.'+this[_0x2f0145(0x1dd)]['data'](_0x2f0145(0x1df))),_0x1817f1(document)[_0x2f0145(0x1ec)]('.'+this[_0x2f0145(0x1dd)][_0x2f0145(0x218)](_0x2f0145(0x1df))+'-drag'),this['$input'][_0x2f0145(0x1c8)](_0x2f0145(0x1ea));}};_0x3ffde9[_0x19abdf(0x20e)]=new _0x4e3fa5(_0x3ffde9[_0x19abdf(0x267)]['color']),_0x3ffde9['originalColor']=new _0x4e3fa5(_0x3ffde9[_0x19abdf(0x267)]['color']),_0x3ffde9[_0x19abdf(0x25b)]=_0x2258fd(_0x3ffde9['currentColor']['r'],_0x3ffde9[_0x19abdf(0x20e)]['g'],_0x3ffde9[_0x19abdf(0x20e)]['b'],_0x3ffde9[_0x19abdf(0x20e)]['a'],null),_0x31ff7c(_0x3ffde9),_0x2a8785(_0x3ffde9),_0x3466cf[_0x19abdf(0x218)](_0x19abdf(0x263),_0x3ffde9);}});};function _0x31ff7c(_0x1549ea){const _0x5f37aa=_0x55dcf0,_0x401ed3=_0x1817f1(_0x5f37aa(0x205)),_0x2e0230=_0x1817f1(_0x5f37aa(0x25a));_0x1549ea[_0x5f37aa(0x267)][_0x5f37aa(0x242)]&&_0x401ed3[_0x5f37aa(0x228)](_0x1549ea['opts'][_0x5f37aa(0x242)]),_0x401ed3[_0x5f37aa(0x1dc)](_0x2e0230),_0x1549ea['$input'][_0x5f37aa(0x28d)](_0x401ed3),_0x1549ea[_0x5f37aa(0x1dd)]['hide'](),_0x1549ea[_0x5f37aa(0x241)]=_0x401ed3,_0x26382(_0x1549ea),_0x401ed3['on'](_0x5f37aa(0x210),function(_0x2ca854){const _0x439745=_0x5f37aa;_0x2ca854[_0x439745(0x1a4)](),_0x2ca854[_0x439745(0x224)](),_0x1549ea[_0x439745(0x200)]?_0x57d5a3(_0x1549ea):_0x5cbff3(_0x1549ea);});}function _0x26382(_0x6dca83){const _0x3559a8=_0x55dcf0;if(!_0x6dca83[_0x3559a8(0x241)])return;const _0x5bbcd0=_0x6dca83[_0x3559a8(0x241)][_0x3559a8(0x1d9)](_0x3559a8(0x1c3)),_0x3ed370=_0x6dca83['$replacer'][_0x3559a8(0x1d9)](_0x3559a8(0x23a)),_0xcbb0be=_0x6dca83['currentColor'];if(!_0xcbb0be||_0x6dca83[_0x3559a8(0x267)]['allowEmpty']&&_0xcbb0be['a']===0x0)_0x5bbcd0['addClass'](_0x3559a8(0x21a)),_0x3ed370[_0x3559a8(0x252)](_0x3559a8(0x238),'transparent');else{_0x5bbcd0['removeClass'](_0x3559a8(0x21a));const _0x1f4da0=_0xcbb0be['toRgbString']();_0x6dca83[_0x3559a8(0x267)][_0x3559a8(0x242)][_0x3559a8(0x23c)](_0x3559a8(0x24a))?(_0x5bbcd0['css'](_0x3559a8(0x243),_0x1f4da0),_0x3ed370[_0x3559a8(0x252)](_0x3559a8(0x28e),'0')):_0x3ed370[_0x3559a8(0x252)]({'background-color':_0x1f4da0,'opacity':'1','display':'block'});}}function _0x2a8785(_0x4f8363){const _0x365f0f=_0x55dcf0,_0x2f552d=_0x1817f1(_0x365f0f(0x1db)),_0x54b37c='picker-'+_0x4f8363[_0x365f0f(0x1dd)][_0x365f0f(0x218)](_0x365f0f(0x1df));_0x2f552d[_0x365f0f(0x198)]('id',_0x54b37c);_0x4f8363[_0x365f0f(0x267)]['containerClassName']&&_0x2f552d[_0x365f0f(0x228)](_0x4f8363[_0x365f0f(0x267)][_0x365f0f(0x1e9)]);const _0xceb024=_0x365f0f(0x28b)+_0x54b37c+_0x365f0f(0x215)+_0x4f8363[_0x365f0f(0x20e)][_0x365f0f(0x1b6)]()+_0x365f0f(0x203)+_0x4f8363[_0x365f0f(0x267)][_0x365f0f(0x268)]+_0x365f0f(0x227)+_0x4f8363[_0x365f0f(0x267)][_0x365f0f(0x217)]+_0x365f0f(0x1ee);_0x2f552d[_0x365f0f(0x254)](_0xceb024),_0x1817f1(_0x365f0f(0x1d3))['append'](_0x2f552d),_0x4f8363[_0x365f0f(0x19c)]=_0x2f552d,_0x18ea92(_0x4f8363),_0x44ba88(_0x4f8363),_0x3d9dc8(_0x4f8363),_0x2a650b(_0x4f8363);}function _0x44ba88(_0x281ca1){const _0x1ae0c1=_0x55dcf0,_0xcf5cb2=_0x281ca1['$container'],_0x15b503=_0xcf5cb2[_0x1ae0c1(0x1d9)](_0x1ae0c1(0x284));let _0x21aa8f=![],_0x5e72b9,_0x21f45,_0x48f0a8,_0x3ab843;_0x15b503['on'](_0x1ae0c1(0x22d),function(_0x14c110){const _0x5521e1=_0x1ae0c1;_0x21aa8f=!![],_0xcf5cb2[_0x5521e1(0x228)](_0x5521e1(0x190));const _0x5d2a89=_0xcf5cb2[_0x5521e1(0x282)]();_0x5e72b9=_0x14c110[_0x5521e1(0x24f)],_0x21f45=_0x14c110['pageY'],_0x48f0a8=_0x5d2a89[_0x5521e1(0x1c0)],_0x3ab843=_0x5d2a89[_0x5521e1(0x26e)],_0x14c110['preventDefault']();}),_0x1817f1(document)['on'](_0x1ae0c1(0x18e)+_0x281ca1[_0x1ae0c1(0x1dd)][_0x1ae0c1(0x218)]('spectrum-id')+_0x1ae0c1(0x235),function(_0xbfa922){const _0x58c430=_0x1ae0c1;if(!_0x21aa8f)return;const _0x10b7ee=_0xbfa922['pageX']-_0x5e72b9,_0x41ccf1=_0xbfa922[_0x58c430(0x262)]-_0x21f45,_0xe90f35=_0x48f0a8+_0x10b7ee,_0x22a6f5=_0x3ab843+_0x41ccf1,_0x37cc92=_0x1817f1(window)[_0x58c430(0x271)](),_0x4c1d85=_0x1817f1(window)[_0x58c430(0x18f)](),_0x4ade68=_0xcf5cb2['outerWidth'](),_0x3cb6a7=_0xcf5cb2[_0x58c430(0x209)](),_0x2d752a=Math[_0x58c430(0x207)](0x0,Math[_0x58c430(0x1da)](_0xe90f35,_0x37cc92-_0x4ade68)),_0xf69827=Math[_0x58c430(0x207)](0x0,Math['min'](_0x22a6f5,_0x4c1d85-_0x3cb6a7));_0xcf5cb2[_0x58c430(0x252)]({'left':_0x2d752a,'top':_0xf69827}),_0xbfa922['preventDefault']();}),_0x1817f1(document)['on']('mouseup.'+_0x281ca1[_0x1ae0c1(0x1dd)][_0x1ae0c1(0x218)]('spectrum-id')+_0x1ae0c1(0x235),function(){const _0x3a28ab=_0x1ae0c1;_0x21aa8f&&(_0x21aa8f=![],_0xcf5cb2[_0x3a28ab(0x22b)](_0x3a28ab(0x190)));});}function _0x18ea92(_0x5177a2){const _0x3d85c8=_0x55dcf0,_0xa934fc=_0x5177a2['$container'];_0xa934fc[_0x3d85c8(0x1d9)]('.hex-input')['on'](_0x3d85c8(0x25d),function(){const _0x1495b5=_0x3d85c8,_0x4dd514=_0x1817f1(this)[_0x1495b5(0x274)]();try{_0x5177a2['currentColor']=new _0x4e3fa5(_0x4dd514),_0x5177a2[_0x1495b5(0x25b)]=_0x2258fd(_0x5177a2[_0x1495b5(0x20e)]['r'],_0x5177a2['currentColor']['g'],_0x5177a2[_0x1495b5(0x20e)]['b'],_0x5177a2[_0x1495b5(0x20e)]['a'],_0x5177a2[_0x1495b5(0x25b)]),_0x26382(_0x5177a2),_0x2a650b(_0x5177a2),_0x5177a2[_0x1495b5(0x267)][_0x1495b5(0x27e)]&&_0x5177a2[_0x1495b5(0x267)][_0x1495b5(0x27e)](_0x5177a2['currentColor']);}catch(_0x535f01){console[_0x1495b5(0x208)](_0x1495b5(0x272),_0x4dd514);}}),_0xa934fc['on']('click','.copy-code',function(_0x4da5c1){const _0x1fb1c7=_0x3d85c8;_0x4da5c1['preventDefault'](),_0x4da5c1[_0x1fb1c7(0x224)]();const _0x262f34=_0x1817f1(_0x4da5c1[_0x1fb1c7(0x21c)]),_0x4f4a3e=_0x262f34[_0x1fb1c7(0x218)](_0x1fb1c7(0x283));let _0x588b81;_0x4f4a3e?_0x588b81=_0x262f34[_0x1fb1c7(0x213)](_0x1fb1c7(0x229)+_0x4f4a3e+'\x22]')['val']():_0x588b81=_0xa934fc['find'](_0x1fb1c7(0x237))['val']();if(navigator[_0x1fb1c7(0x1ba)]&&navigator['clipboard']['writeText'])navigator[_0x1fb1c7(0x1ba)]['writeText'](_0x588b81)['then'](function(){const _0x314507=_0x1fb1c7;_0x262f34['addClass'](_0x314507(0x25c)),setTimeout(function(){const _0x28985d=_0x314507;_0x262f34[_0x28985d(0x22b)](_0x28985d(0x25c));},0x3e8);})[_0x1fb1c7(0x23f)](function(_0xc5331a){const _0x445b40=_0x1fb1c7;console[_0x445b40(0x208)](_0x445b40(0x1d6),_0xc5331a);});else{const _0x21591b=_0x4f4a3e?_0x262f34[_0x1fb1c7(0x213)](_0x1fb1c7(0x229)+_0x4f4a3e+'\x22]'):_0xa934fc[_0x1fb1c7(0x1d9)](_0x1fb1c7(0x237));_0x21591b['select']();try{document[_0x1fb1c7(0x253)](_0x1fb1c7(0x1b4)),_0x262f34[_0x1fb1c7(0x228)]('copied'),setTimeout(function(){const _0x4e712c=_0x1fb1c7;_0x262f34[_0x4e712c(0x22b)]('copied');},0x3e8);}catch(_0x1b90e2){console[_0x1fb1c7(0x208)](_0x1fb1c7(0x1d6),_0x1b90e2);}}}),_0xa934fc[_0x3d85c8(0x1d9)](_0x3d85c8(0x24e))['on'](_0x3d85c8(0x210),function(_0x4c045e){const _0xefdcb2=_0x3d85c8;_0x4c045e[_0xefdcb2(0x1a4)](),_0x4c045e[_0xefdcb2(0x224)](),_0x5177a2[_0xefdcb2(0x20e)]=new _0x4e3fa5({'r':0x0,'g':0x0,'b':0x0,'a':0x0}),_0x5177a2[_0xefdcb2(0x25b)]=_0x2258fd(0x0,0x0,0x0,0x0,_0x5177a2[_0xefdcb2(0x25b)]),_0x26382(_0x5177a2),_0x5177a2['opts'][_0xefdcb2(0x25d)]&&_0x5177a2['opts'][_0xefdcb2(0x25d)](_0x5177a2[_0xefdcb2(0x20e)]),_0x57d5a3(_0x5177a2),_0x5177a2['opts'][_0xefdcb2(0x244)]&&_0x5177a2[_0xefdcb2(0x267)][_0xefdcb2(0x244)]();}),_0xa934fc[_0x3d85c8(0x1d9)](_0x3d85c8(0x1bc))['on']('click',function(_0x48f4db){const _0x4085ae=_0x3d85c8;_0x48f4db['preventDefault'](),_0x48f4db[_0x4085ae(0x224)](),_0x5177a2['opts'][_0x4085ae(0x25d)]&&_0x5177a2[_0x4085ae(0x267)]['change'](_0x5177a2[_0x4085ae(0x20e)]),_0x26382(_0x5177a2),_0x5177a2[_0x4085ae(0x1dd)]['trigger'](_0x4085ae(0x1a5),[_0x5177a2['currentColor']]),_0x57d5a3(_0x5177a2),_0x5177a2['opts'][_0x4085ae(0x244)]&&_0x5177a2[_0x4085ae(0x267)][_0x4085ae(0x244)]();}),_0xa934fc['find'](_0x3d85c8(0x281))['on'](_0x3d85c8(0x210),function(_0x36ef1a){const _0x44538a=_0x3d85c8;_0x36ef1a[_0x44538a(0x1a4)](),_0x36ef1a[_0x44538a(0x224)](),_0x5177a2[_0x44538a(0x20e)]=new _0x4e3fa5(_0x5177a2['originalColor'][_0x44538a(0x250)]()),_0x5177a2[_0x44538a(0x25b)]=_0x2258fd(_0x5177a2[_0x44538a(0x20e)]['r'],_0x5177a2[_0x44538a(0x20e)]['g'],_0x5177a2[_0x44538a(0x20e)]['b'],_0x5177a2[_0x44538a(0x20e)]['a'],_0x5177a2['currentValues']),_0x26382(_0x5177a2),_0x2a650b(_0x5177a2),_0x5177a2[_0x44538a(0x267)][_0x44538a(0x25d)]&&_0x5177a2[_0x44538a(0x267)][_0x44538a(0x25d)](_0x5177a2[_0x44538a(0x20e)]),_0x57d5a3(_0x5177a2),_0x5177a2['opts'][_0x44538a(0x244)]&&_0x5177a2['opts'][_0x44538a(0x244)]();}),_0x1817f1(document)['on'](_0x3d85c8(0x289)+_0x5177a2[_0x3d85c8(0x1dd)][_0x3d85c8(0x218)]('spectrum-id'),function(_0x52a92d){const _0x4c47cd=_0x3d85c8;if(_0x5177a2['eyedropperActive'])return;_0x5177a2[_0x4c47cd(0x200)]&&!_0xa934fc['is'](_0x52a92d[_0x4c47cd(0x219)])&&_0xa934fc[_0x4c47cd(0x27c)](_0x52a92d[_0x4c47cd(0x219)])[_0x4c47cd(0x286)]===0x0&&!_0x5177a2['$replacer']['is'](_0x52a92d['target'])&&_0x5177a2[_0x4c47cd(0x241)][_0x4c47cd(0x27c)](_0x52a92d[_0x4c47cd(0x219)])[_0x4c47cd(0x286)]===0x0&&(_0x5177a2['opts'][_0x4c47cd(0x1ae)]&&(_0x5177a2[_0x4c47cd(0x267)][_0x4c47cd(0x25d)]&&_0x5177a2[_0x4c47cd(0x267)][_0x4c47cd(0x25d)](_0x5177a2['currentColor']),_0x5177a2[_0x4c47cd(0x1dd)][_0x4c47cd(0x276)](_0x4c47cd(0x1a5),[_0x5177a2[_0x4c47cd(0x20e)]])),_0x57d5a3(_0x5177a2),_0x5177a2[_0x4c47cd(0x267)]['hide']&&_0x5177a2[_0x4c47cd(0x267)]['hide']());}),_0xa934fc[_0x3d85c8(0x1d9)](_0x3d85c8(0x1f2))['on'](_0x3d85c8(0x210),function(_0x4a18db){const _0x3e4948=_0x3d85c8;_0x4a18db['preventDefault'](),_0x4a18db[_0x3e4948(0x224)](),_0xa934fc['find'](_0x3e4948(0x1f2))[_0x3e4948(0x22b)](_0x3e4948(0x23d)),_0x1817f1(this)[_0x3e4948(0x228)](_0x3e4948(0x23d)),_0x3d9dc8(_0x5177a2);}),_0xa934fc[_0x3d85c8(0x1d9)](_0x3d85c8(0x24d))['on']('click',function(_0x4be43c){const _0x53c669=_0x3d85c8;_0x4be43c['preventDefault'](),_0x4be43c['stopPropagation'](),_0x5177a2['currentColor']=new _0x4e3fa5({'r':0x0,'g':0x0,'b':0x0,'a':0x0}),_0x5177a2['currentValues']=_0x2258fd(0x0,0x0,0x0,0x0,_0x5177a2['currentValues']),_0x26382(_0x5177a2),_0x2a650b(_0x5177a2),_0x5177a2['opts'][_0x53c669(0x27e)]&&_0x5177a2['opts']['move'](_0x5177a2[_0x53c669(0x20e)]);}),_0xa934fc['on'](_0x3d85c8(0x210),_0x3d85c8(0x1f0),function(_0x2d668e){const _0x4ade16=_0x3d85c8;console['log'](_0x4ade16(0x212)),_0x2d668e['preventDefault'](),_0x2d668e['stopPropagation']();const _0x4c9eb5=_0x1817f1(this);console[_0x4ade16(0x1a3)](_0x4ade16(0x1ff),_0x4c9eb5);let _0x54f9d2,_0x3e189d,_0x52de3e;if(_0x5177a2[_0x4ade16(0x1e2)]){console[_0x4ade16(0x1a3)]('Eyedropper\x20already\x20active\x20-\x20deactivating');_0x5177a2[_0x4ade16(0x248)]&&_0x5177a2[_0x4ade16(0x248)]();return;}console[_0x4ade16(0x1a3)]('Activating\x20eyedropper...'),_0x5177a2[_0x4ade16(0x1e2)]=!![],_0x4c9eb5[_0x4ade16(0x228)]('active'),console[_0x4ade16(0x1a3)](_0x4ade16(0x1d2));const _0x5eed91=jQuery('#paperCanvas'),_0x505e9b=document[_0x4ade16(0x28f)]('paperCanvas');console[_0x4ade16(0x1a3)](_0x4ade16(0x1be),_0x505e9b),console[_0x4ade16(0x1a3)](_0x4ade16(0x1c6),_0x5eed91);if(!_0x505e9b){console[_0x4ade16(0x208)](_0x4ade16(0x26a)),_0x5177a2[_0x4ade16(0x1e2)]=![],_0x4c9eb5[_0x4ade16(0x22b)](_0x4ade16(0x23d));return;}console[_0x4ade16(0x1a3)]('Adding\x20cursor-eyedropper\x20class\x20to\x20canvas');const _0x308a7c=_0x505e9b[_0x4ade16(0x225)];_0x5177a2[_0x4ade16(0x1e3)]=_0x308a7c,console[_0x4ade16(0x1a3)](_0x4ade16(0x279),_0x308a7c),_0x5eed91[_0x4ade16(0x22b)](function(_0x19b977,_0x55fd7d){const _0x14de71=_0x4ade16;return(_0x55fd7d[_0x14de71(0x1e1)](/\bcursor-\S+/g)||[])[_0x14de71(0x259)]('\x20');}),_0x5eed91[_0x4ade16(0x228)]('cursor-eyedropper');const _0x2d3d2f=jQuery('#colorInputBlocker'),_0x552c65=_0x2d3d2f['is'](_0x4ade16(0x1fd));_0x5177a2[_0x4ade16(0x1a1)]=_0x552c65,_0x552c65&&(console[_0x4ade16(0x1a3)]('Hiding\x20colorInputBlocker\x20to\x20allow\x20canvas\x20clicks'),_0x2d3d2f[_0x4ade16(0x244)]()),setTimeout(function(){const _0x3a7e53=_0x4ade16;console['log'](_0x3a7e53(0x192),_0x505e9b['className']),console[_0x3a7e53(0x1a3)](_0x3a7e53(0x1c9),_0x5eed91['hasClass'](_0x3a7e53(0x22e)));},0x64),_0x3e189d=function(_0xc87780){const _0x13f459=_0x4ade16;console['log'](_0x13f459(0x1f4),_0xc87780['target']);if(_0xc87780[_0x13f459(0x219)]!==_0x505e9b){console['log'](_0x13f459(0x1b0));return;}console[_0x13f459(0x1a3)](_0x13f459(0x1bf)),_0xc87780[_0x13f459(0x1a4)](),_0xc87780[_0x13f459(0x224)](),_0xc87780['stopImmediatePropagation']();const _0x204876=_0x505e9b[_0x13f459(0x256)](),_0x343069=_0xc87780[_0x13f459(0x24b)]-_0x204876[_0x13f459(0x1c0)],_0x466f4a=_0xc87780[_0x13f459(0x197)]-_0x204876[_0x13f459(0x26e)];console[_0x13f459(0x1a3)]('Click\x20position:',_0x343069,_0x466f4a,_0x13f459(0x290),_0x204876);if(typeof paper==='undefined'){console[_0x13f459(0x208)](_0x13f459(0x28a)),_0x54f9d2();return;}const _0x18c0a8=paper[_0x13f459(0x269)][_0x13f459(0x255)](new paper[(_0x13f459(0x206))](_0x343069,_0x466f4a));console['log'](_0x13f459(0x25f),_0x18c0a8);const _0x36bb71={'segments':!![],'stroke':!![],'curves':!![],'fill':!![],'guide':![],'tolerance':0x5/paper['view'][_0x13f459(0x28c)]},_0x48233a=paper[_0x13f459(0x195)][_0x13f459(0x1af)](_0x18c0a8,_0x36bb71);console[_0x13f459(0x1a3)]('Hit\x20result:',_0x48233a);if(_0x48233a&&_0x48233a[_0x13f459(0x239)]){let _0x1a568d=null;const _0x14a4fa=pg['stylebar'][_0x13f459(0x20a)]();console[_0x13f459(0x1a3)](_0x13f459(0x1e7),_0x14a4fa);if(_0x14a4fa==='fill'&&_0x48233a[_0x13f459(0x239)]['fillColor'])_0x1a568d=_0x48233a[_0x13f459(0x239)]['fillColor'][_0x13f459(0x273)]();else{if(_0x14a4fa===_0x13f459(0x24a)&&_0x48233a[_0x13f459(0x239)]['strokeColor'])_0x1a568d=_0x48233a['item']['strokeColor'][_0x13f459(0x273)]();else{if(_0x48233a[_0x13f459(0x239)][_0x13f459(0x1eb)])_0x1a568d=_0x48233a['item'][_0x13f459(0x1eb)]['toCSS']();else _0x48233a['item']['strokeColor']&&(_0x1a568d=_0x48233a[_0x13f459(0x239)][_0x13f459(0x240)][_0x13f459(0x273)]());}}console['log'](_0x13f459(0x270),_0x1a568d),_0x1a568d&&(_0x5177a2['currentColor']=new _0x4e3fa5(_0x1a568d),_0x5177a2['currentValues']=_0x2258fd(_0x5177a2[_0x13f459(0x20e)]['r'],_0x5177a2[_0x13f459(0x20e)]['g'],_0x5177a2['currentColor']['b'],_0x5177a2[_0x13f459(0x20e)]['a'],_0x5177a2['currentValues']),_0x26382(_0x5177a2),_0x2a650b(_0x5177a2),_0x5177a2[_0x13f459(0x267)][_0x13f459(0x27e)]&&_0x5177a2[_0x13f459(0x267)]['move'](_0x5177a2['currentColor']),console[_0x13f459(0x1a3)](_0x13f459(0x1a9)));}else console['log'](_0x13f459(0x1f9));_0x54f9d2();},_0x54f9d2=function(){const _0x59753c=_0x4ade16;console[_0x59753c(0x1a3)](_0x59753c(0x1e6)),_0x5177a2[_0x59753c(0x1e2)]=![],_0x4c9eb5[_0x59753c(0x22b)](_0x59753c(0x23d)),_0x5eed91['removeClass'](_0x59753c(0x22e));if(_0x5177a2[_0x59753c(0x1e3)]){const _0x519e55=_0x5177a2['previousCanvasClasses'][_0x59753c(0x1e1)](/\bcursor-\S+/g);_0x519e55&&_0x5eed91[_0x59753c(0x228)](_0x519e55[_0x59753c(0x259)]('\x20')),_0x5177a2[_0x59753c(0x1e3)]=null;}_0x5177a2['blockerWasVisible']&&(console['log'](_0x59753c(0x1b7)),jQuery(_0x59753c(0x222))[_0x59753c(0x1d1)](),_0x5177a2['blockerWasVisible']=![]),_0x3e189d&&document[_0x59753c(0x1a7)](_0x59753c(0x22d),_0x3e189d,!![]),_0x52de3e&&document[_0x59753c(0x1a7)](_0x59753c(0x1e4),_0x52de3e),_0x5177a2['cleanupEyedropper']=null;},_0x5177a2[_0x4ade16(0x248)]=_0x54f9d2,document[_0x4ade16(0x201)](_0x4ade16(0x22d),_0x3e189d,!![]),console[_0x4ade16(0x1a3)](_0x4ade16(0x20f)),_0x52de3e=function(_0x41d2d7){const _0x383338=_0x4ade16;_0x41d2d7[_0x383338(0x1a0)]==='Escape'&&(console[_0x383338(0x1a3)](_0x383338(0x194)),_0x54f9d2());},document['addEventListener']('keydown',_0x52de3e),setTimeout(function(){const _0x34cd50=_0x4ade16;_0x5177a2[_0x34cd50(0x1e2)]&&(console[_0x34cd50(0x1a3)](_0x34cd50(0x27f)),_0x54f9d2());},0x7530);});}function _0x3d9dc8(_0x41d71f){const _0x133d05=_0x55dcf0,_0xa1078b=_0x41d71f['$container'],_0x2ef61b=_0xa1078b[_0x133d05(0x1d9)]('.color-pickers'),_0x1cd853=_0xa1078b['find']('.slider-choices\x20.mode-btn.active'),_0x3f892e=_0x1cd853['data'](_0x133d05(0x283));if(!_0x3f892e)return;_0x2ef61b[_0x133d05(0x1ed)]();const _0x37b7ba=_0x3f892e,_0x6330ba=_0x2ab842(_0x37b7ba,_0x41d71f[_0x133d05(0x25b)]),_0xc6ee79=_0x1817f1(_0x6330ba);_0x2ef61b[_0x133d05(0x1dc)](_0xc6ee79),_0xc6ee79[_0x133d05(0x1d9)](_0x133d05(0x1c4))['on']('input',function(){const _0x59ca32=_0x133d05;_0x49e6aa(_0x41d71f,_0x37b7ba,_0x1817f1(this)['attr'](_0x59ca32(0x26b)),_0x1817f1(this)[_0x59ca32(0x274)]());}),_0xc6ee79[_0x133d05(0x1d9)](_0x133d05(0x1a8))['on'](_0x133d05(0x25d),function(){const _0x1a6524=_0x133d05,_0x331caa=_0x1817f1(this)[_0x1a6524(0x198)](_0x1a6524(0x26b))[_0x1a6524(0x265)](_0x1a6524(0x27b),'');_0x49e6aa(_0x41d71f,_0x37b7ba,_0x331caa,_0x1817f1(this)[_0x1a6524(0x274)]());}),_0xc6ee79['find']('input[type=\x22number\x22]')['on'](_0x133d05(0x1e4),function(_0x28af3a){const _0x3928b9=_0x133d05,_0x2f8ffc=_0x1817f1(this),_0x24fc34=_0x2f8ffc[_0x3928b9(0x198)](_0x3928b9(0x26b))['replace'](_0x3928b9(0x27b),''),_0x363d39=parseFloat(_0x2f8ffc['val']())||0x0,_0x10b265=parseFloat(_0x2f8ffc[_0x3928b9(0x198)](_0x3928b9(0x1da))),_0x3bf4eb=parseFloat(_0x2f8ffc[_0x3928b9(0x198)](_0x3928b9(0x207))),_0x29293a=parseFloat(_0x2f8ffc[_0x3928b9(0x198)](_0x3928b9(0x1e0)))||0x1;let _0x1131b1=_0x363d39,_0x5c3412=![];if(_0x28af3a[_0x3928b9(0x1a0)]===_0x3928b9(0x19b)||_0x28af3a[_0x3928b9(0x1a0)]===_0x3928b9(0x1b9)){const _0x88be7f=_0x28af3a['key']===_0x3928b9(0x19b)?0x1:-0x1;if(_0x28af3a['metaKey']||_0x28af3a[_0x3928b9(0x1b8)])_0x29293a<0x1&&(_0x1131b1=_0x363d39+_0x88be7f*0.1,_0x5c3412=!![]);else _0x28af3a['shiftKey']?_0x3bf4eb>0xa&&(_0x1131b1=_0x363d39+_0x88be7f*0xa,_0x5c3412=!![]):(_0x1131b1=_0x363d39+_0x88be7f,_0x5c3412=!![]);}else _0x28af3a[_0x3928b9(0x1a0)]===_0x3928b9(0x1bb)&&(_0x2f8ffc[_0x3928b9(0x291)](),_0x5c3412=!![]);if(_0x5c3412&&(_0x28af3a[_0x3928b9(0x1a0)]===_0x3928b9(0x19b)||_0x28af3a[_0x3928b9(0x1a0)]===_0x3928b9(0x1b9))){_0x28af3a[_0x3928b9(0x1a4)](),_0x1131b1=Math['max'](_0x10b265,Math[_0x3928b9(0x1da)](_0x3bf4eb,_0x1131b1));if(_0x29293a<0x1){const _0xb71c3=_0x29293a[_0x3928b9(0x216)]()[_0x3928b9(0x232)]('.')[0x1]?.[_0x3928b9(0x286)]||0x1;_0x1131b1=parseFloat(_0x1131b1['toFixed'](_0xb71c3));}else _0x1131b1=Math[_0x3928b9(0x1d8)](_0x1131b1);_0x2f8ffc[_0x3928b9(0x274)](_0x1131b1),_0x49e6aa(_0x41d71f,_0x37b7ba,_0x24fc34,_0x1131b1);}}),_0xc6ee79[_0x133d05(0x1d9)]('input[type=\x22range\x22][name=\x22alpha\x22]')['on'](_0x133d05(0x22a),function(_0x1d18be){const _0x47a237=_0x133d05;return _0x1d18be[_0x47a237(0x1a4)](),_0x49e6aa(_0x41d71f,_0x37b7ba,_0x47a237(0x22c),0x1),![];}),_0xc6ee79[_0x133d05(0x1d9)](_0x133d05(0x1de))['on']('dblclick\x20contextmenu',function(_0x1573bb){return _0x1573bb['preventDefault'](),_0x49e6aa(_0x41d71f,_0x37b7ba,'alpha',0x1),![];});}function _0x2ab842(_0x2b6de2,_0xa78fd9){const _0x581fa4=_0x55dcf0,_0x7ad60a={'rgb':[{'name':_0x581fa4(0x26d),'label':'R','tooltip':_0x581fa4(0x1d5),'min':0x0,'max':0xff,'step':0x1,'value':Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x26d)]||0x0)},{'name':_0x581fa4(0x1aa),'label':'G','tooltip':_0x581fa4(0x26f),'min':0x0,'max':0xff,'step':0x1,'value':Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x1aa)]||0x0)},{'name':_0x581fa4(0x21d),'label':'B','tooltip':'Blue\x20Channel','min':0x0,'max':0xff,'step':0x1,'value':Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x21d)]||0x0)},{'name':_0x581fa4(0x22c),'label':'A','tooltip':_0x581fa4(0x1a6),'min':0x0,'max':0x1,'step':0.01,'value':_0xa78fd9['alpha']!==undefined?_0xa78fd9['alpha']:0x1}],'hsl':[{'name':_0x581fa4(0x20b),'label':'H','tooltip':_0x581fa4(0x19f),'min':0x0,'max':0x168,'step':0x1,'value':Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)},{'name':'saturation','label':'S','tooltip':_0x581fa4(0x1fc),'min':0x0,'max':0x64,'step':0.1,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x220)]||0x0,0x1)},{'name':_0x581fa4(0x20d),'label':'L','tooltip':_0x581fa4(0x258),'min':0x0,'max':0x64,'step':0.1,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x20d)]||0x0,0x1)},{'name':'alpha','label':'A','tooltip':_0x581fa4(0x1a6),'min':0x0,'max':0x1,'step':0.01,'value':_0xa78fd9[_0x581fa4(0x22c)]!==undefined?_0xa78fd9[_0x581fa4(0x22c)]:0x1}],'hsv':[{'name':_0x581fa4(0x20b),'label':'H','tooltip':'Hue','min':0x0,'max':0x168,'step':0x1,'value':Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)},{'name':_0x581fa4(0x226),'label':'S','tooltip':_0x581fa4(0x1fc),'min':0x0,'max':0x64,'step':0.1,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x226)]||0x0,0x1)},{'name':_0x581fa4(0x24c),'label':'V','tooltip':_0x581fa4(0x19a),'min':0x0,'max':0x64,'step':0.1,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x24c)]||0x0,0x1)},{'name':'alpha','label':'A','tooltip':_0x581fa4(0x1a6),'min':0x0,'max':0x1,'step':0.01,'value':_0xa78fd9['alpha']!==undefined?_0xa78fd9['alpha']:0x1}],'hwb':[{'name':_0x581fa4(0x20b),'label':'H','tooltip':_0x581fa4(0x19f),'min':0x0,'max':0x168,'step':0x1,'value':Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)},{'name':'whiteness','label':'W','tooltip':_0x581fa4(0x1ac),'min':0x0,'max':0x64,'step':0.1,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x280)]||0x0,0x1)},{'name':'blackness','label':'B','tooltip':_0x581fa4(0x287),'min':0x0,'max':0x64,'step':0.1,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x257)]||0x0,0x1)},{'name':_0x581fa4(0x22c),'label':'A','tooltip':_0x581fa4(0x1a6),'min':0x0,'max':0x1,'step':0.01,'value':_0xa78fd9[_0x581fa4(0x22c)]!==undefined?_0xa78fd9[_0x581fa4(0x22c)]:0x1}],'oklch':[{'name':_0x581fa4(0x1b5),'label':'L','tooltip':_0x581fa4(0x258),'min':0x0,'max':0x1,'step':0.001,'value':_0x27f81d(_0xa78fd9[_0x581fa4(0x1b5)]||0x0,0x3)},{'name':_0x581fa4(0x1b2),'label':'C','tooltip':_0x581fa4(0x223),'min':0x0,'max':0.37,'step':0.001,'value':_0x27f81d(_0xa78fd9['oklchChroma']||0x0,0x3)},{'name':_0x581fa4(0x1f1),'label':'H','tooltip':'Hue','min':0x0,'max':0x168,'step':0x1,'value':Math['round'](_0xa78fd9[_0x581fa4(0x1f1)]||0x0)},{'name':'alpha','label':'A','tooltip':_0x581fa4(0x1a6),'min':0x0,'max':0x1,'step':0.01,'value':_0xa78fd9[_0x581fa4(0x22c)]!==undefined?_0xa78fd9[_0x581fa4(0x22c)]:0x1}]},_0x4936d7=_0x7ad60a[_0x2b6de2];if(!_0x4936d7)return'';let _0x1cce8e='';switch(_0x2b6de2){case _0x581fa4(0x1c7):_0x1cce8e=_0xa78fd9['alpha']<0x1?_0x581fa4(0x288)+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x26d)]||0x0)+'\x20'+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x1aa)]||0x0)+'\x20'+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x21d)]||0x0)+'\x20/\x20'+_0xa78fd9[_0x581fa4(0x22c)]+')':'rgb('+Math['round'](_0xa78fd9[_0x581fa4(0x26d)]||0x0)+'\x20'+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x1aa)]||0x0)+'\x20'+Math[_0x581fa4(0x1d8)](_0xa78fd9['blue']||0x0)+')';break;case _0x581fa4(0x1e5):_0x1cce8e=_0xa78fd9[_0x581fa4(0x22c)]<0x1?_0x581fa4(0x1f5)+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x220)]||0x0,0x1)+'%\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x20d)]||0x0,0x1)+_0x581fa4(0x275)+_0xa78fd9['alpha']+')':_0x581fa4(0x1cf)+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x220)]||0x0,0x1)+'%\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x20d)]||0x0,0x1)+'%)';break;case _0x581fa4(0x27d):_0x1cce8e=_0xa78fd9['alpha']<0x1?'hsva('+Math['round'](_0xa78fd9[_0x581fa4(0x20b)]||0x0)+'\x20'+_0x27f81d(_0xa78fd9['hsvSaturation']||0x0,0x1)+'%\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x24c)]||0x0,0x1)+_0x581fa4(0x275)+_0xa78fd9[_0x581fa4(0x22c)]+')':_0x581fa4(0x21f)+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x226)]||0x0,0x1)+'%\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x24c)]||0x0,0x1)+'%)';break;case'hwb':_0x1cce8e=_0xa78fd9[_0x581fa4(0x22c)]<0x1?_0x581fa4(0x261)+Math['round'](_0xa78fd9[_0x581fa4(0x20b)]||0x0)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x280)]||0x0,0x1)+'%\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x257)]||0x0,0x1)+_0x581fa4(0x275)+_0xa78fd9['alpha']+')':_0x581fa4(0x1f7)+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x20b)]||0x0)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x280)]||0x0,0x1)+'%\x20'+_0x27f81d(_0xa78fd9['blackness']||0x0,0x1)+'%)';break;case _0x581fa4(0x21e):_0x1cce8e=_0xa78fd9[_0x581fa4(0x22c)]<0x1?'oklch('+_0x27f81d(_0xa78fd9[_0x581fa4(0x1b5)]||0x0,0x3)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x1b2)]||0x0,0x3)+'\x20'+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x1f1)]||0x0)+'\x20/\x20'+_0xa78fd9[_0x581fa4(0x22c)]+')':_0x581fa4(0x1fb)+_0x27f81d(_0xa78fd9[_0x581fa4(0x1b5)]||0x0,0x3)+'\x20'+_0x27f81d(_0xa78fd9[_0x581fa4(0x1b2)]||0x0,0x3)+'\x20'+Math[_0x581fa4(0x1d8)](_0xa78fd9[_0x581fa4(0x1f1)]||0x0)+')';break;}let _0x11449d=_0x581fa4(0x1c5)+_0x2b6de2+'\x22>';return _0x4936d7[_0x581fa4(0x260)](_0x5e0ae1=>{const _0x9c7c03=_0x581fa4,_0x9e0450=Math[_0x9c7c03(0x207)](_0x5e0ae1[_0x9c7c03(0x1da)],Math[_0x9c7c03(0x1da)](_0x5e0ae1[_0x9c7c03(0x207)],_0x5e0ae1[_0x9c7c03(0x24c)])),_0x469981=Math[_0x9c7c03(0x207)](0x0,Math['min'](0x64,(_0x9e0450-_0x5e0ae1[_0x9c7c03(0x1da)])/(_0x5e0ae1[_0x9c7c03(0x207)]-_0x5e0ae1[_0x9c7c03(0x1da)])*0x64)),_0x58990b=_0xd90e4c(_0x2b6de2,_0x5e0ae1[_0x9c7c03(0x26b)],_0xa78fd9);_0x11449d+='\x0a\x09\x09\x09<div\x20class=\x22color-slider\x22>\x0a\x09\x09\x09\x09<div\x20class=\x22slider-track\x22>\x0a\x09\x09\x09\x09\x09<input\x20type=\x22range\x22\x20\x0a\x09\x09\x09\x09\x09\x09data-mode=\x22'+_0x2b6de2+'\x22\x20\x0a\x09\x09\x09\x09\x09\x09name=\x22'+_0x5e0ae1['name']+_0x9c7c03(0x236)+_0x5e0ae1[_0x9c7c03(0x1da)]+_0x9c7c03(0x191)+_0x5e0ae1[_0x9c7c03(0x207)]+'\x22\x20\x0a\x09\x09\x09\x09\x09\x09step=\x22'+_0x5e0ae1[_0x9c7c03(0x1e0)]+_0x9c7c03(0x1c2)+_0x9e0450+_0x9c7c03(0x1d0)+_0x58990b+_0x9c7c03(0x1e8)+_0x469981+_0x9c7c03(0x231)+_0x2b6de2+_0x9c7c03(0x221)+_0x5e0ae1[_0x9c7c03(0x26b)]+'Num\x22\x20\x0a\x09\x09\x09\x09\x09title=\x22'+_0x5e0ae1[_0x9c7c03(0x1cc)]+'\x22\x0a\x09\x09\x09\x09\x09min=\x22'+_0x5e0ae1[_0x9c7c03(0x1da)]+'\x22\x20\x0a\x09\x09\x09\x09\x09max=\x22'+_0x5e0ae1[_0x9c7c03(0x207)]+_0x9c7c03(0x22f)+_0x5e0ae1['step']+_0x9c7c03(0x21b)+_0x9e0450+_0x9c7c03(0x1d4);}),_0x11449d+='\x0a\x09\x09\x09<div\x20class=\x22color-code\x22>\x0a\x09\x09\x09\x09<input\x20type=\x22text\x22\x20\x0a\x09\x09\x09\x09\x09name=\x22'+_0x2b6de2+_0x581fa4(0x245)+_0x2b6de2+_0x581fa4(0x1ca)+_0x1cce8e+_0x581fa4(0x26c)+_0x2b6de2+_0x581fa4(0x202),_0x11449d+='</div>',_0x11449d;}function _0x49e6aa(_0x5d3ba1,_0x381664,_0x2ae35d,_0x417c8f){const _0x443ec1=_0x55dcf0,_0x3b98c6=parseFloat(_0x417c8f);_0x5d3ba1['currentValues'][_0x2ae35d]=_0x3b98c6;let _0x36394a;try{switch(_0x381664){case'rgb':_0x36394a=_0x7a66dc({'r':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x26d)]/0xff,'g':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x1aa)]/0xff,'b':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x21d)]/0xff,'alpha':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x22c)]});break;case _0x443ec1(0x1e5):_0x36394a=_0x4c7811({'h':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x20b)],'s':_0x5d3ba1['currentValues'][_0x443ec1(0x220)]/0x64,'l':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x20d)]/0x64,'alpha':_0x5d3ba1[_0x443ec1(0x25b)]['alpha']});break;case _0x443ec1(0x27d):_0x36394a=_0x38475b({'h':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x20b)],'s':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x226)]/0x64,'v':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x24c)]/0x64,'alpha':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x22c)]});break;case _0x443ec1(0x18d):_0x36394a=_0x3f40c3({'h':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x20b)],'w':_0x5d3ba1[_0x443ec1(0x25b)]['whiteness']/0x64,'b':_0x5d3ba1[_0x443ec1(0x25b)]['blackness']/0x64,'alpha':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x22c)]});break;case _0x443ec1(0x21e):_0x36394a=_0x3e8403({'l':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x1b5)],'c':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x1b2)],'h':_0x5d3ba1['currentValues'][_0x443ec1(0x1f1)],'alpha':_0x5d3ba1[_0x443ec1(0x25b)][_0x443ec1(0x22c)]});break;}if(_0x36394a){const _0x4a63a9=_0x7a66dc(_0x36394a);_0x5d3ba1['currentColor']=new _0x4e3fa5({'r':Math[_0x443ec1(0x1d8)](_0x4a63a9['r']*0xff),'g':Math[_0x443ec1(0x1d8)](_0x4a63a9['g']*0xff),'b':Math[_0x443ec1(0x1d8)](_0x4a63a9['b']*0xff),'a':_0x4a63a9[_0x443ec1(0x22c)]!==undefined?_0x4a63a9['alpha']:0x1}),_0x5d3ba1[_0x443ec1(0x25b)]=_0x2258fd(_0x5d3ba1[_0x443ec1(0x20e)]['r'],_0x5d3ba1[_0x443ec1(0x20e)]['g'],_0x5d3ba1[_0x443ec1(0x20e)]['b'],_0x5d3ba1[_0x443ec1(0x20e)]['a'],_0x5d3ba1[_0x443ec1(0x25b)]),_0x2a650b(_0x5d3ba1),_0x5d3ba1[_0x443ec1(0x267)]['move']&&_0x5d3ba1['opts']['move'](_0x5d3ba1[_0x443ec1(0x20e)]),_0x5d3ba1[_0x443ec1(0x1dd)][_0x443ec1(0x276)]('move.spectrum',[_0x5d3ba1[_0x443ec1(0x20e)]]),setTimeout(function(){_0x26382(_0x5d3ba1);},0x0);}}catch(_0x3d3afa){console[_0x443ec1(0x208)](_0x443ec1(0x251),_0x3d3afa);}}function _0x2a650b(_0x1b70e8){const _0x3e406c=_0x55dcf0,_0x294174=_0x1b70e8[_0x3e406c(0x19c)],_0x51bc44=_0x1b70e8[_0x3e406c(0x20e)],_0x19267d=_0x1b70e8[_0x3e406c(0x25b)];_0x294174[_0x3e406c(0x1d9)](_0x3e406c(0x237))[_0x3e406c(0x274)](_0x51bc44[_0x3e406c(0x1b6)]());const _0x391927=_0x294174[_0x3e406c(0x1d9)](_0x3e406c(0x1bd));_0x391927[_0x3e406c(0x252)]('color',_0x51bc44[_0x3e406c(0x250)]()),_0x19267d[_0x3e406c(0x22c)]<0x1?_0x391927['addClass'](_0x3e406c(0x1cd)):_0x391927[_0x3e406c(0x22b)](_0x3e406c(0x1cd)),_0x294174[_0x3e406c(0x1d9)]('.mode-color-input')[_0x3e406c(0x246)](function(){const _0x5a9d95=_0x3e406c,_0x350428=_0x1817f1(this),_0x48da14=_0x350428[_0x5a9d95(0x218)]('mode');let _0xe0861e='';switch(_0x48da14){case'rgb':_0xe0861e=_0x19267d['alpha']<0x1?_0x5a9d95(0x288)+Math[_0x5a9d95(0x1d8)](_0x19267d['red']||0x0)+'\x20'+Math[_0x5a9d95(0x1d8)](_0x19267d[_0x5a9d95(0x1aa)]||0x0)+'\x20'+Math[_0x5a9d95(0x1d8)](_0x19267d[_0x5a9d95(0x21d)]||0x0)+_0x5a9d95(0x204)+_0x19267d[_0x5a9d95(0x22c)]+')':_0x5a9d95(0x1c1)+Math['round'](_0x19267d[_0x5a9d95(0x26d)]||0x0)+'\x20'+Math[_0x5a9d95(0x1d8)](_0x19267d['green']||0x0)+'\x20'+Math[_0x5a9d95(0x1d8)](_0x19267d[_0x5a9d95(0x21d)]||0x0)+')';break;case _0x5a9d95(0x1e5):_0xe0861e=_0x19267d['alpha']<0x1?_0x5a9d95(0x1f5)+Math[_0x5a9d95(0x1d8)](_0x19267d[_0x5a9d95(0x20b)]||0x0)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x220)]||0x0,0x1)+'%\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x20d)]||0x0,0x1)+_0x5a9d95(0x275)+_0x19267d['alpha']+')':_0x5a9d95(0x1cf)+Math[_0x5a9d95(0x1d8)](_0x19267d[_0x5a9d95(0x20b)]||0x0)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x220)]||0x0,0x1)+'%\x20'+_0x27f81d(_0x19267d['luminosity']||0x0,0x1)+'%)';break;case _0x5a9d95(0x27d):_0xe0861e=_0x19267d[_0x5a9d95(0x22c)]<0x1?_0x5a9d95(0x264)+Math['round'](_0x19267d[_0x5a9d95(0x20b)]||0x0)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x226)]||0x0,0x1)+'%\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x24c)]||0x0,0x1)+'%\x20/\x20'+_0x19267d[_0x5a9d95(0x22c)]+')':_0x5a9d95(0x21f)+Math['round'](_0x19267d[_0x5a9d95(0x20b)]||0x0)+'\x20'+_0x27f81d(_0x19267d['hsvSaturation']||0x0,0x1)+'%\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x24c)]||0x0,0x1)+'%)';break;case _0x5a9d95(0x18d):_0xe0861e=_0x19267d['alpha']<0x1?_0x5a9d95(0x261)+Math['round'](_0x19267d['hue']||0x0)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x280)]||0x0,0x1)+'%\x20'+_0x27f81d(_0x19267d['blackness']||0x0,0x1)+'%\x20/\x20'+_0x19267d[_0x5a9d95(0x22c)]+')':_0x5a9d95(0x1f7)+Math['round'](_0x19267d[_0x5a9d95(0x20b)]||0x0)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x280)]||0x0,0x1)+'%\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x257)]||0x0,0x1)+'%)';break;case _0x5a9d95(0x21e):_0xe0861e=_0x19267d[_0x5a9d95(0x22c)]<0x1?_0x5a9d95(0x1fb)+_0x27f81d(_0x19267d[_0x5a9d95(0x1b5)]||0x0,0x3)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x1b2)]||0x0,0x3)+'\x20'+Math[_0x5a9d95(0x1d8)](_0x19267d[_0x5a9d95(0x1f1)]||0x0)+'\x20/\x20'+_0x19267d[_0x5a9d95(0x22c)]+')':_0x5a9d95(0x1fb)+_0x27f81d(_0x19267d[_0x5a9d95(0x1b5)]||0x0,0x3)+'\x20'+_0x27f81d(_0x19267d[_0x5a9d95(0x1b2)]||0x0,0x3)+'\x20'+Math[_0x5a9d95(0x1d8)](_0x19267d['oklchHue']||0x0)+')';break;}_0x350428['val'](_0xe0861e);}),_0x294174[_0x3e406c(0x1d9)]('input[type=\x22range\x22],\x20input[type=\x22number\x22]')[_0x3e406c(0x246)](function(){const _0x3a686d=_0x3e406c,_0x18997a=_0x1817f1(this),_0x15c88b=_0x18997a[_0x3a686d(0x198)]('name')[_0x3a686d(0x265)](_0x3a686d(0x27b),'');if(_0x19267d[_0x15c88b]!==undefined){_0x18997a[_0x3a686d(0x274)](_0x19267d[_0x15c88b]);if(_0x18997a[_0x3a686d(0x198)]('type')===_0x3a686d(0x1f8)){const _0x40460e=parseFloat(_0x18997a[_0x3a686d(0x198)](_0x3a686d(0x1da))),_0x99e04b=parseFloat(_0x18997a[_0x3a686d(0x198)](_0x3a686d(0x207))),_0x3a1e79=Math['max'](_0x40460e,Math[_0x3a686d(0x1da)](_0x99e04b,_0x19267d[_0x15c88b])),_0x4d4b58=Math[_0x3a686d(0x207)](0x0,Math[_0x3a686d(0x1da)](0x64,(_0x3a1e79-_0x40460e)/(_0x99e04b-_0x40460e)*0x64));_0x18997a['siblings']('.custom-slider-handle')[_0x3a686d(0x252)](_0x3a686d(0x1c0),_0x4d4b58+'%'),_0x18997a[_0x3a686d(0x274)](_0x3a1e79);const _0x1e5bbe=_0x18997a[_0x3a686d(0x218)](_0x3a686d(0x283)),_0x3d7d18=_0xd90e4c(_0x1e5bbe,_0x15c88b,_0x19267d);_0x18997a['css'](_0x3a686d(0x230),_0x3d7d18);}}});}function _0x50b24c(_0x461b06){const _0x39078c=_0x55dcf0,_0x287d57=_0x461b06[_0x39078c(0x241)],_0x15f314=_0x461b06[_0x39078c(0x19c)],_0x175cd3=_0x287d57[_0x39078c(0x282)](),_0x5bf513=_0x1817f1(window)[_0x39078c(0x271)](),_0x2d2fe0=_0x1817f1(window)[_0x39078c(0x18f)](),_0x5450f9=_0x15f314[_0x39078c(0x199)](),_0x2f69fa=_0x15f314['outerHeight']();let _0x515900=_0x175cd3['top']+_0x287d57[_0x39078c(0x209)]()+0x5,_0x7f81e2=_0x175cd3[_0x39078c(0x1c0)];_0x7f81e2+_0x5450f9>_0x5bf513&&(_0x7f81e2=_0x5bf513-_0x5450f9-0xa),_0x515900+_0x2f69fa>_0x2d2fe0&&(_0x515900=_0x175cd3[_0x39078c(0x26e)]-_0x2f69fa-0x5),_0x15f314['css']({'position':_0x39078c(0x214),'top':_0x515900,'left':_0x7f81e2,'zIndex':0x98967b});}function _0x5cbff3(_0x3c09b5){const _0x3ade98=_0x55dcf0;_0x3c09b5[_0x3ade98(0x200)]=!![],_0x3c09b5['originalColor']=new _0x4e3fa5(_0x3c09b5[_0x3ade98(0x20e)][_0x3ade98(0x250)]()),_0x3c09b5[_0x3ade98(0x19c)][_0x3ade98(0x228)](_0x3ade98(0x285)),_0x50b24c(_0x3c09b5),_0x3c09b5[_0x3ade98(0x267)][_0x3ade98(0x1ad)]&&_0x3c09b5[_0x3ade98(0x20e)]&&_0x3c09b5[_0x3ade98(0x20e)]['a']===0x0&&(_0x3c09b5[_0x3ade98(0x25b)]=_0x2258fd(_0x3c09b5[_0x3ade98(0x20e)]['r'],_0x3c09b5[_0x3ade98(0x20e)]['g'],_0x3c09b5[_0x3ade98(0x20e)]['b'],0x0,_0x3c09b5['currentValues'])),_0x3d9dc8(_0x3c09b5),_0x2a650b(_0x3c09b5),_0x3c09b5[_0x3ade98(0x267)][_0x3ade98(0x233)]&&_0x3c09b5[_0x3ade98(0x267)][_0x3ade98(0x233)]();}function _0x57d5a3(_0x492e7c){const _0x236aa2=_0x55dcf0;_0x492e7c[_0x236aa2(0x200)]=![],_0x492e7c[_0x236aa2(0x19c)]['removeClass'](_0x236aa2(0x285));}}(jQuery,window['culori']));function a24_0x51cc(_0x16725c,_0x36de61){_0x16725c=_0x16725c-0x18d;const _0x515839=a24_0x5158();let _0x51cc4e=_0x515839[_0x16725c];return _0x51cc4e;}function a24_0x5158(){const _0x2fbff0=['toHexString','Restoring\x20colorInputBlocker','ctrlKey','ArrowDown','clipboard','Enter','.sp-choose','.color-swatch','Canvas\x20element:','Canvas\x20mousedown\x20for\x20eyedropper\x20sampling','left','rgb(','\x22\x20\x0a\x09\x09\x09\x09\x09\x09value=\x22','.sp-preview','input[type=\x22range\x22]','<div\x20class=\x22color-picker\x22\x20data-mode=\x22','Canvas\x20jQuery:','rgb','removeData','Has\x20cursor-eyedropper\x20class:','\x22\x0a\x09\x09\x09\x09\x09value=\x22','parse','tooltip','has-transparency','apply','hsl(','\x22\x0a\x09\x09\x09\x09\x09\x09style=\x22background:\x20','show','Button\x20active\x20class\x20added','body','\x22>\x0a\x09\x09\x09</div>\x0a\x09\x09','Red\x20Channel','Failed\x20to\x20copy:','399609aJVAjt','round','find','min','<div\x20class=\x22modern-colorpicker-popup\x22></div>','append','$input','input[type=\x22number\x22][name=\x22alphaNum\x22]','spectrum-id','step','match','eyedropperActive','previousCanvasClasses','keydown','hsl','Cleaning\x20up\x20eyedropper','Active\x20swatch:','\x22>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22custom-slider-handle\x22\x20style=\x22left:\x20','containerClassName','spectrum-id\x20spectrum-instance','fillColor','off','empty','</button>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09</div>\x0a\x09\x09','remove','.colorpicker-eyedropper-btn','oklchHue','.slider-choices\x20.mode-btn','335qUpsTZ','Document\x20mousedown\x20captured,\x20target:','hsla(','246616jEKQlh','hwb(','range','No\x20item\x20found\x20at\x20click\x20position','substr','oklch(','Saturation',':visible','prototype','Button\x20element:','isOpen','addEventListener','\x22\x20title=\x22Copy\x20value\x22>\x0a\x09\x09\x09\x09\x09<svg\x20class=\x22copy-icon\x22\x20title=\x22Copy\x20value\x22\x20width=\x2216\x22\x20height=\x2216\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x09\x09\x09\x09\x09\x09<polygon\x20points=\x2231\x2024\x2027\x2024\x2027\x2020\x2025\x2020\x2025\x2024\x2021\x2024\x2021\x2026\x2025\x2026\x2025\x2030\x2027\x2030\x2027\x2026\x2031\x2026\x2031\x2024\x22/>\x0a\x09\x09\x09\x09\x09\x09<path\x20d=\x22M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2H17V28H7V7h3v3H22V7h3v9h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z\x22/>\x0a\x09\x09\x09\x09\x09</svg>\x0a\x09\x09\x09\x09\x09<svg\x20class=\x22copy-success-icon\x22\x20title=\x22Copy\x20value\x22\x20width=\x2216\x22\x20height=\x2216\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x09\x09\x09\x09\x09\x09<polygon\x20points=\x2222\x2027.18\x2019.41\x2024.59\x2018\x2026\x2022\x2030\x2030\x2022\x2028.59\x2020.59\x2022\x2027.18\x22/>\x0a\x09\x09\x09\x09\x09\x09<path\x20d=\x22M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2h9V28H7V7h3v3H22V7h3V18h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z\x22/>\x0a\x09\x09\x09\x09\x09</svg>\x0a\x09\x09\x09\x09</button>\x0a\x09\x09\x09</div>\x0a\x09\x09','\x22\x20\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09autocomplete=\x22off\x22\x20autocorrect=\x22off\x22\x20autocapitalize=\x22off\x22\x20spellcheck=\x22false\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<button\x20aria-label=\x22copy\x20code\x22\x20type=\x22button\x22\x20class=\x22copy-code\x22\x20title=\x22Copy\x20value\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<svg\x20class=\x22copy-icon\x22\x20title=\x22Copy\x20value\x22\x20width=\x2216\x22\x20height=\x2216\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<polygon\x20points=\x2231\x2024\x2027\x2024\x2027\x2020\x2025\x2020\x2025\x2024\x2021\x2024\x2021\x2026\x2025\x2026\x2025\x2030\x2027\x2030\x2027\x2026\x2031\x2026\x2031\x2024\x22/>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<path\x20d=\x22M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2H17V28H7V7h3v3H22V7h3v9h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z\x22/>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</svg>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09<svg\x20class=\x22copy-success-icon\x22\x20title=\x22Copy\x20value\x22\x20width=\x2216\x22\x20height=\x2216\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<polygon\x20points=\x2222\x2027.18\x2019.41\x2024.59\x2018\x2026\x2022\x2030\x2030\x2022\x2028.59\x2020.59\x2022\x2027.18\x22/>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09<path\x20d=\x22M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2h9V28H7V7h3v3H22V7h3V18h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z\x22/>\x0a\x09\x09\x09\x09\x09\x09\x09\x09\x09</svg>\x0a\x09\x09\x09\x09\x09\x09\x09\x09</button>\x0a\x09\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09\x09<div\x20class=\x22color-pickers\x22></div>\x0a\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09<div\x20class=\x22colorpicker-buttons\x22>\x0a\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22colorpicker-eyedropper-btn\x22\x20title=\x22Sample\x20color\x20from\x20canvas\x22>\x0a\x09\x09\x09\x09\x09\x09<svg\x20width=\x2216\x22\x20height=\x2216\x22\x20viewBox=\x220\x200\x2032\x2032\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22>\x0a\x09\x09\x09\x09\x09\x09\x09<rect\x20x=\x222\x22\x20y=\x2227\x22\x20width=\x223\x22\x20height=\x223\x22/>\x0a\x09\x09\x09\x09\x09\x09\x09<path\x20d=\x22M29.71,7.29l-5-5a1,1,0,0,0-1.41,0h0L20,5.59l-1.29-1.3L17.29,5.71,18.59,7,8.29,17.29A1,1,0,0,0,8,18v1.59l-2.71,2.7a1,1,0,0,0,0,1.41h0l3,3a1,1,0,0,0,1.41,0h0L12.41,24H14a1,1,0,0,0,.71-.29L25,13.41l1.29,1.3,1.42-1.42L26.41,12l3.3-3.29a1,1,0,0,0,0-1.41ZM13.59,22h-2L9,24.59,7.41,23,10,20.41v-2l10-10L23.59,12ZM25,10.59,21.41,7,24,4.41,27.59,8Z\x22/>\x0a\x09\x09\x09\x09\x09\x09</svg>\x0a\x09\x09\x09\x09\x09</button>\x0a\x09\x09\x09\x09\x09<button\x20class=\x22sp-cancel\x22>','\x20/\x20','<div\x20class=\x22sp-replacer\x22></div>','Point','max','error','outerHeight','getActiveColorSwatch','hue','random','luminosity','currentColor','Document\x20mousedown\x20handler\x20attached\x20(capture\x20phase)','click','extend','===\x20EYEDROPPER\x20BUTTON\x20CLICKED\x20===','siblings','absolute','-content\x22>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22slider-choices\x22>\x0a\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22colorpicker-clear-btn\x22\x20title=\x22No\x20color\x22></button>\x0a\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22mode-btn\x22\x20data-mode=\x22rgb\x22>RGB</button>\x0a\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22mode-btn\x20active\x22\x20data-mode=\x22hsl\x22>HSL</button>\x0a\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22mode-btn\x22\x20data-mode=\x22hsv\x22>HSV</button>\x0a\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22mode-btn\x22\x20data-mode=\x22hwb\x22>HWB</button>\x0a\x09\x09\x09\x09\x09\x09<button\x20type=\x22button\x22\x20class=\x22mode-btn\x22\x20data-mode=\x22oklch\x22>OKLCH</button>\x0a\x09\x09\x09\x09\x09\x09<div\x20class=\x22colorpicker-drag-handle\x22\x20title=\x22Drag\x20to\x20move\x22></div>\x0a\x09\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09\x09<div\x20class=\x22main\x22>\x0a\x09\x09\x09\x09\x09\x09<div>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22color-swatch\x22></div>\x0a\x09\x09\x09\x09\x09\x09\x09<div\x20class=\x22color-code\x22>\x0a\x09\x09\x09\x09\x09\x09\x09\x09<input\x20type=\x22text\x22\x20name=\x22hex\x22\x20class=\x22hex-input\x22\x20value=\x22','toString','chooseText','data','target','sp-clear-display','\x22\x20\x0a\x09\x09\x09\x09\x09value=\x22','currentTarget','blue','oklch','hsv(','saturation','\x22\x20\x0a\x09\x09\x09\x09\x09name=\x22','#colorInputBlocker','Chroma\x20(Colorfulness)','stopPropagation','className','hsvSaturation','</button>\x0a\x09\x09\x09\x09\x09<button\x20class=\x22sp-choose\x22>','addClass','input[data-mode=\x22','dblclick\x20contextmenu','removeClass','alpha','mousedown','cursor-eyedropper','\x22\x20\x0a\x09\x09\x09\x09\x09step=\x22','background','%\x22></div>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09<input\x20type=\x22number\x22\x20\x0a\x09\x09\x09\x09\x09data-mode=\x22','split','beforeShow','Invalid\x20color','-drag','\x22\x20\x0a\x09\x09\x09\x09\x09\x09min=\x22','.hex-input','background-color','item','.sp-preview-inner','function','includes','active','1486110qdEyqk','catch','strokeColor','$replacer','replacerClassName','border-color','hide','\x22\x20\x0a\x09\x09\x09\x09\x09class=\x22mode-color-input\x22\x0a\x09\x09\x09\x09\x09data-mode=\x22','each','spectrum','cleanupEyedropper','119UoRvxt','stroke','clientX','value','.colorpicker-clear-btn','.sp-clear','pageX','toRgbString','Color\x20conversion\x20error:','css','execCommand','html','viewToProject','getBoundingClientRect','blackness','Lightness','join','<div\x20class=\x22sp-preview\x22><div\x20class=\x22sp-preview-inner\x22></div></div>','currentValues','copied','change','pow','Paper.js\x20point:','forEach','hwba(','pageY','spectrum-instance','hsva(','replace','4092fMOZwt','opts','cancelText','view','Eyedropper:\x20Canvas\x20element\x20not\x20found!','name','\x22\x0a\x09\x09\x09\x09\x09autocomplete=\x22off\x22\x20\x0a\x09\x09\x09\x09\x09autocorrect=\x22off\x22\x20\x0a\x09\x09\x09\x09\x09autocapitalize=\x22off\x22\x20\x0a\x09\x09\x09\x09\x09spellcheck=\x22false\x22>\x0a\x09\x09\x09\x09<button\x20aria-label=\x22copy\x20code\x22\x20type=\x22button\x22\x20class=\x22copy-code\x22\x20data-mode=\x22','red','top','Green\x20Channel','Sampled\x20color:','width','Invalid\x20hex\x20color:','toCSS','val','%\x20/\x20','trigger','2175414swFuHh','734127JPRqsW','Storing\x20previous\x20canvas\x20classes:','55056QnbLCs','Num','has','hsv','move','Eyedropper\x20timeout\x20-\x20auto\x20cleanup','whiteness','.sp-cancel','offset','mode','.colorpicker-drag-handle','sp-active','length','Blackness','rgba(','mousedown.','Paper.js\x20is\x20not\x20available!','\x0a\x09\x09\x09<div\x20class=\x22colorpicker-embed\x22>\x0a\x09\x09\x09\x09<div\x20class=\x22colorpicker-content\x22\x20id=\x22','zoom','after','opacity','getElementById','Canvas\x20rect:','blur','hwb','mousemove.','height','dragging','\x22\x20\x0a\x09\x09\x09\x09\x09\x09max=\x22','Canvas\x20classes\x20after\x20100ms:','110vsaDFQ','Eyedropper\x20cancelled\x20with\x20Escape','project','string','clientY','attr','outerWidth','Value\x20(Brightness)','ArrowUp','$container','push','slice','Hue','key','blockerWasVisible','Culori\x20library\x20not\x20loaded!\x20Color\x20picker\x20will\x20not\x20work.','log','preventDefault','change.spectrum','Alpha\x20(Opacity)','removeEventListener','input[type=\x22number\x22]','Color\x20picker\x20updated\x20successfully','green','spectrum-','Whiteness','allowEmpty','clickoutFiresChange','hitTest','Click\x20not\x20on\x20canvas,\x20ignoring','4fLzyhH','oklchChroma','104028OXmhXq','copy','oklchLightness'];a24_0x5158=function(){return _0x2fbff0;};return a24_0x5158();}
+/**
+ * Modern Color Picker Wrapper - COMPLETE Implementation
+ * Full integration with culori for all color conversions
+ * Supports RGB, HSL, HSV, HWB, OKLCH with real-time synchronization
+ */
+
+(function ($, culori) {
+	'use strict';
+
+	if (!culori) {
+		console.error('Culori library not loaded! Color picker will not work.');
+		return;
+	}
+
+	// Extract culori functions
+	const { rgb, hsl, hsv, hwb, oklch, formatHex, clampChroma, inGamut } = culori;
+
+	// Utility: Round to decimal places
+	const roundTo = (value, decimals = 1) => {
+		const factor = Math.pow(10, decimals);
+		return Math.round(value * factor) / factor;
+	};
+
+	// Color object wrapper compatible with Spectrum.js
+	function ColorObject(color) {
+		if (typeof color === 'string') {
+			try {
+				const parsed = culori.parse(color);
+				if (!parsed) throw new Error('Invalid color');
+
+				const rgbColor = rgb(parsed);
+				this.r = Math.round(rgbColor.r * 255);
+				this.g = Math.round(rgbColor.g * 255);
+				this.b = Math.round(rgbColor.b * 255);
+				this.a = rgbColor.alpha !== undefined ? rgbColor.alpha : 1;
+			} catch (e) {
+				this.r = 0;
+				this.g = 0;
+				this.b = 0;
+				this.a = 1;
+			}
+		} else {
+			this.r = color.r || 0;
+			this.g = color.g || 0;
+			this.b = color.b || 0;
+			this.a = color.a !== undefined ? color.a : 1;
+		}
+	}
+
+	ColorObject.prototype.toRgbString = function () {
+		if (this.a < 1) {
+			return `rgba(${this.r}, ${this.g}, ${this.b}, ${this.a})`;
+		}
+		return `rgb(${this.r}, ${this.g}, ${this.b})`;
+	};
+
+	ColorObject.prototype.toHexString = function () {
+		const hex = formatHex({ mode: 'rgb', r: this.r / 255, g: this.g / 255, b: this.b / 255 });
+		return hex;
+	};
+
+
+	// Convert RGB to all color modes
+	function rgbToAllModes(r, g, b, a, previousValues) {
+		const rgbColor = { mode: 'rgb', r: r / 255, g: g / 255, b: b / 255, alpha: a };
+
+		// HSL
+		const hslColor = hsl(rgbColor);
+		// Preserve hue when it becomes undefined (saturation=0 or lightness=0/100)
+		const hue = hslColor.h !== undefined ? roundTo(hslColor.h, 0) : (previousValues?.hue !== undefined ? previousValues.hue : 0);
+		const saturation = roundTo((hslColor.s || 0) * 100, 1);
+		const luminosity = roundTo((hslColor.l || 0) * 100, 1);
+
+		// HSV
+		const hsvColor = hsv(rgbColor);
+		const hsvSaturation = roundTo((hsvColor.s || 0) * 100, 1);
+		const value = roundTo((hsvColor.v || 0) * 100, 1);
+
+		// HWB
+		const hwbColor = hwb(rgbColor);
+		const whiteness = roundTo((hwbColor.w || 0) * 100, 1);
+		const blackness = roundTo((hwbColor.b || 0) * 100, 1);
+
+		// OKLCH
+		const oklchColor = oklch(rgbColor);
+		const oklchLightness = roundTo(oklchColor.l || 0, 3);
+		const oklchChroma = roundTo(oklchColor.c || 0, 3);
+		const oklchHue = oklchColor.h !== undefined ? roundTo(oklchColor.h, 0) : (previousValues?.oklchHue !== undefined ? previousValues.oklchHue : 0);
+
+		return {
+			red: r, green: g, blue: b,
+			hue, saturation, luminosity,
+			hsvSaturation, value,
+			whiteness, blackness,
+			oklchLightness, oklchChroma, oklchHue,
+			alpha: a
+		};
+	}
+
+	// Generate gradient for sliders
+	function generateGradient(mode, component, currentValues) {
+		const steps = component === 'hue' ? 36 : 10;
+		const colors = [];
+
+		for (let i = 0; i <= steps; i++) {
+			let color;
+			const factor = i / steps;
+
+			switch (mode) {
+				case 'hsl':
+					if (component === 'hue') {
+						color = hsl({ h: factor * 360, s: currentValues.saturation / 100, l: currentValues.luminosity / 100 });
+					} else if (component === 'saturation') {
+						color = hsl({ h: currentValues.hue, s: factor, l: currentValues.luminosity / 100 });
+					} else if (component === 'luminosity') {
+						color = hsl({ h: currentValues.hue, s: currentValues.saturation / 100, l: factor });
+					} else if (component === 'alpha') {
+						colors.push(`hsl(${currentValues.hue} ${currentValues.saturation}% ${currentValues.luminosity}% / ${factor})`);
+						continue;
+					}
+					break;
+
+				case 'hsv':
+					if (component === 'hue') {
+						color = hsv({ h: factor * 360, s: currentValues.hsvSaturation / 100, v: currentValues.value / 100 });
+					} else if (component === 'hsvSaturation') {
+						color = hsv({ h: currentValues.hue, s: factor, v: currentValues.value / 100 });
+					} else if (component === 'value') {
+						color = hsv({ h: currentValues.hue, s: currentValues.hsvSaturation / 100, v: factor });
+					} else if (component === 'alpha') {
+						// Convert HSV to RGB for display
+						const hsvColor = hsv({ h: currentValues.hue, s: currentValues.hsvSaturation / 100, v: currentValues.value / 100 });
+						const rgbColor = rgb(hsvColor);
+						const r = Math.round(rgbColor.r * 255);
+						const g = Math.round(rgbColor.g * 255);
+						const b = Math.round(rgbColor.b * 255);
+						colors.push(`rgba(${r} ${g} ${b} / ${factor})`);
+						continue;
+					}
+					break;
+
+				case 'hwb':
+					if (component === 'hue') {
+						color = hwb({ h: factor * 360, w: currentValues.whiteness / 100, b: currentValues.blackness / 100 });
+					} else if (component === 'whiteness') {
+						color = hwb({ h: currentValues.hue, w: factor, b: currentValues.blackness / 100 });
+					} else if (component === 'blackness') {
+						color = hwb({ h: currentValues.hue, w: currentValues.whiteness / 100, b: factor });
+					} else if (component === 'alpha') {
+						colors.push(`hwb(${currentValues.hue} ${currentValues.whiteness}% ${currentValues.blackness}% / ${factor})`);
+						continue;
+					}
+					break;
+
+				case 'rgb':
+					if (component === 'red') {
+						color = rgb({ r: factor, g: currentValues.green / 255, b: currentValues.blue / 255 });
+					} else if (component === 'green') {
+						color = rgb({ r: currentValues.red / 255, g: factor, b: currentValues.blue / 255 });
+					} else if (component === 'blue') {
+						color = rgb({ r: currentValues.red / 255, g: currentValues.green / 255, b: factor });
+					} else if (component === 'alpha') {
+						// For alpha, use rgba with varying alpha
+						const r = Math.round((currentValues.red || 0));
+						const g = Math.round((currentValues.green || 0));
+						const b = Math.round((currentValues.blue || 0));
+						colors.push(`rgba(${r} ${g} ${b} / ${factor})`);
+						continue;
+					}
+					break;
+
+				case 'oklch':
+					if (component === 'oklchLightness') {
+						color = oklch({ l: factor, c: currentValues.oklchChroma, h: currentValues.oklchHue });
+					} else if (component === 'oklchChroma') {
+						color = oklch({ l: currentValues.oklchLightness, c: factor * 0.37, h: currentValues.oklchHue });
+					} else if (component === 'oklchHue') {
+						color = oklch({ l: currentValues.oklchLightness, c: currentValues.oklchChroma, h: factor * 360 });
+					} else if (component === 'alpha') {
+						colors.push(`oklch(${currentValues.oklchLightness} ${currentValues.oklchChroma} ${currentValues.oklchHue} / ${factor})`);
+						continue;
+					}
+					break;
+			}
+
+			if (color) {
+				const rgbColor = rgb(color);
+				const r = Math.round(rgbColor.r * 255);
+				const g = Math.round(rgbColor.g * 255);
+				const b = Math.round(rgbColor.b * 255);
+				colors.push(`rgb(${r} ${g} ${b})`);
+			}
+		}
+
+		return `linear-gradient(to right, ${colors.join(', ')})`;
+	}
+
+
+	// Main spectrum wrapper
+	$.fn.spectrum = function (opts) {
+		if (typeof opts === 'string') {
+			// Handle method calls
+			const method = opts;
+			const args = Array.prototype.slice.call(arguments, 1);
+			let result;
+
+			this.each(function () {
+				const instance = $(this).data('spectrum-instance');
+				if (instance && typeof instance[method] === 'function') {
+					result = instance[method].apply(instance, args);
+				}
+			});
+
+			return result !== undefined ? result : this;
+		}
+
+		return this.each(function () {
+			const $input = $(this);
+			const instanceId = 'spectrum-' + Math.random().toString(36).substr(2, 9);
+
+			if (!$input.data('spectrum-id')) {
+				$input.data('spectrum-id', instanceId);
+
+				const instance = {
+                    opts: $.extend({}, {
+                        color: '#000000',
+                        showInput: true,
+                        allowEmpty: false,
+                        clickoutFiresChange: true,
+                        chooseText: 'OK',
+                        cancelText: 'Cancel',
+                        preferredFormat: 'rgb',
+                        replacerClassName: '',
+                        containerClassName: '',
+                        useReplacer: true,
+                        positionMode: 'anchor',
+                        anchor: null
+                    }, opts),
+					currentColor: null,
+					originalColor: null,
+					currentValues: null,
+					isOpen: false,
+					$container: null,
+					$replacer: null,
+					$input: $input,
+
+					// API methods
+					get: function () {
+						return this.currentColor;
+					},
+					set: function (color) {
+						this.currentColor = new ColorObject(color);
+						this.currentValues = rgbToAllModes(this.currentColor.r, this.currentColor.g, this.currentColor.b, this.currentColor.a, this.currentValues);
+						updateReplacerColor(this);
+						if (this.$container && this.isOpen) {
+							updatePickerFromColor(this);
+						}
+					},
+					show: function () {
+						showPicker(this);
+					},
+					hide: function () {
+						hidePicker(this);
+					},
+					destroy: function () {
+						if (this.$container) {
+							this.$container.remove();
+						}
+						if (this.$replacer) {
+							this.$replacer.remove();
+						}
+						$(document).off('.' + this.$input.data('spectrum-id'));
+						$(document).off('.' + this.$input.data('spectrum-id') + '-drag');
+						this.$input.removeData('spectrum-id spectrum-instance');
+					}
+				};
+
+				// Initialize
+				instance.currentColor = new ColorObject(instance.opts.color);
+				instance.originalColor = new ColorObject(instance.opts.color);
+				instance.currentValues = rgbToAllModes(instance.currentColor.r, instance.currentColor.g, instance.currentColor.b, instance.currentColor.a, null);
+
+                // Create replacer (swatch button) if enabled
+                if (instance.opts.useReplacer) {
+                    createReplacer(instance);
+                }
+
+                // Create picker container
+                createPicker(instance);
+
+				// Store instance
+				$input.data('spectrum-instance', instance);
+			}
+		});
+	};
+
+
+	function createReplacer(instance) {
+        const $replacer = $('<div class="sp-replacer"></div>');
+        const $preview = $('<div class="sp-preview"><div class="sp-preview-inner"></div></div>');
+
+		if (instance.opts.replacerClassName) {
+			$replacer.addClass(instance.opts.replacerClassName);
+		}
+
+		$replacer.append($preview);
+        instance.$input.after($replacer);
+        instance.$input.hide();
+        instance.$replacer = $replacer;
+
+		updateReplacerColor(instance);
+
+		$replacer.on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			if (instance.isOpen) {
+				hidePicker(instance);
+			} else {
+				showPicker(instance);
+			}
+		});
+	}
+
+	function updateReplacerColor(instance) {
+		if (!instance.$replacer) return;
+
+		const $preview = instance.$replacer.find('.sp-preview');
+		const $previewInner = instance.$replacer.find('.sp-preview-inner');
+		const color = instance.currentColor;
+
+		if (!color || (instance.opts.allowEmpty && color.a === 0)) {
+			$preview.addClass('sp-clear-display');
+			$previewInner.css('background-color', 'transparent');
+		} else {
+			$preview.removeClass('sp-clear-display');
+			const colorStr = color.toRgbString();
+
+			if (instance.opts.replacerClassName.includes('stroke')) {
+				// Stroke: set border color on preview
+				$preview.css('border-color', colorStr);
+				$previewInner.css('opacity', '0'); // Keep inner transparent for stroke
+			} else {
+				// Fill: set background color on inner
+				$previewInner.css({
+					'background-color': colorStr,
+					'opacity': '1',
+					'display': 'block'
+				});
+			}
+		}
+	}
+
+
+	function createPicker(instance) {
+		const $container = $('<div class="modern-colorpicker-popup"></div>');
+		const containerId = 'picker-' + instance.$input.data('spectrum-id');
+		$container.attr('id', containerId);
+
+		if (instance.opts.containerClassName) {
+			$container.addClass(instance.opts.containerClassName);
+		}
+
+		const html = `
+			<div class="colorpicker-embed">
+				<div class="colorpicker-content" id="${containerId}-content">
+					<div class="slider-choices">
+						<button type="button" class="colorpicker-clear-btn" title="No color"></button>
+						<button type="button" class="mode-btn" data-mode="rgb">RGB</button>
+						<button type="button" class="mode-btn active" data-mode="hsl">HSL</button>
+						<button type="button" class="mode-btn" data-mode="hsv">HSV</button>
+						<button type="button" class="mode-btn" data-mode="hwb">HWB</button>
+						<button type="button" class="mode-btn" data-mode="oklch">OKLCH</button>
+						<div class="colorpicker-drag-handle" title="Drag to move"></div>
+					</div>
+					<div class="main">
+						<div>
+							<div class="color-swatch"></div>
+							<div class="color-code">
+								<input type="text" name="hex" class="hex-input" value="${instance.currentColor.toHexString()}" 
+									autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+								<button aria-label="copy code" type="button" class="copy-code" title="Copy value">
+									<svg class="copy-icon" title="Copy value" width="16" height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="31 24 27 24 27 20 25 20 25 24 21 24 21 26 25 26 25 30 27 30 27 26 31 26 31 24"/>
+										<path d="M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2H17V28H7V7h3v3H22V7h3v9h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z"/>
+									</svg>
+									<svg class="copy-success-icon" title="Copy value" width="16" height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="22 27.18 19.41 24.59 18 26 22 30 30 22 28.59 20.59 22 27.18"/>
+										<path d="M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2h9V28H7V7h3v3H22V7h3V18h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="color-pickers"></div>
+					</div>
+				</div>
+				<div class="colorpicker-buttons">
+					<button type="button" class="colorpicker-eyedropper-btn" title="Sample color from canvas">
+						<svg width="16" height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+							<rect x="2" y="27" width="3" height="3"/>
+							<path d="M29.71,7.29l-5-5a1,1,0,0,0-1.41,0h0L20,5.59l-1.29-1.3L17.29,5.71,18.59,7,8.29,17.29A1,1,0,0,0,8,18v1.59l-2.71,2.7a1,1,0,0,0,0,1.41h0l3,3a1,1,0,0,0,1.41,0h0L12.41,24H14a1,1,0,0,0,.71-.29L25,13.41l1.29,1.3,1.42-1.42L26.41,12l3.3-3.29a1,1,0,0,0,0-1.41ZM13.59,22h-2L9,24.59,7.41,23,10,20.41v-2l10-10L23.59,12ZM25,10.59,21.41,7,24,4.41,27.59,8Z"/>
+						</svg>
+					</button>
+					<button class="sp-cancel">${instance.opts.cancelText}</button>
+					<button class="sp-choose">${instance.opts.chooseText}</button>
+				</div>
+			</div>
+		`;
+
+		$container.html(html);
+		$('body').append($container);
+
+		instance.$container = $container;
+
+		setupEventHandlers(instance);
+		setupDragHandlers(instance);
+		updateColorModePickers(instance);
+		updatePickerFromColor(instance);
+	}
+
+	function setupDragHandlers(instance) {
+		const $container = instance.$container;
+		const $dragHandle = $container.find('.colorpicker-drag-handle');
+
+		let isDragging = false;
+		let startX, startY, startLeft, startTop;
+
+		$dragHandle.on('mousedown', function (e) {
+			isDragging = true;
+			$container.addClass('dragging');
+
+			const offset = $container.offset();
+			startX = e.pageX;
+			startY = e.pageY;
+			startLeft = offset.left;
+			startTop = offset.top;
+
+			e.preventDefault();
+		});
+
+		$(document).on('mousemove.' + instance.$input.data('spectrum-id') + '-drag', function (e) {
+			if (!isDragging) return;
+
+			const deltaX = e.pageX - startX;
+			const deltaY = e.pageY - startY;
+
+			const newLeft = startLeft + deltaX;
+			const newTop = startTop + deltaY;
+
+			// Keep within viewport bounds
+			const windowWidth = $(window).width();
+			const windowHeight = $(window).height();
+			const pickerWidth = $container.outerWidth();
+			const pickerHeight = $container.outerHeight();
+
+			const boundedLeft = Math.max(0, Math.min(newLeft, windowWidth - pickerWidth));
+			const boundedTop = Math.max(0, Math.min(newTop, windowHeight - pickerHeight));
+
+			$container.css({
+				left: boundedLeft,
+				top: boundedTop
+			});
+
+			e.preventDefault();
+		});
+
+		$(document).on('mouseup.' + instance.$input.data('spectrum-id') + '-drag', function () {
+			if (isDragging) {
+				isDragging = false;
+				$container.removeClass('dragging');
+			}
+		});
+	}
+
+
+	function setupEventHandlers(instance) {
+		const $container = instance.$container;
+
+		// Hex input change
+		$container.find('.hex-input').on('change', function () {
+			const hex = $(this).val();
+			try {
+				instance.currentColor = new ColorObject(hex);
+				instance.currentValues = rgbToAllModes(instance.currentColor.r, instance.currentColor.g, instance.currentColor.b, instance.currentColor.a, instance.currentValues);
+				updateReplacerColor(instance);
+				updatePickerFromColor(instance);
+
+				if (instance.opts.move) {
+					instance.opts.move(instance.currentColor);
+				}
+			} catch (e) {
+				console.error('Invalid hex color:', hex);
+			}
+		});
+
+		// Copy button (delegated for dynamically created buttons)
+		$container.on('click', '.copy-code', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			const $btn = $(e.currentTarget);
+			const mode = $btn.data('mode');
+
+			let textToCopy;
+			if (mode) {
+				// Copy mode-specific color string
+				textToCopy = $btn.siblings('input[data-mode="' + mode + '"]').val();
+			} else {
+				// Copy hex from top
+				textToCopy = $container.find('.hex-input').val();
+			}
+
+			// Copy to clipboard
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(textToCopy).then(function () {
+					// Visual feedback - show success icon
+					$btn.addClass('copied');
+					setTimeout(function () {
+						$btn.removeClass('copied');
+					}, 1000);
+				}).catch(function (err) {
+					console.error('Failed to copy:', err);
+				});
+			} else {
+				// Fallback for older browsers
+				const $input = mode ? $btn.siblings('input[data-mode="' + mode + '"]') : $container.find('.hex-input');
+				$input.select();
+				try {
+					document.execCommand('copy');
+					$btn.addClass('copied');
+					setTimeout(function () {
+						$btn.removeClass('copied');
+					}, 1000);
+				} catch (err) {
+					console.error('Failed to copy:', err);
+				}
+			}
+		});
+
+		// Clear button
+		$container.find('.sp-clear').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			instance.currentColor = new ColorObject({ r: 0, g: 0, b: 0, a: 0 });
+			instance.currentValues = rgbToAllModes(0, 0, 0, 0, instance.currentValues);
+			updateReplacerColor(instance);
+			if (instance.opts.change) {
+				instance.opts.change(instance.currentColor);
+			}
+			hidePicker(instance);
+			if (instance.opts.hide) {
+				instance.opts.hide();
+			}
+		});
+
+		// Choose button
+		$container.find('.sp-choose').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			if (instance.opts.change) {
+				instance.opts.change(instance.currentColor);
+			}
+			updateReplacerColor(instance);
+
+			// Trigger jQuery change event for compatibility
+			instance.$input.trigger('change.spectrum', [instance.currentColor]);
+
+			hidePicker(instance);
+			if (instance.opts.hide) {
+				instance.opts.hide();
+			}
+		});
+
+		// Cancel button
+		$container.find('.sp-cancel').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			instance.currentColor = new ColorObject(instance.originalColor.toRgbString());
+			instance.currentValues = rgbToAllModes(instance.currentColor.r, instance.currentColor.g, instance.currentColor.b, instance.currentColor.a, instance.currentValues);
+			updateReplacerColor(instance);
+			updatePickerFromColor(instance);
+
+			// Trigger change event to restore the original color on canvas
+			if (instance.opts.change) {
+				instance.opts.change(instance.currentColor);
+			}
+
+			hidePicker(instance);
+			if (instance.opts.hide) {
+				instance.opts.hide();
+			}
+		});
+
+		// Click outside to close
+		$(document).on('mousedown.' + instance.$input.data('spectrum-id'), function (e) {
+			// Don't close if eyedropper is active
+			if (instance.eyedropperActive) {
+				return;
+			}
+
+			if (instance.isOpen &&
+				!$container.is(e.target) &&
+				$container.has(e.target).length === 0 &&
+				!instance.$replacer.is(e.target) &&
+				instance.$replacer.has(e.target).length === 0) {
+				if (instance.opts.clickoutFiresChange) {
+					if (instance.opts.change) {
+						instance.opts.change(instance.currentColor);
+					}
+					// Trigger jQuery change event
+					instance.$input.trigger('change.spectrum', [instance.currentColor]);
+				}
+				hidePicker(instance);
+				if (instance.opts.hide) {
+					instance.opts.hide();
+				}
+			}
+		});
+
+		// Mode buttons (segmented control)
+		$container.find('.slider-choices .mode-btn').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			// Update active state
+			$container.find('.slider-choices .mode-btn').removeClass('active');
+			$(this).addClass('active');
+
+			updateColorModePickers(instance);
+		});
+
+		// Clear color button
+		$container.find('.colorpicker-clear-btn').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			// Set color to transparent
+			instance.currentColor = new ColorObject({ r: 0, g: 0, b: 0, a: 0 });
+			instance.currentValues = rgbToAllModes(0, 0, 0, 0, instance.currentValues);
+			updateReplacerColor(instance);
+			updatePickerFromColor(instance);
+
+			if (instance.opts.move) {
+				instance.opts.move(instance.currentColor);
+			}
+		});
+
+		// Eyedropper button - using event delegation
+		$container.on('click', '.colorpicker-eyedropper-btn', function (e) {
+			console.log('=== EYEDROPPER BUTTON CLICKED ===');
+			e.preventDefault();
+			e.stopPropagation();
+
+			const $btn = $(this);
+			console.log('Button element:', $btn);
+
+			// Cleanup function - defined first for proper scoping
+			let cleanupEyedropper;
+			let handleCanvasClick;
+			let handleEscape;
+
+			// Toggle eyedropper mode
+			if (instance.eyedropperActive) {
+				console.log('Eyedropper already active - deactivating');
+				// Deactivate eyedropper using stored cleanup function
+				if (instance.cleanupEyedropper) {
+					instance.cleanupEyedropper();
+				}
+				return;
+			}
+
+			// Activate eyedropper
+			console.log('Activating eyedropper...');
+			instance.eyedropperActive = true;
+			$btn.addClass('active');
+			console.log('Button active class added');
+
+			// Change cursor to eyedropper
+			const $canvas = jQuery('#paperCanvas');
+			const canvasElement = document.getElementById('paperCanvas');
+
+			console.log('Canvas element:', canvasElement);
+			console.log('Canvas jQuery:', $canvas);
+
+			if (!canvasElement) {
+				console.error('Eyedropper: Canvas element not found!');
+				instance.eyedropperActive = false;
+				$btn.removeClass('active');
+				return;
+			}
+
+			console.log('Adding cursor-eyedropper class to canvas');
+			
+			// Store current cursor classes to restore later
+			const currentClasses = canvasElement.className;
+			instance.previousCanvasClasses = currentClasses;
+			console.log('Storing previous canvas classes:', currentClasses);
+			
+			// Remove all cursor classes and add eyedropper
+			$canvas.removeClass(function(index, className) {
+				return (className.match(/\bcursor-\S+/g) || []).join(' ');
+			});
+			$canvas.addClass('cursor-eyedropper');
+			
+			// Hide the color input blocker so we can click on the canvas
+			const $blocker = jQuery('#colorInputBlocker');
+			const blockerWasVisible = $blocker.is(':visible');
+			instance.blockerWasVisible = blockerWasVisible;
+			if (blockerWasVisible) {
+				console.log('Hiding colorInputBlocker to allow canvas clicks');
+				$blocker.hide();
+			}
+			
+			// Verify cursor class was added
+			setTimeout(function() {
+				console.log('Canvas classes after 100ms:', canvasElement.className);
+				console.log('Has cursor-eyedropper class:', $canvas.hasClass('cursor-eyedropper'));
+			}, 100);
+
+			// Create one-time mousedown handler on the document using native addEventListener with capture
+			handleCanvasClick = function (event) {
+				console.log('Document mousedown captured, target:', event.target);
+				
+				// Check if the click is on the canvas
+				if (event.target !== canvasElement) {
+					console.log('Click not on canvas, ignoring');
+					return;
+				}
+				
+				console.log('Canvas mousedown for eyedropper sampling');
+				
+				event.preventDefault();
+				event.stopPropagation();
+				event.stopImmediatePropagation();
+
+				// Get the click position relative to the canvas
+				const rect = canvasElement.getBoundingClientRect();
+				const x = event.clientX - rect.left;
+				const y = event.clientY - rect.top;
+
+				console.log('Click position:', x, y, 'Canvas rect:', rect);
+
+				// Check if Paper.js is available
+				if (typeof paper === 'undefined') {
+					console.error('Paper.js is not available!');
+					cleanupEyedropper();
+					return;
+				}
+
+				// Convert to Paper.js point - account for view transformation
+				const point = paper.view.viewToProject(new paper.Point(x, y));
+				console.log('Paper.js point:', point);
+
+				// Hit test to find item at this point
+				const hitOptions = {
+					segments: true,
+					stroke: true,
+					curves: true,
+					fill: true,
+					guide: false,
+					tolerance: 5 / paper.view.zoom
+				};
+
+				const hitResult = paper.project.hitTest(point, hitOptions);
+				console.log('Hit result:', hitResult);
+
+				if (hitResult && hitResult.item) {
+					let sampledColor = null;
+
+					// Get the active color swatch to determine which color to sample
+					const activeSwatch = pg.stylebar.getActiveColorSwatch();
+					console.log('Active swatch:', activeSwatch);
+
+					if (activeSwatch === 'fill' && hitResult.item.fillColor) {
+						sampledColor = hitResult.item.fillColor.toCSS();
+					} else if (activeSwatch === 'stroke' && hitResult.item.strokeColor) {
+						sampledColor = hitResult.item.strokeColor.toCSS();
+					} else if (hitResult.item.fillColor) {
+						// Default to fill color if available
+						sampledColor = hitResult.item.fillColor.toCSS();
+					} else if (hitResult.item.strokeColor) {
+						// Fall back to stroke color
+						sampledColor = hitResult.item.strokeColor.toCSS();
+					}
+
+					console.log('Sampled color:', sampledColor);
+
+					if (sampledColor) {
+						// Update the color picker with the sampled color
+						instance.currentColor = new ColorObject(sampledColor);
+						instance.currentValues = rgbToAllModes(
+							instance.currentColor.r,
+							instance.currentColor.g,
+							instance.currentColor.b,
+							instance.currentColor.a,
+							instance.currentValues
+						);
+						updateReplacerColor(instance);
+						updatePickerFromColor(instance);
+
+						if (instance.opts.move) {
+							instance.opts.move(instance.currentColor);
+						}
+						
+						console.log('Color picker updated successfully');
+					}
+				} else {
+					console.log('No item found at click position');
+				}
+
+				// Clean up after sampling
+				cleanupEyedropper();
+			};
+
+			// Cleanup function
+			cleanupEyedropper = function () {
+				console.log('Cleaning up eyedropper');
+				instance.eyedropperActive = false;
+				$btn.removeClass('active');
+				
+				// Remove eyedropper cursor
+				$canvas.removeClass('cursor-eyedropper');
+				
+				// Restore previous cursor classes if stored
+				if (instance.previousCanvasClasses) {
+					const previousCursorClasses = instance.previousCanvasClasses.match(/\bcursor-\S+/g);
+					if (previousCursorClasses) {
+						$canvas.addClass(previousCursorClasses.join(' '));
+					}
+					instance.previousCanvasClasses = null;
+				}
+				
+				// Restore the color input blocker if it was visible
+				if (instance.blockerWasVisible) {
+					console.log('Restoring colorInputBlocker');
+					jQuery('#colorInputBlocker').show();
+					instance.blockerWasVisible = false;
+				}
+				if (handleCanvasClick) {
+					document.removeEventListener('mousedown', handleCanvasClick, true);
+				}
+				if (handleEscape) {
+					document.removeEventListener('keydown', handleEscape);
+				}
+				instance.cleanupEyedropper = null;
+			};
+
+			// Store cleanup function for external access
+			instance.cleanupEyedropper = cleanupEyedropper;
+
+			// Attach the mousedown handler to the document to catch it before Paper.js
+			// Using capture phase and document level to ensure we get the event first
+			document.addEventListener('mousedown', handleCanvasClick, true);
+			console.log('Document mousedown handler attached (capture phase)');
+
+			// Also set up escape key to cancel
+			handleEscape = function (event) {
+				if (event.key === 'Escape') {
+					console.log('Eyedropper cancelled with Escape');
+					cleanupEyedropper();
+				}
+			};
+			document.addEventListener('keydown', handleEscape);
+
+			// Set up a timeout to clear the flag if user doesn't sample
+			setTimeout(function () {
+				if (instance.eyedropperActive) {
+					console.log('Eyedropper timeout - auto cleanup');
+					cleanupEyedropper();
+				}
+			}, 30000); // 30 second timeout
+		});
+	}
+
+
+	function updateColorModePickers(instance) {
+		const $container = instance.$container;
+		const $pickers = $container.find('.color-pickers');
+
+		// Get the active mode (only one at a time)
+		const $activeBtn = $container.find('.slider-choices .mode-btn.active');
+		const activeMode = $activeBtn.data('mode');
+
+		if (!activeMode) return;
+
+		$pickers.empty();
+
+		// Only show the active mode
+		const mode = activeMode;
+		const pickerHTML = createColorModePicker(mode, instance.currentValues);
+		const $picker = $(pickerHTML);
+		$pickers.append($picker);
+
+		// Attach event handlers
+		$picker.find('input[type="range"]').on('input', function () {
+			handleSliderChange(instance, mode, $(this).attr('name'), $(this).val());
+		});
+
+		$picker.find('input[type="number"]').on('change', function () {
+			const name = $(this).attr('name').replace('Num', '');
+			handleSliderChange(instance, mode, name, $(this).val());
+		});
+
+		// Add keyboard shortcuts for number inputs
+		$picker.find('input[type="number"]').on('keydown', function (e) {
+			const $input = $(this);
+			const name = $input.attr('name').replace('Num', '');
+			const currentValue = parseFloat($input.val()) || 0;
+			const min = parseFloat($input.attr('min'));
+			const max = parseFloat($input.attr('max'));
+			const step = parseFloat($input.attr('step')) || 1;
+
+			let newValue = currentValue;
+			let handled = false;
+
+			// Arrow Up/Down keys
+			if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+				const direction = e.key === 'ArrowUp' ? 1 : -1;
+
+				if (e.metaKey || e.ctrlKey) {
+					// Cmd/Ctrl + Arrow: increment by 0.1 (for decimal values)
+					if (step < 1) {
+						newValue = currentValue + (direction * 0.1);
+						handled = true;
+					}
+				} else if (e.shiftKey) {
+					// Shift + Arrow: increment by 10 (only if max > 10)
+					if (max > 10) {
+						newValue = currentValue + (direction * 10);
+						handled = true;
+					}
+				} else {
+					// Arrow only: increment by 1
+					newValue = currentValue + direction;
+					handled = true;
+				}
+			}
+			// Enter key: confirm and blur
+			else if (e.key === 'Enter') {
+				$input.blur();
+				handled = true;
+			}
+
+			if (handled && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+				e.preventDefault();
+
+				// Clamp to min/max
+				newValue = Math.max(min, Math.min(max, newValue));
+
+				// Round to appropriate decimal places based on step
+				if (step < 1) {
+					const decimals = step.toString().split('.')[1]?.length || 1;
+					newValue = parseFloat(newValue.toFixed(decimals));
+				} else {
+					newValue = Math.round(newValue);
+				}
+
+				$input.val(newValue);
+				handleSliderChange(instance, mode, name, newValue);
+			}
+		});
+
+		// Add double-click and right-click handlers for alpha sliders to reset to 1 (100%)
+		$picker.find('input[type="range"][name="alpha"]').on('dblclick contextmenu', function (e) {
+			e.preventDefault();
+			handleSliderChange(instance, mode, 'alpha', 1);
+			return false;
+		});
+
+		$picker.find('input[type="number"][name="alphaNum"]').on('dblclick contextmenu', function (e) {
+			e.preventDefault();
+			handleSliderChange(instance, mode, 'alpha', 1);
+			return false;
+		});
+	}
+
+	function createColorModePicker(mode, values) {
+		const modes = {
+			rgb: [
+				{ name: 'red', label: 'R', tooltip: 'Red Channel', min: 0, max: 255, step: 1, value: Math.round(values.red || 0) },
+				{ name: 'green', label: 'G', tooltip: 'Green Channel', min: 0, max: 255, step: 1, value: Math.round(values.green || 0) },
+				{ name: 'blue', label: 'B', tooltip: 'Blue Channel', min: 0, max: 255, step: 1, value: Math.round(values.blue || 0) },
+				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
+			],
+			hsl: [
+				{ name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
+				{ name: 'saturation', label: 'S', tooltip: 'Saturation', min: 0, max: 100, step: 0.1, value: roundTo(values.saturation || 0, 1) },
+				{ name: 'luminosity', label: 'L', tooltip: 'Lightness', min: 0, max: 100, step: 0.1, value: roundTo(values.luminosity || 0, 1) },
+				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
+			],
+			hsv: [
+				{ name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
+				{ name: 'hsvSaturation', label: 'S', tooltip: 'Saturation', min: 0, max: 100, step: 0.1, value: roundTo(values.hsvSaturation || 0, 1) },
+				{ name: 'value', label: 'V', tooltip: 'Value (Brightness)', min: 0, max: 100, step: 0.1, value: roundTo(values.value || 0, 1) },
+				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
+			],
+			hwb: [
+				{ name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
+				{ name: 'whiteness', label: 'W', tooltip: 'Whiteness', min: 0, max: 100, step: 0.1, value: roundTo(values.whiteness || 0, 1) },
+				{ name: 'blackness', label: 'B', tooltip: 'Blackness', min: 0, max: 100, step: 0.1, value: roundTo(values.blackness || 0, 1) },
+				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
+			],
+			oklch: [
+				{ name: 'oklchLightness', label: 'L', tooltip: 'Lightness', min: 0, max: 1, step: 0.001, value: roundTo(values.oklchLightness || 0, 3) },
+				{ name: 'oklchChroma', label: 'C', tooltip: 'Chroma (Colorfulness)', min: 0, max: 0.37, step: 0.001, value: roundTo(values.oklchChroma || 0, 3) },
+				{ name: 'oklchHue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.oklchHue || 0) },
+				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
+			]
+		};
+
+		const modeConfig = modes[mode];
+		if (!modeConfig) return '';
+
+		// Generate color string for this mode
+		let colorString = '';
+		switch (mode) {
+			case 'rgb':
+				colorString = values.alpha < 1
+					? `rgba(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)} / ${values.alpha})`
+					: `rgb(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)})`;
+				break;
+			case 'hsl':
+				colorString = values.alpha < 1
+					? `hsla(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}% / ${values.alpha})`
+					: `hsl(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}%)`;
+				break;
+			case 'hsv':
+				colorString = values.alpha < 1
+					? `hsva(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}% / ${values.alpha})`
+					: `hsv(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}%)`;
+				break;
+			case 'hwb':
+				colorString = values.alpha < 1
+					? `hwba(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}% / ${values.alpha})`
+					: `hwb(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}%)`;
+				break;
+			case 'oklch':
+				colorString = values.alpha < 1
+					? `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)} / ${values.alpha})`
+					: `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)})`;
+				break;
+		}
+
+		let html = `<div class="color-picker" data-mode="${mode}">`;
+
+		modeConfig.forEach(slider => {
+			// Clamp value to min/max range
+			const clampedValue = Math.max(slider.min, Math.min(slider.max, slider.value));
+			const percent = Math.max(0, Math.min(100, ((clampedValue - slider.min) / (slider.max - slider.min)) * 100));
+			const gradient = generateGradient(mode, slider.name, values);
+
+			html += `
+			<div class="color-slider">
+				<div class="slider-track">
+					<input type="range" 
+						data-mode="${mode}" 
+						name="${slider.name}" 
+						min="${slider.min}" 
+						max="${slider.max}" 
+						step="${slider.step}" 
+						value="${clampedValue}"
+						style="background: ${gradient}">
+					<div class="custom-slider-handle" style="left: ${percent}%"></div>
+				</div>
+				<input type="number" 
+					data-mode="${mode}" 
+					name="${slider.name}Num" 
+					title="${slider.tooltip}"
+					min="${slider.min}" 
+					max="${slider.max}" 
+					step="${slider.step}" 
+					value="${clampedValue}">
+			</div>
+		`;
+		});
+
+		// Add color-code input at the bottom of each picker
+		html += `
+			<div class="color-code">
+				<input type="text" 
+					name="${mode}" 
+					class="mode-color-input"
+					data-mode="${mode}"
+					value="${colorString}"
+					autocomplete="off" 
+					autocorrect="off" 
+					autocapitalize="off" 
+					spellcheck="false">
+				<button aria-label="copy code" type="button" class="copy-code" data-mode="${mode}" title="Copy value">
+					<svg class="copy-icon" title="Copy value" width="16" height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+						<polygon points="31 24 27 24 27 20 25 20 25 24 21 24 21 26 25 26 25 30 27 30 27 26 31 26 31 24"/>
+						<path d="M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2H17V28H7V7h3v3H22V7h3v9h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z"/>
+					</svg>
+					<svg class="copy-success-icon" title="Copy value" width="16" height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+						<polygon points="22 27.18 19.41 24.59 18 26 22 30 30 22 28.59 20.59 22 27.18"/>
+						<path d="M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2h9V28H7V7h3v3H22V7h3V18h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z"/>
+					</svg>
+				</button>
+			</div>
+		`;
+
+		html += '</div>';
+		return html;
+	}
+
+
+	function handleSliderChange(instance, mode, component, value) {
+		const numValue = parseFloat(value);
+		instance.currentValues[component] = numValue;
+
+		// Convert from current mode to RGB
+		let color;
+		try {
+			switch (mode) {
+				case 'rgb':
+					color = rgb({
+						r: instance.currentValues.red / 255,
+						g: instance.currentValues.green / 255,
+						b: instance.currentValues.blue / 255,
+						alpha: instance.currentValues.alpha
+					});
+					break;
+				case 'hsl':
+					color = hsl({
+						h: instance.currentValues.hue,
+						s: instance.currentValues.saturation / 100,
+						l: instance.currentValues.luminosity / 100,
+						alpha: instance.currentValues.alpha
+					});
+					break;
+				case 'hsv':
+					color = hsv({
+						h: instance.currentValues.hue,
+						s: instance.currentValues.hsvSaturation / 100,
+						v: instance.currentValues.value / 100,
+						alpha: instance.currentValues.alpha
+					});
+					break;
+				case 'hwb':
+					color = hwb({
+						h: instance.currentValues.hue,
+						w: instance.currentValues.whiteness / 100,
+						b: instance.currentValues.blackness / 100,
+						alpha: instance.currentValues.alpha
+					});
+					break;
+				case 'oklch':
+					color = oklch({
+						l: instance.currentValues.oklchLightness,
+						c: instance.currentValues.oklchChroma,
+						h: instance.currentValues.oklchHue,
+						alpha: instance.currentValues.alpha
+					});
+					break;
+			}
+
+			if (color) {
+				const rgbColor = rgb(color);
+				instance.currentColor = new ColorObject({
+					r: Math.round(rgbColor.r * 255),
+					g: Math.round(rgbColor.g * 255),
+					b: Math.round(rgbColor.b * 255),
+					a: rgbColor.alpha !== undefined ? rgbColor.alpha : 1
+				});
+
+				// Update all values (preserve hue when it becomes undefined)
+				instance.currentValues = rgbToAllModes(instance.currentColor.r, instance.currentColor.g, instance.currentColor.b, instance.currentColor.a, instance.currentValues);
+
+				// Update UI
+				updatePickerFromColor(instance);
+
+				// Trigger move event (callback)
+				if (instance.opts.move) {
+					instance.opts.move(instance.currentColor);
+				}
+
+				// Trigger jQuery events for compatibility
+				instance.$input.trigger('move.spectrum', [instance.currentColor]);
+
+				// Update replacer color AFTER triggering events (with small delay to ensure DOM updates)
+				setTimeout(function () {
+					updateReplacerColor(instance);
+				}, 0);
+			}
+		} catch (e) {
+			console.error('Color conversion error:', e);
+		}
+	}
+
+	function updatePickerFromColor(instance) {
+		const $container = instance.$container;
+		const color = instance.currentColor;
+		const values = instance.currentValues;
+
+		// Update hex input
+		$container.find('.hex-input').val(color.toHexString());
+
+		// Update color swatch (using CSS color property for the ::before pseudo-element)
+		const $swatch = $container.find('.color-swatch');
+		$swatch.css('color', color.toRgbString());
+
+		// Show/hide checkerboard based on alpha
+		if (values.alpha < 1) {
+			$swatch.addClass('has-transparency');
+		} else {
+			$swatch.removeClass('has-transparency');
+		}
+
+		// Update mode color inputs
+		$container.find('.mode-color-input').each(function () {
+			const $input = $(this);
+			const mode = $input.data('mode');
+			let colorString = '';
+
+			switch (mode) {
+				case 'rgb':
+					colorString = values.alpha < 1
+						? `rgba(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)} / ${values.alpha})`
+						: `rgb(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)})`;
+					break;
+				case 'hsl':
+					colorString = values.alpha < 1
+						? `hsla(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}% / ${values.alpha})`
+						: `hsl(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}%)`;
+					break;
+				case 'hsv':
+					colorString = values.alpha < 1
+						? `hsva(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}% / ${values.alpha})`
+						: `hsv(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}%)`;
+					break;
+				case 'hwb':
+					colorString = values.alpha < 1
+						? `hwba(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}% / ${values.alpha})`
+						: `hwb(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}%)`;
+					break;
+				case 'oklch':
+					colorString = values.alpha < 1
+						? `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)} / ${values.alpha})`
+						: `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)})`;
+					break;
+			}
+
+			$input.val(colorString);
+		});
+
+		// Update all sliders and inputs
+		$container.find('input[type="range"], input[type="number"]').each(function () {
+			const $input = $(this);
+			const name = $input.attr('name').replace('Num', '');
+
+			if (values[name] !== undefined) {
+				$input.val(values[name]);
+
+				// Update slider handle position
+				if ($input.attr('type') === 'range') {
+					const min = parseFloat($input.attr('min'));
+					const max = parseFloat($input.attr('max'));
+					// Clamp value to min/max range
+					const clampedValue = Math.max(min, Math.min(max, values[name]));
+					const percent = Math.max(0, Math.min(100, ((clampedValue - min) / (max - min)) * 100));
+					$input.siblings('.custom-slider-handle').css('left', percent + '%');
+
+					// Also update the input value to the clamped value
+					$input.val(clampedValue);
+
+					// Update gradient
+					const mode = $input.data('mode');
+					const gradient = generateGradient(mode, name, values);
+					$input.css('background', gradient);
+				}
+			}
+		});
+
+	}
+
+	function positionPicker(instance) {
+        const $replacer = instance.$replacer;
+        const $container = instance.$container;
+        const windowWidth = $(window).width();
+        const windowHeight = $(window).height();
+        const scrollTop = $(window).scrollTop();
+        const scrollLeft = $(window).scrollLeft();
+        const pickerWidth = $container.outerWidth();
+        const pickerHeight = $container.outerHeight();
+        let top;
+        let left;
+
+        if (instance.opts.positionMode === 'center') {
+            top = scrollTop + Math.max(10, Math.round((windowHeight - pickerHeight) / 2));
+            left = scrollLeft + Math.max(10, Math.round((windowWidth - pickerWidth) / 2));
+        } else {
+            const $anchor = instance.opts.anchor || $replacer || instance.$input;
+            const offset = $anchor.offset() || { top: 0, left: 0 };
+            top = offset.top + $anchor.outerHeight() + 5;
+            left = offset.left;
+            if (left + pickerWidth > scrollLeft + windowWidth) {
+                left = scrollLeft + windowWidth - pickerWidth - 10;
+            }
+            if (top + pickerHeight > scrollTop + windowHeight) {
+                top = offset.top - pickerHeight - 5;
+            }
+        }
+
+        $container.css({
+            position: 'absolute',
+            top: top,
+            left: left,
+            zIndex: 9999995
+        });
+	}
+
+	function showPicker(instance) {
+		instance.isOpen = true;
+		instance.originalColor = new ColorObject(instance.currentColor.toRgbString());
+		instance.$container.addClass('sp-active');
+		positionPicker(instance);
+
+		// Ensure picker reflects current swatch state when opening
+		// If current swatch is "No Color" (alpha = 0), initialize sliders with alpha 0
+		if (instance.opts.allowEmpty && instance.currentColor && (instance.currentColor.a === 0)) {
+			instance.currentValues = rgbToAllModes(
+				instance.currentColor.r,
+				instance.currentColor.g,
+				instance.currentColor.b,
+				0,
+				instance.currentValues
+			);
+		}
+
+		// Rebuild sliders for the active mode with current values and update UI
+		updateColorModePickers(instance);
+		updatePickerFromColor(instance);
+
+		if (instance.opts.beforeShow) {
+			instance.opts.beforeShow();
+		}
+	}
+
+	function hidePicker(instance) {
+		instance.isOpen = false;
+		instance.$container.removeClass('sp-active');
+	}
+
+})(jQuery, window.culori);

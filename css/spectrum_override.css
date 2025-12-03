@@ -5,7 +5,8 @@
 /* Override Spectrum's default replacer styling */
 .colorContainer .sp-replacer,
 .fillColorSpec .sp-replacer,
-.strokeColorSpec .sp-replacer {
+.strokeColorSpec .sp-replacer,
+.effectColorSpec .sp-replacer {
 	border: none !important;
 	padding: 0 !important;
 	margin: 0 !important;
@@ -13,12 +14,12 @@
 	background-color: transparent !important;
 	background-image: none !important;
 	box-shadow: none !important;
-	width: 32px !important;
-	height: 32px !important;
-	min-width: 32px !important;
-	min-height: 32px !important;
-	max-width: 32px !important;
-	max-height: 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
 	overflow: visible !important;
 	border-radius: 0 !important;
 	display: block !important;
@@ -58,9 +59,9 @@
 
 /* Ensure only the preview circle is visible */
 .sp-replacer>*:not(.sp-preview) {
-	display: none !important;
-	width: 0 !important;
-	height: 0 !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .sp-replacer .sp-preview {
@@ -151,6 +152,57 @@ body.dark-theme .fillColorSpec .sp-preview.sp-clear-display {
 		linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)) !important;
 	background-size: 10px 10px !important;
 	background-position: 0px 0px, 5px 5px !important;
+}
+
+/* Grid Color Swatch - match view panel input style */
+.gridColorSpec.sp-replacer {
+    flex: 1 !important;
+    height: 32px !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: var(--radius-sm) !important;
+    background-color: var(--bg-primary) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+}
+.gridColorSpec .sp-preview {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+}
+.gridColorSpec .sp-preview-inner {
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 2px !important;
+    box-sizing: border-box !important;
+}
+
+/* Effect Color Swatch - small square */
+.effectColorSpec.sp-replacer {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+}
+.effectColorSpec .sp-preview {
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+}
+.effectColorSpec .sp-preview:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    outline: 2px solid var(--accent-primary) !important;
+    outline-offset: 2px !important;
 }
 
 body.dark-theme .strokeColorSpec .sp-preview {

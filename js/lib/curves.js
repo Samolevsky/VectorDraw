@@ -1,1 +1,705 @@
-const a26_0x29f79f=a26_0x42c8;(function(_0x46c99a,_0x132122){const _0x138674=a26_0x42c8,_0x143b0e=_0x46c99a();while(!![]){try{const _0x274404=parseInt(_0x138674(0x199))/0x1+parseInt(_0x138674(0x1d0))/0x2*(parseInt(_0x138674(0x19c))/0x3)+parseInt(_0x138674(0x1cd))/0x4+-parseInt(_0x138674(0x1b6))/0x5*(-parseInt(_0x138674(0x197))/0x6)+parseInt(_0x138674(0x1ba))/0x7*(parseInt(_0x138674(0x1b7))/0x8)+-parseInt(_0x138674(0x193))/0x9+-parseInt(_0x138674(0x1d6))/0xa;if(_0x274404===_0x132122)break;else _0x143b0e['push'](_0x143b0e['shift']());}catch(_0x1dfd3f){_0x143b0e['push'](_0x143b0e['shift']());}}}(a26_0x5163,0xa8c2e));class Vec2{constructor(_0x38f473,_0x12ab34){this['x']=_0x38f473,this['y']=_0x12ab34;}[a26_0x29f79f(0x1a6)](){const _0x567221=a26_0x29f79f;return Math[_0x567221(0x1b2)](this['x'],this['y']);}[a26_0x29f79f(0x1d2)](_0x5c7cbf){return this['x']*_0x5c7cbf['x']+this['y']*_0x5c7cbf['y'];}['cross'](_0x14c2ce){return this['x']*_0x14c2ce['y']-this['y']*_0x14c2ce['x'];}}class CubicBez{constructor(_0x252389){this['c']=_0x252389;}[a26_0x29f79f(0x1a1)](_0x206f37,_0x1805c6,_0x365136,_0x39ecb6){let _0x41ea7e=_0x206f37*this['c'][0x0]+_0x1805c6*this['c'][0x2]+_0x365136*this['c'][0x4]+_0x39ecb6*this['c'][0x6],_0x1ad6f1=_0x206f37*this['c'][0x1]+_0x1805c6*this['c'][0x3]+_0x365136*this['c'][0x5]+_0x39ecb6*this['c'][0x7];return new Vec2(_0x41ea7e,_0x1ad6f1);}[a26_0x29f79f(0x195)](_0x13b7be){const _0x26d3bd=a26_0x29f79f;let _0x15eb91=0x1-_0x13b7be,_0x479eeb=_0x15eb91*_0x15eb91*_0x15eb91,_0x112b54=0x3*_0x15eb91*_0x15eb91*_0x13b7be,_0x2e6507=0x3*_0x15eb91*_0x13b7be*_0x13b7be,_0x57d2cf=_0x13b7be*_0x13b7be*_0x13b7be;return this[_0x26d3bd(0x1a1)](_0x479eeb,_0x112b54,_0x2e6507,_0x57d2cf);}[a26_0x29f79f(0x1cf)](_0x3d1932){const _0x9dfe23=a26_0x29f79f;let _0x28c7f0=0x1-_0x3d1932,_0x1696d5=-0x3*_0x28c7f0*_0x28c7f0,_0x14e1ef=0x3*_0x3d1932*_0x3d1932,_0x1b0482=-0x6*_0x3d1932*_0x28c7f0-_0x1696d5,_0x414b13=0x6*_0x3d1932*_0x28c7f0-_0x14e1ef;return this[_0x9dfe23(0x1a1)](_0x1696d5,_0x1b0482,_0x414b13,_0x14e1ef);}[a26_0x29f79f(0x1b8)](_0xf1c50){const _0x2e7f8e=a26_0x29f79f;let _0x2b726e=0x1-_0xf1c50,_0x2faa7b=0x6*_0x2b726e,_0x195044=0x6*_0xf1c50,_0x2b3bdb=0x6-0x12*_0x2b726e,_0xc47080=0x6-0x12*_0xf1c50;return this[_0x2e7f8e(0x1a1)](_0x2faa7b,_0x2b3bdb,_0xc47080,_0x195044);}[a26_0x29f79f(0x1af)](_0x4a4e92){const _0x395ad0=a26_0x29f79f;let _0x998ff0=this[_0x395ad0(0x1cf)](_0x4a4e92),_0x1093e8=this[_0x395ad0(0x1b8)](_0x4a4e92);return _0x998ff0['cross'](_0x1093e8)/Math[_0x395ad0(0x1be)](_0x998ff0[_0x395ad0(0x1a6)](),0x3);}[a26_0x29f79f(0x1a4)](_0x213cc9){const _0x33f399=a26_0x29f79f;let _0x1a18b4=this[_0x33f399(0x1cf)](_0x213cc9),_0x239f8c=this[_0x33f399(0x1b8)](_0x213cc9);return Math[_0x33f399(0x19a)](_0x1a18b4[_0x33f399(0x196)](_0x239f8c),Math['pow'](_0x1a18b4['norm'](),0x3));}['leftHalf'](){let _0x17dce6=new Float64Array(0x8);return _0x17dce6[0x0]=this['c'][0x0],_0x17dce6[0x1]=this['c'][0x1],_0x17dce6[0x2]=0.5*(this['c'][0x0]+this['c'][0x2]),_0x17dce6[0x3]=0.5*(this['c'][0x1]+this['c'][0x3]),_0x17dce6[0x4]=0.25*(this['c'][0x0]+0x2*this['c'][0x2]+this['c'][0x4]),_0x17dce6[0x5]=0.25*(this['c'][0x1]+0x2*this['c'][0x3]+this['c'][0x5]),_0x17dce6[0x6]=0.125*(this['c'][0x0]+0x3*(this['c'][0x2]+this['c'][0x4])+this['c'][0x6]),_0x17dce6[0x7]=0.125*(this['c'][0x1]+0x3*(this['c'][0x3]+this['c'][0x5])+this['c'][0x7]),new CubicBez(_0x17dce6);}[a26_0x29f79f(0x1c0)](){let _0x55c968=new Float64Array(0x8);return _0x55c968[0x0]=0.125*(this['c'][0x0]+0x3*(this['c'][0x2]+this['c'][0x4])+this['c'][0x6]),_0x55c968[0x1]=0.125*(this['c'][0x1]+0x3*(this['c'][0x3]+this['c'][0x5])+this['c'][0x7]),_0x55c968[0x2]=0.25*(this['c'][0x2]+0x2*this['c'][0x4]+this['c'][0x6]),_0x55c968[0x3]=0.25*(this['c'][0x3]+0x2*this['c'][0x5]+this['c'][0x7]),_0x55c968[0x4]=0.5*(this['c'][0x4]+this['c'][0x6]),_0x55c968[0x5]=0.5*(this['c'][0x5]+this['c'][0x7]),_0x55c968[0x6]=this['c'][0x6],_0x55c968[0x7]=this['c'][0x7],new CubicBez(_0x55c968);}}class Polynomial{constructor(_0x1b5b90){this['c']=_0x1b5b90;}[a26_0x29f79f(0x195)](_0x5f518e){let _0x1e13cd=0x1,_0x801d7d=0x0;for(let _0x10e7a5 of this['c']){_0x801d7d+=_0x10e7a5*_0x1e13cd,_0x1e13cd*=_0x5f518e;}return _0x801d7d;}[a26_0x29f79f(0x1cf)](){const _0x3e99a6=a26_0x29f79f;let _0x54e733=new Float64Array(this['c'][_0x3e99a6(0x1a0)]-0x1);for(let _0x584208=0x0;_0x584208<_0x54e733[_0x3e99a6(0x1a0)];_0x584208++){_0x54e733[_0x584208]=(_0x584208+0x1)*this['c'][_0x584208+0x1];}return new Polynomial(_0x54e733);}}function hermite5(_0x42cef1,_0x2e964f,_0x334f2f,_0x4d3180,_0x231b38,_0x33f0a0){return new Polynomial([_0x42cef1,_0x334f2f,0.5*_0x231b38,-0xa*_0x42cef1+0xa*_0x2e964f-0x6*_0x334f2f-0x4*_0x4d3180-1.5*_0x231b38+0.5*_0x33f0a0,0xf*_0x42cef1-0xf*_0x2e964f+0x8*_0x334f2f+0x7*_0x4d3180+1.5*_0x231b38-_0x33f0a0,-0x6*_0x42cef1+0x6*_0x2e964f-0x3*_0x334f2f-0x3*_0x4d3180+-0.5*_0x231b38+0.5*_0x33f0a0]);}function tridiag(_0x140416,_0x551f36,_0x56cba9,_0x3c3568,_0x505536){let _0x5c0535=_0x505536['length'];for(var _0x39a7c3=0x1;_0x39a7c3<_0x5c0535;_0x39a7c3++){let _0x4980e2=_0x140416[_0x39a7c3]/_0x551f36[_0x39a7c3-0x1];_0x551f36[_0x39a7c3]-=_0x4980e2*_0x56cba9[_0x39a7c3-0x1],_0x3c3568[_0x39a7c3]-=_0x4980e2*_0x3c3568[_0x39a7c3-0x1];}_0x505536[_0x5c0535-0x1]=_0x3c3568[_0x5c0535-0x1]/_0x551f36[_0x5c0535-0x1];for(var _0x39a7c3=_0x5c0535-0x2;_0x39a7c3>=0x0;_0x39a7c3--){_0x505536[_0x39a7c3]=(_0x3c3568[_0x39a7c3]-_0x56cba9[_0x39a7c3]*_0x505536[_0x39a7c3+0x1])/_0x551f36[_0x39a7c3];}}function myCubic(_0x39422f,_0xf15c6c){const _0x10054e=a26_0x29f79f;function _0x319459(_0x16ed9b,_0x227031){const _0x1b03e7=a26_0x42c8;let _0xc3ea38=0.3*Math[_0x1b03e7(0x19f)](_0x227031*0x2-0.4*Math[_0x1b03e7(0x19f)](_0x227031*0x2)),_0x36c8b8=0x1/(0x3*0.8),_0x69ea12=_0x36c8b8*(Math[_0x1b03e7(0x1bf)](_0x16ed9b-_0xc3ea38)-0.2*Math[_0x1b03e7(0x1bf)](0x3*(_0x16ed9b-_0xc3ea38)));return _0x69ea12;}var _0x4d2ed1=new Float64Array(0x8);let _0x8ec55e=_0x319459(_0x39422f,_0xf15c6c);_0x4d2ed1[0x2]=Math['cos'](_0x39422f)*_0x8ec55e,_0x4d2ed1[0x3]=Math['sin'](_0x39422f)*_0x8ec55e;let _0x23b8af=_0x319459(_0xf15c6c,_0x39422f);return _0x4d2ed1[0x4]=0x1-Math[_0x10054e(0x1bf)](_0xf15c6c)*_0x23b8af,_0x4d2ed1[0x5]=Math['sin'](_0xf15c6c)*_0x23b8af,_0x4d2ed1[0x6]=0x1,_0x4d2ed1;}class TwoParamCurve{[a26_0x29f79f(0x1d9)](_0x3af304,_0xbb2ef5){const _0x21ff07=a26_0x29f79f;let _0x17506d=0.000001,_0x58a7c7=0x2/_0x17506d,_0x46e8fc=this[_0x21ff07(0x1c7)](_0x3af304+_0x17506d,_0xbb2ef5),_0x5d0609=this[_0x21ff07(0x1c7)](_0x3af304-_0x17506d,_0xbb2ef5),_0x185f13=_0x58a7c7*(_0x46e8fc[_0x21ff07(0x1a7)]-_0x5d0609[_0x21ff07(0x1a7)]),_0x4dba1a=_0x58a7c7*(_0x46e8fc[_0x21ff07(0x1bb)]-_0x5d0609[_0x21ff07(0x1bb)]),_0x3e0097=this[_0x21ff07(0x1c7)](_0x3af304,_0xbb2ef5+_0x17506d),_0x8b3a5b=this[_0x21ff07(0x1c7)](_0x3af304,_0xbb2ef5-_0x17506d),_0x50530a=_0x58a7c7*(_0x3e0097['ak0']-_0x8b3a5b[_0x21ff07(0x1a7)]),_0xbbf985=_0x58a7c7*(_0x3e0097[_0x21ff07(0x1bb)]-_0x8b3a5b['ak1']);return{'dak0dth0':_0x185f13,'dak1dth0':_0x4dba1a,'dak0dth1':_0x50530a,'dak1dth1':_0xbbf985};}}function a26_0x5163(){const _0xb9e649=['endpointTangent','smooth','computeCurvature','push','mark','render4Cubic','tanh','rth','5286784xSQUFC','th1','deriv','679430fFYqKx','sign','dot','render4','sqrt','curveto','21128950irqBDD','leftHalf','render4Quintic','computeCurvatureDerivs','ths','9170325OyFUXD','rAk','eval','cross','6995034ugfjVY','startIx','156227PRcFqG','atan2','initialThs','3hdDIwb','th0','isClosed','sin','length','weightsum','rTh','lTh','atanCurvature','solveClosedSmooth','norm','ak0','lth','chordLen','abs','chord','kBlend','lAk','curve','curvature','ctrlPts','corner','hypot','solve','startTh','getThs','5DJUsff','8jwdIFi','deriv2','iterDumb','5877123qoWFaS','ak1','endTh','moveto','pow','cos','rightHalf','render','computeCurvatureBlending','tan','renderSvg'];a26_0x5163=function(){return _0xb9e649;};return a26_0x5163();}class MyCurve extends TwoParamCurve{[a26_0x29f79f(0x1c1)](_0x38f898,_0x2fa3e1){let _0x5aaaa3=myCubic(_0x38f898,_0x2fa3e1);return[new Vec2(_0x5aaaa3[0x2],_0x5aaaa3[0x3]),new Vec2(_0x5aaaa3[0x4],_0x5aaaa3[0x5])];}[a26_0x29f79f(0x1d8)](_0x40a3cb,_0x5601bb,_0x572282,_0xa9679d){const _0xdac953=a26_0x29f79f;let _0x5bd043=this['convCubic'](this[_0xdac953(0x1ca)](_0x40a3cb,_0x5601bb,_0x572282,_0xa9679d));function _0x1f0f86(_0x4afbed,_0x14cfcf,_0x131bc5){const _0x1e1479=_0xdac953;if(_0x131bc5===null)return new Vec2(0x0,0x0);let _0x2f026b=Math[_0x1e1479(0x1bf)](_0x14cfcf),_0x1c6180=Math['sin'](_0x14cfcf),_0x3a617c=_0x5bd043[_0x1e1479(0x1b8)](_0x4afbed),_0x72f3fe=_0x3a617c['y']*_0x2f026b-_0x3a617c['x']*_0x1c6180,_0xaa2166=_0x5bd043['deriv'](_0x4afbed),_0x3af68c=_0xaa2166['x']*_0x2f026b+_0xaa2166['y']*_0x1c6180,_0x4a6ec5=_0x72f3fe/(_0x3af68c*_0x3af68c),_0xeb40bc=_0x131bc5-_0x4a6ec5,_0x37a21c=_0xeb40bc*(_0x3af68c*_0x3af68c);return new Vec2(-_0x1c6180*_0x37a21c,_0x2f026b*_0x37a21c);}let _0x15f576=_0x1f0f86(0x0,_0x40a3cb,_0x572282),_0x5cda2a=_0x1f0f86(0x1,-_0x5601bb,_0xa9679d),_0x26f711=hermite5(0x0,0x0,0x0,0x0,_0x15f576['x'],_0x5cda2a['x']),_0xd3f2=hermite5(0x0,0x0,0x0,0x0,_0x15f576['y'],_0x5cda2a['y']),_0x33bda5=_0x26f711[_0xdac953(0x1cf)](),_0x522acd=_0xd3f2[_0xdac953(0x1cf)](),_0x590bc2=_0x5bd043[_0xdac953(0x1d7)](),_0x4fffb9=_0x5bd043[_0xdac953(0x1c0)](),_0x4a1aa1=[_0x590bc2[_0xdac953(0x1d7)](),_0x590bc2[_0xdac953(0x1c0)](),_0x4fffb9[_0xdac953(0x1d7)](),_0x4fffb9['rightHalf']()],_0x51d15b=[],_0x366446=0x1/0xc;for(let _0x1f33f0=0x0;_0x1f33f0<0x4;_0x1f33f0++){let _0x144a79=0.25*_0x1f33f0,_0x5ab851=_0x144a79+0.25,_0x2a94a4=_0x4a1aa1[_0x1f33f0]['c'],_0x3bc1e3=_0x26f711['eval'](_0x144a79),_0x566314=_0xd3f2[_0xdac953(0x195)](_0x144a79),_0x43b993=_0x3bc1e3+_0x366446*_0x33bda5[_0xdac953(0x195)](_0x144a79),_0x4cc198=_0x566314+_0x366446*_0x522acd[_0xdac953(0x195)](_0x144a79),_0x75ffb9=_0x26f711[_0xdac953(0x195)](_0x5ab851),_0x25cae9=_0xd3f2[_0xdac953(0x195)](_0x5ab851),_0x1c7238=_0x75ffb9-_0x366446*_0x33bda5[_0xdac953(0x195)](_0x5ab851),_0x36d1e7=_0x25cae9-_0x366446*_0x522acd[_0xdac953(0x195)](_0x5ab851);_0x1f33f0!=0x0&&_0x51d15b[_0xdac953(0x1c8)](new Vec2(_0x2a94a4[0x0]+_0x3bc1e3,_0x2a94a4[0x1]+_0x566314)),_0x51d15b['push'](new Vec2(_0x2a94a4[0x2]+_0x43b993,_0x2a94a4[0x3]+_0x4cc198)),_0x51d15b[_0xdac953(0x1c8)](new Vec2(_0x2a94a4[0x4]+_0x1c7238,_0x2a94a4[0x5]+_0x36d1e7));}return _0x51d15b;}['convCubic'](_0x23951d){let _0x42810f=new Float64Array(0x8);return _0x42810f[0x2]=_0x23951d[0x0]['x'],_0x42810f[0x3]=_0x23951d[0x0]['y'],_0x42810f[0x4]=_0x23951d[0x1]['x'],_0x42810f[0x5]=_0x23951d[0x1]['y'],_0x42810f[0x6]=0x1,new CubicBez(_0x42810f);}[a26_0x29f79f(0x1ca)](_0x4c940d,_0x1dcf6d,_0x292451,_0x1d37de){const _0xacc068=a26_0x29f79f;let _0x158e7a=new CubicBez(myCubic(_0x4c940d,_0x1dcf6d)),_0x138bff=[];function _0x5bf1e6(_0x3489c6,_0x4cbc07,_0xa1fb30){const _0x5c667b=a26_0x42c8;if(_0xa1fb30===null)return 0x1/0x3;let _0x389a1b=Math[_0x5c667b(0x1bf)](_0x4cbc07),_0x11a8d4=Math[_0x5c667b(0x19f)](_0x4cbc07),_0x55df2d=_0x158e7a[_0x5c667b(0x1cf)](_0x3489c6),_0xd54d9d=_0x158e7a['deriv2'](_0x3489c6),_0x21178e=_0xd54d9d['y']*_0x389a1b-_0xd54d9d['x']*_0x11a8d4,_0x1da62f=_0x55df2d['x']*_0x389a1b+_0x55df2d['y']*_0x11a8d4,_0xf64f67=_0x21178e/(_0x1da62f*_0x1da62f);if(Math[_0x5c667b(0x1aa)](_0xf64f67)<0.000001)_0xf64f67=0.000001;let _0x6915cb=_0xa1fb30/_0xf64f67,_0x45aa62=0x1/(0x2+_0x6915cb);return _0x45aa62;}let _0x5036a1=_0x5bf1e6(0x0,_0x4c940d,_0x292451),_0x4f08f3=_0x158e7a['deriv'](0x0);_0x138bff[_0xacc068(0x1c8)](new Vec2(_0x4f08f3['x']*_0x5036a1,_0x4f08f3['y']*_0x5036a1));let _0x1dc572=_0x158e7a[_0xacc068(0x1cf)](0x1),_0x556401=_0x5bf1e6(0x1,-_0x1dcf6d,_0x1d37de);return _0x138bff['push'](new Vec2(0x1-_0x1dc572['x']*_0x556401,-_0x1dc572['y']*_0x556401)),_0x138bff;}['render4'](_0x48ffe7,_0x133b61,_0x2f1d37,_0x142927){const _0x177eec=a26_0x29f79f;if(_0x2f1d37===null&&_0x142927===null)return this[_0x177eec(0x1c1)](_0x48ffe7,_0x133b61);return this['render4Quintic'](_0x48ffe7,_0x133b61,_0x2f1d37,_0x142927);}[a26_0x29f79f(0x1c7)](_0x5d62f1,_0x5974c4){let _0x19e8ed=new CubicBez(myCubic(_0x5d62f1,_0x5974c4));function _0x21bae4(_0x2ffe12,_0x1d371e){const _0x4712ac=a26_0x42c8;let _0x3ddd64=Math[_0x4712ac(0x1bf)](_0x1d371e),_0x9ba8ca=Math[_0x4712ac(0x19f)](_0x1d371e),_0x594aaa=_0x19e8ed[_0x4712ac(0x1b8)](_0x2ffe12),_0x5166dc=_0x594aaa['y']*_0x3ddd64-_0x594aaa['x']*_0x9ba8ca,_0x2153a7=_0x19e8ed['deriv'](_0x2ffe12),_0x5349cc=_0x2153a7['x']*_0x3ddd64+_0x2153a7['y']*_0x9ba8ca;return Math[_0x4712ac(0x19a)](_0x5166dc,_0x5349cc*Math['abs'](_0x5349cc));}let _0x3b232a=_0x21bae4(0x0,_0x5d62f1),_0x148be4=_0x21bae4(0x1,-_0x5974c4);return{'ak0':_0x3b232a,'ak1':_0x148be4};}[a26_0x29f79f(0x1c5)](_0x5f2841){return 0.5*Math['sin'](0x2*_0x5f2841);}}function a26_0x42c8(_0x70b3a7,_0x1538d0){_0x70b3a7=_0x70b3a7-0x192;const _0x51639a=a26_0x5163();let _0x42c8b7=_0x51639a[_0x70b3a7];return _0x42c8b7;}function mod2pi(_0x4c6610){let _0x5880e0=0x2*Math['PI'],_0xc34391=_0x4c6610*(0x1/_0x5880e0);return _0x5880e0*(_0xc34391-Math['round'](_0xc34391));}class TwoParamSpline{constructor(_0x5d2d18,_0x2c542b){const _0x4b9c5a=a26_0x29f79f;this[_0x4b9c5a(0x1ae)]=_0x5d2d18,this[_0x4b9c5a(0x1b0)]=_0x2c542b,this[_0x4b9c5a(0x1b4)]=null,this[_0x4b9c5a(0x1bc)]=null;}[a26_0x29f79f(0x19b)](){const _0x5827db=a26_0x29f79f;var _0xf09d79=new Float64Array(this['ctrlPts'][_0x5827db(0x1a0)]);for(var _0x240786=0x1;_0x240786<_0xf09d79['length']-0x1;_0x240786++){let _0x4b2ec3=this[_0x5827db(0x1b0)][_0x240786]['x']-this[_0x5827db(0x1b0)][_0x240786-0x1]['x'],_0x3e264a=this['ctrlPts'][_0x240786]['y']-this[_0x5827db(0x1b0)][_0x240786-0x1]['y'],_0x2a496a=Math[_0x5827db(0x1b2)](_0x4b2ec3,_0x3e264a),_0x5b32cc=this[_0x5827db(0x1b0)][_0x240786+0x1]['x']-this[_0x5827db(0x1b0)][_0x240786]['x'],_0x109034=this['ctrlPts'][_0x240786+0x1]['y']-this['ctrlPts'][_0x240786]['y'],_0x580fdf=Math['hypot'](_0x5b32cc,_0x109034),_0x5f3f77=Math[_0x5827db(0x19a)](_0x3e264a,_0x4b2ec3),_0x4834c4=Math[_0x5827db(0x19a)](_0x109034,_0x5b32cc),_0x5ce758=mod2pi(_0x4834c4-_0x5f3f77),_0x1e1c18=mod2pi(_0x5f3f77+_0x5ce758*_0x2a496a/(_0x2a496a+_0x580fdf));_0xf09d79[_0x240786]=_0x1e1c18,_0x240786==0x1&&(_0xf09d79[0x0]=_0x5f3f77),_0x240786==_0xf09d79[_0x5827db(0x1a0)]-0x2&&(_0xf09d79[_0x240786+0x1]=_0x4834c4);}return this[_0x5827db(0x1b4)]!==null&&(_0xf09d79[0x0]=this[_0x5827db(0x1b4)]),this['endTh']!==null&&(_0xf09d79[_0xf09d79[_0x5827db(0x1a0)]-0x1]=this['endTh']),this[_0x5827db(0x192)]=_0xf09d79,_0xf09d79;}[a26_0x29f79f(0x1b5)](_0x1b3ad0){const _0x532513=a26_0x29f79f;let _0x2a1a32=this[_0x532513(0x1b0)][_0x1b3ad0+0x1]['x']-this[_0x532513(0x1b0)][_0x1b3ad0]['x'],_0x2802b0=this['ctrlPts'][_0x1b3ad0+0x1]['y']-this['ctrlPts'][_0x1b3ad0]['y'],_0x52b9e5=Math[_0x532513(0x19a)](_0x2802b0,_0x2a1a32),_0x1f71f6=mod2pi(this[_0x532513(0x192)][_0x1b3ad0]-_0x52b9e5),_0xa8092=mod2pi(_0x52b9e5-this['ths'][_0x1b3ad0+0x1]),_0x238553=Math[_0x532513(0x1b2)](_0x2a1a32,_0x2802b0);return{'th0':_0x1f71f6,'th1':_0xa8092,'chord':_0x238553};}[a26_0x29f79f(0x1b9)](_0xdfe8a7){const _0x584f88=a26_0x29f79f;function _0xb3616a(_0xe8bf83,_0x39300c,_0x4a679d,_0x4d0bf1){const _0xfa2161=a26_0x42c8;let _0x4d0c0=Math[_0xfa2161(0x1d4)](_0xe8bf83[_0xfa2161(0x1ab)]),_0x2fa543=Math[_0xfa2161(0x1d4)](_0x4a679d[_0xfa2161(0x1ab)]),_0x147370=Math['atan2'](Math[_0xfa2161(0x19f)](_0x39300c['ak1'])*_0x2fa543,Math['cos'](_0x39300c[_0xfa2161(0x1bb)])*_0x4d0c0),_0x159d89=Math[_0xfa2161(0x19a)](Math[_0xfa2161(0x19f)](_0x4d0bf1[_0xfa2161(0x1a7)])*_0x4d0c0,Math[_0xfa2161(0x1bf)](_0x4d0bf1[_0xfa2161(0x1a7)])*_0x2fa543);return _0x147370-_0x159d89;}let _0x2a9b54=this[_0x584f88(0x1b0)][_0x584f88(0x1a0)];if(this[_0x584f88(0x1b4)]===null){let _0x33c23d=this[_0x584f88(0x1b5)](0x0);this['ths'][0x0]+=this[_0x584f88(0x1ae)][_0x584f88(0x1c5)](_0x33c23d[_0x584f88(0x1ce)])-_0x33c23d[_0x584f88(0x19d)];}if(this[_0x584f88(0x1bc)]===null){let _0x2725d6=this[_0x584f88(0x1b5)](_0x2a9b54-0x2);this[_0x584f88(0x192)][_0x2a9b54-0x1]-=this[_0x584f88(0x1ae)]['endpointTangent'](_0x2725d6['th0'])-_0x2725d6[_0x584f88(0x1ce)];}if(_0x2a9b54<0x3)return 0x0;var _0x330bb1=0x0,_0x56e4ab=new Float64Array(_0x2a9b54-0x2),_0x406026=this['getThs'](0x0),_0x5c548f=this[_0x584f88(0x1ae)]['computeCurvature'](_0x406026[_0x584f88(0x19d)],_0x406026[_0x584f88(0x1ce)]);for(var _0x109fad=0x0;_0x109fad<_0x2a9b54-0x2;_0x109fad++){let _0x5b15f4=this[_0x584f88(0x1b5)](_0x109fad+0x1),_0x23171d=this['curve'][_0x584f88(0x1c7)](_0x5b15f4['th0'],_0x5b15f4['th1']),_0x24febd=_0xb3616a(_0x406026,_0x5c548f,_0x5b15f4,_0x23171d);_0x330bb1+=Math[_0x584f88(0x1aa)](_0x24febd);let _0xbe1614=0.001,_0x64d7bf=this[_0x584f88(0x1ae)][_0x584f88(0x1c7)](_0x406026['th0'],_0x406026[_0x584f88(0x1ce)]+_0xbe1614),_0x1baa7b=this[_0x584f88(0x1ae)][_0x584f88(0x1c7)](_0x5b15f4[_0x584f88(0x19d)]-_0xbe1614,_0x5b15f4[_0x584f88(0x1ce)]),_0x155ae7=_0xb3616a(_0x406026,_0x64d7bf,_0x5b15f4,_0x1baa7b),_0x2bd09a=(_0x155ae7-_0x24febd)*(0x1/_0xbe1614);_0x56e4ab[_0x109fad]=_0x24febd/_0x2bd09a,_0x406026=_0x5b15f4,_0x5c548f=_0x23171d;}for(var _0x109fad=0x0;_0x109fad<_0x2a9b54-0x2;_0x109fad++){let _0x53d3ac=Math[_0x584f88(0x1cb)](0.25*(_0xdfe8a7+0x1));this[_0x584f88(0x192)][_0x109fad+0x1]+=_0x53d3ac*_0x56e4ab[_0x109fad];}return _0x330bb1;}[a26_0x29f79f(0x1c4)](){const _0x198a85=a26_0x29f79f;let _0x2838c3=this[_0x198a85(0x1b0)];if(_0x2838c3['length']==0x0)return'';let _0x2a85c9='M'+_0x2838c3[0x0]['x']+'\x20'+_0x2838c3[0x0]['y'],_0x439d57='\x20C';for(var _0x23f9ab=0x0;_0x23f9ab<_0x2838c3[_0x198a85(0x1a0)]-0x1;_0x23f9ab++){let _0x142b49=this[_0x198a85(0x1b5)](_0x23f9ab),_0x1f9b40=this[_0x198a85(0x1ae)][_0x198a85(0x1c1)](_0x142b49[_0x198a85(0x19d)],_0x142b49[_0x198a85(0x1ce)]),_0x2a1e79=_0x2838c3[_0x23f9ab+0x1]['x']-_0x2838c3[_0x23f9ab]['x'],_0x3cfe77=_0x2838c3[_0x23f9ab+0x1]['y']-_0x2838c3[_0x23f9ab]['y'];for(var _0x1a173a=0x0;_0x1a173a<_0x1f9b40[_0x198a85(0x1a0)];_0x1a173a++){let _0x5d0922=_0x1f9b40[_0x1a173a],_0x2c6ac7=_0x2838c3[_0x23f9ab]['x']+_0x2a1e79*_0x5d0922['x']-_0x3cfe77*_0x5d0922['y'],_0xca1c43=_0x2838c3[_0x23f9ab]['y']+_0x3cfe77*_0x5d0922['x']+_0x2a1e79*_0x5d0922['y'];_0x2a85c9+=''+_0x439d57+_0x2c6ac7+'\x20'+_0xca1c43,_0x439d57='\x20';}_0x2a85c9+='\x20'+_0x2838c3[_0x23f9ab+0x1]['x']+'\x20'+_0x2838c3[_0x23f9ab+0x1]['y'];}return _0x2a85c9;}}class Spline{constructor(_0x341de6,_0x36bd25){const _0x56fa0c=a26_0x29f79f;this[_0x56fa0c(0x1b0)]=_0x341de6,this[_0x56fa0c(0x19e)]=_0x36bd25,this[_0x56fa0c(0x1ae)]=new MyCurve();}['pt'](_0x53f895,_0x134eac){const _0x1070fb=a26_0x29f79f;let _0x44c867=this[_0x1070fb(0x1b0)][_0x1070fb(0x1a0)];return this[_0x1070fb(0x1b0)][(_0x53f895+_0x134eac+_0x44c867)%_0x44c867];}[a26_0x29f79f(0x198)](){const _0x282967=a26_0x29f79f;if(!this[_0x282967(0x19e)])return 0x0;for(let _0x48729b=0x0;_0x48729b<this[_0x282967(0x1b0)][_0x282967(0x1a0)];_0x48729b++){let _0x2bd5ca=this[_0x282967(0x1b0)][_0x48729b];if(_0x2bd5ca['ty']===_0x282967(0x1b1)||_0x2bd5ca[_0x282967(0x1a8)]!==null)return _0x48729b;}return 0x0;}[a26_0x29f79f(0x1b3)](){const _0x2106df=a26_0x29f79f;let _0x3d61f6=this[_0x2106df(0x198)](),_0x2a407e=this[_0x2106df(0x1b0)][_0x2106df(0x1a0)]-(this[_0x2106df(0x19e)]?0x0:0x1);if(this[_0x2106df(0x19e)]&&_0x3d61f6===0x0){let _0x3c36bf=!![];for(let _0x4806ae of this[_0x2106df(0x1b0)]){if(_0x4806ae['ty']==='corner'||_0x4806ae[_0x2106df(0x1a8)]!==null){_0x3c36bf=![];break;}}if(_0x3c36bf){this[_0x2106df(0x1a5)]();return;}}let _0x1691f5=0x0;while(_0x1691f5<_0x2a407e){let _0x492bbd=this['pt'](_0x1691f5,_0x3d61f6),_0x6007c3=this['pt'](_0x1691f5+0x1,_0x3d61f6);if((_0x1691f5+0x1==_0x2a407e||_0x6007c3['ty']===_0x2106df(0x1b1))&&_0x492bbd[_0x2106df(0x1cc)]===null&&_0x6007c3['lth']===null){let _0x426d51=_0x6007c3['pt']['x']-_0x492bbd['pt']['x'],_0x2d8064=_0x6007c3['pt']['y']-_0x492bbd['pt']['y'],_0x42808c=Math[_0x2106df(0x19a)](_0x2d8064,_0x426d51);_0x492bbd['rTh']=_0x42808c,_0x6007c3[_0x2106df(0x1a3)]=_0x42808c,_0x1691f5+=0x1;}else{let _0x39125d=[_0x492bbd['pt']],_0xe16e68=_0x1691f5+0x1;while(_0xe16e68<_0x2a407e+0x1){let _0x3402af=this['pt'](_0xe16e68,_0x3d61f6);_0x39125d[_0x2106df(0x1c8)](_0x3402af['pt']),_0xe16e68+=0x1;if(_0x3402af['ty']==='corner'||_0x3402af[_0x2106df(0x1a8)]!==null)break;}let _0x2af5b9=new TwoParamSpline(this[_0x2106df(0x1ae)],_0x39125d);_0x2af5b9[_0x2106df(0x1b4)]=this['pt'](_0x1691f5,_0x3d61f6)[_0x2106df(0x1cc)],_0x2af5b9[_0x2106df(0x1bc)]=this['pt'](_0xe16e68-0x1,_0x3d61f6)[_0x2106df(0x1a8)];let _0x432a8f=0xa;_0x2af5b9[_0x2106df(0x19b)]();for(let _0x43ae25=0x0;_0x43ae25<_0x432a8f;_0x43ae25++){_0x2af5b9[_0x2106df(0x1b9)](_0x43ae25);}for(let _0x454c20=_0x1691f5;_0x454c20+0x1<_0xe16e68;_0x454c20++){this['pt'](_0x454c20,_0x3d61f6)[_0x2106df(0x1a2)]=_0x2af5b9['ths'][_0x454c20-_0x1691f5],this['pt'](_0x454c20+0x1,_0x3d61f6)['lTh']=_0x2af5b9[_0x2106df(0x192)][_0x454c20+0x1-_0x1691f5];let _0x3c3282=_0x2af5b9['getThs'](_0x454c20-_0x1691f5),_0x16fa7d=this['curve']['computeCurvature'](_0x3c3282[_0x2106df(0x19d)],_0x3c3282[_0x2106df(0x1ce)]);this['pt'](_0x454c20,_0x3d61f6)[_0x2106df(0x194)]=_0x16fa7d['ak0'],this['pt'](_0x454c20+0x1,_0x3d61f6)['lAk']=_0x16fa7d[_0x2106df(0x1bb)];}_0x1691f5=_0xe16e68-0x1;}}}['solveClosedSmooth'](){const _0x2a6a81=a26_0x29f79f;let _0x3401e7=this[_0x2a6a81(0x1b0)][_0x2a6a81(0x1a0)];if(_0x3401e7<0x3)return;let _0xd05313=new Float64Array(_0x3401e7);for(let _0x4b5f08=0x0;_0x4b5f08<_0x3401e7;_0x4b5f08++){let _0xf5b32=(_0x4b5f08-0x1+_0x3401e7)%_0x3401e7,_0x240f56=(_0x4b5f08+0x1)%_0x3401e7,_0x36d2d0=this[_0x2a6a81(0x1b0)][_0x4b5f08]['pt']['x']-this[_0x2a6a81(0x1b0)][_0xf5b32]['pt']['x'],_0x1e5d13=this[_0x2a6a81(0x1b0)][_0x4b5f08]['pt']['y']-this['ctrlPts'][_0xf5b32]['pt']['y'],_0x32651b=Math[_0x2a6a81(0x1b2)](_0x36d2d0,_0x1e5d13),_0x10fdf5=this[_0x2a6a81(0x1b0)][_0x240f56]['pt']['x']-this['ctrlPts'][_0x4b5f08]['pt']['x'],_0x3768a8=this['ctrlPts'][_0x240f56]['pt']['y']-this[_0x2a6a81(0x1b0)][_0x4b5f08]['pt']['y'],_0x5917fe=Math['hypot'](_0x10fdf5,_0x3768a8),_0x5f4c48=Math['atan2'](_0x1e5d13,_0x36d2d0),_0x34e742=Math[_0x2a6a81(0x19a)](_0x3768a8,_0x10fdf5),_0x33b8c3=mod2pi(_0x34e742-_0x5f4c48);_0xd05313[_0x4b5f08]=mod2pi(_0x5f4c48+_0x33b8c3*_0x32651b/(_0x32651b+_0x5917fe));}let _0xadd32a=0xa;for(let _0x2b0f19=0x0;_0x2b0f19<_0xadd32a;_0x2b0f19++){let _0x5d77b0=new Float64Array(_0x3401e7);for(let _0x4a6e92=0x0;_0x4a6e92<_0x3401e7;_0x4a6e92++){let _0x255f95=(_0x4a6e92+0x1)%_0x3401e7,_0x5f16ab=this[_0x2a6a81(0x1b0)][_0x255f95]['pt']['x']-this['ctrlPts'][_0x4a6e92]['pt']['x'],_0xb8acc9=this[_0x2a6a81(0x1b0)][_0x255f95]['pt']['y']-this[_0x2a6a81(0x1b0)][_0x4a6e92]['pt']['y'],_0x359fe9=Math[_0x2a6a81(0x1b2)](_0x5f16ab,_0xb8acc9),_0x3c69d5=Math[_0x2a6a81(0x19a)](_0xb8acc9,_0x5f16ab),_0x38e5d0=mod2pi(_0xd05313[_0x4a6e92]-_0x3c69d5),_0x41b8b9=mod2pi(_0x3c69d5-_0xd05313[_0x255f95]),_0x4400af=this[_0x2a6a81(0x1ae)]['computeCurvature'](_0x38e5d0,_0x41b8b9),_0x38457a=(_0x255f95+0x1)%_0x3401e7,_0x4c5d33=this[_0x2a6a81(0x1b0)][_0x38457a]['pt']['x']-this['ctrlPts'][_0x255f95]['pt']['x'],_0x48f6e6=this[_0x2a6a81(0x1b0)][_0x38457a]['pt']['y']-this[_0x2a6a81(0x1b0)][_0x255f95]['pt']['y'],_0x3c7c29=Math['hypot'](_0x4c5d33,_0x48f6e6),_0x499447=Math[_0x2a6a81(0x19a)](_0x48f6e6,_0x4c5d33),_0x2bb55c=mod2pi(_0xd05313[_0x255f95]-_0x499447),_0x3afc86=mod2pi(_0x499447-_0xd05313[_0x38457a]),_0x4b10d7=this[_0x2a6a81(0x1ae)][_0x2a6a81(0x1c7)](_0x2bb55c,_0x3afc86),_0xbd8535=Math[_0x2a6a81(0x1d4)](_0x359fe9),_0x27d7b3=Math[_0x2a6a81(0x1d4)](_0x3c7c29),_0x12c8d4=Math['atan2'](Math[_0x2a6a81(0x19f)](_0x4400af[_0x2a6a81(0x1bb)])*_0x27d7b3,Math[_0x2a6a81(0x1bf)](_0x4400af[_0x2a6a81(0x1bb)])*_0xbd8535),_0x2e6254=Math[_0x2a6a81(0x19a)](Math[_0x2a6a81(0x19f)](_0x4b10d7[_0x2a6a81(0x1a7)])*_0xbd8535,Math[_0x2a6a81(0x1bf)](_0x4b10d7['ak0'])*_0x27d7b3),_0x21cf20=_0x12c8d4-_0x2e6254,_0x2d7df4=0.001,_0x2aac58=this[_0x2a6a81(0x1ae)]['computeCurvature'](_0x38e5d0,_0x41b8b9+_0x2d7df4),_0x3edec5=this[_0x2a6a81(0x1ae)][_0x2a6a81(0x1c7)](_0x2bb55c-_0x2d7df4,_0x3afc86),_0x1f562e=Math[_0x2a6a81(0x19a)](Math[_0x2a6a81(0x19f)](_0x2aac58[_0x2a6a81(0x1bb)])*_0x27d7b3,Math[_0x2a6a81(0x1bf)](_0x2aac58[_0x2a6a81(0x1bb)])*_0xbd8535),_0x1d0d66=Math[_0x2a6a81(0x19a)](Math[_0x2a6a81(0x19f)](_0x3edec5[_0x2a6a81(0x1a7)])*_0xbd8535,Math['cos'](_0x3edec5[_0x2a6a81(0x1a7)])*_0x27d7b3),_0x379a2e=_0x1f562e-_0x1d0d66,_0x3d99be=(_0x379a2e-_0x21cf20)/_0x2d7df4;Math[_0x2a6a81(0x1aa)](_0x3d99be)>1e-9&&(_0x5d77b0[_0x255f95]=_0x21cf20/_0x3d99be);}let _0x3eab3b=Math[_0x2a6a81(0x1cb)](0.25*(_0x2b0f19+0x1));for(let _0x2b29cc=0x0;_0x2b29cc<_0x3401e7;_0x2b29cc++){_0xd05313[_0x2b29cc]+=_0x3eab3b*_0x5d77b0[_0x2b29cc];}}for(let _0x2d25a1=0x0;_0x2d25a1<_0x3401e7;_0x2d25a1++){this['ctrlPts'][_0x2d25a1][_0x2a6a81(0x1a3)]=_0xd05313[_0x2d25a1],this[_0x2a6a81(0x1b0)][_0x2d25a1][_0x2a6a81(0x1a2)]=_0xd05313[_0x2d25a1];let _0x4c115a=(_0x2d25a1+0x1)%_0x3401e7,_0x463bd1=this[_0x2a6a81(0x1b0)][_0x4c115a]['pt']['x']-this[_0x2a6a81(0x1b0)][_0x2d25a1]['pt']['x'],_0x17b05c=this['ctrlPts'][_0x4c115a]['pt']['y']-this[_0x2a6a81(0x1b0)][_0x2d25a1]['pt']['y'],_0x37a3d9=Math[_0x2a6a81(0x1b2)](_0x463bd1,_0x17b05c),_0x486c0e=Math[_0x2a6a81(0x19a)](_0x17b05c,_0x463bd1),_0x2dc24e=mod2pi(_0xd05313[_0x2d25a1]-_0x486c0e),_0x1b1be=mod2pi(_0x486c0e-_0xd05313[_0x4c115a]),_0x49ea6f=this['curve'][_0x2a6a81(0x1c7)](_0x2dc24e,_0x1b1be);this['ctrlPts'][_0x2d25a1]['rAk']=_0x49ea6f['ak0'],this['ctrlPts'][_0x4c115a]['lAk']=_0x49ea6f[_0x2a6a81(0x1bb)];}}[a26_0x29f79f(0x1a9)](_0x47e6d2){const _0x88003=a26_0x29f79f;let _0x4f6a00=this['pt'](_0x47e6d2,0x0)['pt'],_0x3a1087=this['pt'](_0x47e6d2+0x1,0x0)['pt'];return Math[_0x88003(0x1b2)](_0x3a1087['x']-_0x4f6a00['x'],_0x3a1087['y']-_0x4f6a00['y']);}[a26_0x29f79f(0x1c2)](){const _0x1400b7=a26_0x29f79f;function _0x296713(_0x499f6b){const _0x46ec9b=a26_0x42c8;if(_0x499f6b>Math['PI']/0x2)return Math[_0x46ec9b(0x1c3)](Math['PI']-_0x499f6b);else return _0x499f6b<-Math['PI']/0x2?Math[_0x46ec9b(0x1c3)](-Math['PI']-_0x499f6b):Math[_0x46ec9b(0x1c3)](_0x499f6b);}for(let _0x157716 of this['ctrlPts']){_0x157716[_0x1400b7(0x1ac)]=null;}let _0x29818e=this[_0x1400b7(0x1b0)][_0x1400b7(0x1a0)]-(this[_0x1400b7(0x19e)]?0x0:0x1);for(let _0x3fa766=0x0;_0x3fa766<_0x29818e;_0x3fa766++){let _0x2faa1b=this['pt'](_0x3fa766,0x0);if(_0x2faa1b['ty']===_0x1400b7(0x1c6)&&_0x2faa1b[_0x1400b7(0x1a8)]!==null){if(Math[_0x1400b7(0x1d1)](_0x2faa1b[_0x1400b7(0x194)])!=Math[_0x1400b7(0x1d1)](_0x2faa1b[_0x1400b7(0x1ad)]))_0x2faa1b['kBlend']=0x0;else{let _0x1b6152=_0x296713(_0x2faa1b[_0x1400b7(0x194)])/this[_0x1400b7(0x1a9)](_0x3fa766-0x1),_0x3d6bbd=_0x296713(_0x2faa1b['lAk'])/this['chordLen'](_0x3fa766);_0x2faa1b[_0x1400b7(0x1ac)]=0x2/(0x1/_0x1b6152+0x1/_0x3d6bbd);}}}}['render'](){const _0x313434=a26_0x29f79f;let _0x291f3a=new BezPath();if(this[_0x313434(0x1b0)][_0x313434(0x1a0)]==0x0)return _0x291f3a;let _0x1556e9=this[_0x313434(0x1b0)][0x0];_0x291f3a[_0x313434(0x1bd)](_0x1556e9['pt']['x'],_0x1556e9['pt']['y']);let _0x53d323=this['ctrlPts'][_0x313434(0x1a0)]-(this['isClosed']?0x0:0x1),_0xf7772a=0x0;for(let _0x13c6e6=0x0;_0x13c6e6<_0x53d323;_0x13c6e6++){_0x291f3a[_0x313434(0x1c9)](_0x13c6e6);let _0x87a539=this['pt'](_0x13c6e6,0x0),_0x2f2299=this['pt'](_0x13c6e6+0x1,0x0),_0x4dce8d=_0x2f2299['pt']['x']-_0x87a539['pt']['x'],_0x3a7be5=_0x2f2299['pt']['y']-_0x87a539['pt']['y'],_0x129cff=Math['atan2'](_0x3a7be5,_0x4dce8d),_0x3f435e=Math[_0x313434(0x1b2)](_0x3a7be5,_0x4dce8d),_0x12fca3=mod2pi(_0x87a539[_0x313434(0x1a2)]-_0x129cff),_0x58e542=mod2pi(_0x129cff-_0x2f2299[_0x313434(0x1a3)]),_0x153a9c=_0x87a539[_0x313434(0x1ac)]!==null?_0x87a539['kBlend']*_0x3f435e:null,_0x4b2f9c=_0x2f2299[_0x313434(0x1ac)]!==null?_0x2f2299[_0x313434(0x1ac)]*_0x3f435e:null,_0x390e7c=this[_0x313434(0x1ae)][_0x313434(0x1d3)](_0x12fca3,_0x58e542,_0x153a9c,_0x4b2f9c),_0x3045e2=[];for(let _0x4069e2=0x0;_0x4069e2<_0x390e7c['length'];_0x4069e2++){let _0x1c7a2d=_0x390e7c[_0x4069e2];_0x3045e2[_0x313434(0x1c8)](_0x87a539['pt']['x']+_0x4dce8d*_0x1c7a2d['x']-_0x3a7be5*_0x1c7a2d['y']),_0x3045e2['push'](_0x87a539['pt']['y']+_0x3a7be5*_0x1c7a2d['x']+_0x4dce8d*_0x1c7a2d['y']);}_0x3045e2[_0x313434(0x1c8)](_0x2f2299['pt']['x']),_0x3045e2[_0x313434(0x1c8)](_0x2f2299['pt']['y']);for(let _0x1594ea=0x0;_0x1594ea<_0x3045e2[_0x313434(0x1a0)];_0x1594ea+=0x6){_0x291f3a[_0x313434(0x1d5)](_0x3045e2[_0x1594ea],_0x3045e2[_0x1594ea+0x1],_0x3045e2[_0x1594ea+0x2],_0x3045e2[_0x1594ea+0x3],_0x3045e2[_0x1594ea+0x4],_0x3045e2[_0x1594ea+0x5]);}}return this[_0x313434(0x19e)]&&_0x291f3a['closepath'](),_0x291f3a;}[a26_0x29f79f(0x1c4)](){const _0x4d4fa4=a26_0x29f79f;return this[_0x4d4fa4(0x1c1)]()[_0x4d4fa4(0x1c4)]();}}class ControlPoint{constructor(_0x4ec51c,_0xba29ec,_0x45ff97,_0x75fdc1){const _0x2245ae=a26_0x29f79f;this['pt']=_0x4ec51c,this['ty']=_0xba29ec,this[_0x2245ae(0x1a8)]=_0x45ff97,this[_0x2245ae(0x1cc)]=_0x75fdc1;}}
+// Copyright 2018 Raph Levien
+// Licensed under the Apache License, Version 2.0
+
+//! A library of primitives for curves and splines.
+
+class Vec2 {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	norm() {
+		return Math.hypot(this.x, this.y);
+	}
+
+	dot(other) {
+		return this.x * other.x + this.y * other.y;
+	}
+
+	cross(other) {
+		return this.x * other.y - this.y * other.x;
+	}
+}
+
+class CubicBez {
+	constructor(coords) {
+		this.c = coords;
+	}
+
+	weightsum(c0, c1, c2, c3) {
+		let x = c0 * this.c[0] + c1 * this.c[2] + c2 * this.c[4] + c3 * this.c[6];
+		let y = c0 * this.c[1] + c1 * this.c[3] + c2 * this.c[5] + c3 * this.c[7];
+		return new Vec2(x, y);
+	}
+
+	eval(t) {
+		let mt = 1 - t;
+		let c0 = mt * mt * mt;
+		let c1 = 3 * mt * mt * t;
+		let c2 = 3 * mt * t * t;
+		let c3 = t * t * t;
+		return this.weightsum(c0, c1, c2, c3);
+	}
+
+	deriv(t) {
+		let mt = 1 - t;
+		let c0 = -3 * mt * mt;
+		let c3 = 3 * t * t;
+		let c1 = -6 * t * mt - c0;
+		let c2 = 6 * t * mt - c3;
+		return this.weightsum(c0, c1, c2, c3);
+	}
+
+	deriv2(t) {
+		let mt = 1 - t;
+		let c0 = 6 * mt;
+		let c3 = 6 * t;
+		let c1 = 6 - 18 * mt;
+		let c2 = 6 - 18 * t;
+		return this.weightsum(c0, c1, c2, c3);
+	}
+
+	curvature(t) {
+		let d = this.deriv(t);
+		let d2 = this.deriv2(t);
+		return d.cross(d2) / Math.pow(d.norm(), 3);
+	}
+
+	atanCurvature(t) {
+		let d = this.deriv(t);
+		let d2 = this.deriv2(t);
+		return Math.atan2(d.cross(d2), Math.pow(d.norm(), 3));
+	}
+
+	leftHalf() {
+		let c = new Float64Array(8);
+		c[0] = this.c[0];
+		c[1] = this.c[1];
+		c[2] = 0.5 * (this.c[0] + this.c[2]);
+		c[3] = 0.5 * (this.c[1] + this.c[3]);
+		c[4] = 0.25 * (this.c[0] + 2 * this.c[2] + this.c[4]);
+		c[5] = 0.25 * (this.c[1] + 2 * this.c[3] + this.c[5]);
+		c[6] = 0.125 * (this.c[0] + 3 * (this.c[2] + this.c[4]) + this.c[6]);
+		c[7] = 0.125 * (this.c[1] + 3 * (this.c[3] + this.c[5]) + this.c[7]);
+		return new CubicBez(c);
+	}
+
+	rightHalf() {
+		let c = new Float64Array(8);
+		c[0] = 0.125 * (this.c[0] + 3 * (this.c[2] + this.c[4]) + this.c[6]);
+		c[1] = 0.125 * (this.c[1] + 3 * (this.c[3] + this.c[5]) + this.c[7]);
+		c[2] = 0.25 * (this.c[2] + 2 * this.c[4] + this.c[6]);
+		c[3] = 0.25 * (this.c[3] + 2 * this.c[5] + this.c[7]);
+		c[4] = 0.5 * (this.c[4] + this.c[6]);
+		c[5] = 0.5 * (this.c[5] + this.c[7]);
+		c[6] = this.c[6];
+		c[7] = this.c[7];
+		return new CubicBez(c);
+	}
+}
+
+class Polynomial {
+	constructor(c) {
+		this.c = c;
+	}
+
+	eval(x) {
+		let xi = 1;
+		let s = 0;
+		for (let a of this.c) {
+			s += a * xi;
+			xi *= x;
+		}
+		return s;
+	}
+
+	deriv() {
+		let c = new Float64Array(this.c.length - 1);
+		for (let i = 0; i < c.length; i++) {
+			c[i] = (i + 1) * this.c[i + 1];
+		}
+		return new Polynomial(c);
+	}
+}
+
+function hermite5(x0, x1, v0, v1, a0, a1) {
+	return new Polynomial([x0,
+		v0,
+		0.5 * a0,
+		-10 * x0 + 10 * x1 - 6 * v0 - 4 * v1 - 1.5 * a0 + 0.5 * a1,
+		15 * x0 - 15 * x1 + 8 * v0 + 7 * v1 + 1.5 * a0 - a1,
+		-6 * x0 + 6 * x1 - 3 * v0 - 3 * v1 + -.5 * a0 + 0.5 * a1]);
+}
+
+function tridiag(a, b, c, d, x) {
+	let n = x.length;
+	for (var i = 1; i < n; i++) {
+		let m = a[i] / b[i - 1];
+		b[i] -= m * c[i - 1];
+		d[i] -= m * d[i - 1];
+	}
+	x[n - 1] = d[n - 1] / b[n - 1];
+	for (var i = n - 2; i >= 0; i--) {
+		x[i] = (d[i] - c[i] * x[i + 1]) / b[i];
+	}
+}
+
+function myCubic(th0, th1) {
+	function myCubicLen(th0, th1) {
+		let offset = 0.3 * Math.sin(th1 * 2 - 0.4 * Math.sin(th1 * 2));
+		let scale = 1.0 / (3 * 0.8);
+		let len = scale * (Math.cos(th0 - offset) - 0.2 * Math.cos((3 * (th0 - offset))));
+		return len;
+	}
+
+	var coords = new Float64Array(8);
+	let len0 = myCubicLen(th0, th1);
+	coords[2] = Math.cos(th0) * len0;
+	coords[3] = Math.sin(th0) * len0;
+
+	let len1 = myCubicLen(th1, th0);
+	coords[4] = 1 - Math.cos(th1) * len1;
+	coords[5] = Math.sin(th1) * len1;
+	coords[6] = 1;
+	return coords;
+}
+
+class TwoParamCurve {
+	computeCurvatureDerivs(th0, th1) {
+		let epsilon = 1e-6;
+		let scale = 2.0 / epsilon;
+		let k0plus = this.computeCurvature(th0 + epsilon, th1);
+		let k0minus = this.computeCurvature(th0 - epsilon, th1);
+		let dak0dth0 = scale * (k0plus.ak0 - k0minus.ak0);
+		let dak1dth0 = scale * (k0plus.ak1 - k0minus.ak1);
+		let k1plus = this.computeCurvature(th0, th1 + epsilon);
+		let k1minus = this.computeCurvature(th0, th1 - epsilon);
+		let dak0dth1 = scale * (k1plus.ak0 - k1minus.ak0);
+		let dak1dth1 = scale * (k1plus.ak1 - k1minus.ak1);
+		return {dak0dth0: dak0dth0, dak1dth0: dak1dth0, dak0dth1: dak0dth1, dak1dth1: dak1dth1};
+	}
+}
+
+class MyCurve extends TwoParamCurve {
+	render(th0, th1) {
+		let c = myCubic(th0, th1);
+		return [new Vec2(c[2], c[3]), new Vec2(c[4], c[5])];
+	}
+
+	render4Quintic(th0, th1, k0, k1) {
+		let cb = this.convCubic(this.render4Cubic(th0, th1, k0, k1));
+		function curvAdjust(t, th, k) {
+			if (k === null) return new Vec2(0, 0);
+			let c = Math.cos(th);
+			let s = Math.sin(th);
+			let d2 = cb.deriv2(t);
+			let d2cross = d2.y * c - d2.x * s;
+			let d = cb.deriv(t);
+			let ddot = d.x * c + d.y * s;
+			let oldK = d2cross / (ddot * ddot);
+			let kAdjust = k - oldK;
+			let aAdjust = kAdjust * (ddot * ddot);
+			return new Vec2(-s * aAdjust, c * aAdjust);
+		}
+		let a0 = curvAdjust(0, th0, k0);
+		let a1 = curvAdjust(1, -th1, k1);
+		let hx = hermite5(0, 0, 0, 0, a0.x, a1.x);
+		let hy = hermite5(0, 0, 0, 0, a0.y, a1.y);
+		let hxd = hx.deriv();
+		let hyd = hy.deriv();
+		let c0 = cb.leftHalf();
+		let c1 = cb.rightHalf();
+		let cs = [c0.leftHalf(), c0.rightHalf(), c1.leftHalf(), c1.rightHalf()];
+		let result = [];
+		let scale = 1./12;
+		for (let i = 0; i < 4; i++) {
+			let t = 0.25 * i;
+			let t1 = t + 0.25;
+			let c = cs[i].c;
+			let x0 = hx.eval(t);
+			let y0 = hy.eval(t);
+			let x1 = x0 + scale * hxd.eval(t);
+			let y1 = y0 + scale * hyd.eval(t);
+			let x3 = hx.eval(t1);
+			let y3 = hy.eval(t1);
+			let x2 = x3 - scale * hxd.eval(t1);
+			let y2 = y3 - scale * hyd.eval(t1);
+			if (i != 0) {
+				result.push(new Vec2(c[0] + x0, c[1] + y0));
+			}
+			result.push(new Vec2(c[2] + x1, c[3] + y1));
+			result.push(new Vec2(c[4] + x2, c[5] + y2));
+		}
+		return result;
+	}
+
+	convCubic(pts) {
+		let coords = new Float64Array(8);
+		coords[2] = pts[0].x;
+		coords[3] = pts[0].y;
+		coords[4] = pts[1].x;
+		coords[5] = pts[1].y;
+		coords[6] = 1;
+		return new CubicBez(coords);
+	}
+
+	render4Cubic(th0, th1, k0, k1) {
+		let cb = new CubicBez(myCubic(th0, th1));
+		let result = [];
+		function deriv_scale(t, th, k) {
+			if (k === null) return 1/3;
+			let c = Math.cos(th);
+			let s = Math.sin(th);
+			let d = cb.deriv(t);
+			let d2 = cb.deriv2(t);
+			let d2cross = d2.y * c - d2.x * s;
+			let ddot = d.x * c + d.y * s;
+			let oldK = d2cross / (ddot * ddot);
+			if (Math.abs(oldK) < 1e-6) oldK = 1e-6;
+			let ratio = k / oldK;
+			let scale = 1/(2 + ratio);
+			return scale;
+		}
+		let scale0 = deriv_scale(0, th0, k0);
+		let d0 = cb.deriv(0);
+		result.push(new Vec2(d0.x * scale0, d0.y * scale0));
+		let d1 = cb.deriv(1);
+		let scale1 = deriv_scale(1, -th1, k1);
+		result.push(new Vec2(1 - d1.x * scale1, - d1.y * scale1));
+		return result;
+	}
+
+	render4(th0, th1, k0, k1) {
+		if (k0 === null && k1 === null) {
+			return this.render(th0, th1);
+		}
+		return this.render4Quintic(th0, th1, k0, k1);
+	}
+
+	computeCurvature(th0, th1) {
+		let cb = new CubicBez(myCubic(th0, th1));
+		function curv(t, th) {
+			let c = Math.cos(th);
+			let s = Math.sin(th);
+			let d2 = cb.deriv2(t);
+			let d2cross = d2.y * c - d2.x * s;
+			let d = cb.deriv(t);
+			let ddot = d.x * c + d.y * s;
+			return Math.atan2(d2cross, ddot * Math.abs(ddot));
+		}
+		let ak0 = curv(0, th0);
+		let ak1 = curv(1, -th1);
+		return {ak0: ak0, ak1: ak1};
+	}
+
+	endpointTangent(th) {
+		return 0.5 * Math.sin(2 * th);
+	}
+}
+
+function mod2pi(th) {
+	let twopi = 2 * Math.PI;
+	let frac = th * (1 / twopi);
+	return twopi * (frac - Math.round(frac)); 
+}
+
+class TwoParamSpline {
+	constructor(curve, ctrlPts) {
+		this.curve = curve;
+		this.ctrlPts = ctrlPts;
+		this.startTh = null;
+		this.endTh = null;
+	}
+
+	initialThs() {
+		var ths = new Float64Array(this.ctrlPts.length);
+		for (var i = 1; i < ths.length - 1; i++) {
+			let dx0 = this.ctrlPts[i].x - this.ctrlPts[i - 1].x;
+			let dy0 = this.ctrlPts[i].y - this.ctrlPts[i - 1].y;
+			let l0 = Math.hypot(dx0, dy0);
+			let dx1 = this.ctrlPts[i + 1].x - this.ctrlPts[i].x;
+			let dy1 = this.ctrlPts[i + 1].y - this.ctrlPts[i].y;
+			let l1 = Math.hypot(dx1, dy1);
+			let th0 = Math.atan2(dy0, dx0);
+			let th1 = Math.atan2(dy1, dx1);
+			let bend = mod2pi(th1 - th0);
+			let th = mod2pi(th0 + bend * l0 / (l0 + l1));
+			ths[i] = th;
+			if (i == 1) { ths[0] = th0; }
+			if (i == ths.length - 2) { ths[i + 1] = th1; }
+		}
+		if (this.startTh !== null) {
+			ths[0] = this.startTh;
+		}
+		if (this.endTh !== null) {
+			ths[ths.length - 1] = this.endTh;
+		}
+		this.ths = ths;
+		return ths;
+	}
+
+	getThs(i) {
+		let dx = this.ctrlPts[i + 1].x - this.ctrlPts[i].x;
+		let dy = this.ctrlPts[i + 1].y - this.ctrlPts[i].y;
+		let th =  Math.atan2(dy, dx);
+		let th0 = mod2pi(this.ths[i] - th);
+		let th1 = mod2pi(th - this.ths[i + 1]);
+		let chord = Math.hypot(dx, dy);
+		return {th0: th0, th1: th1, chord: chord};
+	}
+
+	iterDumb(iter) {
+		function computeErr(ths0, ak0, ths1, ak1) {
+			let ch0 = Math.sqrt(ths0.chord);
+			let ch1 = Math.sqrt(ths1.chord);
+			let a0 = Math.atan2(Math.sin(ak0.ak1) * ch1, Math.cos(ak0.ak1) * ch0);
+			let a1 = Math.atan2(Math.sin(ak1.ak0) * ch0, Math.cos(ak1.ak0) * ch1);
+			return a0 - a1;
+		}
+
+		let n = this.ctrlPts.length;
+		if (this.startTh === null) {
+			let ths0 = this.getThs(0);
+			this.ths[0] += this.curve.endpointTangent(ths0.th1) - ths0.th0;
+		}
+
+		if (this.endTh === null) {
+			let ths0 = this.getThs(n - 2);
+			this.ths[n - 1] -= this.curve.endpointTangent(ths0.th0) - ths0.th1;
+		}
+		if (n < 3) return 0;
+
+		var absErr = 0;
+		var x = new Float64Array(n - 2);
+		var ths0 = this.getThs(0);
+		var ak0 = this.curve.computeCurvature(ths0.th0, ths0.th1);
+		for (var i = 0; i < n - 2; i++) {
+			let ths1 = this.getThs(i + 1);
+			let ak1 = this.curve.computeCurvature(ths1.th0, ths1.th1);
+			let err = computeErr(ths0, ak0, ths1, ak1);
+			absErr += Math.abs(err);
+
+			let epsilon = 1e-3;
+			let ak0p = this.curve.computeCurvature(ths0.th0, ths0.th1 + epsilon);
+			let ak1p = this.curve.computeCurvature(ths1.th0 - epsilon, ths1.th1);
+			let errp = computeErr(ths0, ak0p, ths1, ak1p);
+			let derr = (errp - err) * (1 / epsilon);
+			x[i] = err / derr;
+
+			ths0 = ths1;
+			ak0 = ak1;
+		}
+
+		for (var i = 0; i < n - 2; i++) {
+			let scale = Math.tanh(0.25 * (iter + 1));
+			this.ths[i + 1] += scale * x[i];
+		}
+
+		return absErr;
+	}
+
+	renderSvg() {
+		let c = this.ctrlPts;
+		if (c.length == 0) { return ""; }
+		let path = `M${c[0].x} ${c[0].y}`;
+		let cmd = " C";
+		for (var i = 0; i < c.length - 1; i++) {
+			let ths = this.getThs(i);
+			let render = this.curve.render(ths.th0, ths.th1);
+			let dx = c[i + 1].x - c[i].x;
+			let dy = c[i + 1].y - c[i].y;
+			for (var j = 0; j < render.length; j++) {
+				let pt = render[j];
+				let x = c[i].x + dx * pt.x - dy * pt.y;
+				let y = c[i].y + dy * pt.x + dx * pt.y;
+				path += `${cmd}${x} ${y}`;
+				cmd = " ";
+			}
+			path += ` ${c[i + 1].x} ${c[i + 1].y}`;
+		}
+		return path;
+	}
+}
+
+class Spline {
+	constructor(ctrlPts, isClosed) {
+		this.ctrlPts = ctrlPts;
+		this.isClosed = isClosed;
+		this.curve = new MyCurve();
+	}
+
+	pt(i, start) {
+		let length = this.ctrlPts.length;
+		return this.ctrlPts[(i + start + length) % length];
+	}
+
+	startIx() {
+		if (!this.isClosed) {
+			return 0;
+		}
+		for (let i = 0; i < this.ctrlPts.length; i++) {
+			let pt = this.ctrlPts[i];
+			if (pt.ty === "corner" || pt.lth !== null) {
+				return i;
+			}
+		}
+		return 0;
+	}
+
+	solve() {
+		let start = this.startIx();
+		let length = this.ctrlPts.length - (this.isClosed ? 0 : 1);
+		
+		// Special handling for closed paths with all smooth points
+		if (this.isClosed && start === 0) {
+			// Check if all points are smooth
+			let allSmooth = true;
+			for (let pt of this.ctrlPts) {
+				if (pt.ty === "corner" || pt.lth !== null) {
+					allSmooth = false;
+					break;
+				}
+			}
+			
+			if (allSmooth) {
+				// Solve closed smooth curve with special iteration
+				this.solveClosedSmooth();
+				return;
+			}
+		}
+		
+		let i = 0;
+		while (i < length) {
+			let ptI = this.pt(i, start);
+			let ptI1 = this.pt(i + 1, start);
+			if ((i + 1 == length || ptI1.ty === "corner")
+				&& ptI.rth === null && ptI1.lth === null) {
+				let dx = ptI1.pt.x - ptI.pt.x;
+				let dy = ptI1.pt.y - ptI.pt.y;
+				let th = Math.atan2(dy, dx);
+				ptI.rTh = th;
+				ptI1.lTh = th;
+				i += 1;
+			} else {
+				let innerPts = [ptI.pt];
+				let j = i + 1;
+				while (j < length + 1) {
+					let ptJ = this.pt(j, start);
+					innerPts.push(ptJ.pt);
+					j += 1;
+					if (ptJ.ty === "corner" || ptJ.lth !== null) {
+						break;
+					}
+				}
+				let inner = new TwoParamSpline(this.curve, innerPts);
+				inner.startTh = this.pt(i, start).rth;
+				inner.endTh = this.pt(j - 1, start).lth;
+				let nIter = 10;
+				inner.initialThs();
+				for (let k = 0; k < nIter; k++) {
+					inner.iterDumb(k);
+				}
+				for (let k = i; k + 1 < j; k++) {
+					this.pt(k, start).rTh = inner.ths[k - i];
+					this.pt(k + 1, start).lTh = inner.ths[k + 1 - i];
+					let ths = inner.getThs(k - i);
+					let aks = this.curve.computeCurvature(ths.th0, ths.th1);
+					this.pt(k, start).rAk = aks.ak0;
+					this.pt(k + 1, start).lAk = aks.ak1;
+				}
+				i = j - 1;
+			}
+		}
+	}
+
+	solveClosedSmooth() {
+		let n = this.ctrlPts.length;
+		if (n < 3) return;
+		
+		// Initialize tangent angles for all points
+		let ths = new Float64Array(n);
+		for (let i = 0; i < n; i++) {
+			let prev = (i - 1 + n) % n;
+			let next = (i + 1) % n;
+			
+			let dx0 = this.ctrlPts[i].pt.x - this.ctrlPts[prev].pt.x;
+			let dy0 = this.ctrlPts[i].pt.y - this.ctrlPts[prev].pt.y;
+			let l0 = Math.hypot(dx0, dy0);
+			
+			let dx1 = this.ctrlPts[next].pt.x - this.ctrlPts[i].pt.x;
+			let dy1 = this.ctrlPts[next].pt.y - this.ctrlPts[i].pt.y;
+			let l1 = Math.hypot(dx1, dy1);
+			
+			let th0 = Math.atan2(dy0, dx0);
+			let th1 = Math.atan2(dy1, dx1);
+			let bend = mod2pi(th1 - th0);
+			ths[i] = mod2pi(th0 + bend * l0 / (l0 + l1));
+		}
+		
+		// Iterate to achieve curvature continuity
+		let nIter = 10;
+		for (let iter = 0; iter < nIter; iter++) {
+			let x = new Float64Array(n);
+			
+			for (let i = 0; i < n; i++) {
+				let next = (i + 1) % n;
+				
+				// Get chord vector and length
+				let dx = this.ctrlPts[next].pt.x - this.ctrlPts[i].pt.x;
+				let dy = this.ctrlPts[next].pt.y - this.ctrlPts[i].pt.y;
+				let chord = Math.hypot(dx, dy);
+				let chth = Math.atan2(dy, dx);
+				
+				// Compute relative tangent angles
+				let th0 = mod2pi(ths[i] - chth);
+				let th1 = mod2pi(chth - ths[next]);
+				
+				// Compute curvatures
+				let ak = this.curve.computeCurvature(th0, th1);
+				
+				// Get next segment for continuity constraint
+				let nextnext = (next + 1) % n;
+				let dx2 = this.ctrlPts[nextnext].pt.x - this.ctrlPts[next].pt.x;
+				let dy2 = this.ctrlPts[nextnext].pt.y - this.ctrlPts[next].pt.y;
+				let chord2 = Math.hypot(dx2, dy2);
+				let chth2 = Math.atan2(dy2, dx2);
+				
+				let th0_2 = mod2pi(ths[next] - chth2);
+				let th1_2 = mod2pi(chth2 - ths[nextnext]);
+				let ak2 = this.curve.computeCurvature(th0_2, th1_2);
+				
+				// Compute curvature continuity error
+				let ch0 = Math.sqrt(chord);
+				let ch1 = Math.sqrt(chord2);
+				let a0 = Math.atan2(Math.sin(ak.ak1) * ch1, Math.cos(ak.ak1) * ch0);
+				let a1 = Math.atan2(Math.sin(ak2.ak0) * ch0, Math.cos(ak2.ak0) * ch1);
+				let err = a0 - a1;
+				
+				// Compute derivative for Newton step
+				let epsilon = 1e-3;
+				let ak_p = this.curve.computeCurvature(th0, th1 + epsilon);
+				let ak2_p = this.curve.computeCurvature(th0_2 - epsilon, th1_2);
+				let a0_p = Math.atan2(Math.sin(ak_p.ak1) * ch1, Math.cos(ak_p.ak1) * ch0);
+				let a1_p = Math.atan2(Math.sin(ak2_p.ak0) * ch0, Math.cos(ak2_p.ak0) * ch1);
+				let err_p = a0_p - a1_p;
+				let derr = (err_p - err) / epsilon;
+				
+				if (Math.abs(derr) > 1e-9) {
+					x[next] = err / derr;
+				}
+			}
+			
+			// Apply updates
+			let scale = Math.tanh(0.25 * (iter + 1));
+			for (let i = 0; i < n; i++) {
+				ths[i] += scale * x[i];
+			}
+		}
+		
+		// Apply solved tangents to all points equally
+		for (let i = 0; i < n; i++) {
+			this.ctrlPts[i].lTh = ths[i];
+			this.ctrlPts[i].rTh = ths[i];
+			
+			// Compute curvatures for the next step
+			let next = (i + 1) % n;
+			let dx = this.ctrlPts[next].pt.x - this.ctrlPts[i].pt.x;
+			let dy = this.ctrlPts[next].pt.y - this.ctrlPts[i].pt.y;
+			let chord = Math.hypot(dx, dy);
+			let chth = Math.atan2(dy, dx);
+			let th0 = mod2pi(ths[i] - chth);
+			let th1 = mod2pi(chth - ths[next]);
+			let aks = this.curve.computeCurvature(th0, th1);
+			this.ctrlPts[i].rAk = aks.ak0;
+			this.ctrlPts[next].lAk = aks.ak1;
+		}
+	}
+
+	chordLen(i) {
+		let ptI = this.pt(i, 0).pt;
+		let ptI1 = this.pt(i + 1, 0).pt;
+		return Math.hypot(ptI1.x - ptI.x, ptI1.y - ptI.y);
+	}
+
+	computeCurvatureBlending() {
+		function myTan(th) {
+			if (th > Math.PI / 2) {
+				return Math.tan(Math.PI - th);
+			} else if (th < -Math.PI / 2) {
+				return Math.tan(-Math.PI - th);
+			} else {
+				return Math.tan(th);
+			}
+		}
+		for (let pt of this.ctrlPts) {
+			pt.kBlend = null;
+		}
+		let length = this.ctrlPts.length - (this.isClosed ? 0 : 1);
+		for (let i = 0; i < length; i++) {
+			let pt = this.pt(i, 0);
+			if (pt.ty === "smooth" && pt.lth !== null) {
+				if (Math.sign(pt.rAk) != Math.sign(pt.lAk)) {
+					pt.kBlend = 0;
+				} else {
+					let rK = myTan(pt.rAk) / this.chordLen(i - 1);
+					let lK = myTan(pt.lAk) / this.chordLen(i);
+					pt.kBlend = 2 / (1 / rK + 1 / lK);
+				}
+			}
+		}
+	}
+
+	render() {
+		let path = new BezPath;
+		if (this.ctrlPts.length == 0) {
+			return path;
+		}
+		let pt0 = this.ctrlPts[0];
+		path.moveto(pt0.pt.x, pt0.pt.y);
+		let length = this.ctrlPts.length - (this.isClosed ? 0 : 1);
+		let i = 0;
+		for (let i = 0; i < length; i++) {
+			path.mark(i);
+			let ptI = this.pt(i, 0);
+			let ptI1 = this.pt(i + 1, 0);
+			let dx = ptI1.pt.x - ptI.pt.x;
+			let dy = ptI1.pt.y - ptI.pt.y;
+			let chth = Math.atan2(dy, dx);
+			let chord = Math.hypot(dy, dx);
+			let th0 = mod2pi(ptI.rTh - chth);
+			let th1 = mod2pi(chth - ptI1.lTh);
+			let k0 = ptI.kBlend !== null ? ptI.kBlend * chord : null;
+			let k1 = ptI1.kBlend !== null ? ptI1.kBlend * chord : null;
+			let render = this.curve.render4(th0, th1, k0, k1);
+			let c = [];
+			for (let j = 0; j < render.length; j++) {
+				let pt = render[j];
+				c.push(ptI.pt.x + dx * pt.x - dy * pt.y);
+				c.push(ptI.pt.y + dy * pt.x + dx * pt.y);
+			}
+			c.push(ptI1.pt.x);
+			c.push(ptI1.pt.y);
+			for (let j = 0; j < c.length; j += 6) {
+				path.curveto(c[j], c[j + 1], c[j + 2], c[j + 3], c[j + 4], c[j + 5]);
+			}
+		}
+		if (this.isClosed) {
+			path.closepath();
+		}
+		return path;
+	}
+
+	renderSvg() {
+		return this.render().renderSvg();
+	}
+}
+
+class ControlPoint {
+	constructor(pt, ty, lth, rth) {
+		this.pt = pt;
+		this.ty = ty;
+		this.lth = lth;
+		this.rth = rth;
+	}
+}

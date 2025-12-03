@@ -1,1 +1,2080 @@
-function a34_0x1f4a(_0x91b70,_0x3a3ec1){_0x91b70=_0x91b70-0x1d8;var _0x11ea6d=a34_0x11ea();var _0x1f4a58=_0x11ea6d[_0x91b70];return _0x1f4a58;}function a34_0x11ea(){var _0x25c928=['replace','#ff0000','monochromatic','preventDefault','</div>','equals','min','ffb6c1','3cb371','ownerDocument','beforeShow','hex6','callbacks','ffdead','toString','1175778kMttCn','toHsl','bdb76b','ffc0cb','sp-dragging','ff7f50','hex3','data','00fa9a','GradientType\x20=\x201,\x20','dragstart.spectrum','keydown','get','toRgb','<div\x20class=\x27sp-color\x27>','indexOf','filter','100%','touchend\x20mouseup','addClass',')\x5cs*\x5c)?','gradientType','00008b','<div\x20class=\x27sp-','ignore','returnValue','\x27></div>','move','2e8b57','adff2f','backgroundColor','cd853f','position','hex8','apply','<div\x20class=\x27sp-replacer\x27>','%,\x20','touchmove\x20mousemove','\x22></span>','#4b0082','round','extend','showPaletteOnly','<button\x20class=\x27sp-cancel\x27></button>','4169e1','<div\x20class=\x27sp-initial\x20sp-thumb\x20sp-cf\x27></div>','hsv','removeClass','.sp-alpha','e0ffff','-moz-','<div\x20class=\x27sp-clear\x20sp-clear-display\x27>','#ffffff','showPalette','names','dda0dd','ee82ee','5f9ea0','<div\x20class=\x27sp-container\x20sp-hidden\x27>','7fff00','greyscale','#ffff00','ff69b4','4b0082','keyCode','90ee90','8b4513','find','808080','1e90ff','cancelText','fffff0','<div\x20class=\x27sp-dragger\x27></div>','preferredFormat','pageX','daa520','b22222','sp-disabled','startColorstr=','ea7e5d','title','loadOpts','outerWidth','allowEmpty','rgba(','.sp-alpha-inner','dc143c','trigger','fffacd','isArray','transparent','val','1SLfQXI','color','click','<div\x20class=\x27sp-palette\x20sp-thumb\x20sp-cf\x27></div>','after','f4a460','spectrum.id','show.spectrum','dragstop.spectrum','sp-buttons-disabled','sp-initial-disabled','hsv(','sp-hidden','ffebcd','alpha','ffa07a','sp-active','2151009OraoJm','console',')|(?:','98fb98','attr','hsla','c71585','defaults','sp-clear-display','f5f5dc','isDefaultPrevented','length','-ms-','filter:','style','800080','.sp-hue','rgba','append','readable','showButtons','localStorage','random','ffdab9','input[type=color]','replacerClassName','696969','faebd7','ff6347','map','dcdcdc','f0fff0','disabled','483d8b','[\x5cs|\x5c(]+(','inArray','originalEvent','join','<div\x20class=\x27sp-palette-container\x27>','ffe4e1','f0ffff','9txyHLU','db7093','sp-palette-disabled','<input\x20type=\x27color\x27\x20value=\x27!\x27\x20/>','toFilter','clientWidth','shift','d2b48c','sp-light','documentElement','unbind','6495ed','a52a2a','desaturate','log','parent','f0e68c','max','228b22','f0f8ff','object','css','#9400d3','.sp-input','type','sp-palette-row\x20sp-palette-row-selection','abs','top','tetrad','9370db','.sp-alpha-handle','.sp-dragger','e6e6fa','toHexString','8XSvEli','Event','f5fffa','.sp-color','background-color','darken','<span\x20title=\x22','ffffe0','navigator','html','.sp-cancel','sp-clear-enabled','split','a9a9a9','showInput','00bfff','pageY','ba55d3','1267038sJmWLs','reverse','[-\x5c+]?\x5cd*\x5c.\x5cd+%?','dragstart','fa8072','fff5ee','1847840pdfpNx','push','*:not(input)','rgb(','toName','showAlpha','option','[-\x5c+]?\x5cd+%?','slice','\x20sp-thumb-active','da70d6','006400','7fffd4','change','<div\x20class=\x27sp-picker-container\x27>','width','selectstart','body','sp-alpha-enabled','createElement','progid:DXImageTransform.Microsoft.gradient(','toPercentageRgbString','appendTo','#0000ff','hexNames','789','call','87ceeb','concat','hasOwnProperty','7cfc00','f08080','8b0000','ff0','charAt','000','offset','triad','008080','fff8dc','prgb','f0f','toHsv','hex','708090','readability','toHsvString','8b008b','755448dagSyO','absolute','6a5acd','processNativeColorInputs','c0c0c0','rgb','<div\x20class=\x27sp-dd\x27>&#9660;</div>','spectrum','d8bfd8','sp-palette-row-initial','exec','userAgent','input','toHex8String','scrollTop','saturate','hasClass','touches','fromRatio','.sp-choose','destroy','tinycolor','8fbc8f',')[,|\x5cs]+(','ffefd5','left','ffd700','linear-gradient(to\x20right,\x20','f8f8ff','cancel','maxSelectionSize','click.spectrum\x20touchstart.spectrum','touchstart\x20mousedown','9acd32','\x22\x20class=\x22','2f4f4f','008b8b','delegate','sp-palette-row\x20sp-palette-row-','_tc_id','<span\x20title=\x22No\x20Color\x20Selected\x22\x20data-color=\x22\x22\x20style=\x22background-color:transparent;\x22\x20class=\x22','sp-validation-error','87cefa','click.spectrum','hsva(','-webkit-','ff4500','stopPropagation','show','toHex8','toLowerCase','scrollLeft','cd5c5c','container','ffa500','toHslString','.sp-thumb-el:nth-child(1)','7b68ee','showInitial','66cdaa','bc8f8f','prototype','ff8c00','unselectable','sp-palette-only','687762RlUbKx','load','button','target','height','sp-thumb-el\x20sp-thumb-light','9400d3','className','.sp-clear','hide.spectrum','5905770EOjjEL','removeData','fffafa','toggleClass','remove','fafad2','move.spectrum','palettes','name','each','toRgbString','string','background','mousedown.spectrum','shiftKey','00ff7f','which','clearText','sp-flat','hide','showSelectionPalette','fffaf0','outerHeight','<input\x20class=\x27sp-input\x27\x20type=\x27text\x27\x20spellcheck=\x27false\x27\x20\x20/>','localStorageKey','hsl','lighten','div','palette','.sp-thumb-el','beforeShow.spectrum','b0e0e6','#ff8000','sp-thumb-el\x20sp-thumb-dark','bind','format','d3d3d3','text','brightness','(?:',';\x22\x20/></span>','eee8aa','fff','9932cc'];a34_0x11ea=function(){return _0x25c928;};return a34_0x11ea();}(function(_0x84a970,_0x12870e){var _0x1a63a1=a34_0x1f4a,_0x48bb19=_0x84a970();while(!![]){try{var _0x368114=-parseInt(_0x1a63a1(0x1f9))/0x1*(parseInt(_0x1a63a1(0x323))/0x2)+-parseInt(_0x1a63a1(0x233))/0x3*(-parseInt(_0x1a63a1(0x29d))/0x4)+parseInt(_0x1a63a1(0x26d))/0x5+-parseInt(_0x1a63a1(0x2de))/0x6+-parseInt(_0x1a63a1(0x20a))/0x7*(parseInt(_0x1a63a1(0x255))/0x8)+-parseInt(_0x1a63a1(0x267))/0x9+parseInt(_0x1a63a1(0x2e8))/0xa;if(_0x368114===_0x12870e)break;else _0x48bb19['push'](_0x48bb19['shift']());}catch(_0x47f575){_0x48bb19['push'](_0x48bb19['shift']());}}}(a34_0x11ea,0x5bd52),function(_0x111ba9,_0x424c17,_0x84d953){var _0x45da64=a34_0x1f4a,_0x1b9849={'beforeShow':_0x28cc1c,'move':_0x28cc1c,'change':_0x28cc1c,'show':_0x28cc1c,'hide':_0x28cc1c,'color':![],'flat':![],'showInput':![],'allowEmpty':![],'showButtons':!![],'clickoutFiresChange':![],'showInitial':![],'showPalette':![],'showPaletteOnly':![],'showSelectionPalette':!![],'localStorageKey':![],'appendTo':'body','maxSelectionSize':0x7,'cancelText':'cancel','chooseText':'choose','clearText':'Clear\x20Color\x20Selection','preferredFormat':![],'className':'','containerClassName':'','replacerClassName':'','showAlpha':![],'theme':_0x45da64(0x23b),'palette':[[_0x45da64(0x357),'#000000',_0x45da64(0x315),_0x45da64(0x308),_0x45da64(0x1da),'#008000',_0x45da64(0x284),_0x45da64(0x34a),_0x45da64(0x249)]],'selectionPalette':[],'disabled':![]},_0xf1a3b1=[],_0x419960=!!/msie/i['exec'](_0x111ba9[_0x45da64(0x25d)][_0x45da64(0x2a8)]),_0x2490bd=(function(){var _0x23033c=_0x45da64;function _0x2f58cd(_0x488e58,_0x399f62){return!!~(''+_0x488e58)['indexOf'](_0x399f62);}var _0x23ddc5=document[_0x23033c(0x280)](_0x23033c(0x303)),_0x1d93f4=_0x23ddc5[_0x23033c(0x218)];return _0x1d93f4['cssText']='background-color:rgba(0,0,0,.5)',_0x2f58cd(_0x1d93f4[_0x23033c(0x341)],'rgba')||_0x2f58cd(_0x1d93f4[_0x23033c(0x341)],_0x23033c(0x20f));}()),_0x5cbc59=(function(){var _0x3bc173=_0x45da64,_0x445adb=_0x424c17(_0x3bc173(0x236))[0x0];return _0x445adb[_0x3bc173(0x24b)]==='color'&&_0x445adb['value']!=='!';}()),_0x253aca=[_0x45da64(0x346),'<div\x20class=\x27sp-preview\x27><div\x20class=\x27sp-preview-inner\x27></div></div>',_0x45da64(0x2a3),_0x45da64(0x318)][_0x45da64(0x22f)](''),_0x153c1a=(function(){var _0x255d80=_0x45da64,_0x4ffedf='';if(_0x419960)for(var _0x1489a7=0x1;_0x1489a7<=0x6;_0x1489a7++){_0x4ffedf+=_0x255d80(0x33a)+_0x1489a7+_0x255d80(0x33d);}return[_0x255d80(0x35d),_0x255d80(0x230),_0x255d80(0x1fc),_0x255d80(0x318),_0x255d80(0x27b),'<div\x20class=\x27sp-top\x20sp-cf\x27>','<div\x20class=\x27sp-fill\x27></div>','<div\x20class=\x27sp-top-inner\x27>',_0x255d80(0x331),'<div\x20class=\x27sp-sat\x27>','<div\x20class=\x27sp-val\x27>',_0x255d80(0x1e5),_0x255d80(0x318),_0x255d80(0x318),_0x255d80(0x318),_0x255d80(0x356),'</div>','<div\x20class=\x27sp-hue\x27>','<div\x20class=\x27sp-slider\x27></div>',_0x4ffedf,_0x255d80(0x318),'</div>','<div\x20class=\x27sp-alpha\x27><div\x20class=\x27sp-alpha-inner\x27><div\x20class=\x27sp-alpha-handle\x27></div></div></div>',_0x255d80(0x318),'<div\x20class=\x27sp-input-container\x20sp-cf\x27>',_0x255d80(0x2ff),_0x255d80(0x318),_0x255d80(0x350),'<div\x20class=\x27sp-button-container\x20sp-cf\x27>',_0x255d80(0x34e),'<button\x20type=\x27button\x27\x20class=\x27sp-choose\x27></button>',_0x255d80(0x318),_0x255d80(0x318),'</div>'][_0x255d80(0x22f)]('');}());function _0xdd38b(_0xcb92bf,_0x4b3f8e,_0x3d8a08,_0x1fcf2d){var _0x1eab97=_0x45da64,_0x4a687d=[];for(var _0x4ec4ef=0x0;_0x4ec4ef<_0xcb92bf[_0x1eab97(0x215)];_0x4ec4ef++){var _0x57ec01=_0xcb92bf[_0x4ec4ef];if(_0x57ec01){var _0x53244c=tinycolor(_0x57ec01),_0x39d746=_0x53244c['toHsl']()['l']<0.5?_0x1eab97(0x309):_0x1eab97(0x2e3);_0x39d746+=tinycolor[_0x1eab97(0x319)](_0x4b3f8e,_0x57ec01)?_0x1eab97(0x276):'';var _0x557d92=_0x53244c['toString'](_0x1fcf2d||_0x1eab97(0x2a2)),_0x1b5d89=_0x2490bd?'background-color:'+_0x53244c[_0x1eab97(0x2f2)]():_0x1eab97(0x217)+_0x53244c['toFilter']();_0x4a687d[_0x1eab97(0x26e)](_0x1eab97(0x25b)+_0x557d92+'\x22\x20data-color=\x22'+_0x53244c[_0x1eab97(0x2f2)]()+_0x1eab97(0x2bf)+_0x39d746+'\x22><span\x20class=\x22sp-thumb-inner\x22\x20style=\x22'+_0x1b5d89+_0x1eab97(0x310));}else{var _0x1eb611=_0x1eab97(0x212);_0x4a687d[_0x1eab97(0x26e)](_0x1eab97(0x2c5)+_0x1eb611+_0x1eab97(0x349));}}return'<div\x20class=\x27sp-cf\x20'+_0x3d8a08+'\x27>'+_0x4a687d['join']('')+_0x1eab97(0x318);}function _0x3cd7ed(){var _0x1e88f8=_0x45da64;for(var _0x37d282=0x0;_0x37d282<_0xf1a3b1[_0x1e88f8(0x215)];_0x37d282++){_0xf1a3b1[_0x37d282]&&_0xf1a3b1[_0x37d282]['hide']();}}function _0x2c0507(_0x10cfd7,_0x2d11ab){var _0x46c0fe=_0x45da64,_0x25f478=_0x424c17[_0x46c0fe(0x34c)]({},_0x1b9849,_0x10cfd7);return _0x25f478[_0x46c0fe(0x320)]={'move':_0x15cfbc(_0x25f478[_0x46c0fe(0x33e)],_0x2d11ab),'change':_0x15cfbc(_0x25f478[_0x46c0fe(0x27a)],_0x2d11ab),'show':_0x15cfbc(_0x25f478['show'],_0x2d11ab),'hide':_0x15cfbc(_0x25f478['hide'],_0x2d11ab),'beforeShow':_0x15cfbc(_0x25f478[_0x46c0fe(0x31e)],_0x2d11ab)},_0x25f478;}function _0x3a6883(_0xb8bb91,_0x3d6cd6){var _0xb7e7e4=_0x45da64,_0x51c026=_0x2c0507(_0x3d6cd6,_0xb8bb91),_0x2b8624=_0x51c026['flat'],_0x2e9c57=_0x51c026[_0xb7e7e4(0x2fc)],_0x57e6dd=_0x51c026[_0xb7e7e4(0x300)],_0x45275f=_0x51c026['theme'],_0x2d83bc=_0x51c026[_0xb7e7e4(0x320)],_0x2ca645=_0x1fd73d(_0x3e76ba,0xa),_0x519750=![],_0x356a9b=0x0,_0x55e9a1=0x0,_0x3555ab=0x0,_0x1ae432=0x0,_0x2cfa3a=0x0,_0x2b41fd=0x0,_0x5c5488=0x0,_0x247dc4=0x0,_0x5c59b4=0x0,_0x1c3d47=0x0,_0x335c7b=0x0,_0x3b8da9=0x1,_0x24f39d=[],_0x532570=[],_0x128205={},_0x255928=_0x51c026['selectionPalette'][_0xb7e7e4(0x275)](0x0),_0x47a1a2=_0x51c026['maxSelectionSize'],_0x1b89a5=_0xb7e7e4(0x327),_0x584cfc=null,_0x58046f=_0xb8bb91[_0xb7e7e4(0x31d)],_0x49a8b7=_0x58046f[_0xb7e7e4(0x27e)],_0x3c4201=_0x424c17(_0xb8bb91),_0x45e2f4=![],_0x2e51ce=_0x424c17(_0x153c1a,_0x58046f)[_0xb7e7e4(0x336)](_0x45275f),_0xbc6c2c=_0x2e51ce['find'](_0xb7e7e4(0x258)),_0x518826=_0x2e51ce['find'](_0xb7e7e4(0x252)),_0x17fa6b=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x21a)),_0x59805a=_0x2e51ce['find']('.sp-slider'),_0x3a3527=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x1f2)),_0x268843=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x353)),_0x4ed671=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x251)),_0x957f8c=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x24a)),_0x596bb6=_0x2e51ce['find']('.sp-palette'),_0x526bc2=_0x2e51ce[_0xb7e7e4(0x1e0)]('.sp-initial'),_0x3b9da5=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x25f)),_0x378025=_0x2e51ce['find'](_0xb7e7e4(0x2e6)),_0x2c34ed=_0x2e51ce[_0xb7e7e4(0x1e0)](_0xb7e7e4(0x2b0)),_0x4ab245=_0x3c4201['is']('input'),_0x313bac=_0x4ab245&&_0x5cbc59&&_0x3c4201[_0xb7e7e4(0x20e)](_0xb7e7e4(0x24b))===_0xb7e7e4(0x1fa),_0x2bc54e=_0x4ab245&&!_0x2b8624,_0x11bff7=_0x2bc54e?_0x424c17(_0x253aca)[_0xb7e7e4(0x336)](_0x45275f)[_0xb7e7e4(0x336)](_0x51c026[_0xb7e7e4(0x2e5)])[_0xb7e7e4(0x336)](_0x51c026[_0xb7e7e4(0x223)]):_0x424c17([]),_0x4ff56a=_0x2bc54e?_0x11bff7:_0x3c4201,_0x4229d0=_0x11bff7[_0xb7e7e4(0x1e0)]('.sp-preview-inner'),_0x19a791=_0x51c026[_0xb7e7e4(0x1fa)]||_0x4ab245&&_0x3c4201[_0xb7e7e4(0x1f8)](),_0x406ad6=![],_0xc332ea=_0x51c026['preferredFormat'],_0x433778=_0xc332ea,_0x398d7a=!_0x51c026[_0xb7e7e4(0x21e)]||_0x51c026['clickoutFiresChange'],_0x23a904=!_0x19a791,_0x5be410=_0x51c026[_0xb7e7e4(0x1f0)]&&!_0x313bac;function _0x420fa7(){var _0x19af4d=_0xb7e7e4;_0x51c026[_0x19af4d(0x34d)]&&(_0x51c026[_0x19af4d(0x358)]=!![]);if(_0x51c026[_0x19af4d(0x304)]){_0x24f39d=_0x51c026[_0x19af4d(0x304)]['slice'](0x0),_0x532570=_0x424c17[_0x19af4d(0x1f6)](_0x24f39d[0x0])?_0x24f39d:[_0x24f39d],_0x128205={};for(var _0x432329=0x0;_0x432329<_0x532570['length'];_0x432329++){for(var _0x587b14=0x0;_0x587b14<_0x532570[_0x432329][_0x19af4d(0x215)];_0x587b14++){var _0x4a7228=tinycolor(_0x532570[_0x432329][_0x587b14])[_0x19af4d(0x2f2)]();_0x128205[_0x4a7228]=!![];}}}_0x2e51ce[_0x19af4d(0x2eb)](_0x19af4d(0x2fa),_0x2b8624),_0x2e51ce[_0x19af4d(0x2eb)]('sp-input-disabled',!_0x51c026[_0x19af4d(0x263)]),_0x2e51ce[_0x19af4d(0x2eb)](_0x19af4d(0x27f),_0x51c026[_0x19af4d(0x272)]),_0x2e51ce[_0x19af4d(0x2eb)](_0x19af4d(0x260),_0x5be410),_0x2e51ce['toggleClass'](_0x19af4d(0x202),!_0x51c026[_0x19af4d(0x21e)]),_0x2e51ce[_0x19af4d(0x2eb)](_0x19af4d(0x235),!_0x51c026[_0x19af4d(0x358)]),_0x2e51ce[_0x19af4d(0x2eb)](_0x19af4d(0x2dd),_0x51c026['showPaletteOnly']),_0x2e51ce[_0x19af4d(0x2eb)](_0x19af4d(0x203),!_0x51c026[_0x19af4d(0x2d7)]),_0x2e51ce[_0x19af4d(0x336)](_0x51c026[_0x19af4d(0x2e5)])['addClass'](_0x51c026['containerClassName']),_0x3e76ba();}function _0x4c3a06(){var _0x123a6b=_0xb7e7e4;_0x419960&&_0x2e51ce[_0x123a6b(0x1e0)](_0x123a6b(0x26f))[_0x123a6b(0x20e)](_0x123a6b(0x2dc),'on');_0x420fa7();_0x2bc54e&&_0x3c4201['after'](_0x11bff7)[_0x123a6b(0x2fb)]();!_0x5be410&&_0x378025[_0x123a6b(0x2fb)]();if(_0x2b8624)_0x3c4201[_0x123a6b(0x1fd)](_0x2e51ce)['hide']();else{var _0x2d3a9b=_0x51c026[_0x123a6b(0x283)]===_0x123a6b(0x242)?_0x3c4201[_0x123a6b(0x242)]():_0x424c17(_0x51c026[_0x123a6b(0x283)]);_0x2d3a9b[_0x123a6b(0x215)]!==0x1&&(_0x2d3a9b=_0x424c17(_0x123a6b(0x27e))),_0x2d3a9b[_0x123a6b(0x21c)](_0x2e51ce);}_0x1f4494(),_0x4ff56a[_0x123a6b(0x30a)](_0x123a6b(0x2bc),function(_0x20f8d9){var _0x222ad7=_0x123a6b;!_0x45e2f4&&_0x257458(),_0x20f8d9[_0x222ad7(0x2cc)](),!_0x424c17(_0x20f8d9[_0x222ad7(0x2e1)])['is'](_0x222ad7(0x2a9))&&_0x20f8d9['preventDefault']();});(_0x3c4201['is'](':disabled')||_0x51c026[_0x123a6b(0x22a)]===!![])&&_0x5698fe();_0x2e51ce['click'](_0x5aea83),_0x957f8c[_0x123a6b(0x27a)](_0x40b355),_0x957f8c[_0x123a6b(0x30a)]('paste',function(){setTimeout(_0x40b355,0x1);}),_0x957f8c[_0x123a6b(0x32e)](function(_0x1f04e8){var _0x3c6041=_0x123a6b;_0x1f04e8[_0x3c6041(0x1dd)]==0xd&&_0x40b355();}),_0x3b9da5[_0x123a6b(0x30d)](_0x51c026[_0x123a6b(0x1e3)]),_0x3b9da5[_0x123a6b(0x30a)](_0x123a6b(0x2c8),function(_0x18746d){var _0x1a93d7=_0x123a6b;_0x18746d[_0x1a93d7(0x2cc)](),_0x18746d['preventDefault'](),_0x22ad43(_0x1a93d7(0x2ba));}),_0x378025[_0x123a6b(0x20e)](_0x123a6b(0x1ed),_0x51c026[_0x123a6b(0x2f9)]),_0x378025[_0x123a6b(0x30a)]('click.spectrum',function(_0x212516){var _0x1d1bbc=_0x123a6b;_0x212516[_0x1d1bbc(0x2cc)](),_0x212516[_0x1d1bbc(0x317)](),_0x23a904=!![],_0x412db0(),_0x2b8624&&_0x574977(!![]);}),_0x2c34ed['text'](_0x51c026['chooseText']),_0x2c34ed[_0x123a6b(0x30a)](_0x123a6b(0x2c8),function(_0x13fbf1){var _0x31ddd2=_0x123a6b;_0x13fbf1[_0x31ddd2(0x2cc)](),_0x13fbf1[_0x31ddd2(0x317)](),_0x257c79()&&(_0x574977(!![]),_0x22ad43());}),_0x5ba4a4(_0x268843,function(_0x4fd41e,_0x113e27,_0x37db7e){var _0x142ad6=_0x123a6b;_0x3b8da9=_0x4fd41e/_0x2b41fd,_0x23a904=![],_0x37db7e[_0x142ad6(0x2f6)]&&(_0x3b8da9=Math['round'](_0x3b8da9*0xa)/0xa),_0x412db0();},_0x15f8da,_0x5e8b61),_0x5ba4a4(_0x17fa6b,function(_0x6ad142,_0x439a6b){var _0x2d414e=_0x123a6b;_0x5c59b4=parseFloat(_0x439a6b/_0x1ae432),_0x23a904=![],!_0x51c026[_0x2d414e(0x272)]&&(_0x3b8da9=0x1),_0x412db0();},_0x15f8da,_0x5e8b61),_0x5ba4a4(_0xbc6c2c,function(_0x36a4a9,_0x12c698,_0x1a17d8){var _0x52f196=_0x123a6b;if(!_0x1a17d8[_0x52f196(0x2f6)])_0x584cfc=null;else{if(!_0x584cfc){var _0x5f433a=_0x1c3d47*_0x356a9b,_0x1f3fe1=_0x55e9a1-_0x335c7b*_0x55e9a1,_0x10e227=Math[_0x52f196(0x24d)](_0x36a4a9-_0x5f433a)>Math[_0x52f196(0x24d)](_0x12c698-_0x1f3fe1);_0x584cfc=_0x10e227?'x':'y';}}var _0x192df0=!_0x584cfc||_0x584cfc==='x',_0x12cc35=!_0x584cfc||_0x584cfc==='y';_0x192df0&&(_0x1c3d47=parseFloat(_0x36a4a9/_0x356a9b)),_0x12cc35&&(_0x335c7b=parseFloat((_0x55e9a1-_0x12c698)/_0x55e9a1)),_0x23a904=![],!_0x51c026[_0x52f196(0x272)]&&(_0x3b8da9=0x1),_0x412db0();},_0x15f8da,_0x5e8b61);!!_0x19a791?(_0xa72930(_0x19a791),_0x3c4342(),_0x433778=_0xc332ea||tinycolor(_0x19a791)[_0x123a6b(0x30b)],_0x1d205a(_0x19a791)):_0x3c4342();_0x2b8624&&_0x396fe6();function _0x297c82(_0xd2d66){var _0x21bfe3=_0x123a6b;return _0xd2d66['data']&&_0xd2d66[_0x21bfe3(0x32a)][_0x21bfe3(0x33b)]?(_0xa72930(_0x424c17(this)['data']('color')),_0x412db0()):(_0xa72930(_0x424c17(this)[_0x21bfe3(0x32a)](_0x21bfe3(0x1fa))),_0x412db0(),_0x574977(!![]),_0x22ad43()),![];}var _0x43af06=_0x419960?_0x123a6b(0x2f5):_0x123a6b(0x2bc);_0x596bb6[_0x123a6b(0x2c2)](_0x123a6b(0x305),_0x43af06,_0x297c82),_0x526bc2[_0x123a6b(0x2c2)](_0x123a6b(0x2d5),_0x43af06,{'ignore':!![]},_0x297c82);}function _0x1f4494(){var _0x77711f=_0xb7e7e4;if(_0x57e6dd&&_0x111ba9['localStorage']){try{var _0x2f0ce3=_0x111ba9[_0x77711f(0x21f)][_0x57e6dd][_0x77711f(0x261)](',#');_0x2f0ce3[_0x77711f(0x215)]>0x1&&(delete _0x111ba9[_0x77711f(0x21f)][_0x57e6dd],_0x424c17[_0x77711f(0x2f1)](_0x2f0ce3,function(_0x2f1161,_0x257883){_0x1d205a(_0x257883);}));}catch(_0x51e196){}try{_0x255928=_0x111ba9[_0x77711f(0x21f)][_0x57e6dd][_0x77711f(0x261)](';');}catch(_0x355216){}}}function _0x1d205a(_0x4a0b02){var _0x2504e4=_0xb7e7e4;if(_0x2e9c57){var _0x16b0ac=tinycolor(_0x4a0b02)[_0x2504e4(0x2f2)]();if(!_0x128205[_0x16b0ac]&&_0x424c17[_0x2504e4(0x22d)](_0x16b0ac,_0x255928)===-0x1){_0x255928[_0x2504e4(0x26e)](_0x16b0ac);while(_0x255928[_0x2504e4(0x215)]>_0x47a1a2){_0x255928[_0x2504e4(0x239)]();}}if(_0x57e6dd&&_0x111ba9[_0x2504e4(0x21f)])try{_0x111ba9['localStorage'][_0x57e6dd]=_0x255928[_0x2504e4(0x22f)](';');}catch(_0x252325){}}}function _0x5de1c9(){var _0x1666ec=_0xb7e7e4,_0x17a1ca=[];if(_0x51c026[_0x1666ec(0x358)])for(i=0x0;i<_0x255928[_0x1666ec(0x215)];i++){var _0x167135=tinycolor(_0x255928[i])[_0x1666ec(0x2f2)]();!_0x128205[_0x167135]&&_0x17a1ca[_0x1666ec(0x26e)](_0x255928[i]);}return _0x17a1ca[_0x1666ec(0x268)]()[_0x1666ec(0x275)](0x0,_0x51c026[_0x1666ec(0x2bb)]);}function _0x176e91(){var _0x50caab=_0xb7e7e4,_0x770c26=_0x1cb83b(),_0x595d2e=_0x424c17[_0x50caab(0x227)](_0x532570,function(_0x4e04c9,_0x19064b){var _0x39484d=_0x50caab;return _0xdd38b(_0x4e04c9,_0x770c26,_0x39484d(0x2c3)+_0x19064b,_0x51c026[_0x39484d(0x1e6)]);});_0x1f4494(),_0x255928&&_0x595d2e[_0x50caab(0x26e)](_0xdd38b(_0x5de1c9(),_0x770c26,_0x50caab(0x24c),_0x51c026[_0x50caab(0x1e6)])),_0x596bb6['html'](_0x595d2e['join'](''));}function _0x3affcf(){var _0x11c129=_0xb7e7e4;if(_0x51c026['showInitial']){var _0x41c7e2=_0x406ad6,_0x3a13f5=_0x1cb83b();_0x526bc2[_0x11c129(0x25e)](_0xdd38b([_0x41c7e2,_0x3a13f5],_0x3a13f5,_0x11c129(0x2a6),_0x51c026[_0x11c129(0x1e6)]));}}function _0x15f8da(){var _0x2f6e44=_0xb7e7e4;(_0x55e9a1<=0x0||_0x356a9b<=0x0||_0x1ae432<=0x0)&&_0x3e76ba(),_0x2e51ce[_0x2f6e44(0x336)](_0x1b89a5),_0x584cfc=null,_0x3c4201['trigger'](_0x2f6e44(0x32d),[_0x1cb83b()]);}function _0x5e8b61(){var _0x12b1ad=_0xb7e7e4;_0x2e51ce[_0x12b1ad(0x352)](_0x1b89a5),_0x3c4201[_0x12b1ad(0x1f4)](_0x12b1ad(0x201),[_0x1cb83b()]);}function _0x40b355(){var _0x4e3f50=_0xb7e7e4,_0x3648fa=_0x957f8c[_0x4e3f50(0x1f8)]();if((_0x3648fa===null||_0x3648fa==='')&&_0x5be410)_0xa72930(null),_0x574977(!![]);else{var _0x44a736=tinycolor(_0x3648fa);_0x44a736['ok']?(_0xa72930(_0x44a736),_0x574977(!![])):_0x957f8c[_0x4e3f50(0x336)](_0x4e3f50(0x2c6));}}function _0x257458(){_0x519750?_0x22ad43():_0x396fe6();}function _0x396fe6(){var _0x3e14ac=_0xb7e7e4,_0x25a78a=_0x424c17[_0x3e14ac(0x256)](_0x3e14ac(0x306));if(_0x519750){_0x3e76ba();return;}_0x3c4201[_0x3e14ac(0x1f4)](_0x25a78a,[_0x1cb83b()]);if(_0x2d83bc['beforeShow'](_0x1cb83b())===![]||_0x25a78a[_0x3e14ac(0x214)]())return;_0x3cd7ed(),_0x519750=!![],_0x424c17(_0x58046f)[_0x3e14ac(0x30a)](_0x3e14ac(0x2c8),_0x22ad43),_0x424c17(_0x111ba9)[_0x3e14ac(0x30a)]('resize.spectrum',_0x2ca645),_0x11bff7[_0x3e14ac(0x336)](_0x3e14ac(0x209)),_0x2e51ce[_0x3e14ac(0x352)](_0x3e14ac(0x205)),_0x3e76ba(),_0x3c4342(),_0x406ad6=_0x1cb83b(),_0x3affcf(),_0x2d83bc[_0x3e14ac(0x2cd)](_0x406ad6),_0x3c4201['trigger'](_0x3e14ac(0x200),[_0x406ad6]);}function _0x22ad43(_0x4b5704){var _0x5b1628=_0xb7e7e4;if(_0x4b5704&&_0x4b5704[_0x5b1628(0x24b)]==_0x5b1628(0x1fb)&&_0x4b5704[_0x5b1628(0x2e0)]==0x2)return;if(!_0x519750||_0x2b8624)return;_0x519750=![],_0x424c17(_0x58046f)['unbind'](_0x5b1628(0x2c8),_0x22ad43),_0x424c17(_0x111ba9)[_0x5b1628(0x23d)]('resize.spectrum',_0x2ca645),_0x11bff7[_0x5b1628(0x352)](_0x5b1628(0x209)),_0x2e51ce[_0x5b1628(0x336)]('sp-hidden');var _0x1eecbf=!tinycolor[_0x5b1628(0x319)](_0x1cb83b(),_0x406ad6);_0x1eecbf&&(_0x398d7a&&_0x4b5704!==_0x5b1628(0x2ba)?_0x574977(!![]):_0x5c6ea8()),_0x2d83bc[_0x5b1628(0x2fb)](_0x1cb83b()),_0x3c4201['trigger'](_0x5b1628(0x2e7),[_0x1cb83b()]);}function _0x5c6ea8(){_0xa72930(_0x406ad6,!![]);}function _0xa72930(_0x4b55eb,_0x3f8fdd){var _0x5b54d1=_0xb7e7e4;if(tinycolor[_0x5b54d1(0x319)](_0x4b55eb,_0x1cb83b())){_0x3c4342();return;}var _0x5b3f89,_0x357847;!_0x4b55eb&&_0x5be410?_0x23a904=!![]:(_0x23a904=![],_0x5b3f89=tinycolor(_0x4b55eb),_0x357847=_0x5b3f89[_0x5b54d1(0x297)](),_0x5c59b4=_0x357847['h']%0x168/0x168,_0x1c3d47=_0x357847['s'],_0x335c7b=_0x357847['v'],_0x3b8da9=_0x357847['a']),_0x3c4342(),_0x5b3f89&&_0x5b3f89['ok']&&!_0x3f8fdd&&(_0x433778=_0xc332ea||_0x5b3f89[_0x5b54d1(0x30b)]);}function _0x1cb83b(_0x5004ea){var _0x278858=_0xb7e7e4;_0x5004ea=_0x5004ea||{};if(_0x5be410&&_0x23a904)return null;return tinycolor['fromRatio']({'h':_0x5c59b4,'s':_0x1c3d47,'v':_0x335c7b,'a':Math[_0x278858(0x34b)](_0x3b8da9*0x64)/0x64},{'format':_0x5004ea[_0x278858(0x30b)]||_0x433778});}function _0x257c79(){var _0x18c883=_0xb7e7e4;return!_0x957f8c[_0x18c883(0x2ad)](_0x18c883(0x2c6));}function _0x412db0(){var _0x3af27d=_0xb7e7e4;_0x3c4342(),_0x2d83bc[_0x3af27d(0x33e)](_0x1cb83b()),_0x3c4201[_0x3af27d(0x1f4)](_0x3af27d(0x2ee),[_0x1cb83b()]);}function _0x3c4342(){var _0x4dfb5f=_0xb7e7e4;_0x957f8c[_0x4dfb5f(0x352)](_0x4dfb5f(0x2c6)),_0x4e0c49();var _0x35b871=tinycolor[_0x4dfb5f(0x2af)]({'h':_0x5c59b4,'s':0x1,'v':0x1});_0xbc6c2c['css']('background-color',_0x35b871[_0x4dfb5f(0x254)]());var _0x112357=_0x433778;_0x3b8da9<0x1&&!(_0x3b8da9===0x0&&_0x112357===_0x4dfb5f(0x2f0))&&((_0x112357==='hex'||_0x112357===_0x4dfb5f(0x329)||_0x112357===_0x4dfb5f(0x31f)||_0x112357==='name')&&(_0x112357=_0x4dfb5f(0x2a2)));var _0x54ef86=_0x1cb83b({'format':_0x112357}),_0x4a29e0='';_0x4229d0[_0x4dfb5f(0x352)](_0x4dfb5f(0x212)),_0x4229d0[_0x4dfb5f(0x248)](_0x4dfb5f(0x259),_0x4dfb5f(0x1f7));if(!_0x54ef86&&_0x5be410)_0x4229d0[_0x4dfb5f(0x336)](_0x4dfb5f(0x212));else{var _0xf344c3=_0x54ef86[_0x4dfb5f(0x254)](),_0x9ee074=_0x54ef86[_0x4dfb5f(0x2f2)]();_0x2490bd||_0x54ef86[_0x4dfb5f(0x207)]===0x1?_0x4229d0[_0x4dfb5f(0x248)]('background-color',_0x9ee074):(_0x4229d0[_0x4dfb5f(0x248)](_0x4dfb5f(0x259),_0x4dfb5f(0x1f7)),_0x4229d0['css'](_0x4dfb5f(0x333),_0x54ef86[_0x4dfb5f(0x237)]()));if(_0x51c026[_0x4dfb5f(0x272)]){var _0x20179f=_0x54ef86[_0x4dfb5f(0x330)]();_0x20179f['a']=0x0;var _0x36b2fc=tinycolor(_0x20179f)[_0x4dfb5f(0x2f2)](),_0xf4f081='linear-gradient(left,\x20'+_0x36b2fc+',\x20'+_0xf344c3+')';_0x419960?_0x3a3527[_0x4dfb5f(0x248)](_0x4dfb5f(0x333),tinycolor(_0x36b2fc)[_0x4dfb5f(0x237)]({'gradientType':0x1},_0xf344c3)):(_0x3a3527['css'](_0x4dfb5f(0x2f4),_0x4dfb5f(0x2ca)+_0xf4f081),_0x3a3527[_0x4dfb5f(0x248)](_0x4dfb5f(0x2f4),_0x4dfb5f(0x355)+_0xf4f081),_0x3a3527[_0x4dfb5f(0x248)](_0x4dfb5f(0x2f4),_0x4dfb5f(0x216)+_0xf4f081),_0x3a3527['css'](_0x4dfb5f(0x2f4),_0x4dfb5f(0x2b8)+_0x36b2fc+',\x20'+_0xf344c3+')'));}_0x4a29e0=_0x54ef86['toString'](_0x112357);}_0x51c026['showInput']&&_0x957f8c[_0x4dfb5f(0x1f8)](_0x4a29e0),_0x51c026[_0x4dfb5f(0x358)]&&_0x176e91(),_0x3affcf();}function _0x4e0c49(){var _0xb6cd79=_0xb7e7e4,_0x229778=_0x1c3d47,_0x4e1db3=_0x335c7b;if(_0x5be410&&_0x23a904)_0x4ed671[_0xb6cd79(0x2fb)](),_0x59805a[_0xb6cd79(0x2fb)](),_0x518826[_0xb6cd79(0x2fb)]();else{_0x4ed671[_0xb6cd79(0x2cd)](),_0x59805a['show'](),_0x518826[_0xb6cd79(0x2cd)]();var _0x141698=_0x229778*_0x356a9b,_0x440272=_0x55e9a1-_0x4e1db3*_0x55e9a1;_0x141698=Math[_0xb6cd79(0x244)](-_0x3555ab,Math[_0xb6cd79(0x31a)](_0x356a9b-_0x3555ab,_0x141698-_0x3555ab)),_0x440272=Math[_0xb6cd79(0x244)](-_0x3555ab,Math[_0xb6cd79(0x31a)](_0x55e9a1-_0x3555ab,_0x440272-_0x3555ab)),_0x518826[_0xb6cd79(0x248)]({'top':_0x440272+'px','left':_0x141698+'px'});var _0x3124a1=_0x3b8da9*_0x2b41fd;_0x4ed671[_0xb6cd79(0x248)]({'left':_0x3124a1-_0x5c5488/0x2+'px'});var _0x134c5f=_0x5c59b4*_0x1ae432;_0x59805a[_0xb6cd79(0x248)]({'top':_0x134c5f-_0x247dc4+'px'});}}function _0x574977(_0x2d50ee){var _0x387443=_0xb7e7e4,_0x4eeaf5=_0x1cb83b(),_0x205a55='',_0x2d1143=!tinycolor[_0x387443(0x319)](_0x4eeaf5,_0x406ad6);_0x4eeaf5&&(_0x205a55=_0x4eeaf5['toString'](_0x433778),_0x1d205a(_0x4eeaf5)),_0x4ab245&&_0x3c4201['val'](_0x205a55),_0x406ad6=_0x4eeaf5,_0x2d50ee&&_0x2d1143&&(_0x2d83bc['change'](_0x4eeaf5),_0x3c4201[_0x387443(0x1f4)]('change',[_0x4eeaf5]));}function _0x3e76ba(){var _0x1e9ef2=_0xb7e7e4;_0x356a9b=_0xbc6c2c['width'](),_0x55e9a1=_0xbc6c2c['height'](),_0x3555ab=_0x518826[_0x1e9ef2(0x2e2)](),_0x2cfa3a=_0x17fa6b['width'](),_0x1ae432=_0x17fa6b['height'](),_0x247dc4=_0x59805a[_0x1e9ef2(0x2e2)](),_0x2b41fd=_0x268843['width'](),_0x5c5488=_0x4ed671['width'](),!_0x2b8624&&(_0x2e51ce[_0x1e9ef2(0x248)](_0x1e9ef2(0x343),_0x1e9ef2(0x29e)),_0x2e51ce[_0x1e9ef2(0x291)](_0x49efec(_0x2e51ce,_0x4ff56a))),_0x4e0c49(),_0x51c026[_0x1e9ef2(0x358)]&&_0x176e91(),_0x3c4201['trigger']('reflow.spectrum');}function _0x30cac8(){var _0x50afcf=_0xb7e7e4;_0x3c4201[_0x50afcf(0x2cd)](),_0x4ff56a[_0x50afcf(0x23d)]('click.spectrum\x20touchstart.spectrum'),_0x2e51ce[_0x50afcf(0x2ec)](),_0x11bff7['remove'](),_0xf1a3b1[_0x22a00f['id']]=null;}function _0xcc6c37(_0x3f9aea,_0x2f8698){if(_0x3f9aea===_0x84d953)return _0x424c17['extend']({},_0x51c026);if(_0x2f8698===_0x84d953)return _0x51c026[_0x3f9aea];_0x51c026[_0x3f9aea]=_0x2f8698,_0x420fa7();}function _0x38e178(){var _0x438b1a=_0xb7e7e4;_0x45e2f4=![],_0x3c4201[_0x438b1a(0x20e)](_0x438b1a(0x22a),![]),_0x4ff56a[_0x438b1a(0x352)](_0x438b1a(0x1ea));}function _0x5698fe(){var _0x33dc5d=_0xb7e7e4;_0x22ad43(),_0x45e2f4=!![],_0x3c4201[_0x33dc5d(0x20e)](_0x33dc5d(0x22a),!![]),_0x4ff56a['addClass'](_0x33dc5d(0x1ea));}_0x4c3a06();var _0x22a00f={'show':_0x396fe6,'hide':_0x22ad43,'toggle':_0x257458,'reflow':_0x3e76ba,'option':_0xcc6c37,'enable':_0x38e178,'disable':_0x5698fe,'set':function(_0x48e9f9){_0xa72930(_0x48e9f9),_0x574977();},'get':_0x1cb83b,'destroy':_0x30cac8,'container':_0x2e51ce};return _0x22a00f['id']=_0xf1a3b1['push'](_0x22a00f)-0x1,_0x22a00f;}function _0x49efec(_0x597bf7,_0x220b34){var _0x50f892=_0x45da64,_0x26420e=0x0,_0x397185=_0x597bf7[_0x50f892(0x1ef)](),_0x16f07f=_0x597bf7['outerHeight'](),_0x4b2f30=_0x220b34[_0x50f892(0x2fe)](),_0x43892f=_0x597bf7[0x0]['ownerDocument'],_0x146c81=_0x43892f[_0x50f892(0x23c)],_0x41c45d=_0x146c81[_0x50f892(0x238)]+_0x424c17(_0x43892f)[_0x50f892(0x2d0)](),_0x539d2d=_0x146c81['clientHeight']+_0x424c17(_0x43892f)[_0x50f892(0x2ab)](),_0x42daca=_0x220b34[_0x50f892(0x291)]();return _0x42daca[_0x50f892(0x24e)]+=_0x4b2f30,_0x42daca['left']-=Math[_0x50f892(0x31a)](_0x42daca[_0x50f892(0x2b6)],_0x42daca[_0x50f892(0x2b6)]+_0x397185>_0x41c45d&&_0x41c45d>_0x397185?Math[_0x50f892(0x24d)](_0x42daca[_0x50f892(0x2b6)]+_0x397185-_0x41c45d):0x0),_0x42daca[_0x50f892(0x24e)]-=Math['min'](_0x42daca[_0x50f892(0x24e)],_0x42daca['top']+_0x16f07f>_0x539d2d&&_0x539d2d>_0x16f07f?Math[_0x50f892(0x24d)](_0x16f07f+_0x4b2f30-_0x26420e):_0x26420e),_0x42daca;}function _0x28cc1c(){}function _0x5aea83(_0x261956){_0x261956['stopPropagation']();}function _0x15cfbc(_0x4d48fa,_0x1bcd00){var _0xfd24d7=_0x45da64,_0x27b7e3=Array[_0xfd24d7(0x2da)]['slice'],_0x54026a=_0x27b7e3[_0xfd24d7(0x287)](arguments,0x2);return function(){var _0xbdf937=_0xfd24d7;return _0x4d48fa[_0xbdf937(0x345)](_0x1bcd00,_0x54026a[_0xbdf937(0x289)](_0x27b7e3[_0xbdf937(0x287)](arguments)));};}function _0x5ba4a4(_0xf85f07,_0x1aae08,_0x522c43,_0x2483dd){var _0x4d3d50=_0x45da64;_0x1aae08=_0x1aae08||function(){},_0x522c43=_0x522c43||function(){},_0x2483dd=_0x2483dd||function(){};var _0x45f9a0=_0xf85f07[_0x4d3d50(0x31d)]||document,_0x14067d=![],_0x7be55a={},_0x39ba0c=0x0,_0x15ff25=0x0,_0x5b0614='ontouchstart'in _0x111ba9,_0x28276b={};_0x28276b[_0x4d3d50(0x27d)]=_0x47311d,_0x28276b[_0x4d3d50(0x26a)]=_0x47311d,_0x28276b[_0x4d3d50(0x348)]=_0x496760,_0x28276b[_0x4d3d50(0x335)]=_0x498ba1;function _0x47311d(_0x17e65b){var _0x37dcb7=_0x4d3d50;_0x17e65b[_0x37dcb7(0x2cc)]&&_0x17e65b[_0x37dcb7(0x2cc)](),_0x17e65b['preventDefault']&&_0x17e65b[_0x37dcb7(0x317)](),_0x17e65b[_0x37dcb7(0x33c)]=![];}function _0x496760(_0x52179d){var _0xdf143a=_0x4d3d50;if(_0x14067d){if(_0x419960&&document['documentMode']<0x9&&!_0x52179d[_0xdf143a(0x2e0)])return _0x498ba1();var _0x5110d1=_0x52179d[_0xdf143a(0x22e)][_0xdf143a(0x2ae)],_0x43978d=_0x5110d1?_0x5110d1[0x0][_0xdf143a(0x1e7)]:_0x52179d[_0xdf143a(0x1e7)],_0x351fc3=_0x5110d1?_0x5110d1[0x0][_0xdf143a(0x265)]:_0x52179d[_0xdf143a(0x265)],_0x2eb07c=Math[_0xdf143a(0x244)](0x0,Math[_0xdf143a(0x31a)](_0x43978d-_0x7be55a[_0xdf143a(0x2b6)],_0x15ff25)),_0x3dd66f=Math[_0xdf143a(0x244)](0x0,Math[_0xdf143a(0x31a)](_0x351fc3-_0x7be55a[_0xdf143a(0x24e)],_0x39ba0c));_0x5b0614&&_0x47311d(_0x52179d),_0x1aae08['apply'](_0xf85f07,[_0x2eb07c,_0x3dd66f,_0x52179d]);}}function _0x16a41b(_0x56e4cf){var _0x2da269=_0x4d3d50,_0x4e1efa=_0x56e4cf[_0x2da269(0x2f8)]?_0x56e4cf[_0x2da269(0x2f8)]==0x3:_0x56e4cf[_0x2da269(0x2e0)]==0x2,_0x3502fd=_0x56e4cf['originalEvent']['touches'];!_0x4e1efa&&!_0x14067d&&(_0x522c43[_0x2da269(0x345)](_0xf85f07,arguments)!==![]&&(_0x14067d=!![],_0x39ba0c=_0x424c17(_0xf85f07)[_0x2da269(0x2e2)](),_0x15ff25=_0x424c17(_0xf85f07)[_0x2da269(0x27c)](),_0x7be55a=_0x424c17(_0xf85f07)[_0x2da269(0x291)](),_0x424c17(_0x45f9a0)[_0x2da269(0x30a)](_0x28276b),_0x424c17(_0x45f9a0['body'])[_0x2da269(0x336)](_0x2da269(0x327)),!_0x5b0614&&_0x496760(_0x56e4cf),_0x47311d(_0x56e4cf)));}function _0x498ba1(){var _0x2cb8a9=_0x4d3d50;_0x14067d&&(_0x424c17(_0x45f9a0)['unbind'](_0x28276b),_0x424c17(_0x45f9a0[_0x2cb8a9(0x27e)])['removeClass'](_0x2cb8a9(0x327)),_0x2483dd[_0x2cb8a9(0x345)](_0xf85f07,arguments)),_0x14067d=![];}_0x424c17(_0xf85f07)['bind'](_0x4d3d50(0x2bd),_0x16a41b);}function _0x1fd73d(_0x243779,_0x5b06b1,_0x9ba43c){var _0x5b09d6;return function(){var _0x34c10c=this,_0x25157c=arguments,_0x26371f=function(){var _0x27e68c=a34_0x1f4a;_0x5b09d6=null,_0x243779[_0x27e68c(0x345)](_0x34c10c,_0x25157c);};if(_0x9ba43c)clearTimeout(_0x5b09d6);if(_0x9ba43c||!_0x5b09d6)_0x5b09d6=setTimeout(_0x26371f,_0x5b06b1);};}function _0x360f66(){var _0x1dbe2a=_0x45da64;if(_0x111ba9[_0x1dbe2a(0x20b)]){if(Function['prototype'][_0x1dbe2a(0x30a)])_0x360f66=Function['prototype']['bind'][_0x1dbe2a(0x287)](console[_0x1dbe2a(0x241)],console);else _0x360f66=function(){var _0x5580f0=_0x1dbe2a;Function[_0x5580f0(0x2da)][_0x5580f0(0x345)]['call'](console[_0x5580f0(0x241)],console,arguments);};_0x360f66[_0x1dbe2a(0x345)](this,arguments);}}var _0x4102c2=_0x45da64(0x1ff);_0x424c17['fn'][_0x45da64(0x2a4)]=function(_0xada2e,_0x21a8a3){var _0x1cc66d=_0x45da64;if(typeof _0xada2e=='string'){var _0x127b2a=this,_0x35f4de=Array[_0x1cc66d(0x2da)][_0x1cc66d(0x275)][_0x1cc66d(0x287)](arguments,0x1);return this['each'](function(){var _0x19a50a=_0x1cc66d,_0x528604=_0xf1a3b1[_0x424c17(this)[_0x19a50a(0x32a)](_0x4102c2)];if(_0x528604){var _0x3f4258=_0x528604[_0xada2e];if(!_0x3f4258)throw new Error('Spectrum:\x20no\x20such\x20method:\x20\x27'+_0xada2e+'\x27');if(_0xada2e==_0x19a50a(0x32f))_0x127b2a=_0x528604[_0x19a50a(0x32f)]();else{if(_0xada2e==_0x19a50a(0x2d2))_0x127b2a=_0x528604['container'];else{if(_0xada2e==_0x19a50a(0x273))_0x127b2a=_0x528604[_0x19a50a(0x273)]['apply'](_0x528604,_0x35f4de);else _0xada2e=='destroy'?(_0x528604[_0x19a50a(0x2b1)](),_0x424c17(this)[_0x19a50a(0x2e9)](_0x4102c2)):_0x3f4258[_0x19a50a(0x345)](_0x528604,_0x35f4de);}}}}),_0x127b2a;}return this['spectrum'](_0x1cc66d(0x2b1))[_0x1cc66d(0x2f1)](function(){var _0xd84f3f=_0x1cc66d,_0x3cb02a=_0x424c17[_0xd84f3f(0x34c)]({},_0xada2e,_0x424c17(this)[_0xd84f3f(0x32a)]()),_0x21732a=_0x3a6883(this,_0x3cb02a);_0x424c17(this)['data'](_0x4102c2,_0x21732a['id']);});},_0x424c17['fn']['spectrum'][_0x45da64(0x2df)]=!![],_0x424c17['fn'][_0x45da64(0x2a4)][_0x45da64(0x1ee)]={},_0x424c17['fn'][_0x45da64(0x2a4)]['draggable']=_0x5ba4a4,_0x424c17['fn'][_0x45da64(0x2a4)][_0x45da64(0x211)]=_0x1b9849,_0x424c17[_0x45da64(0x2a4)]={},_0x424c17[_0x45da64(0x2a4)]['localization']={},_0x424c17[_0x45da64(0x2a4)][_0x45da64(0x2ef)]={},_0x424c17['fn'][_0x45da64(0x2a4)]['processNativeColorInputs']=function(){var _0x235634=_0x45da64;!_0x5cbc59&&_0x424c17(_0x235634(0x222))[_0x235634(0x2a4)]({'preferredFormat':_0x235634(0x31f)});},(function(){var _0x25bed7=_0x45da64,_0x4808a1=/^[\s,#]+/,_0x5d2815=/\s+$/,_0x565787=0x0,_0x29c01b=Math,_0x3b612d=_0x29c01b['round'],_0x420c68=_0x29c01b['min'],_0x21c432=_0x29c01b[_0x25bed7(0x244)],_0x52fb43=_0x29c01b[_0x25bed7(0x220)];function _0x2e6007(_0x53b5e5,_0x5c11ef){var _0x333870=_0x25bed7;_0x53b5e5=_0x53b5e5?_0x53b5e5:'',_0x5c11ef=_0x5c11ef||{};if(typeof _0x53b5e5==_0x333870(0x247)&&_0x53b5e5[_0x333870(0x28a)](_0x333870(0x2c4)))return _0x53b5e5;var _0x14e359=_0x55c196(_0x53b5e5),_0x4a3064=_0x14e359['r'],_0x1fd961=_0x14e359['g'],_0x5e98d7=_0x14e359['b'],_0x4f821c=_0x14e359['a'],_0x1fe097=_0x3b612d(0x64*_0x4f821c)/0x64,_0x384fef=_0x5c11ef[_0x333870(0x30b)]||_0x14e359[_0x333870(0x30b)];return _0x4a3064<0x1&&(_0x4a3064=_0x3b612d(_0x4a3064)),_0x1fd961<0x1&&(_0x1fd961=_0x3b612d(_0x1fd961)),_0x5e98d7<0x1&&(_0x5e98d7=_0x3b612d(_0x5e98d7)),{'ok':_0x14e359['ok'],'format':_0x384fef,'_tc_id':_0x565787++,'alpha':_0x4f821c,'getAlpha':function(){return _0x4f821c;},'setAlpha':function(_0x540ecb){_0x4f821c=_0x28f85a(_0x540ecb),_0x1fe097=_0x3b612d(0x64*_0x4f821c)/0x64;},'toHsv':function(){var _0x366661=_0x303bf8(_0x4a3064,_0x1fd961,_0x5e98d7);return{'h':_0x366661['h']*0x168,'s':_0x366661['s'],'v':_0x366661['v'],'a':_0x4f821c};},'toHsvString':function(){var _0x4b05b2=_0x333870,_0x5f28d1=_0x303bf8(_0x4a3064,_0x1fd961,_0x5e98d7),_0x6af780=_0x3b612d(_0x5f28d1['h']*0x168),_0x5bae30=_0x3b612d(_0x5f28d1['s']*0x64),_0x3f74fb=_0x3b612d(_0x5f28d1['v']*0x64);return _0x4f821c==0x1?_0x4b05b2(0x204)+_0x6af780+',\x20'+_0x5bae30+'%,\x20'+_0x3f74fb+'%)':_0x4b05b2(0x2c9)+_0x6af780+',\x20'+_0x5bae30+'%,\x20'+_0x3f74fb+'%,\x20'+_0x1fe097+')';},'toHsl':function(){var _0x48f17f=_0x1dad13(_0x4a3064,_0x1fd961,_0x5e98d7);return{'h':_0x48f17f['h']*0x168,'s':_0x48f17f['s'],'l':_0x48f17f['l'],'a':_0x4f821c};},'toHslString':function(){var _0x375c30=_0x333870,_0x1b640f=_0x1dad13(_0x4a3064,_0x1fd961,_0x5e98d7),_0x224a55=_0x3b612d(_0x1b640f['h']*0x168),_0xaa480c=_0x3b612d(_0x1b640f['s']*0x64),_0x36b8fb=_0x3b612d(_0x1b640f['l']*0x64);return _0x4f821c==0x1?'hsl('+_0x224a55+',\x20'+_0xaa480c+'%,\x20'+_0x36b8fb+'%)':'hsla('+_0x224a55+',\x20'+_0xaa480c+'%,\x20'+_0x36b8fb+_0x375c30(0x347)+_0x1fe097+')';},'toHex':function(_0x48b36d){return _0x3e6c86(_0x4a3064,_0x1fd961,_0x5e98d7,_0x48b36d);},'toHexString':function(_0x36ef9d){return'#'+this['toHex'](_0x36ef9d);},'toHex8':function(){return _0x1b766d(_0x4a3064,_0x1fd961,_0x5e98d7,_0x4f821c);},'toHex8String':function(){var _0x5323fb=_0x333870;return'#'+this[_0x5323fb(0x2ce)]();},'toRgb':function(){return{'r':_0x3b612d(_0x4a3064),'g':_0x3b612d(_0x1fd961),'b':_0x3b612d(_0x5e98d7),'a':_0x4f821c};},'toRgbString':function(){var _0x144a25=_0x333870;return _0x4f821c==0x1?_0x144a25(0x270)+_0x3b612d(_0x4a3064)+',\x20'+_0x3b612d(_0x1fd961)+',\x20'+_0x3b612d(_0x5e98d7)+')':'rgba('+_0x3b612d(_0x4a3064)+',\x20'+_0x3b612d(_0x1fd961)+',\x20'+_0x3b612d(_0x5e98d7)+',\x20'+_0x1fe097+')';},'toPercentageRgb':function(){return{'r':_0x3b612d(_0x582441(_0x4a3064,0xff)*0x64)+'%','g':_0x3b612d(_0x582441(_0x1fd961,0xff)*0x64)+'%','b':_0x3b612d(_0x582441(_0x5e98d7,0xff)*0x64)+'%','a':_0x4f821c};},'toPercentageRgbString':function(){var _0x485ae7=_0x333870;return _0x4f821c==0x1?_0x485ae7(0x270)+_0x3b612d(_0x582441(_0x4a3064,0xff)*0x64)+_0x485ae7(0x347)+_0x3b612d(_0x582441(_0x1fd961,0xff)*0x64)+_0x485ae7(0x347)+_0x3b612d(_0x582441(_0x5e98d7,0xff)*0x64)+'%)':_0x485ae7(0x1f1)+_0x3b612d(_0x582441(_0x4a3064,0xff)*0x64)+_0x485ae7(0x347)+_0x3b612d(_0x582441(_0x1fd961,0xff)*0x64)+'%,\x20'+_0x3b612d(_0x582441(_0x5e98d7,0xff)*0x64)+_0x485ae7(0x347)+_0x1fe097+')';},'toName':function(){var _0x41f202=_0x333870;if(_0x4f821c===0x0)return _0x41f202(0x1f7);return _0x3a78e0[_0x3e6c86(_0x4a3064,_0x1fd961,_0x5e98d7,!![])]||![];},'toFilter':function(_0x32df36){var _0x48c998=_0x333870,_0x492268='#'+_0x1b766d(_0x4a3064,_0x1fd961,_0x5e98d7,_0x4f821c),_0x129fba=_0x492268,_0x8dfd68=_0x5c11ef&&_0x5c11ef[_0x48c998(0x338)]?_0x48c998(0x32c):'';if(_0x32df36){var _0xaebb6c=_0x2e6007(_0x32df36);_0x129fba=_0xaebb6c['toHex8String']();}return _0x48c998(0x281)+_0x8dfd68+_0x48c998(0x1eb)+_0x492268+',endColorstr='+_0x129fba+')';},'toString':function(_0x5630bc){var _0x131b6a=_0x333870,_0x503bbc=!!_0x5630bc;_0x5630bc=_0x5630bc||this['format'];var _0x3d0961=![],_0x3d61d6=!_0x503bbc&&_0x4f821c<0x1&&_0x4f821c>0x0,_0x22ad72=_0x3d61d6&&(_0x5630bc===_0x131b6a(0x298)||_0x5630bc===_0x131b6a(0x31f)||_0x5630bc==='hex3'||_0x5630bc===_0x131b6a(0x2f0));_0x5630bc===_0x131b6a(0x2a2)&&(_0x3d0961=this[_0x131b6a(0x2f2)]());_0x5630bc===_0x131b6a(0x295)&&(_0x3d0961=this[_0x131b6a(0x282)]());(_0x5630bc===_0x131b6a(0x298)||_0x5630bc===_0x131b6a(0x31f))&&(_0x3d0961=this['toHexString']());_0x5630bc===_0x131b6a(0x329)&&(_0x3d0961=this[_0x131b6a(0x254)](!![]));_0x5630bc===_0x131b6a(0x344)&&(_0x3d0961=this[_0x131b6a(0x2aa)]());_0x5630bc===_0x131b6a(0x2f0)&&(_0x3d0961=this[_0x131b6a(0x271)]());_0x5630bc===_0x131b6a(0x301)&&(_0x3d0961=this[_0x131b6a(0x2d4)]());_0x5630bc==='hsv'&&(_0x3d0961=this[_0x131b6a(0x29b)]());if(_0x22ad72)return this[_0x131b6a(0x2f2)]();return _0x3d0961||this[_0x131b6a(0x254)]();}};}_0x2e6007['fromRatio']=function(_0xc1070a,_0x454253){var _0x251b17=_0x25bed7;if(typeof _0xc1070a==_0x251b17(0x247)){var _0x107609={};for(var _0x2d6d44 in _0xc1070a){_0xc1070a['hasOwnProperty'](_0x2d6d44)&&(_0x2d6d44==='a'?_0x107609[_0x2d6d44]=_0xc1070a[_0x2d6d44]:_0x107609[_0x2d6d44]=_0x4a3fdf(_0xc1070a[_0x2d6d44]));}_0xc1070a=_0x107609;}return _0x2e6007(_0xc1070a,_0x454253);};function _0x55c196(_0x6fe1c8){var _0x5389c4=_0x25bed7,_0xe71e35={'r':0x0,'g':0x0,'b':0x0},_0x3c1f01=0x1,_0x487b32=![],_0x1b9396=![];typeof _0x6fe1c8==_0x5389c4(0x2f3)&&(_0x6fe1c8=_0x4f0ebd(_0x6fe1c8));if(typeof _0x6fe1c8==_0x5389c4(0x247)){if(_0x6fe1c8[_0x5389c4(0x28a)]('r')&&_0x6fe1c8[_0x5389c4(0x28a)]('g')&&_0x6fe1c8['hasOwnProperty']('b'))_0xe71e35=_0x35b993(_0x6fe1c8['r'],_0x6fe1c8['g'],_0x6fe1c8['b']),_0x487b32=!![],_0x1b9396=String(_0x6fe1c8['r'])['substr'](-0x1)==='%'?_0x5389c4(0x295):'rgb';else{if(_0x6fe1c8['hasOwnProperty']('h')&&_0x6fe1c8[_0x5389c4(0x28a)]('s')&&_0x6fe1c8['hasOwnProperty']('v'))_0x6fe1c8['s']=_0x4a3fdf(_0x6fe1c8['s']),_0x6fe1c8['v']=_0x4a3fdf(_0x6fe1c8['v']),_0xe71e35=_0x4fa565(_0x6fe1c8['h'],_0x6fe1c8['s'],_0x6fe1c8['v']),_0x487b32=!![],_0x1b9396='hsv';else _0x6fe1c8[_0x5389c4(0x28a)]('h')&&_0x6fe1c8[_0x5389c4(0x28a)]('s')&&_0x6fe1c8[_0x5389c4(0x28a)]('l')&&(_0x6fe1c8['s']=_0x4a3fdf(_0x6fe1c8['s']),_0x6fe1c8['l']=_0x4a3fdf(_0x6fe1c8['l']),_0xe71e35=_0x3098cc(_0x6fe1c8['h'],_0x6fe1c8['s'],_0x6fe1c8['l']),_0x487b32=!![],_0x1b9396=_0x5389c4(0x301));}_0x6fe1c8[_0x5389c4(0x28a)]('a')&&(_0x3c1f01=_0x6fe1c8['a']);}return _0x3c1f01=_0x28f85a(_0x3c1f01),{'ok':_0x487b32,'format':_0x6fe1c8[_0x5389c4(0x30b)]||_0x1b9396,'r':_0x420c68(0xff,_0x21c432(_0xe71e35['r'],0x0)),'g':_0x420c68(0xff,_0x21c432(_0xe71e35['g'],0x0)),'b':_0x420c68(0xff,_0x21c432(_0xe71e35['b'],0x0)),'a':_0x3c1f01};}function _0x35b993(_0x1c6ba4,_0x336dbc,_0x348a54){return{'r':_0x582441(_0x1c6ba4,0xff)*0xff,'g':_0x582441(_0x336dbc,0xff)*0xff,'b':_0x582441(_0x348a54,0xff)*0xff};}function _0x1dad13(_0x2e0055,_0x562a3a,_0x49a400){_0x2e0055=_0x582441(_0x2e0055,0xff),_0x562a3a=_0x582441(_0x562a3a,0xff),_0x49a400=_0x582441(_0x49a400,0xff);var _0x43d31c=_0x21c432(_0x2e0055,_0x562a3a,_0x49a400),_0x5be200=_0x420c68(_0x2e0055,_0x562a3a,_0x49a400),_0x4e2582,_0x3e89a0,_0x35c01b=(_0x43d31c+_0x5be200)/0x2;if(_0x43d31c==_0x5be200)_0x4e2582=_0x3e89a0=0x0;else{var _0x25e1de=_0x43d31c-_0x5be200;_0x3e89a0=_0x35c01b>0.5?_0x25e1de/(0x2-_0x43d31c-_0x5be200):_0x25e1de/(_0x43d31c+_0x5be200);switch(_0x43d31c){case _0x2e0055:_0x4e2582=(_0x562a3a-_0x49a400)/_0x25e1de+(_0x562a3a<_0x49a400?0x6:0x0);break;case _0x562a3a:_0x4e2582=(_0x49a400-_0x2e0055)/_0x25e1de+0x2;break;case _0x49a400:_0x4e2582=(_0x2e0055-_0x562a3a)/_0x25e1de+0x4;break;}_0x4e2582/=0x6;}return{'h':_0x4e2582,'s':_0x3e89a0,'l':_0x35c01b};}function _0x3098cc(_0x102e7c,_0x17104b,_0x16d439){var _0xa10f3,_0x423311,_0x33b20b;_0x102e7c=_0x582441(_0x102e7c,0x168),_0x17104b=_0x582441(_0x17104b,0x64),_0x16d439=_0x582441(_0x16d439,0x64);function _0x3ca37c(_0x472130,_0x4091f8,_0x5dc09e){if(_0x5dc09e<0x0)_0x5dc09e+=0x1;if(_0x5dc09e>0x1)_0x5dc09e-=0x1;if(_0x5dc09e<0x1/0x6)return _0x472130+(_0x4091f8-_0x472130)*0x6*_0x5dc09e;if(_0x5dc09e<0x1/0x2)return _0x4091f8;if(_0x5dc09e<0x2/0x3)return _0x472130+(_0x4091f8-_0x472130)*(0x2/0x3-_0x5dc09e)*0x6;return _0x472130;}if(_0x17104b===0x0)_0xa10f3=_0x423311=_0x33b20b=_0x16d439;else{var _0x5aaed5=_0x16d439<0.5?_0x16d439*(0x1+_0x17104b):_0x16d439+_0x17104b-_0x16d439*_0x17104b,_0x3eb3b5=0x2*_0x16d439-_0x5aaed5;_0xa10f3=_0x3ca37c(_0x3eb3b5,_0x5aaed5,_0x102e7c+0x1/0x3),_0x423311=_0x3ca37c(_0x3eb3b5,_0x5aaed5,_0x102e7c),_0x33b20b=_0x3ca37c(_0x3eb3b5,_0x5aaed5,_0x102e7c-0x1/0x3);}return{'r':_0xa10f3*0xff,'g':_0x423311*0xff,'b':_0x33b20b*0xff};}function _0x303bf8(_0x2f4f6a,_0x1dbb58,_0x573ea5){_0x2f4f6a=_0x582441(_0x2f4f6a,0xff),_0x1dbb58=_0x582441(_0x1dbb58,0xff),_0x573ea5=_0x582441(_0x573ea5,0xff);var _0x1b62fe=_0x21c432(_0x2f4f6a,_0x1dbb58,_0x573ea5),_0x3414f7=_0x420c68(_0x2f4f6a,_0x1dbb58,_0x573ea5),_0xe8c592,_0x2746cb,_0x393cc0=_0x1b62fe,_0x1c8952=_0x1b62fe-_0x3414f7;_0x2746cb=_0x1b62fe===0x0?0x0:_0x1c8952/_0x1b62fe;if(_0x1b62fe==_0x3414f7)_0xe8c592=0x0;else{switch(_0x1b62fe){case _0x2f4f6a:_0xe8c592=(_0x1dbb58-_0x573ea5)/_0x1c8952+(_0x1dbb58<_0x573ea5?0x6:0x0);break;case _0x1dbb58:_0xe8c592=(_0x573ea5-_0x2f4f6a)/_0x1c8952+0x2;break;case _0x573ea5:_0xe8c592=(_0x2f4f6a-_0x1dbb58)/_0x1c8952+0x4;break;}_0xe8c592/=0x6;}return{'h':_0xe8c592,'s':_0x2746cb,'v':_0x393cc0};}function _0x4fa565(_0x7015e6,_0x1a7de3,_0x2c517f){_0x7015e6=_0x582441(_0x7015e6,0x168)*0x6,_0x1a7de3=_0x582441(_0x1a7de3,0x64),_0x2c517f=_0x582441(_0x2c517f,0x64);var _0x3a57b8=_0x29c01b['floor'](_0x7015e6),_0x4394fa=_0x7015e6-_0x3a57b8,_0x574ce8=_0x2c517f*(0x1-_0x1a7de3),_0x2ba2e1=_0x2c517f*(0x1-_0x4394fa*_0x1a7de3),_0x17af3f=_0x2c517f*(0x1-(0x1-_0x4394fa)*_0x1a7de3),_0x21f6fb=_0x3a57b8%0x6,_0x4cd837=[_0x2c517f,_0x2ba2e1,_0x574ce8,_0x574ce8,_0x17af3f,_0x2c517f][_0x21f6fb],_0xb9032d=[_0x17af3f,_0x2c517f,_0x2c517f,_0x2ba2e1,_0x574ce8,_0x574ce8][_0x21f6fb],_0x18f21d=[_0x574ce8,_0x574ce8,_0x17af3f,_0x2c517f,_0x2c517f,_0x2ba2e1][_0x21f6fb];return{'r':_0x4cd837*0xff,'g':_0xb9032d*0xff,'b':_0x18f21d*0xff};}function _0x3e6c86(_0x337c25,_0x22c802,_0x492893,_0x1b701f){var _0x53f311=_0x25bed7,_0x10b361=[_0x15ddd0(_0x3b612d(_0x337c25)[_0x53f311(0x322)](0x10)),_0x15ddd0(_0x3b612d(_0x22c802)[_0x53f311(0x322)](0x10)),_0x15ddd0(_0x3b612d(_0x492893)['toString'](0x10))];if(_0x1b701f&&_0x10b361[0x0][_0x53f311(0x28f)](0x0)==_0x10b361[0x0]['charAt'](0x1)&&_0x10b361[0x1][_0x53f311(0x28f)](0x0)==_0x10b361[0x1][_0x53f311(0x28f)](0x1)&&_0x10b361[0x2]['charAt'](0x0)==_0x10b361[0x2]['charAt'](0x1))return _0x10b361[0x0][_0x53f311(0x28f)](0x0)+_0x10b361[0x1][_0x53f311(0x28f)](0x0)+_0x10b361[0x2]['charAt'](0x0);return _0x10b361[_0x53f311(0x22f)]('');}function _0x1b766d(_0x4ff8f9,_0x199784,_0x3153f0,_0x54e335){var _0x3e584b=_0x25bed7,_0x59d5b8=[_0x15ddd0(_0x4dd28d(_0x54e335)),_0x15ddd0(_0x3b612d(_0x4ff8f9)[_0x3e584b(0x322)](0x10)),_0x15ddd0(_0x3b612d(_0x199784)[_0x3e584b(0x322)](0x10)),_0x15ddd0(_0x3b612d(_0x3153f0)['toString'](0x10))];return _0x59d5b8['join']('');}_0x2e6007[_0x25bed7(0x319)]=function(_0x5176ad,_0x4dc2f8){var _0x220797=_0x25bed7;if(!_0x5176ad||!_0x4dc2f8)return![];return _0x2e6007(_0x5176ad)[_0x220797(0x2f2)]()==_0x2e6007(_0x4dc2f8)[_0x220797(0x2f2)]();},_0x2e6007[_0x25bed7(0x220)]=function(){var _0x8c87a5=_0x25bed7;return _0x2e6007[_0x8c87a5(0x2af)]({'r':_0x52fb43(),'g':_0x52fb43(),'b':_0x52fb43()});},_0x2e6007['desaturate']=function(_0x291d61,_0x1cf28c){var _0x4f51ef=_0x25bed7;_0x1cf28c=_0x1cf28c===0x0?0x0:_0x1cf28c||0xa;var _0x2a7c30=_0x2e6007(_0x291d61)[_0x4f51ef(0x324)]();return _0x2a7c30['s']-=_0x1cf28c/0x64,_0x2a7c30['s']=_0x344e39(_0x2a7c30['s']),_0x2e6007(_0x2a7c30);},_0x2e6007[_0x25bed7(0x2ac)]=function(_0x4ba3aa,_0x670a04){var _0x2fb1c1=_0x25bed7;_0x670a04=_0x670a04===0x0?0x0:_0x670a04||0xa;var _0x532bf4=_0x2e6007(_0x4ba3aa)[_0x2fb1c1(0x324)]();return _0x532bf4['s']+=_0x670a04/0x64,_0x532bf4['s']=_0x344e39(_0x532bf4['s']),_0x2e6007(_0x532bf4);},_0x2e6007[_0x25bed7(0x1d9)]=function(_0xb45e0a){var _0x5a6979=_0x25bed7;return _0x2e6007[_0x5a6979(0x240)](_0xb45e0a,0x64);},_0x2e6007[_0x25bed7(0x302)]=function(_0x3bc154,_0x97140e){var _0x35b018=_0x25bed7;_0x97140e=_0x97140e===0x0?0x0:_0x97140e||0xa;var _0x2c7b8e=_0x2e6007(_0x3bc154)[_0x35b018(0x324)]();return _0x2c7b8e['l']+=_0x97140e/0x64,_0x2c7b8e['l']=_0x344e39(_0x2c7b8e['l']),_0x2e6007(_0x2c7b8e);},_0x2e6007[_0x25bed7(0x25a)]=function(_0x2cfc84,_0x5d7852){var _0x1f9e10=_0x25bed7;_0x5d7852=_0x5d7852===0x0?0x0:_0x5d7852||0xa;var _0x334e2b=_0x2e6007(_0x2cfc84)[_0x1f9e10(0x324)]();return _0x334e2b['l']-=_0x5d7852/0x64,_0x334e2b['l']=_0x344e39(_0x334e2b['l']),_0x2e6007(_0x334e2b);},_0x2e6007['complement']=function(_0x5bc180){var _0xc812c9=_0x25bed7,_0x5ecb6b=_0x2e6007(_0x5bc180)[_0xc812c9(0x324)]();return _0x5ecb6b['h']=(_0x5ecb6b['h']+0xb4)%0x168,_0x2e6007(_0x5ecb6b);},_0x2e6007[_0x25bed7(0x292)]=function(_0x11c168){var _0x2fa616=_0x25bed7,_0x536fc0=_0x2e6007(_0x11c168)[_0x2fa616(0x324)](),_0x369d26=_0x536fc0['h'];return[_0x2e6007(_0x11c168),_0x2e6007({'h':(_0x369d26+0x78)%0x168,'s':_0x536fc0['s'],'l':_0x536fc0['l']}),_0x2e6007({'h':(_0x369d26+0xf0)%0x168,'s':_0x536fc0['s'],'l':_0x536fc0['l']})];},_0x2e6007[_0x25bed7(0x24f)]=function(_0xbd4a18){var _0x9e32d8=_0x25bed7,_0x2f2e4f=_0x2e6007(_0xbd4a18)[_0x9e32d8(0x324)](),_0x45d1b3=_0x2f2e4f['h'];return[_0x2e6007(_0xbd4a18),_0x2e6007({'h':(_0x45d1b3+0x5a)%0x168,'s':_0x2f2e4f['s'],'l':_0x2f2e4f['l']}),_0x2e6007({'h':(_0x45d1b3+0xb4)%0x168,'s':_0x2f2e4f['s'],'l':_0x2f2e4f['l']}),_0x2e6007({'h':(_0x45d1b3+0x10e)%0x168,'s':_0x2f2e4f['s'],'l':_0x2f2e4f['l']})];},_0x2e6007['splitcomplement']=function(_0x2043c8){var _0x33a51e=_0x2e6007(_0x2043c8)['toHsl'](),_0x2ac3bd=_0x33a51e['h'];return[_0x2e6007(_0x2043c8),_0x2e6007({'h':(_0x2ac3bd+0x48)%0x168,'s':_0x33a51e['s'],'l':_0x33a51e['l']}),_0x2e6007({'h':(_0x2ac3bd+0xd8)%0x168,'s':_0x33a51e['s'],'l':_0x33a51e['l']})];},_0x2e6007['analogous']=function(_0x22dd2f,_0xc90fb9,_0x49ae48){var _0x4f30d1=_0x25bed7;_0xc90fb9=_0xc90fb9||0x6,_0x49ae48=_0x49ae48||0x1e;var _0x2d161f=_0x2e6007(_0x22dd2f)[_0x4f30d1(0x324)](),_0x3813a6=0x168/_0x49ae48,_0x47d46d=[_0x2e6007(_0x22dd2f)];for(_0x2d161f['h']=(_0x2d161f['h']-(_0x3813a6*_0xc90fb9>>0x1)+0x2d0)%0x168;--_0xc90fb9;){_0x2d161f['h']=(_0x2d161f['h']+_0x3813a6)%0x168,_0x47d46d['push'](_0x2e6007(_0x2d161f));}return _0x47d46d;},_0x2e6007[_0x25bed7(0x316)]=function(_0x1b38cf,_0x1a2653){var _0x369702=_0x25bed7;_0x1a2653=_0x1a2653||0x6;var _0x5cb777=_0x2e6007(_0x1b38cf)['toHsv'](),_0x53924f=_0x5cb777['h'],_0x17b55e=_0x5cb777['s'],_0x2fc446=_0x5cb777['v'],_0x3a0eb5=[],_0x56adc7=0x1/_0x1a2653;while(_0x1a2653--){_0x3a0eb5[_0x369702(0x26e)](_0x2e6007({'h':_0x53924f,'s':_0x17b55e,'v':_0x2fc446})),_0x2fc446=(_0x2fc446+_0x56adc7)%0x1;}return _0x3a0eb5;},_0x2e6007[_0x25bed7(0x29a)]=function(_0x27615c,_0xab9897){var _0x20693d=_0x25bed7,_0x146a1e=_0x2e6007(_0x27615c)[_0x20693d(0x330)](),_0x92ea90=_0x2e6007(_0xab9897)[_0x20693d(0x330)](),_0x3f61fd=(_0x146a1e['r']*0x12b+_0x146a1e['g']*0x24b+_0x146a1e['b']*0x72)/0x3e8,_0x25f4e0=(_0x92ea90['r']*0x12b+_0x92ea90['g']*0x24b+_0x92ea90['b']*0x72)/0x3e8,_0x6a5737=Math[_0x20693d(0x244)](_0x146a1e['r'],_0x92ea90['r'])-Math[_0x20693d(0x31a)](_0x146a1e['r'],_0x92ea90['r'])+Math[_0x20693d(0x244)](_0x146a1e['g'],_0x92ea90['g'])-Math[_0x20693d(0x31a)](_0x146a1e['g'],_0x92ea90['g'])+Math['max'](_0x146a1e['b'],_0x92ea90['b'])-Math[_0x20693d(0x31a)](_0x146a1e['b'],_0x92ea90['b']);return{'brightness':Math[_0x20693d(0x24d)](_0x3f61fd-_0x25f4e0),'color':_0x6a5737};},_0x2e6007[_0x25bed7(0x21d)]=function(_0x56868b,_0x4fdc64){var _0x27f952=_0x25bed7,_0xae5409=_0x2e6007[_0x27f952(0x29a)](_0x56868b,_0x4fdc64);return _0xae5409['brightness']>0x7d&&_0xae5409[_0x27f952(0x1fa)]>0x1f4;},_0x2e6007['mostReadable']=function(_0x59b3f8,_0x22c6bc){var _0x4480f7=_0x25bed7,_0x1ff991=null,_0x3a1bae=0x0,_0x230ebf=![];for(var _0x47271d=0x0;_0x47271d<_0x22c6bc['length'];_0x47271d++){var _0x3ec2a0=_0x2e6007['readability'](_0x59b3f8,_0x22c6bc[_0x47271d]),_0x2019a5=_0x3ec2a0['brightness']>0x7d&&_0x3ec2a0[_0x4480f7(0x1fa)]>0x1f4,_0x189495=0x3*(_0x3ec2a0[_0x4480f7(0x30e)]/0x7d)+_0x3ec2a0[_0x4480f7(0x1fa)]/0x1f4;(_0x2019a5&&!_0x230ebf||_0x2019a5&&_0x230ebf&&_0x189495>_0x3a1bae||!_0x2019a5&&!_0x230ebf&&_0x189495>_0x3a1bae)&&(_0x230ebf=_0x2019a5,_0x3a1bae=_0x189495,_0x1ff991=_0x2e6007(_0x22c6bc[_0x47271d]));}return _0x1ff991;};var _0x29bcfa=_0x2e6007[_0x25bed7(0x359)]={'aliceblue':_0x25bed7(0x246),'antiquewhite':_0x25bed7(0x225),'aqua':'0ff','aquamarine':_0x25bed7(0x279),'azure':_0x25bed7(0x232),'beige':_0x25bed7(0x213),'bisque':'ffe4c4','black':_0x25bed7(0x290),'blanchedalmond':_0x25bed7(0x206),'blue':'00f','blueviolet':'8a2be2','brown':_0x25bed7(0x23f),'burlywood':'deb887','burntsienna':_0x25bed7(0x1ec),'cadetblue':_0x25bed7(0x35c),'chartreuse':_0x25bed7(0x1d8),'chocolate':'d2691e','coral':_0x25bed7(0x328),'cornflowerblue':_0x25bed7(0x23e),'cornsilk':_0x25bed7(0x294),'crimson':_0x25bed7(0x1f3),'cyan':'0ff','darkblue':_0x25bed7(0x339),'darkcyan':_0x25bed7(0x2c1),'darkgoldenrod':'b8860b','darkgray':_0x25bed7(0x262),'darkgreen':_0x25bed7(0x278),'darkgrey':'a9a9a9','darkkhaki':_0x25bed7(0x325),'darkmagenta':_0x25bed7(0x29c),'darkolivegreen':'556b2f','darkorange':_0x25bed7(0x2db),'darkorchid':_0x25bed7(0x313),'darkred':_0x25bed7(0x28d),'darksalmon':'e9967a','darkseagreen':_0x25bed7(0x2b3),'darkslateblue':_0x25bed7(0x22b),'darkslategray':_0x25bed7(0x2c0),'darkslategrey':'2f4f4f','darkturquoise':'00ced1','darkviolet':_0x25bed7(0x2e4),'deeppink':'ff1493','deepskyblue':_0x25bed7(0x264),'dimgray':_0x25bed7(0x224),'dimgrey':_0x25bed7(0x224),'dodgerblue':_0x25bed7(0x1e2),'firebrick':_0x25bed7(0x1e9),'floralwhite':_0x25bed7(0x2fd),'forestgreen':_0x25bed7(0x245),'fuchsia':_0x25bed7(0x296),'gainsboro':_0x25bed7(0x228),'ghostwhite':_0x25bed7(0x2b9),'gold':_0x25bed7(0x2b7),'goldenrod':_0x25bed7(0x1e8),'gray':_0x25bed7(0x1e1),'green':'008000','greenyellow':_0x25bed7(0x340),'grey':'808080','honeydew':_0x25bed7(0x229),'hotpink':_0x25bed7(0x1db),'indianred':_0x25bed7(0x2d1),'indigo':_0x25bed7(0x1dc),'ivory':_0x25bed7(0x1e4),'khaki':_0x25bed7(0x243),'lavender':_0x25bed7(0x253),'lavenderblush':'fff0f5','lawngreen':_0x25bed7(0x28b),'lemonchiffon':_0x25bed7(0x1f5),'lightblue':'add8e6','lightcoral':_0x25bed7(0x28c),'lightcyan':_0x25bed7(0x354),'lightgoldenrodyellow':_0x25bed7(0x2ed),'lightgray':_0x25bed7(0x30c),'lightgreen':_0x25bed7(0x1de),'lightgrey':_0x25bed7(0x30c),'lightpink':_0x25bed7(0x31b),'lightsalmon':_0x25bed7(0x208),'lightseagreen':'20b2aa','lightskyblue':_0x25bed7(0x2c7),'lightslategray':'789','lightslategrey':_0x25bed7(0x286),'lightsteelblue':'b0c4de','lightyellow':_0x25bed7(0x25c),'lime':'0f0','limegreen':'32cd32','linen':'faf0e6','magenta':_0x25bed7(0x296),'maroon':'800000','mediumaquamarine':_0x25bed7(0x2d8),'mediumblue':'0000cd','mediumorchid':_0x25bed7(0x266),'mediumpurple':_0x25bed7(0x250),'mediumseagreen':_0x25bed7(0x31c),'mediumslateblue':_0x25bed7(0x2d6),'mediumspringgreen':_0x25bed7(0x32b),'mediumturquoise':'48d1cc','mediumvioletred':_0x25bed7(0x210),'midnightblue':'191970','mintcream':_0x25bed7(0x257),'mistyrose':_0x25bed7(0x231),'moccasin':'ffe4b5','navajowhite':_0x25bed7(0x321),'navy':'000080','oldlace':'fdf5e6','olive':'808000','olivedrab':'6b8e23','orange':_0x25bed7(0x2d3),'orangered':_0x25bed7(0x2cb),'orchid':_0x25bed7(0x277),'palegoldenrod':_0x25bed7(0x311),'palegreen':_0x25bed7(0x20d),'paleturquoise':'afeeee','palevioletred':_0x25bed7(0x234),'papayawhip':_0x25bed7(0x2b5),'peachpuff':_0x25bed7(0x221),'peru':_0x25bed7(0x342),'pink':_0x25bed7(0x326),'plum':_0x25bed7(0x35a),'powderblue':_0x25bed7(0x307),'purple':_0x25bed7(0x219),'red':'f00','rosybrown':_0x25bed7(0x2d9),'royalblue':_0x25bed7(0x34f),'saddlebrown':_0x25bed7(0x1df),'salmon':_0x25bed7(0x26b),'sandybrown':_0x25bed7(0x1fe),'seagreen':_0x25bed7(0x33f),'seashell':_0x25bed7(0x26c),'sienna':'a0522d','silver':_0x25bed7(0x2a1),'skyblue':_0x25bed7(0x288),'slateblue':_0x25bed7(0x29f),'slategray':_0x25bed7(0x299),'slategrey':_0x25bed7(0x299),'snow':_0x25bed7(0x2ea),'springgreen':_0x25bed7(0x2f7),'steelblue':'4682b4','tan':_0x25bed7(0x23a),'teal':_0x25bed7(0x293),'thistle':_0x25bed7(0x2a5),'tomato':_0x25bed7(0x226),'turquoise':'40e0d0','violet':_0x25bed7(0x35b),'wheat':'f5deb3','white':_0x25bed7(0x312),'whitesmoke':'f5f5f5','yellow':_0x25bed7(0x28e),'yellowgreen':_0x25bed7(0x2be)},_0x3a78e0=_0x2e6007[_0x25bed7(0x285)]=_0x3e86c4(_0x29bcfa);function _0x3e86c4(_0x46332f){var _0x20b899={};for(var _0xa0ca06 in _0x46332f){_0x46332f['hasOwnProperty'](_0xa0ca06)&&(_0x20b899[_0x46332f[_0xa0ca06]]=_0xa0ca06);}return _0x20b899;}function _0x28f85a(_0x43fed0){return _0x43fed0=parseFloat(_0x43fed0),(isNaN(_0x43fed0)||_0x43fed0<0x0||_0x43fed0>0x1)&&(_0x43fed0=0x1),_0x43fed0;}function _0x582441(_0x59e64b,_0x5a1d9a){var _0x457479=_0x25bed7;_0x2d130b(_0x59e64b)&&(_0x59e64b=_0x457479(0x334));var _0x307a3f=_0x140258(_0x59e64b);_0x59e64b=_0x420c68(_0x5a1d9a,_0x21c432(0x0,parseFloat(_0x59e64b)));_0x307a3f&&(_0x59e64b=parseInt(_0x59e64b*_0x5a1d9a,0xa)/0x64);if(_0x29c01b['abs'](_0x59e64b-_0x5a1d9a)<0.000001)return 0x1;return _0x59e64b%_0x5a1d9a/parseFloat(_0x5a1d9a);}function _0x344e39(_0x2d549f){return _0x420c68(0x1,_0x21c432(0x0,_0x2d549f));}function _0x303eaa(_0x430b78){return parseInt(_0x430b78,0x10);}function _0x2d130b(_0x21781d){return typeof _0x21781d=='string'&&_0x21781d['indexOf']('.')!=-0x1&&parseFloat(_0x21781d)===0x1;}function _0x140258(_0xbed965){var _0x397a17=_0x25bed7;return typeof _0xbed965==='string'&&_0xbed965[_0x397a17(0x332)]('%')!=-0x1;}function _0x15ddd0(_0x44d793){var _0x3ba0bd=_0x25bed7;return _0x44d793[_0x3ba0bd(0x215)]==0x1?'0'+_0x44d793:''+_0x44d793;}function _0x4a3fdf(_0x5b211f){return _0x5b211f<=0x1&&(_0x5b211f=_0x5b211f*0x64+'%'),_0x5b211f;}function _0x4dd28d(_0x358dec){var _0x3c0cb1=_0x25bed7;return Math[_0x3c0cb1(0x34b)](parseFloat(_0x358dec)*0xff)[_0x3c0cb1(0x322)](0x10);}function _0x1ac2d3(_0x433fff){return _0x303eaa(_0x433fff)/0xff;}var _0x142493=(function(){var _0x205586=_0x25bed7,_0x446114=_0x205586(0x274),_0xce1034=_0x205586(0x269),_0x8995c2=_0x205586(0x30f)+_0xce1034+_0x205586(0x20c)+_0x446114+')',_0x3dfe34=_0x205586(0x22c)+_0x8995c2+_0x205586(0x2b4)+_0x8995c2+_0x205586(0x2b4)+_0x8995c2+_0x205586(0x337),_0x23f358=_0x205586(0x22c)+_0x8995c2+_0x205586(0x2b4)+_0x8995c2+_0x205586(0x2b4)+_0x8995c2+')[,|\x5cs]+('+_0x8995c2+_0x205586(0x337);return{'rgb':new RegExp(_0x205586(0x2a2)+_0x3dfe34),'rgba':new RegExp(_0x205586(0x21b)+_0x23f358),'hsl':new RegExp(_0x205586(0x301)+_0x3dfe34),'hsla':new RegExp(_0x205586(0x20f)+_0x23f358),'hsv':new RegExp(_0x205586(0x351)+_0x3dfe34),'hex3':/^([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,'hex6':/^([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,'hex8':/^([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/};}());function _0x4f0ebd(_0x4b940a){var _0x405cda=_0x25bed7;_0x4b940a=_0x4b940a[_0x405cda(0x314)](_0x4808a1,'')[_0x405cda(0x314)](_0x5d2815,'')[_0x405cda(0x2cf)]();var _0x5916df=![];if(_0x29bcfa[_0x4b940a])_0x4b940a=_0x29bcfa[_0x4b940a],_0x5916df=!![];else{if(_0x4b940a=='transparent')return{'r':0x0,'g':0x0,'b':0x0,'a':0x0,'format':_0x405cda(0x2f0)};}var _0x33db1b;if(_0x33db1b=_0x142493[_0x405cda(0x2a2)]['exec'](_0x4b940a))return{'r':_0x33db1b[0x1],'g':_0x33db1b[0x2],'b':_0x33db1b[0x3]};if(_0x33db1b=_0x142493[_0x405cda(0x21b)][_0x405cda(0x2a7)](_0x4b940a))return{'r':_0x33db1b[0x1],'g':_0x33db1b[0x2],'b':_0x33db1b[0x3],'a':_0x33db1b[0x4]};if(_0x33db1b=_0x142493[_0x405cda(0x301)][_0x405cda(0x2a7)](_0x4b940a))return{'h':_0x33db1b[0x1],'s':_0x33db1b[0x2],'l':_0x33db1b[0x3]};if(_0x33db1b=_0x142493[_0x405cda(0x20f)][_0x405cda(0x2a7)](_0x4b940a))return{'h':_0x33db1b[0x1],'s':_0x33db1b[0x2],'l':_0x33db1b[0x3],'a':_0x33db1b[0x4]};if(_0x33db1b=_0x142493[_0x405cda(0x351)][_0x405cda(0x2a7)](_0x4b940a))return{'h':_0x33db1b[0x1],'s':_0x33db1b[0x2],'v':_0x33db1b[0x3]};if(_0x33db1b=_0x142493[_0x405cda(0x344)][_0x405cda(0x2a7)](_0x4b940a))return{'a':_0x1ac2d3(_0x33db1b[0x1]),'r':_0x303eaa(_0x33db1b[0x2]),'g':_0x303eaa(_0x33db1b[0x3]),'b':_0x303eaa(_0x33db1b[0x4]),'format':_0x5916df?_0x405cda(0x2f0):_0x405cda(0x344)};if(_0x33db1b=_0x142493[_0x405cda(0x31f)][_0x405cda(0x2a7)](_0x4b940a))return{'r':_0x303eaa(_0x33db1b[0x1]),'g':_0x303eaa(_0x33db1b[0x2]),'b':_0x303eaa(_0x33db1b[0x3]),'format':_0x5916df?_0x405cda(0x2f0):'hex'};if(_0x33db1b=_0x142493[_0x405cda(0x329)][_0x405cda(0x2a7)](_0x4b940a))return{'r':_0x303eaa(_0x33db1b[0x1]+''+_0x33db1b[0x1]),'g':_0x303eaa(_0x33db1b[0x2]+''+_0x33db1b[0x2]),'b':_0x303eaa(_0x33db1b[0x3]+''+_0x33db1b[0x3]),'format':_0x5916df?_0x405cda(0x2f0):'hex'};return![];}_0x111ba9[_0x25bed7(0x2b2)]=_0x2e6007;}()),_0x424c17(function(){var _0x21f3e0=_0x45da64;_0x424c17['fn'][_0x21f3e0(0x2a4)][_0x21f3e0(0x2df)]&&_0x424c17['fn']['spectrum'][_0x21f3e0(0x2a0)]();});}(window,jQuery));
+// Spectrum Colorpicker v1.3.4
+// https://github.com/bgrins/spectrum
+// Author: Brian Grinstead
+// License: MIT
+
+(function (window, $, undefined) {
+    var defaultOpts = {
+
+        // Callbacks
+        beforeShow: noop,
+        move: noop,
+        change: noop,
+        show: noop,
+        hide: noop,
+
+        // Options
+        color: false,
+        flat: false,
+        showInput: false,
+        allowEmpty: false,
+        showButtons: true,
+        clickoutFiresChange: false,
+        showInitial: false,
+        showPalette: false,
+        showPaletteOnly: false,
+        showSelectionPalette: true,
+        localStorageKey: false,
+        appendTo: "body",
+        maxSelectionSize: 7,
+        cancelText: "cancel",
+        chooseText: "choose",
+        clearText: "Clear Color Selection",
+        preferredFormat: false,
+        className: "", // Deprecated - use containerClassName and replacerClassName instead.
+        containerClassName: "",
+        replacerClassName: "",
+        showAlpha: false,
+        theme: "sp-light",
+        palette: [["#ffffff", "#000000", "#ff0000", "#ff8000", "#ffff00", "#008000", "#0000ff", "#4b0082", "#9400d3"]],
+        selectionPalette: [],
+        disabled: false
+    },
+    spectrums = [],
+    IE = !!/msie/i.exec( window.navigator.userAgent ),
+    rgbaSupport = (function() {
+        function contains( str, substr ) {
+            return !!~('' + str).indexOf(substr);
+        }
+
+        var elem = document.createElement('div');
+        var style = elem.style;
+        style.cssText = 'background-color:rgba(0,0,0,.5)';
+        return contains(style.backgroundColor, 'rgba') || contains(style.backgroundColor, 'hsla');
+    })(),
+    inputTypeColorSupport = (function() {
+        var colorInput = $("<input type='color' value='!' />")[0];
+        return colorInput.type === "color" && colorInput.value !== "!";
+    })(),
+    replaceInput = [
+        "<div class='sp-replacer'>",
+            "<div class='sp-preview'><div class='sp-preview-inner'></div></div>",
+            "<div class='sp-dd'>&#9660;</div>",
+        "</div>"
+    ].join(''),
+    markup = (function () {
+
+        // IE does not support gradients with multiple stops, so we need to simulate
+        //  that for the rainbow slider with 8 divs that each have a single gradient
+        var gradientFix = "";
+        if (IE) {
+            for (var i = 1; i <= 6; i++) {
+                gradientFix += "<div class='sp-" + i + "'></div>";
+            }
+        }
+
+        return [
+            "<div class='sp-container sp-hidden'>",
+                "<div class='sp-palette-container'>",
+                    "<div class='sp-palette sp-thumb sp-cf'></div>",
+                "</div>",
+                "<div class='sp-picker-container'>",
+                    "<div class='sp-top sp-cf'>",
+                        "<div class='sp-fill'></div>",
+                        "<div class='sp-top-inner'>",
+                            "<div class='sp-color'>",
+                                "<div class='sp-sat'>",
+                                    "<div class='sp-val'>",
+                                        "<div class='sp-dragger'></div>",
+                                    "</div>",
+                                "</div>",
+                            "</div>",
+                            "<div class='sp-clear sp-clear-display'>",
+                            "</div>",
+                            "<div class='sp-hue'>",
+                                "<div class='sp-slider'></div>",
+                                gradientFix,
+                            "</div>",
+                        "</div>",
+                        "<div class='sp-alpha'><div class='sp-alpha-inner'><div class='sp-alpha-handle'></div></div></div>",
+                    "</div>",
+                    "<div class='sp-input-container sp-cf'>",
+                        "<input class='sp-input' type='text' spellcheck='false'  />",
+                    "</div>",
+                    "<div class='sp-initial sp-thumb sp-cf'></div>",
+                    "<div class='sp-button-container sp-cf'>",
+                        "<button class='sp-cancel'></button>",
+                        "<button type='button' class='sp-choose'></button>",
+                    "</div>",
+                "</div>",
+            "</div>"
+        ].join("");
+    })();
+
+    function paletteTemplate (p, color, className, tooltipFormat) {
+        var html = [];
+        for (var i = 0; i < p.length; i++) {
+            var current = p[i];
+            if(current) {
+                var tiny = tinycolor(current);
+                var c = tiny.toHsl().l < 0.5 ? "sp-thumb-el sp-thumb-dark" : "sp-thumb-el sp-thumb-light";
+                c += (tinycolor.equals(color, current)) ? " sp-thumb-active" : "";
+
+                var formattedString = tiny.toString(tooltipFormat || "rgb");
+                var swatchStyle = rgbaSupport ? ("background-color:" + tiny.toRgbString()) : "filter:" + tiny.toFilter();
+                html.push('<span title="' + formattedString + '" data-color="' + tiny.toRgbString() + '" class="' + c + '"><span class="sp-thumb-inner" style="' + swatchStyle + ';" /></span>');
+            } else {
+                var cls = 'sp-clear-display';
+                html.push('<span title="No Color Selected" data-color="" style="background-color:transparent;" class="' + cls + '"></span>');
+            }
+        }
+        return "<div class='sp-cf " + className + "'>" + html.join('') + "</div>";
+    }
+
+    function hideAll() {
+        for (var i = 0; i < spectrums.length; i++) {
+            if (spectrums[i]) {
+                spectrums[i].hide();
+            }
+        }
+    }
+
+    function instanceOptions(o, callbackContext) {
+        var opts = $.extend({}, defaultOpts, o);
+        opts.callbacks = {
+            'move': bind(opts.move, callbackContext),
+            'change': bind(opts.change, callbackContext),
+            'show': bind(opts.show, callbackContext),
+            'hide': bind(opts.hide, callbackContext),
+            'beforeShow': bind(opts.beforeShow, callbackContext)
+        };
+
+        return opts;
+    }
+
+    function spectrum(element, o) {
+
+        var opts = instanceOptions(o, element),
+            flat = opts.flat,
+            showSelectionPalette = opts.showSelectionPalette,
+            localStorageKey = opts.localStorageKey,
+            theme = opts.theme,
+            callbacks = opts.callbacks,
+            resize = throttle(reflow, 10),
+            visible = false,
+            dragWidth = 0,
+            dragHeight = 0,
+            dragHelperHeight = 0,
+            slideHeight = 0,
+            slideWidth = 0,
+            alphaWidth = 0,
+            alphaSlideHelperWidth = 0,
+            slideHelperHeight = 0,
+            currentHue = 0,
+            currentSaturation = 0,
+            currentValue = 0,
+            currentAlpha = 1,
+            palette = [],
+            paletteArray = [],
+            paletteLookup = {},
+            selectionPalette = opts.selectionPalette.slice(0),
+            maxSelectionSize = opts.maxSelectionSize,
+            draggingClass = "sp-dragging",
+            shiftMovementDirection = null;
+
+        var doc = element.ownerDocument,
+            body = doc.body,
+            boundElement = $(element),
+            disabled = false,
+            container = $(markup, doc).addClass(theme),
+            dragger = container.find(".sp-color"),
+            dragHelper = container.find(".sp-dragger"),
+            slider = container.find(".sp-hue"),
+            slideHelper = container.find(".sp-slider"),
+            alphaSliderInner = container.find(".sp-alpha-inner"),
+            alphaSlider = container.find(".sp-alpha"),
+            alphaSlideHelper = container.find(".sp-alpha-handle"),
+            textInput = container.find(".sp-input"),
+            paletteContainer = container.find(".sp-palette"),
+            initialColorContainer = container.find(".sp-initial"),
+            cancelButton = container.find(".sp-cancel"),
+            clearButton = container.find(".sp-clear"),
+            chooseButton = container.find(".sp-choose"),
+            isInput = boundElement.is("input"),
+            isInputTypeColor = isInput && inputTypeColorSupport && boundElement.attr("type") === "color",
+            shouldReplace = isInput && !flat,
+            replacer = (shouldReplace) ? $(replaceInput).addClass(theme).addClass(opts.className).addClass(opts.replacerClassName) : $([]),
+            offsetElement = (shouldReplace) ? replacer : boundElement,
+            previewElement = replacer.find(".sp-preview-inner"),
+            initialColor = opts.color || (isInput && boundElement.val()),
+            colorOnShow = false,
+            preferredFormat = opts.preferredFormat,
+            currentPreferredFormat = preferredFormat,
+            clickoutFiresChange = !opts.showButtons || opts.clickoutFiresChange,
+            isEmpty = !initialColor,
+            allowEmpty = opts.allowEmpty && !isInputTypeColor;
+
+        function applyOptions() {
+
+            if (opts.showPaletteOnly) {
+                opts.showPalette = true;
+            }
+
+            if (opts.palette) {
+                palette = opts.palette.slice(0);
+                paletteArray = $.isArray(palette[0]) ? palette : [palette];
+                paletteLookup = {};
+                for (var i = 0; i < paletteArray.length; i++) {
+                    for (var j = 0; j < paletteArray[i].length; j++) {
+                        var rgb = tinycolor(paletteArray[i][j]).toRgbString();
+                        paletteLookup[rgb] = true;
+                    }
+                }
+            }
+
+            container.toggleClass("sp-flat", flat);
+            container.toggleClass("sp-input-disabled", !opts.showInput);
+            container.toggleClass("sp-alpha-enabled", opts.showAlpha);
+            container.toggleClass("sp-clear-enabled", allowEmpty);
+            container.toggleClass("sp-buttons-disabled", !opts.showButtons);
+            container.toggleClass("sp-palette-disabled", !opts.showPalette);
+            container.toggleClass("sp-palette-only", opts.showPaletteOnly);
+            container.toggleClass("sp-initial-disabled", !opts.showInitial);
+            container.addClass(opts.className).addClass(opts.containerClassName);
+
+            reflow();
+        }
+
+        function initialize() {
+
+            if (IE) {
+                container.find("*:not(input)").attr("unselectable", "on");
+            }
+
+            applyOptions();
+
+            if (shouldReplace) {
+                boundElement.after(replacer).hide();
+            }
+
+            if (!allowEmpty) {
+                clearButton.hide();
+            }
+
+            if (flat) {
+                boundElement.after(container).hide();
+            }
+            else {
+
+                var appendTo = opts.appendTo === "parent" ? boundElement.parent() : $(opts.appendTo);
+                if (appendTo.length !== 1) {
+                    appendTo = $("body");
+                }
+
+                appendTo.append(container);
+            }
+
+            updateSelectionPaletteFromStorage();
+
+            offsetElement.bind("click.spectrum touchstart.spectrum", function (e) {
+                if (!disabled) {
+                    toggle();
+                }
+
+                e.stopPropagation();
+
+                if (!$(e.target).is("input")) {
+                    e.preventDefault();
+                }
+            });
+
+            if(boundElement.is(":disabled") || (opts.disabled === true)) {
+                disable();
+            }
+
+            // Prevent clicks from bubbling up to document.  This would cause it to be hidden.
+            container.click(stopPropagation);
+
+            // Handle user typed input
+            textInput.change(setFromTextInput);
+            textInput.bind("paste", function () {
+                setTimeout(setFromTextInput, 1);
+            });
+            textInput.keydown(function (e) { if (e.keyCode == 13) { setFromTextInput(); } });
+
+            cancelButton.text(opts.cancelText);
+            cancelButton.bind("click.spectrum", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                hide("cancel");
+            });
+
+            clearButton.attr("title", opts.clearText);
+            clearButton.bind("click.spectrum", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                isEmpty = true;
+                move();
+
+                if(flat) {
+                    //for the flat style, this is a change event
+                    updateOriginalInput(true);
+                }
+            });
+
+            chooseButton.text(opts.chooseText);
+            chooseButton.bind("click.spectrum", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                if (isValid()) {
+                    updateOriginalInput(true);
+                    hide();
+                }
+            });
+
+            draggable(alphaSlider, function (dragX, dragY, e) {
+                currentAlpha = (dragX / alphaWidth);
+                isEmpty = false;
+                if (e.shiftKey) {
+                    currentAlpha = Math.round(currentAlpha * 10) / 10;
+                }
+
+                move();
+            }, dragStart, dragStop);
+
+            draggable(slider, function (dragX, dragY) {
+                currentHue = parseFloat(dragY / slideHeight);
+                isEmpty = false;
+                if (!opts.showAlpha) {
+                    currentAlpha = 1;
+                }
+                move();
+            }, dragStart, dragStop);
+
+            draggable(dragger, function (dragX, dragY, e) {
+
+                // shift+drag should snap the movement to either the x or y axis.
+                if (!e.shiftKey) {
+                    shiftMovementDirection = null;
+                }
+                else if (!shiftMovementDirection) {
+                    var oldDragX = currentSaturation * dragWidth;
+                    var oldDragY = dragHeight - (currentValue * dragHeight);
+                    var furtherFromX = Math.abs(dragX - oldDragX) > Math.abs(dragY - oldDragY);
+
+                    shiftMovementDirection = furtherFromX ? "x" : "y";
+                }
+
+                var setSaturation = !shiftMovementDirection || shiftMovementDirection === "x";
+                var setValue = !shiftMovementDirection || shiftMovementDirection === "y";
+
+                if (setSaturation) {
+                    currentSaturation = parseFloat(dragX / dragWidth);
+                }
+                if (setValue) {
+                    currentValue = parseFloat((dragHeight - dragY) / dragHeight);
+                }
+
+                isEmpty = false;
+                if (!opts.showAlpha) {
+                    currentAlpha = 1;
+                }
+
+                move();
+
+            }, dragStart, dragStop);
+
+            if (!!initialColor) {
+                set(initialColor);
+
+                // In case color was black - update the preview UI and set the format
+                // since the set function will not run (default color is black).
+                updateUI();
+                currentPreferredFormat = preferredFormat || tinycolor(initialColor).format;
+
+                addColorToSelectionPalette(initialColor);
+            }
+            else {
+                updateUI();
+            }
+
+            if (flat) {
+                show();
+            }
+
+            function palletElementClick(e) {
+                if (e.data && e.data.ignore) {
+                    set($(this).data("color"));
+                    move();
+                }
+                else {
+                    set($(this).data("color"));
+                    move();
+                    updateOriginalInput(true);
+                    hide();
+                }
+
+                return false;
+            }
+
+            var paletteEvent = IE ? "mousedown.spectrum" : "click.spectrum touchstart.spectrum";
+            paletteContainer.delegate(".sp-thumb-el", paletteEvent, palletElementClick);
+            initialColorContainer.delegate(".sp-thumb-el:nth-child(1)", paletteEvent, { ignore: true }, palletElementClick);
+        }
+
+        function updateSelectionPaletteFromStorage() {
+
+            if (localStorageKey && window.localStorage) {
+
+                // Migrate old palettes over to new format.  May want to remove this eventually.
+                try {
+                    var oldPalette = window.localStorage[localStorageKey].split(",#");
+                    if (oldPalette.length > 1) {
+                        delete window.localStorage[localStorageKey];
+                        $.each(oldPalette, function(i, c) {
+                             addColorToSelectionPalette(c);
+                        });
+                    }
+                }
+                catch(e) { }
+
+                try {
+                    selectionPalette = window.localStorage[localStorageKey].split(";");
+                }
+                catch (e) { }
+            }
+        }
+
+        function addColorToSelectionPalette(color) {
+            if (showSelectionPalette) {
+                var rgb = tinycolor(color).toRgbString();
+                if (!paletteLookup[rgb] && $.inArray(rgb, selectionPalette) === -1) {
+                    selectionPalette.push(rgb);
+                    while(selectionPalette.length > maxSelectionSize) {
+                        selectionPalette.shift();
+                    }
+                }
+
+                if (localStorageKey && window.localStorage) {
+                    try {
+                        window.localStorage[localStorageKey] = selectionPalette.join(";");
+                    }
+                    catch(e) { }
+                }
+            }
+        }
+
+        function getUniqueSelectionPalette() {
+            var unique = [];
+            if (opts.showPalette) {
+                for (i = 0; i < selectionPalette.length; i++) {
+                    var rgb = tinycolor(selectionPalette[i]).toRgbString();
+
+                    if (!paletteLookup[rgb]) {
+                        unique.push(selectionPalette[i]);
+                    }
+                }
+            }
+
+            return unique.reverse().slice(0, opts.maxSelectionSize);
+        }
+
+        function drawPalette() {
+
+            var currentColor = get();
+
+            var html = $.map(paletteArray, function (palette, i) {
+                return paletteTemplate(palette, currentColor, "sp-palette-row sp-palette-row-" + i, opts.preferredFormat);
+            });
+
+            updateSelectionPaletteFromStorage();
+
+            if (selectionPalette) {
+                html.push(paletteTemplate(getUniqueSelectionPalette(), currentColor, "sp-palette-row sp-palette-row-selection", opts.preferredFormat));
+            }
+
+            paletteContainer.html(html.join(""));
+        }
+
+        function drawInitial() {
+            if (opts.showInitial) {
+                var initial = colorOnShow;
+                var current = get();
+                initialColorContainer.html(paletteTemplate([initial, current], current, "sp-palette-row-initial", opts.preferredFormat));
+            }
+        }
+
+        function dragStart() {
+            if (dragHeight <= 0 || dragWidth <= 0 || slideHeight <= 0) {
+                reflow();
+            }
+            container.addClass(draggingClass);
+            shiftMovementDirection = null;
+            boundElement.trigger('dragstart.spectrum', [ get() ]);
+        }
+
+        function dragStop() {
+            container.removeClass(draggingClass);
+            boundElement.trigger('dragstop.spectrum', [ get() ]);
+        }
+
+        function setFromTextInput() {
+
+            var value = textInput.val();
+
+            if ((value === null || value === "") && allowEmpty) {
+                set(null);
+                updateOriginalInput(true);
+            }
+            else {
+                var tiny = tinycolor(value);
+                if (tiny.ok) {
+                    set(tiny);
+                    updateOriginalInput(true);
+                }
+                else {
+                    textInput.addClass("sp-validation-error");
+                }
+            }
+        }
+
+        function toggle() {
+            if (visible) {
+                hide();
+            }
+            else {
+                show();
+            }
+        }
+
+        function show() {
+            var event = $.Event('beforeShow.spectrum');
+
+            if (visible) {
+                reflow();
+                return;
+            }
+
+            boundElement.trigger(event, [ get() ]);
+
+            if (callbacks.beforeShow(get()) === false || event.isDefaultPrevented()) {
+                return;
+            }
+
+            hideAll();
+            visible = true;
+
+            $(doc).bind("click.spectrum", hide);
+            $(window).bind("resize.spectrum", resize);
+            replacer.addClass("sp-active");
+            container.removeClass("sp-hidden");
+
+            reflow();
+            updateUI();
+
+            colorOnShow = get();
+
+            drawInitial();
+            callbacks.show(colorOnShow);
+            boundElement.trigger('show.spectrum', [ colorOnShow ]);
+        }
+
+        function hide(e) {
+
+            // Return on right click
+            if (e && e.type == "click" && e.button == 2) { return; }
+
+            // Return if hiding is unnecessary
+            if (!visible || flat) { return; }
+            visible = false;
+
+            $(doc).unbind("click.spectrum", hide);
+            $(window).unbind("resize.spectrum", resize);
+
+            replacer.removeClass("sp-active");
+            container.addClass("sp-hidden");
+
+            var colorHasChanged = !tinycolor.equals(get(), colorOnShow);
+
+            if (colorHasChanged) {
+                if (clickoutFiresChange && e !== "cancel") {
+                    updateOriginalInput(true);
+                }
+                else {
+                    revert();
+                }
+            }
+
+            callbacks.hide(get());
+            boundElement.trigger('hide.spectrum', [ get() ]);
+        }
+
+        function revert() {
+            set(colorOnShow, true);
+        }
+
+        function set(color, ignoreFormatChange) {
+            if (tinycolor.equals(color, get())) {
+                // Update UI just in case a validation error needs
+                // to be cleared.
+                updateUI();
+                return;
+            }
+
+            var newColor, newHsv;
+            if (!color && allowEmpty) {
+                isEmpty = true;
+            } else {
+                isEmpty = false;
+                newColor = tinycolor(color);
+                newHsv = newColor.toHsv();
+
+                currentHue = (newHsv.h % 360) / 360;
+                currentSaturation = newHsv.s;
+                currentValue = newHsv.v;
+                currentAlpha = newHsv.a;
+            }
+            updateUI();
+
+            if (newColor && newColor.ok && !ignoreFormatChange) {
+                currentPreferredFormat = preferredFormat || newColor.format;
+            }
+        }
+
+        function get(opts) {
+            opts = opts || { };
+
+            if (allowEmpty && isEmpty) {
+                return null;
+            }
+
+            return tinycolor.fromRatio({
+                h: currentHue,
+                s: currentSaturation,
+                v: currentValue,
+                a: Math.round(currentAlpha * 100) / 100
+            }, { format: opts.format || currentPreferredFormat });
+        }
+
+        function isValid() {
+            return !textInput.hasClass("sp-validation-error");
+        }
+
+        function move() {
+            updateUI();
+
+            callbacks.move(get());
+            boundElement.trigger('move.spectrum', [ get() ]);
+        }
+
+        function updateUI() {
+
+            textInput.removeClass("sp-validation-error");
+
+            updateHelperLocations();
+
+            // Update dragger background color (gradients take care of saturation and value).
+            var flatColor = tinycolor.fromRatio({ h: currentHue, s: 1, v: 1 });
+            dragger.css("background-color", flatColor.toHexString());
+
+            // Get a format that alpha will be included in (hex and names ignore alpha)
+            var format = currentPreferredFormat;
+            if (currentAlpha < 1 && !(currentAlpha === 0 && format === "name")) {
+                if (format === "hex" || format === "hex3" || format === "hex6" || format === "name") {
+                    format = "rgb";
+                }
+            }
+
+            var realColor = get({ format: format }),
+                displayColor = '';
+
+             //reset background info for preview element
+            previewElement.removeClass("sp-clear-display");
+            previewElement.css('background-color', 'transparent');
+
+            if (!realColor && allowEmpty) {
+                // Update the replaced elements background with icon indicating no color selection
+                previewElement.addClass("sp-clear-display");
+            }
+            else {
+                var realHex = realColor.toHexString(),
+                    realRgb = realColor.toRgbString();
+
+                // Update the replaced elements background color (with actual selected color)
+                if (rgbaSupport || realColor.alpha === 1) {
+                    previewElement.css("background-color", realRgb);
+                }
+                else {
+                    previewElement.css("background-color", "transparent");
+                    previewElement.css("filter", realColor.toFilter());
+                }
+
+                if (opts.showAlpha) {
+                    var rgb = realColor.toRgb();
+                    rgb.a = 0;
+                    var realAlpha = tinycolor(rgb).toRgbString();
+                    var gradient = "linear-gradient(left, " + realAlpha + ", " + realHex + ")";
+
+                    if (IE) {
+                        alphaSliderInner.css("filter", tinycolor(realAlpha).toFilter({ gradientType: 1 }, realHex));
+                    }
+                    else {
+                        alphaSliderInner.css("background", "-webkit-" + gradient);
+                        alphaSliderInner.css("background", "-moz-" + gradient);
+                        alphaSliderInner.css("background", "-ms-" + gradient);
+                        // Use current syntax gradient on unprefixed property.
+                        alphaSliderInner.css("background",
+                            "linear-gradient(to right, " + realAlpha + ", " + realHex + ")");
+                    }
+                }
+
+                displayColor = realColor.toString(format);
+            }
+
+            // Update the text entry input as it changes happen
+            if (opts.showInput) {
+                textInput.val(displayColor);
+            }
+
+            if (opts.showPalette) {
+                drawPalette();
+            }
+
+            drawInitial();
+        }
+
+        function updateHelperLocations() {
+            var s = currentSaturation;
+            var v = currentValue;
+
+            if(allowEmpty && isEmpty) {
+                //if selected color is empty, hide the helpers
+                alphaSlideHelper.hide();
+                slideHelper.hide();
+                dragHelper.hide();
+            }
+            else {
+                //make sure helpers are visible
+                alphaSlideHelper.show();
+                slideHelper.show();
+                dragHelper.show();
+
+                // Where to show the little circle in that displays your current selected color
+                var dragX = s * dragWidth;
+                var dragY = dragHeight - (v * dragHeight);
+                dragX = Math.max(
+                    -dragHelperHeight,
+                    Math.min(dragWidth - dragHelperHeight, dragX - dragHelperHeight)
+                );
+                dragY = Math.max(
+                    -dragHelperHeight,
+                    Math.min(dragHeight - dragHelperHeight, dragY - dragHelperHeight)
+                );
+                dragHelper.css({
+                    "top": dragY + "px",
+                    "left": dragX + "px"
+                });
+
+                var alphaX = currentAlpha * alphaWidth;
+                alphaSlideHelper.css({
+                    "left": (alphaX - (alphaSlideHelperWidth / 2)) + "px"
+                });
+
+                // Where to show the bar that displays your current selected hue
+                var slideY = (currentHue) * slideHeight;
+                slideHelper.css({
+                    "top": (slideY - slideHelperHeight) + "px"
+                });
+            }
+        }
+
+        function updateOriginalInput(fireCallback) {
+            var color = get(),
+                displayColor = '',
+                hasChanged = !tinycolor.equals(color, colorOnShow);
+
+            if (color) {
+                displayColor = color.toString(currentPreferredFormat);
+                // Update the selection palette with the current color
+                addColorToSelectionPalette(color);
+            }
+
+            if (isInput) {
+                boundElement.val(displayColor);
+            }
+
+            colorOnShow = color;
+
+            if (fireCallback && hasChanged) {
+                callbacks.change(color);
+                boundElement.trigger('change', [ color ]);
+            }
+        }
+
+        function reflow() {
+            dragWidth = dragger.width();
+            dragHeight = dragger.height();
+            dragHelperHeight = dragHelper.height();
+            slideWidth = slider.width();
+            slideHeight = slider.height();
+            slideHelperHeight = slideHelper.height();
+            alphaWidth = alphaSlider.width();
+            alphaSlideHelperWidth = alphaSlideHelper.width();
+
+            if (!flat) {
+                container.css("position", "absolute");
+                container.offset(getOffset(container, offsetElement));
+            }
+
+            updateHelperLocations();
+
+            if (opts.showPalette) {
+                drawPalette();
+            }
+
+            boundElement.trigger('reflow.spectrum');
+        }
+
+        function destroy() {
+            boundElement.show();
+            offsetElement.unbind("click.spectrum touchstart.spectrum");
+            container.remove();
+            replacer.remove();
+            spectrums[spect.id] = null;
+        }
+
+        function option(optionName, optionValue) {
+            if (optionName === undefined) {
+                return $.extend({}, opts);
+            }
+            if (optionValue === undefined) {
+                return opts[optionName];
+            }
+
+            opts[optionName] = optionValue;
+            applyOptions();
+        }
+
+        function enable() {
+            disabled = false;
+            boundElement.attr("disabled", false);
+            offsetElement.removeClass("sp-disabled");
+        }
+
+        function disable() {
+            hide();
+            disabled = true;
+            boundElement.attr("disabled", true);
+            offsetElement.addClass("sp-disabled");
+        }
+
+        initialize();
+
+        var spect = {
+            show: show,
+            hide: hide,
+            toggle: toggle,
+            reflow: reflow,
+            option: option,
+            enable: enable,
+            disable: disable,
+            set: function (c) {
+                set(c);
+                updateOriginalInput();
+            },
+            get: get,
+            destroy: destroy,
+            container: container
+        };
+
+        spect.id = spectrums.push(spect) - 1;
+
+        return spect;
+    }
+
+    /**
+    * checkOffset - get the offset below/above and left/right element depending on screen position
+    * Thanks https://github.com/jquery/jquery-ui/blob/master/ui/jquery.ui.datepicker.js
+    */
+    function getOffset(picker, input) {
+        var extraY = 0;
+        var dpWidth = picker.outerWidth();
+        var dpHeight = picker.outerHeight();
+        var inputHeight = input.outerHeight();
+        var doc = picker[0].ownerDocument;
+        var docElem = doc.documentElement;
+        var viewWidth = docElem.clientWidth + $(doc).scrollLeft();
+        var viewHeight = docElem.clientHeight + $(doc).scrollTop();
+        var offset = input.offset();
+        offset.top += inputHeight;
+
+        offset.left -=
+            Math.min(offset.left, (offset.left + dpWidth > viewWidth && viewWidth > dpWidth) ?
+            Math.abs(offset.left + dpWidth - viewWidth) : 0);
+
+        offset.top -=
+            Math.min(offset.top, ((offset.top + dpHeight > viewHeight && viewHeight > dpHeight) ?
+            Math.abs(dpHeight + inputHeight - extraY) : extraY));
+
+        return offset;
+    }
+
+    /**
+    * noop - do nothing
+    */
+    function noop() {
+
+    }
+
+    /**
+    * stopPropagation - makes the code only doing this a little easier to read in line
+    */
+    function stopPropagation(e) {
+        e.stopPropagation();
+    }
+
+    /**
+    * Create a function bound to a given object
+    * Thanks to underscore.js
+    */
+    function bind(func, obj) {
+        var slice = Array.prototype.slice;
+        var args = slice.call(arguments, 2);
+        return function () {
+            return func.apply(obj, args.concat(slice.call(arguments)));
+        };
+    }
+
+    /**
+    * Lightweight drag helper.  Handles containment within the element, so that
+    * when dragging, the x is within [0,element.width] and y is within [0,element.height]
+    */
+    function draggable(element, onmove, onstart, onstop) {
+        onmove = onmove || function () { };
+        onstart = onstart || function () { };
+        onstop = onstop || function () { };
+        var doc = element.ownerDocument || document;
+        var dragging = false;
+        var offset = {};
+        var maxHeight = 0;
+        var maxWidth = 0;
+        var hasTouch = ('ontouchstart' in window);
+
+        var duringDragEvents = {};
+        duringDragEvents["selectstart"] = prevent;
+        duringDragEvents["dragstart"] = prevent;
+        duringDragEvents["touchmove mousemove"] = move;
+        duringDragEvents["touchend mouseup"] = stop;
+
+        function prevent(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation();
+            }
+            if (e.preventDefault) {
+                e.preventDefault();
+            }
+            e.returnValue = false;
+        }
+
+        function move(e) {
+            if (dragging) {
+                // Mouseup happened outside of window
+                if (IE && document.documentMode < 9 && !e.button) {
+                    return stop();
+                }
+
+                var touches = e.originalEvent.touches;
+                var pageX = touches ? touches[0].pageX : e.pageX;
+                var pageY = touches ? touches[0].pageY : e.pageY;
+
+                var dragX = Math.max(0, Math.min(pageX - offset.left, maxWidth));
+                var dragY = Math.max(0, Math.min(pageY - offset.top, maxHeight));
+
+                if (hasTouch) {
+                    // Stop scrolling in iOS
+                    prevent(e);
+                }
+
+                onmove.apply(element, [dragX, dragY, e]);
+            }
+        }
+
+        function start(e) {
+            var rightclick = (e.which) ? (e.which == 3) : (e.button == 2);
+            var touches = e.originalEvent.touches;
+
+            if (!rightclick && !dragging) {
+                if (onstart.apply(element, arguments) !== false) {
+                    dragging = true;
+                    maxHeight = $(element).height();
+                    maxWidth = $(element).width();
+                    offset = $(element).offset();
+
+                    $(doc).bind(duringDragEvents);
+                    $(doc.body).addClass("sp-dragging");
+
+                    if (!hasTouch) {
+                        move(e);
+                    }
+
+                    prevent(e);
+                }
+            }
+        }
+
+        function stop() {
+            if (dragging) {
+                $(doc).unbind(duringDragEvents);
+                $(doc.body).removeClass("sp-dragging");
+                onstop.apply(element, arguments);
+            }
+            dragging = false;
+        }
+
+        $(element).bind("touchstart mousedown", start);
+    }
+
+    function throttle(func, wait, debounce) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var throttler = function () {
+                timeout = null;
+                func.apply(context, args);
+            };
+            if (debounce) clearTimeout(timeout);
+            if (debounce || !timeout) timeout = setTimeout(throttler, wait);
+        };
+    }
+
+    function log(){/* jshint -W021 */if(window.console){if(Function.prototype.bind)log=Function.prototype.bind.call(console.log,console);else log=function(){Function.prototype.apply.call(console.log,console,arguments);};log.apply(this,arguments);}}
+
+    /**
+    * Define a jQuery plugin
+    */
+    var dataID = "spectrum.id";
+    $.fn.spectrum = function (opts, extra) {
+
+        if (typeof opts == "string") {
+
+            var returnValue = this;
+            var args = Array.prototype.slice.call( arguments, 1 );
+
+            this.each(function () {
+                var spect = spectrums[$(this).data(dataID)];
+                if (spect) {
+                    var method = spect[opts];
+                    if (!method) {
+                        throw new Error( "Spectrum: no such method: '" + opts + "'" );
+                    }
+
+                    if (opts == "get") {
+                        returnValue = spect.get();
+                    }
+                    else if (opts == "container") {
+                        returnValue = spect.container;
+                    }
+                    else if (opts == "option") {
+                        returnValue = spect.option.apply(spect, args);
+                    }
+                    else if (opts == "destroy") {
+                        spect.destroy();
+                        $(this).removeData(dataID);
+                    }
+                    else {
+                        method.apply(spect, args);
+                    }
+                }
+            });
+
+            return returnValue;
+        }
+
+        // Initializing a new instance of spectrum
+        return this.spectrum("destroy").each(function () {
+            var options = $.extend({}, opts, $(this).data());
+            var spect = spectrum(this, options);
+            $(this).data(dataID, spect.id);
+        });
+    };
+
+    $.fn.spectrum.load = true;
+    $.fn.spectrum.loadOpts = {};
+    $.fn.spectrum.draggable = draggable;
+    $.fn.spectrum.defaults = defaultOpts;
+
+    $.spectrum = { };
+    $.spectrum.localization = { };
+    $.spectrum.palettes = { };
+
+    $.fn.spectrum.processNativeColorInputs = function () {
+        if (!inputTypeColorSupport) {
+            $("input[type=color]").spectrum({
+                preferredFormat: "hex6"
+            });
+        }
+    };
+
+    // TinyColor v0.9.17
+    // https://github.com/bgrins/TinyColor
+    // 2013-08-10, Brian Grinstead, MIT License
+
+    (function() {
+
+    var trimLeft = /^[\s,#]+/,
+        trimRight = /\s+$/,
+        tinyCounter = 0,
+        math = Math,
+        mathRound = math.round,
+        mathMin = math.min,
+        mathMax = math.max,
+        mathRandom = math.random;
+
+    function tinycolor (color, opts) {
+
+        color = (color) ? color : '';
+        opts = opts || { };
+
+        // If input is already a tinycolor, return itself
+        if (typeof color == "object" && color.hasOwnProperty("_tc_id")) {
+           return color;
+        }
+
+        var rgb = inputToRGB(color);
+        var r = rgb.r,
+            g = rgb.g,
+            b = rgb.b,
+            a = rgb.a,
+            roundA = mathRound(100*a) / 100,
+            format = opts.format || rgb.format;
+
+        // Don't let the range of [0,255] come back in [0,1].
+        // Potentially lose a little bit of precision here, but will fix issues where
+        // .5 gets interpreted as half of the total, instead of half of 1
+        // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+        if (r < 1) { r = mathRound(r); }
+        if (g < 1) { g = mathRound(g); }
+        if (b < 1) { b = mathRound(b); }
+
+        return {
+            ok: rgb.ok,
+            format: format,
+            _tc_id: tinyCounter++,
+            alpha: a,
+            getAlpha: function() {
+                return a;
+            },
+            setAlpha: function(value) {
+                a = boundAlpha(value);
+                roundA = mathRound(100*a) / 100;
+            },
+            toHsv: function() {
+                var hsv = rgbToHsv(r, g, b);
+                return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: a };
+            },
+            toHsvString: function() {
+                var hsv = rgbToHsv(r, g, b);
+                var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
+                return (a == 1) ?
+                  "hsv("  + h + ", " + s + "%, " + v + "%)" :
+                  "hsva(" + h + ", " + s + "%, " + v + "%, "+ roundA + ")";
+            },
+            toHsl: function() {
+                var hsl = rgbToHsl(r, g, b);
+                return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: a };
+            },
+            toHslString: function() {
+                var hsl = rgbToHsl(r, g, b);
+                var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
+                return (a == 1) ?
+                  "hsl("  + h + ", " + s + "%, " + l + "%)" :
+                  "hsla(" + h + ", " + s + "%, " + l + "%, "+ roundA + ")";
+            },
+            toHex: function(allow3Char) {
+                return rgbToHex(r, g, b, allow3Char);
+            },
+            toHexString: function(allow3Char) {
+                return '#' + this.toHex(allow3Char);
+            },
+            toHex8: function() {
+                return rgbaToHex(r, g, b, a);
+            },
+            toHex8String: function() {
+                return '#' + this.toHex8();
+            },
+            toRgb: function() {
+                return { r: mathRound(r), g: mathRound(g), b: mathRound(b), a: a };
+            },
+            toRgbString: function() {
+                return (a == 1) ?
+                  "rgb("  + mathRound(r) + ", " + mathRound(g) + ", " + mathRound(b) + ")" :
+                  "rgba(" + mathRound(r) + ", " + mathRound(g) + ", " + mathRound(b) + ", " + roundA + ")";
+            },
+            toPercentageRgb: function() {
+                return { r: mathRound(bound01(r, 255) * 100) + "%", g: mathRound(bound01(g, 255) * 100) + "%", b: mathRound(bound01(b, 255) * 100) + "%", a: a };
+            },
+            toPercentageRgbString: function() {
+                return (a == 1) ?
+                  "rgb("  + mathRound(bound01(r, 255) * 100) + "%, " + mathRound(bound01(g, 255) * 100) + "%, " + mathRound(bound01(b, 255) * 100) + "%)" :
+                  "rgba(" + mathRound(bound01(r, 255) * 100) + "%, " + mathRound(bound01(g, 255) * 100) + "%, " + mathRound(bound01(b, 255) * 100) + "%, " + roundA + ")";
+            },
+            toName: function() {
+                if (a === 0) {
+                    return "transparent";
+                }
+
+                return hexNames[rgbToHex(r, g, b, true)] || false;
+            },
+            toFilter: function(secondColor) {
+                var hex8String = '#' + rgbaToHex(r, g, b, a);
+                var secondHex8String = hex8String;
+                var gradientType = opts && opts.gradientType ? "GradientType = 1, " : "";
+
+                if (secondColor) {
+                    var s = tinycolor(secondColor);
+                    secondHex8String = s.toHex8String();
+                }
+
+                return "progid:DXImageTransform.Microsoft.gradient("+gradientType+"startColorstr="+hex8String+",endColorstr="+secondHex8String+")";
+            },
+            toString: function(format) {
+                var formatSet = !!format;
+                format = format || this.format;
+
+                var formattedString = false;
+                var hasAlphaAndFormatNotSet = !formatSet && a < 1 && a > 0;
+                var formatWithAlpha = hasAlphaAndFormatNotSet && (format === "hex" || format === "hex6" || format === "hex3" || format === "name");
+
+                if (format === "rgb") {
+                    formattedString = this.toRgbString();
+                }
+                if (format === "prgb") {
+                    formattedString = this.toPercentageRgbString();
+                }
+                if (format === "hex" || format === "hex6") {
+                    formattedString = this.toHexString();
+                }
+                if (format === "hex3") {
+                    formattedString = this.toHexString(true);
+                }
+                if (format === "hex8") {
+                    formattedString = this.toHex8String();
+                }
+                if (format === "name") {
+                    formattedString = this.toName();
+                }
+                if (format === "hsl") {
+                    formattedString = this.toHslString();
+                }
+                if (format === "hsv") {
+                    formattedString = this.toHsvString();
+                }
+
+                if (formatWithAlpha) {
+                    return this.toRgbString();
+                }
+
+                return formattedString || this.toHexString();
+            }
+        };
+    }
+
+    // If input is an object, force 1 into "1.0" to handle ratios properly
+    // String input requires "1.0" as input, so 1 will be treated as 1
+    tinycolor.fromRatio = function(color, opts) {
+        if (typeof color == "object") {
+            var newColor = {};
+            for (var i in color) {
+                if (color.hasOwnProperty(i)) {
+                    if (i === "a") {
+                        newColor[i] = color[i];
+                    }
+                    else {
+                        newColor[i] = convertToPercentage(color[i]);
+                    }
+                }
+            }
+            color = newColor;
+        }
+
+        return tinycolor(color, opts);
+    };
+
+    // Given a string or object, convert that input to RGB
+    // Possible string inputs:
+    //
+    //     "red"
+    //     "#f00" or "f00"
+    //     "#ff0000" or "ff0000"
+    //     "#ff000000" or "ff000000"
+    //     "rgb 255 0 0" or "rgb (255, 0, 0)"
+    //     "rgb 1.0 0 0" or "rgb (1, 0, 0)"
+    //     "rgba (255, 0, 0, 1)" or "rgba 255, 0, 0, 1"
+    //     "rgba (1.0, 0, 0, 1)" or "rgba 1.0, 0, 0, 1"
+    //     "hsl(0, 100%, 50%)" or "hsl 0 100% 50%"
+    //     "hsla(0, 100%, 50%, 1)" or "hsla 0 100% 50%, 1"
+    //     "hsv(0, 100%, 100%)" or "hsv 0 100% 100%"
+    //
+    function inputToRGB(color) {
+
+        var rgb = { r: 0, g: 0, b: 0 };
+        var a = 1;
+        var ok = false;
+        var format = false;
+
+        if (typeof color == "string") {
+            color = stringInputToObject(color);
+        }
+
+        if (typeof color == "object") {
+            if (color.hasOwnProperty("r") && color.hasOwnProperty("g") && color.hasOwnProperty("b")) {
+                rgb = rgbToRgb(color.r, color.g, color.b);
+                ok = true;
+                format = String(color.r).substr(-1) === "%" ? "prgb" : "rgb";
+            }
+            else if (color.hasOwnProperty("h") && color.hasOwnProperty("s") && color.hasOwnProperty("v")) {
+                color.s = convertToPercentage(color.s);
+                color.v = convertToPercentage(color.v);
+                rgb = hsvToRgb(color.h, color.s, color.v);
+                ok = true;
+                format = "hsv";
+            }
+            else if (color.hasOwnProperty("h") && color.hasOwnProperty("s") && color.hasOwnProperty("l")) {
+                color.s = convertToPercentage(color.s);
+                color.l = convertToPercentage(color.l);
+                rgb = hslToRgb(color.h, color.s, color.l);
+                ok = true;
+                format = "hsl";
+            }
+
+            if (color.hasOwnProperty("a")) {
+                a = color.a;
+            }
+        }
+
+        a = boundAlpha(a);
+
+        return {
+            ok: ok,
+            format: color.format || format,
+            r: mathMin(255, mathMax(rgb.r, 0)),
+            g: mathMin(255, mathMax(rgb.g, 0)),
+            b: mathMin(255, mathMax(rgb.b, 0)),
+            a: a
+        };
+    }
+
+
+    // Conversion Functions
+    // --------------------
+
+    // `rgbToHsl`, `rgbToHsv`, `hslToRgb`, `hsvToRgb` modified from:
+    // <http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript>
+
+    // `rgbToRgb`
+    // Handle bounds / percentage checking to conform to CSS color spec
+    // <http://www.w3.org/TR/css3-color/>
+    // *Assumes:* r, g, b in [0, 255] or [0, 1]
+    // *Returns:* { r, g, b } in [0, 255]
+    function rgbToRgb(r, g, b){
+        return {
+            r: bound01(r, 255) * 255,
+            g: bound01(g, 255) * 255,
+            b: bound01(b, 255) * 255
+        };
+    }
+
+    // `rgbToHsl`
+    // Converts an RGB color value to HSL.
+    // *Assumes:* r, g, and b are contained in [0, 255] or [0, 1]
+    // *Returns:* { h, s, l } in [0,1]
+    function rgbToHsl(r, g, b) {
+
+        r = bound01(r, 255);
+        g = bound01(g, 255);
+        b = bound01(b, 255);
+
+        var max = mathMax(r, g, b), min = mathMin(r, g, b);
+        var h, s, l = (max + min) / 2;
+
+        if(max == min) {
+            h = s = 0; // achromatic
+        }
+        else {
+            var d = max - min;
+            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+            switch(max) {
+                case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                case g: h = (b - r) / d + 2; break;
+                case b: h = (r - g) / d + 4; break;
+            }
+
+            h /= 6;
+        }
+
+        return { h: h, s: s, l: l };
+    }
+
+    // `hslToRgb`
+    // Converts an HSL color value to RGB.
+    // *Assumes:* h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+    // *Returns:* { r, g, b } in the set [0, 255]
+    function hslToRgb(h, s, l) {
+        var r, g, b;
+
+        h = bound01(h, 360);
+        s = bound01(s, 100);
+        l = bound01(l, 100);
+
+        function hue2rgb(p, q, t) {
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        if(s === 0) {
+            r = g = b = l; // achromatic
+        }
+        else {
+            var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            var p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1/3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1/3);
+        }
+
+        return { r: r * 255, g: g * 255, b: b * 255 };
+    }
+
+    // `rgbToHsv`
+    // Converts an RGB color value to HSV
+    // *Assumes:* r, g, and b are contained in the set [0, 255] or [0, 1]
+    // *Returns:* { h, s, v } in [0,1]
+    function rgbToHsv(r, g, b) {
+
+        r = bound01(r, 255);
+        g = bound01(g, 255);
+        b = bound01(b, 255);
+
+        var max = mathMax(r, g, b), min = mathMin(r, g, b);
+        var h, s, v = max;
+
+        var d = max - min;
+        s = max === 0 ? 0 : d / max;
+
+        if(max == min) {
+            h = 0; // achromatic
+        }
+        else {
+            switch(max) {
+                case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                case g: h = (b - r) / d + 2; break;
+                case b: h = (r - g) / d + 4; break;
+            }
+            h /= 6;
+        }
+        return { h: h, s: s, v: v };
+    }
+
+    // `hsvToRgb`
+    // Converts an HSV color value to RGB.
+    // *Assumes:* h is contained in [0, 1] or [0, 360] and s and v are contained in [0, 1] or [0, 100]
+    // *Returns:* { r, g, b } in the set [0, 255]
+     function hsvToRgb(h, s, v) {
+
+        h = bound01(h, 360) * 6;
+        s = bound01(s, 100);
+        v = bound01(v, 100);
+
+        var i = math.floor(h),
+            f = h - i,
+            p = v * (1 - s),
+            q = v * (1 - f * s),
+            t = v * (1 - (1 - f) * s),
+            mod = i % 6,
+            r = [v, q, p, p, t, v][mod],
+            g = [t, v, v, q, p, p][mod],
+            b = [p, p, t, v, v, q][mod];
+
+        return { r: r * 255, g: g * 255, b: b * 255 };
+    }
+
+    // `rgbToHex`
+    // Converts an RGB color to hex
+    // Assumes r, g, and b are contained in the set [0, 255]
+    // Returns a 3 or 6 character hex
+    function rgbToHex(r, g, b, allow3Char) {
+
+        var hex = [
+            pad2(mathRound(r).toString(16)),
+            pad2(mathRound(g).toString(16)),
+            pad2(mathRound(b).toString(16))
+        ];
+
+        // Return a 3 character hex if possible
+        if (allow3Char && hex[0].charAt(0) == hex[0].charAt(1) && hex[1].charAt(0) == hex[1].charAt(1) && hex[2].charAt(0) == hex[2].charAt(1)) {
+            return hex[0].charAt(0) + hex[1].charAt(0) + hex[2].charAt(0);
+        }
+
+        return hex.join("");
+    }
+        // `rgbaToHex`
+        // Converts an RGBA color plus alpha transparency to hex
+        // Assumes r, g, b and a are contained in the set [0, 255]
+        // Returns an 8 character hex
+        function rgbaToHex(r, g, b, a) {
+
+            var hex = [
+                pad2(convertDecimalToHex(a)),
+                pad2(mathRound(r).toString(16)),
+                pad2(mathRound(g).toString(16)),
+                pad2(mathRound(b).toString(16))
+            ];
+
+            return hex.join("");
+        }
+
+    // `equals`
+    // Can be called with any tinycolor input
+    tinycolor.equals = function (color1, color2) {
+        if (!color1 || !color2) { return false; }
+        return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+    };
+    tinycolor.random = function() {
+        return tinycolor.fromRatio({
+            r: mathRandom(),
+            g: mathRandom(),
+            b: mathRandom()
+        });
+    };
+
+
+    // Modification Functions
+    // ----------------------
+    // Thanks to less.js for some of the basics here
+    // <https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js>
+
+    tinycolor.desaturate = function (color, amount) {
+        amount = (amount === 0) ? 0 : (amount || 10);
+        var hsl = tinycolor(color).toHsl();
+        hsl.s -= amount / 100;
+        hsl.s = clamp01(hsl.s);
+        return tinycolor(hsl);
+    };
+    tinycolor.saturate = function (color, amount) {
+        amount = (amount === 0) ? 0 : (amount || 10);
+        var hsl = tinycolor(color).toHsl();
+        hsl.s += amount / 100;
+        hsl.s = clamp01(hsl.s);
+        return tinycolor(hsl);
+    };
+    tinycolor.greyscale = function(color) {
+        return tinycolor.desaturate(color, 100);
+    };
+    tinycolor.lighten = function(color, amount) {
+        amount = (amount === 0) ? 0 : (amount || 10);
+        var hsl = tinycolor(color).toHsl();
+        hsl.l += amount / 100;
+        hsl.l = clamp01(hsl.l);
+        return tinycolor(hsl);
+    };
+    tinycolor.darken = function (color, amount) {
+        amount = (amount === 0) ? 0 : (amount || 10);
+        var hsl = tinycolor(color).toHsl();
+        hsl.l -= amount / 100;
+        hsl.l = clamp01(hsl.l);
+        return tinycolor(hsl);
+    };
+    tinycolor.complement = function(color) {
+        var hsl = tinycolor(color).toHsl();
+        hsl.h = (hsl.h + 180) % 360;
+        return tinycolor(hsl);
+    };
+
+
+    // Combination Functions
+    // ---------------------
+    // Thanks to jQuery xColor for some of the ideas behind these
+    // <https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js>
+
+    tinycolor.triad = function(color) {
+        var hsl = tinycolor(color).toHsl();
+        var h = hsl.h;
+        return [
+            tinycolor(color),
+            tinycolor({ h: (h + 120) % 360, s: hsl.s, l: hsl.l }),
+            tinycolor({ h: (h + 240) % 360, s: hsl.s, l: hsl.l })
+        ];
+    };
+    tinycolor.tetrad = function(color) {
+        var hsl = tinycolor(color).toHsl();
+        var h = hsl.h;
+        return [
+            tinycolor(color),
+            tinycolor({ h: (h + 90) % 360, s: hsl.s, l: hsl.l }),
+            tinycolor({ h: (h + 180) % 360, s: hsl.s, l: hsl.l }),
+            tinycolor({ h: (h + 270) % 360, s: hsl.s, l: hsl.l })
+        ];
+    };
+    tinycolor.splitcomplement = function(color) {
+        var hsl = tinycolor(color).toHsl();
+        var h = hsl.h;
+        return [
+            tinycolor(color),
+            tinycolor({ h: (h + 72) % 360, s: hsl.s, l: hsl.l}),
+            tinycolor({ h: (h + 216) % 360, s: hsl.s, l: hsl.l})
+        ];
+    };
+    tinycolor.analogous = function(color, results, slices) {
+        results = results || 6;
+        slices = slices || 30;
+
+        var hsl = tinycolor(color).toHsl();
+        var part = 360 / slices;
+        var ret = [tinycolor(color)];
+
+        for (hsl.h = ((hsl.h - (part * results >> 1)) + 720) % 360; --results; ) {
+            hsl.h = (hsl.h + part) % 360;
+            ret.push(tinycolor(hsl));
+        }
+        return ret;
+    };
+    tinycolor.monochromatic = function(color, results) {
+        results = results || 6;
+        var hsv = tinycolor(color).toHsv();
+        var h = hsv.h, s = hsv.s, v = hsv.v;
+        var ret = [];
+        var modification = 1 / results;
+
+        while (results--) {
+            ret.push(tinycolor({ h: h, s: s, v: v}));
+            v = (v + modification) % 1;
+        }
+
+        return ret;
+    };
+
+
+    // Readability Functions
+    // ---------------------
+    // <http://www.w3.org/TR/AERT#color-contrast>
+
+    // `readability`
+    // Analyze the 2 colors and returns an object with the following properties:
+    //    `brightness`: difference in brightness between the two colors
+    //    `color`: difference in color/hue between the two colors
+    tinycolor.readability = function(color1, color2) {
+        var a = tinycolor(color1).toRgb();
+        var b = tinycolor(color2).toRgb();
+        var brightnessA = (a.r * 299 + a.g * 587 + a.b * 114) / 1000;
+        var brightnessB = (b.r * 299 + b.g * 587 + b.b * 114) / 1000;
+        var colorDiff = (
+            Math.max(a.r, b.r) - Math.min(a.r, b.r) +
+            Math.max(a.g, b.g) - Math.min(a.g, b.g) +
+            Math.max(a.b, b.b) - Math.min(a.b, b.b)
+        );
+
+        return {
+            brightness: Math.abs(brightnessA - brightnessB),
+            color: colorDiff
+        };
+    };
+
+    // `readable`
+    // http://www.w3.org/TR/AERT#color-contrast
+    // Ensure that foreground and background color combinations provide sufficient contrast.
+    // *Example*
+    //    tinycolor.readable("#000", "#111") => false
+    tinycolor.readable = function(color1, color2) {
+        var readability = tinycolor.readability(color1, color2);
+        return readability.brightness > 125 && readability.color > 500;
+    };
+
+    // `mostReadable`
+    // Given a base color and a list of possible foreground or background
+    // colors for that base, returns the most readable color.
+    // *Example*
+    //    tinycolor.mostReadable("#123", ["#fff", "#000"]) => "#000"
+    tinycolor.mostReadable = function(baseColor, colorList) {
+        var bestColor = null;
+        var bestScore = 0;
+        var bestIsReadable = false;
+        for (var i=0; i < colorList.length; i++) {
+
+            // We normalize both around the "acceptable" breaking point,
+            // but rank brightness constrast higher than hue.
+
+            var readability = tinycolor.readability(baseColor, colorList[i]);
+            var readable = readability.brightness > 125 && readability.color > 500;
+            var score = 3 * (readability.brightness / 125) + (readability.color / 500);
+
+            if ((readable && ! bestIsReadable) ||
+                (readable && bestIsReadable && score > bestScore) ||
+                ((! readable) && (! bestIsReadable) && score > bestScore)) {
+                bestIsReadable = readable;
+                bestScore = score;
+                bestColor = tinycolor(colorList[i]);
+            }
+        }
+        return bestColor;
+    };
+
+
+    // Big List of Colors
+    // ------------------
+    // <http://www.w3.org/TR/css3-color/#svg-color>
+    var names = tinycolor.names = {
+        aliceblue: "f0f8ff",
+        antiquewhite: "faebd7",
+        aqua: "0ff",
+        aquamarine: "7fffd4",
+        azure: "f0ffff",
+        beige: "f5f5dc",
+        bisque: "ffe4c4",
+        black: "000",
+        blanchedalmond: "ffebcd",
+        blue: "00f",
+        blueviolet: "8a2be2",
+        brown: "a52a2a",
+        burlywood: "deb887",
+        burntsienna: "ea7e5d",
+        cadetblue: "5f9ea0",
+        chartreuse: "7fff00",
+        chocolate: "d2691e",
+        coral: "ff7f50",
+        cornflowerblue: "6495ed",
+        cornsilk: "fff8dc",
+        crimson: "dc143c",
+        cyan: "0ff",
+        darkblue: "00008b",
+        darkcyan: "008b8b",
+        darkgoldenrod: "b8860b",
+        darkgray: "a9a9a9",
+        darkgreen: "006400",
+        darkgrey: "a9a9a9",
+        darkkhaki: "bdb76b",
+        darkmagenta: "8b008b",
+        darkolivegreen: "556b2f",
+        darkorange: "ff8c00",
+        darkorchid: "9932cc",
+        darkred: "8b0000",
+        darksalmon: "e9967a",
+        darkseagreen: "8fbc8f",
+        darkslateblue: "483d8b",
+        darkslategray: "2f4f4f",
+        darkslategrey: "2f4f4f",
+        darkturquoise: "00ced1",
+        darkviolet: "9400d3",
+        deeppink: "ff1493",
+        deepskyblue: "00bfff",
+        dimgray: "696969",
+        dimgrey: "696969",
+        dodgerblue: "1e90ff",
+        firebrick: "b22222",
+        floralwhite: "fffaf0",
+        forestgreen: "228b22",
+        fuchsia: "f0f",
+        gainsboro: "dcdcdc",
+        ghostwhite: "f8f8ff",
+        gold: "ffd700",
+        goldenrod: "daa520",
+        gray: "808080",
+        green: "008000",
+        greenyellow: "adff2f",
+        grey: "808080",
+        honeydew: "f0fff0",
+        hotpink: "ff69b4",
+        indianred: "cd5c5c",
+        indigo: "4b0082",
+        ivory: "fffff0",
+        khaki: "f0e68c",
+        lavender: "e6e6fa",
+        lavenderblush: "fff0f5",
+        lawngreen: "7cfc00",
+        lemonchiffon: "fffacd",
+        lightblue: "add8e6",
+        lightcoral: "f08080",
+        lightcyan: "e0ffff",
+        lightgoldenrodyellow: "fafad2",
+        lightgray: "d3d3d3",
+        lightgreen: "90ee90",
+        lightgrey: "d3d3d3",
+        lightpink: "ffb6c1",
+        lightsalmon: "ffa07a",
+        lightseagreen: "20b2aa",
+        lightskyblue: "87cefa",
+        lightslategray: "789",
+        lightslategrey: "789",
+        lightsteelblue: "b0c4de",
+        lightyellow: "ffffe0",
+        lime: "0f0",
+        limegreen: "32cd32",
+        linen: "faf0e6",
+        magenta: "f0f",
+        maroon: "800000",
+        mediumaquamarine: "66cdaa",
+        mediumblue: "0000cd",
+        mediumorchid: "ba55d3",
+        mediumpurple: "9370db",
+        mediumseagreen: "3cb371",
+        mediumslateblue: "7b68ee",
+        mediumspringgreen: "00fa9a",
+        mediumturquoise: "48d1cc",
+        mediumvioletred: "c71585",
+        midnightblue: "191970",
+        mintcream: "f5fffa",
+        mistyrose: "ffe4e1",
+        moccasin: "ffe4b5",
+        navajowhite: "ffdead",
+        navy: "000080",
+        oldlace: "fdf5e6",
+        olive: "808000",
+        olivedrab: "6b8e23",
+        orange: "ffa500",
+        orangered: "ff4500",
+        orchid: "da70d6",
+        palegoldenrod: "eee8aa",
+        palegreen: "98fb98",
+        paleturquoise: "afeeee",
+        palevioletred: "db7093",
+        papayawhip: "ffefd5",
+        peachpuff: "ffdab9",
+        peru: "cd853f",
+        pink: "ffc0cb",
+        plum: "dda0dd",
+        powderblue: "b0e0e6",
+        purple: "800080",
+        red: "f00",
+        rosybrown: "bc8f8f",
+        royalblue: "4169e1",
+        saddlebrown: "8b4513",
+        salmon: "fa8072",
+        sandybrown: "f4a460",
+        seagreen: "2e8b57",
+        seashell: "fff5ee",
+        sienna: "a0522d",
+        silver: "c0c0c0",
+        skyblue: "87ceeb",
+        slateblue: "6a5acd",
+        slategray: "708090",
+        slategrey: "708090",
+        snow: "fffafa",
+        springgreen: "00ff7f",
+        steelblue: "4682b4",
+        tan: "d2b48c",
+        teal: "008080",
+        thistle: "d8bfd8",
+        tomato: "ff6347",
+        turquoise: "40e0d0",
+        violet: "ee82ee",
+        wheat: "f5deb3",
+        white: "fff",
+        whitesmoke: "f5f5f5",
+        yellow: "ff0",
+        yellowgreen: "9acd32"
+    };
+
+    // Make it easy to access colors via `hexNames[hex]`
+    var hexNames = tinycolor.hexNames = flip(names);
+
+
+    // Utilities
+    // ---------
+
+    // `{ 'name1': 'val1' }` becomes `{ 'val1': 'name1' }`
+    function flip(o) {
+        var flipped = { };
+        for (var i in o) {
+            if (o.hasOwnProperty(i)) {
+                flipped[o[i]] = i;
+            }
+        }
+        return flipped;
+    }
+
+    // Return a valid alpha value [0,1] with all invalid values being set to 1
+    function boundAlpha(a) {
+        a = parseFloat(a);
+
+        if (isNaN(a) || a < 0 || a > 1) {
+            a = 1;
+        }
+
+        return a;
+    }
+
+    // Take input from [0, n] and return it as [0, 1]
+    function bound01(n, max) {
+        if (isOnePointZero(n)) { n = "100%"; }
+
+        var processPercent = isPercentage(n);
+        n = mathMin(max, mathMax(0, parseFloat(n)));
+
+        // Automatically convert percentage into number
+        if (processPercent) {
+            n = parseInt(n * max, 10) / 100;
+        }
+
+        // Handle floating point rounding errors
+        if ((math.abs(n - max) < 0.000001)) {
+            return 1;
+        }
+
+        // Convert into [0, 1] range if it isn't already
+        return (n % max) / parseFloat(max);
+    }
+
+    // Force a number between 0 and 1
+    function clamp01(val) {
+        return mathMin(1, mathMax(0, val));
+    }
+
+    // Parse a base-16 hex value into a base-10 integer
+    function parseIntFromHex(val) {
+        return parseInt(val, 16);
+    }
+
+    // Need to handle 1.0 as 100%, since once it is a number, there is no difference between it and 1
+    // <http://stackoverflow.com/questions/7422072/javascript-how-to-detect-number-as-a-decimal-including-1-0>
+    function isOnePointZero(n) {
+        return typeof n == "string" && n.indexOf('.') != -1 && parseFloat(n) === 1;
+    }
+
+    // Check to see if string passed in is a percentage
+    function isPercentage(n) {
+        return typeof n === "string" && n.indexOf('%') != -1;
+    }
+
+    // Force a hex value to have 2 characters
+    function pad2(c) {
+        return c.length == 1 ? '0' + c : '' + c;
+    }
+
+    // Replace a decimal with it's percentage value
+    function convertToPercentage(n) {
+        if (n <= 1) {
+            n = (n * 100) + "%";
+        }
+
+        return n;
+    }
+
+    // Converts a decimal to a hex value
+    function convertDecimalToHex(d) {
+        return Math.round(parseFloat(d) * 255).toString(16);
+    }
+    // Converts a hex value to a decimal
+    function convertHexToDecimal(h) {
+        return (parseIntFromHex(h) / 255);
+    }
+
+    var matchers = (function() {
+
+        // <http://www.w3.org/TR/css3-values/#integers>
+        var CSS_INTEGER = "[-\\+]?\\d+%?";
+
+        // <http://www.w3.org/TR/css3-values/#number-value>
+        var CSS_NUMBER = "[-\\+]?\\d*\\.\\d+%?";
+
+        // Allow positive/negative integer/number.  Don't capture the either/or, just the entire outcome.
+        var CSS_UNIT = "(?:" + CSS_NUMBER + ")|(?:" + CSS_INTEGER + ")";
+
+        // Actual matching.
+        // Parentheses and commas are optional, but not required.
+        // Whitespace can take the place of commas or opening paren
+        var PERMISSIVE_MATCH3 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+        var PERMISSIVE_MATCH4 = "[\\s|\\(]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")[,|\\s]+(" + CSS_UNIT + ")\\s*\\)?";
+
+        return {
+            rgb: new RegExp("rgb" + PERMISSIVE_MATCH3),
+            rgba: new RegExp("rgba" + PERMISSIVE_MATCH4),
+            hsl: new RegExp("hsl" + PERMISSIVE_MATCH3),
+            hsla: new RegExp("hsla" + PERMISSIVE_MATCH4),
+            hsv: new RegExp("hsv" + PERMISSIVE_MATCH3),
+            hex3: /^([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+            hex6: /^([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
+            hex8: /^([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
+        };
+    })();
+
+    // `stringInputToObject`
+    // Permissive string parsing.  Take in a number of formats, and output an object
+    // based on detected format.  Returns `{ r, g, b }` or `{ h, s, l }` or `{ h, s, v}`
+    function stringInputToObject(color) {
+
+        color = color.replace(trimLeft,'').replace(trimRight, '').toLowerCase();
+        var named = false;
+        if (names[color]) {
+            color = names[color];
+            named = true;
+        }
+        else if (color == 'transparent') {
+            return { r: 0, g: 0, b: 0, a: 0, format: "name" };
+        }
+
+        // Try to match string input using regular expressions.
+        // Keep most of the number bounding out of this function - don't worry about [0,1] or [0,100] or [0,360]
+        // Just return an object and let the conversion functions handle that.
+        // This way the result will be the same whether the tinycolor is initialized with string or object.
+        var match;
+        if ((match = matchers.rgb.exec(color))) {
+            return { r: match[1], g: match[2], b: match[3] };
+        }
+        if ((match = matchers.rgba.exec(color))) {
+            return { r: match[1], g: match[2], b: match[3], a: match[4] };
+        }
+        if ((match = matchers.hsl.exec(color))) {
+            return { h: match[1], s: match[2], l: match[3] };
+        }
+        if ((match = matchers.hsla.exec(color))) {
+            return { h: match[1], s: match[2], l: match[3], a: match[4] };
+        }
+        if ((match = matchers.hsv.exec(color))) {
+            return { h: match[1], s: match[2], v: match[3] };
+        }
+        if ((match = matchers.hex8.exec(color))) {
+            return {
+                a: convertHexToDecimal(match[1]),
+                r: parseIntFromHex(match[2]),
+                g: parseIntFromHex(match[3]),
+                b: parseIntFromHex(match[4]),
+                format: named ? "name" : "hex8"
+            };
+        }
+        if ((match = matchers.hex6.exec(color))) {
+            return {
+                r: parseIntFromHex(match[1]),
+                g: parseIntFromHex(match[2]),
+                b: parseIntFromHex(match[3]),
+                format: named ? "name" : "hex"
+            };
+        }
+        if ((match = matchers.hex3.exec(color))) {
+            return {
+                r: parseIntFromHex(match[1] + '' + match[1]),
+                g: parseIntFromHex(match[2] + '' + match[2]),
+                b: parseIntFromHex(match[3] + '' + match[3]),
+                format: named ? "name" : "hex"
+            };
+        }
+
+        return false;
+    }
+
+    // Expose tinycolor to window, does not need to run in non-browser context.
+    window.tinycolor = tinycolor;
+
+    })();
+
+
+    $(function () {
+        if ($.fn.spectrum.load) {
+            $.fn.spectrum.processNativeColorInputs();
+        }
+    });
+
+})(window, jQuery);
