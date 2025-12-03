@@ -83,6 +83,7 @@
 	opacity: 0.7;
 }
 
+
 .modern-colorpicker-popup.dragging {
 	transition: none;
 	user-select: none;
@@ -563,6 +564,47 @@ body.dark-theme .modern-colorpicker-popup .slider-track:after {
 .sp-clear:hover {
 	background-color: #c82333 !important;
 	border-color: #bd2130 !important;
+}
+
+/* Eyedropper button in buttons area */
+.colorpicker-buttons .colorpicker-eyedropper-btn {
+	flex: 0 0 auto;
+	width: auto;
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	text-align: center;
+	border: 1px solid var(--border-medium);
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: auto;
+}
+
+.colorpicker-buttons .colorpicker-eyedropper-btn:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--border-dark);
+}
+
+.colorpicker-buttons .colorpicker-eyedropper-btn.active {
+	background-color: var(--accent-color, #007bff);
+	border-color: var(--accent-color, #007bff);
+	color: white;
+}
+
+.colorpicker-buttons .colorpicker-eyedropper-btn.active:hover {
+	background-color: var(--accent-hover, #0056b3);
+	border-color: var(--accent-hover, #0056b3);
+}
+
+.colorpicker-buttons .colorpicker-eyedropper-btn svg {
+	fill: currentColor;
+	display: block;
 }
 
 /* Dark Theme Adjustments */

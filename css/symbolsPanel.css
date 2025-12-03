@@ -1,0 +1,283 @@
+/* Symbols Panel Styles */
+
+.sidebarSymbolsPanel {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.symbolsPanelHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--spacing-sm);
+	padding: var(--spacing-md) var(--spacing-lg);
+	border-bottom: 1px solid var(--border-light);
+}
+
+.createSymbolBtn {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs) var(--spacing-md);
+	font-size: 12px;
+	background-color: var(--accent-primary);
+	color: white;
+	border: none;
+	font-weight: 500;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.createSymbolBtn:hover {
+	background-color: var(--accent-hover);
+	transform: translateY(0);
+}
+
+.createSymbolBtn svg {
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
+.symbolsList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-y: auto;
+	max-height: 400px;
+	flex-shrink: 0;
+}
+
+.symbolsList::-webkit-scrollbar {
+	width: 6px;
+}
+
+.symbolsList::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.symbolsList::-webkit-scrollbar-thumb {
+	background: var(--border-medium);
+	border-radius: 3px;
+}
+
+.symbolItem {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-md);
+	padding: var(--spacing-md) var(--spacing-lg);
+	background: transparent;
+	border-bottom: 1px solid var(--border-light);
+	transition: all 0.15s ease;
+}
+
+.symbolThumbnail {
+	flex-shrink: 0;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg-secondary);
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+	position: relative;
+	cursor: grab;
+	transition: all 0.15s ease;
+}
+
+.symbolThumbnail:hover {
+	border-color: var(--accent-primary);
+	box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.1);
+}
+
+.symbolThumbnail:active {
+	cursor: grabbing;
+}
+
+.symbolThumbnail svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.symbolThumbnail svg * {
+	vector-effect: non-scaling-stroke;
+}
+
+.symbolInfo {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+}
+
+.symbolName {
+	width: 100%;
+	padding: var(--spacing-xs) var(--spacing-sm);
+	font-size: 13px;
+	font-weight: 500;
+	border: 1px solid transparent;
+	border-radius: var(--radius-sm);
+	background: transparent;
+	color: var(--text-primary);
+	transition: all 0.15s ease;
+}
+
+.symbolName:hover {
+	border-color: var(--border-medium);
+	background: var(--bg-secondary);
+}
+
+.symbolName:focus {
+	outline: none;
+	border-color: var(--accent-primary);
+	background: var(--bg-secondary);
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1);
+}
+
+.symbolInstances {
+	font-size: 11px;
+	color: var(--text-tertiary);
+	opacity: 0.8;
+}
+
+.symbolActions {
+	display: flex;
+	gap: var(--spacing-xs);
+	flex-shrink: 0;
+}
+
+.symbolActionBtn {
+	width: 28px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border: 1px solid var(--border-medium);
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	color: var(--text-secondary);
+	transition: all 0.15s ease;
+	padding: 0;
+}
+
+.symbolActionBtn:hover {
+	background: var(--bg-hover);
+	border-color: var(--border-dark);
+	color: var(--text-primary);
+	transform: translateY(0);
+}
+
+.symbolActionBtn svg {
+	width: 16px;
+	height: 16px;
+	fill: currentColor;
+	display: block;
+}
+
+/* Specific button hover colors */
+.symbolEditBtn:hover {
+	background: rgba(76, 110, 245, 0.1);
+	border-color: var(--accent-primary);
+	color: var(--accent-primary);
+}
+
+.symbolPlaceBtn:hover {
+	background: rgba(76, 200, 100, 0.1);
+	border-color: #4cc864;
+	color: #4cc864;
+}
+
+.symbolDeleteBtn:hover {
+	background: rgba(255, 68, 68, 0.1);
+	border-color: #ff4444;
+	color: #ff4444;
+}
+
+/* Symbol Edit Mode Banner */
+.symbol-edit-banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+	background: var(--accent-primary);
+	color: white;
+	height: 48px;
+	box-shadow: var(--shadow-md);
+}
+
+.symbol-edit-content {
+	max-width: 1200px;
+	height: 48px;
+	margin: 0 auto;
+	padding: 0 var(--spacing-lg);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.symbol-edit-text {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.symbol-edit-text strong {
+	font-weight: 600;
+}
+
+.symbol-edit-actions {
+	display: flex;
+	gap: var(--spacing-sm);
+}
+
+.symbol-edit-cancel,
+.symbol-edit-done {
+	padding: 6px var(--spacing-lg);
+	border: none;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 600;
+	transition: all 0.15s ease;
+	min-width: 80px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.symbol-edit-cancel {
+	background: transparent;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.symbol-edit-cancel:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: white;
+	transform: translateY(0);
+}
+
+.symbol-edit-done {
+	background: white;
+	color: var(--accent-primary);
+}
+
+.symbol-edit-done:hover {
+	background: rgba(255, 255, 255, 0.9);
+	transform: translateY(0);
+}
+
+/* Symbol edit mode - dim canvas slightly */
+body.symbol-edit-mode #paperCanvas {
+	opacity: 0.95;
+}
