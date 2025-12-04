@@ -14,6 +14,148 @@
 	transition: transform 0.3s ease;
 }
 
+/* Sidebar Search Bar */
+.sidebarSearchBar {
+	flex-shrink: 0;
+	padding: var(--spacing-md);
+	background-color: var(--bg-secondary);
+	border-bottom: 1px solid var(--border-medium);
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+.sidebarSearchWrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: var(--bg-primary);
+	border: 2px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	transition: all 0.15s ease;
+	overflow: hidden;
+	height: 36px;
+	flex: 1;
+}
+
+.sidebarSearchWrapper:focus-within {
+	border-color: var(--accent-primary);
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1);
+}
+
+.sidebarSearchInput {
+	flex: 1;
+	padding: 0 12px;
+	font-size: 13px;
+	background-color: transparent;
+	border: none;
+	color: var(--text-primary);
+	outline: none;
+	height: 100%;
+}
+
+.sidebarSearchInput::placeholder {
+	color: var(--text-tertiary);
+	opacity: 0.6;
+}
+
+.sidebarSearchIconBtn {
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	background: transparent;
+	border: none;
+	color: var(--text-tertiary);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	position: relative;
+	outline: none;
+}
+
+.sidebarSearchIconBtn:hover {
+	background-color: var(--bg-hover);
+	color: var(--text-primary);
+}
+
+.sidebarSearchIconBtn:focus {
+	outline: none;
+}
+
+.sidebarSearchIcon,
+.sidebarSearchClear {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.sidebarSearchIcon {
+	color: var(--text-tertiary);
+}
+
+.sidebarSearchClear {
+	color: var(--text-tertiary);
+}
+
+.sidebarCollapseExpandBtn {
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	background-color: var(--bg-primary);
+	border: 2px solid var(--border-medium);
+	border-radius: var(--radius-md);
+	color: var(--text-secondary);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	position: relative;
+	outline: none;
+}
+
+.sidebarCollapseExpandBtn:hover {
+	background-color: var(--bg-hover);
+	border-color: var(--accent-primary);
+	color: var(--text-primary);
+}
+
+.sidebarCollapseExpandBtn:focus {
+	outline: none;
+	border-color: var(--accent-primary);
+	box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.1);
+}
+
+.sidebarCollapseIcon,
+.sidebarExpandIcon {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	fill: currentColor;
+}
+
+.sidebarSearchNoResults {
+	padding: var(--spacing-xl) var(--spacing-md);
+	text-align: center;
+	color: var(--text-tertiary);
+	font-size: 13px;
+	font-style: italic;
+	background-color: var(--bg-secondary);
+	border-bottom: 1px solid var(--border-light);
+}
+
 .rightSidebar.collapsed {
 	transform: translateX(100%);
 }
@@ -2812,11 +2954,13 @@ body.dark-theme .tool-property-slider:hover::-moz-range-thumb {
 
 /* Sidebar Footer */
 .sidebarFooter {
-	padding: var(--spacing-lg) var(--spacing-md);
-	background-color: var(--bg-primary);
-	border-top: 1px solid var(--border-light);
-	text-align: center;
-	flex-shrink: 0;
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-light);
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: visible;
 }
 
 .sidebarFooterText {
@@ -2868,7 +3012,7 @@ body.dark-theme .tool-property-slider:hover::-moz-range-thumb {
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 6px 12px;
-	background-color: var(--bg-tertiary);
+	background-color: rgba(255, 255, 255, 0.85);
 	color: var(--text-primary);
 	font-size: 11px;
 	white-space: nowrap;
@@ -2880,14 +3024,18 @@ body.dark-theme .tool-property-slider:hover::-moz-range-thumb {
 	pointer-events: none;
 	transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 	z-index: 1000;
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 }
 
 /* Dark theme tooltip styling */
 :root.dark-theme .sidebarFooterTooltip,
 body.dark-theme .sidebarFooterTooltip {
-	background-color: rgba(30, 32, 36, 0.95);
+	background-color: rgba(30, 32, 36, 0.75);
 	border-color: rgba(76, 110, 245, 0.3);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 8px rgba(76, 110, 245, 0.2);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 }
 
 /* Tooltip arrow */
@@ -2898,12 +3046,12 @@ body.dark-theme .sidebarFooterTooltip {
 	left: 50%;
 	transform: translateX(-50%);
 	border: 5px solid transparent;
-	border-top-color: var(--bg-tertiary);
+	border-top-color: rgba(255, 255, 255, 0.85);
 }
 
 :root.dark-theme .sidebarFooterTooltip::after,
 body.dark-theme .sidebarFooterTooltip::after {
-	border-top-color: rgba(30, 32, 36, 0.95);
+	border-top-color: rgba(30, 32, 36, 0.75);
 }
 
 /* Show tooltip with class */

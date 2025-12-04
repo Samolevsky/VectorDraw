@@ -61,8 +61,8 @@
 
 
 	// Convert RGB to all color modes
-	function rgbToAllModes(r, g, b, a, previousValues) {
-		const rgbColor = { mode: 'rgb', r: r / 255, g: g / 255, b: b / 255, alpha: a };
+    function rgbToAllModes(r, g, b, a, previousValues) {
+        const rgbColor = { mode: 'rgb', r: r / 255, g: g / 255, b: b / 255, alpha: a };
 
 		// HSL
 		const hslColor = hsl(rgbColor);
@@ -87,15 +87,15 @@
 		const oklchChroma = roundTo(oklchColor.c || 0, 3);
 		const oklchHue = oklchColor.h !== undefined ? roundTo(oklchColor.h, 0) : (previousValues?.oklchHue !== undefined ? previousValues.oklchHue : 0);
 
-		return {
-			red: r, green: g, blue: b,
-			hue, saturation, luminosity,
-			hsvSaturation, value,
-			whiteness, blackness,
-			oklchLightness, oklchChroma, oklchHue,
-			alpha: a
-		};
-	}
+        return {
+            red: r, green: g, blue: b,
+            hue, saturation, luminosity,
+            hsvSaturation, value,
+            whiteness, blackness,
+            oklchLightness, oklchChroma, oklchHue,
+            alpha: a * 100
+        };
+    }
 
 	// Generate gradient for sliders
 	function generateGradient(mode, component, currentValues) {
@@ -959,52 +959,52 @@
 		});
 
 		// Add double-click and right-click handlers for alpha sliders to reset to 1 (100%)
-		$picker.find('input[type="range"][name="alpha"]').on('dblclick contextmenu', function (e) {
-			e.preventDefault();
-			handleSliderChange(instance, mode, 'alpha', 1);
-			return false;
-		});
+        $picker.find('input[type="range"][name="alpha"]').on('dblclick contextmenu', function (e) {
+            e.preventDefault();
+            handleSliderChange(instance, mode, 'alpha', 100);
+            return false;
+        });
 
-		$picker.find('input[type="number"][name="alphaNum"]').on('dblclick contextmenu', function (e) {
-			e.preventDefault();
-			handleSliderChange(instance, mode, 'alpha', 1);
-			return false;
-		});
+        $picker.find('input[type="number"][name="alphaNum"]').on('dblclick contextmenu', function (e) {
+            e.preventDefault();
+            handleSliderChange(instance, mode, 'alpha', 100);
+            return false;
+        });
 	}
 
 	function createColorModePicker(mode, values) {
 		const modes = {
-			rgb: [
-				{ name: 'red', label: 'R', tooltip: 'Red Channel', min: 0, max: 255, step: 1, value: Math.round(values.red || 0) },
-				{ name: 'green', label: 'G', tooltip: 'Green Channel', min: 0, max: 255, step: 1, value: Math.round(values.green || 0) },
-				{ name: 'blue', label: 'B', tooltip: 'Blue Channel', min: 0, max: 255, step: 1, value: Math.round(values.blue || 0) },
-				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
-			],
-			hsl: [
-				{ name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
-				{ name: 'saturation', label: 'S', tooltip: 'Saturation', min: 0, max: 100, step: 0.1, value: roundTo(values.saturation || 0, 1) },
-				{ name: 'luminosity', label: 'L', tooltip: 'Lightness', min: 0, max: 100, step: 0.1, value: roundTo(values.luminosity || 0, 1) },
-				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
-			],
-			hsv: [
-				{ name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
-				{ name: 'hsvSaturation', label: 'S', tooltip: 'Saturation', min: 0, max: 100, step: 0.1, value: roundTo(values.hsvSaturation || 0, 1) },
-				{ name: 'value', label: 'V', tooltip: 'Value (Brightness)', min: 0, max: 100, step: 0.1, value: roundTo(values.value || 0, 1) },
-				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
-			],
-			hwb: [
-				{ name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
-				{ name: 'whiteness', label: 'W', tooltip: 'Whiteness', min: 0, max: 100, step: 0.1, value: roundTo(values.whiteness || 0, 1) },
-				{ name: 'blackness', label: 'B', tooltip: 'Blackness', min: 0, max: 100, step: 0.1, value: roundTo(values.blackness || 0, 1) },
-				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
-			],
-			oklch: [
-				{ name: 'oklchLightness', label: 'L', tooltip: 'Lightness', min: 0, max: 1, step: 0.001, value: roundTo(values.oklchLightness || 0, 3) },
-				{ name: 'oklchChroma', label: 'C', tooltip: 'Chroma (Colorfulness)', min: 0, max: 0.37, step: 0.001, value: roundTo(values.oklchChroma || 0, 3) },
-				{ name: 'oklchHue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.oklchHue || 0) },
-				{ name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 1, step: 0.01, value: (values.alpha !== undefined ? values.alpha : 1) }
-			]
-		};
+            rgb: [
+                { name: 'red', label: 'R', tooltip: 'Red Channel', min: 0, max: 255, step: 1, value: Math.round(values.red || 0) },
+                { name: 'green', label: 'G', tooltip: 'Green Channel', min: 0, max: 255, step: 1, value: Math.round(values.green || 0) },
+                { name: 'blue', label: 'B', tooltip: 'Blue Channel', min: 0, max: 255, step: 1, value: Math.round(values.blue || 0) },
+                { name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 100, step: 1, value: (values.alpha !== undefined ? values.alpha : 100) }
+            ],
+            hsl: [
+                { name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
+                { name: 'saturation', label: 'S', tooltip: 'Saturation', min: 0, max: 100, step: 0.1, value: roundTo(values.saturation || 0, 1) },
+                { name: 'luminosity', label: 'L', tooltip: 'Lightness', min: 0, max: 100, step: 0.1, value: roundTo(values.luminosity || 0, 1) },
+                { name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 100, step: 1, value: (values.alpha !== undefined ? values.alpha : 100) }
+            ],
+            hsv: [
+                { name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
+                { name: 'hsvSaturation', label: 'S', tooltip: 'Saturation', min: 0, max: 100, step: 0.1, value: roundTo(values.hsvSaturation || 0, 1) },
+                { name: 'value', label: 'V', tooltip: 'Value (Brightness)', min: 0, max: 100, step: 0.1, value: roundTo(values.value || 0, 1) },
+                { name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 100, step: 1, value: (values.alpha !== undefined ? values.alpha : 100) }
+            ],
+            hwb: [
+                { name: 'hue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.hue || 0) },
+                { name: 'whiteness', label: 'W', tooltip: 'Whiteness', min: 0, max: 100, step: 0.1, value: roundTo(values.whiteness || 0, 1) },
+                { name: 'blackness', label: 'B', tooltip: 'Blackness', min: 0, max: 100, step: 0.1, value: roundTo(values.blackness || 0, 1) },
+                { name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 100, step: 1, value: (values.alpha !== undefined ? values.alpha : 100) }
+            ],
+            oklch: [
+                { name: 'oklchLightness', label: 'L', tooltip: 'Lightness', min: 0, max: 1, step: 0.001, value: roundTo(values.oklchLightness || 0, 3) },
+                { name: 'oklchChroma', label: 'C', tooltip: 'Chroma (Colorfulness)', min: 0, max: 0.37, step: 0.001, value: roundTo(values.oklchChroma || 0, 3) },
+                { name: 'oklchHue', label: 'H', tooltip: 'Hue', min: 0, max: 360, step: 1, value: Math.round(values.oklchHue || 0) },
+                { name: 'alpha', label: 'A', tooltip: 'Alpha (Opacity)', min: 0, max: 100, step: 1, value: (values.alpha !== undefined ? values.alpha : 100) }
+            ]
+        };
 
 		const modeConfig = modes[mode];
 		if (!modeConfig) return '';
@@ -1012,32 +1012,32 @@
 		// Generate color string for this mode
 		let colorString = '';
 		switch (mode) {
-			case 'rgb':
-				colorString = values.alpha < 1
-					? `rgba(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)} / ${values.alpha})`
-					: `rgb(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)})`;
-				break;
-			case 'hsl':
-				colorString = values.alpha < 1
-					? `hsla(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}% / ${values.alpha})`
-					: `hsl(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}%)`;
-				break;
-			case 'hsv':
-				colorString = values.alpha < 1
-					? `hsva(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}% / ${values.alpha})`
-					: `hsv(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}%)`;
-				break;
-			case 'hwb':
-				colorString = values.alpha < 1
-					? `hwba(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}% / ${values.alpha})`
-					: `hwb(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}%)`;
-				break;
-			case 'oklch':
-				colorString = values.alpha < 1
-					? `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)} / ${values.alpha})`
-					: `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)})`;
-				break;
-		}
+            case 'rgb':
+                colorString = values.alpha < 100
+                    ? `rgba(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)} / ${values.alpha / 100})`
+                    : `rgb(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)})`;
+                break;
+            case 'hsl':
+                colorString = values.alpha < 100
+                    ? `hsla(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}% / ${values.alpha / 100})`
+                    : `hsl(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}%)`;
+                break;
+            case 'hsv':
+                colorString = values.alpha < 100
+                    ? `hsva(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}% / ${values.alpha / 100})`
+                    : `hsv(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}%)`;
+                break;
+            case 'hwb':
+                colorString = values.alpha < 100
+                    ? `hwba(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}% / ${values.alpha / 100})`
+                    : `hwb(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}%)`;
+                break;
+            case 'oklch':
+                colorString = values.alpha < 100
+                    ? `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)} / ${values.alpha / 100})`
+                    : `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)})`;
+                break;
+        }
 
 		let html = `<div class="color-picker" data-mode="${mode}">`;
 
@@ -1102,55 +1102,55 @@
 	}
 
 
-	function handleSliderChange(instance, mode, component, value) {
-		const numValue = parseFloat(value);
-		instance.currentValues[component] = numValue;
+    function handleSliderChange(instance, mode, component, value) {
+        const numValue = parseFloat(value);
+        instance.currentValues[component] = numValue;
 
 		// Convert from current mode to RGB
 		let color;
 		try {
 			switch (mode) {
-				case 'rgb':
-					color = rgb({
-						r: instance.currentValues.red / 255,
-						g: instance.currentValues.green / 255,
-						b: instance.currentValues.blue / 255,
-						alpha: instance.currentValues.alpha
-					});
-					break;
-				case 'hsl':
-					color = hsl({
-						h: instance.currentValues.hue,
-						s: instance.currentValues.saturation / 100,
-						l: instance.currentValues.luminosity / 100,
-						alpha: instance.currentValues.alpha
-					});
-					break;
-				case 'hsv':
-					color = hsv({
-						h: instance.currentValues.hue,
-						s: instance.currentValues.hsvSaturation / 100,
-						v: instance.currentValues.value / 100,
-						alpha: instance.currentValues.alpha
-					});
-					break;
-				case 'hwb':
-					color = hwb({
-						h: instance.currentValues.hue,
-						w: instance.currentValues.whiteness / 100,
-						b: instance.currentValues.blackness / 100,
-						alpha: instance.currentValues.alpha
-					});
-					break;
-				case 'oklch':
-					color = oklch({
-						l: instance.currentValues.oklchLightness,
-						c: instance.currentValues.oklchChroma,
-						h: instance.currentValues.oklchHue,
-						alpha: instance.currentValues.alpha
-					});
-					break;
-			}
+                case 'rgb':
+                    color = rgb({
+                        r: instance.currentValues.red / 255,
+                        g: instance.currentValues.green / 255,
+                        b: instance.currentValues.blue / 255,
+                        alpha: instance.currentValues.alpha / 100
+                    });
+                    break;
+                case 'hsl':
+                    color = hsl({
+                        h: instance.currentValues.hue,
+                        s: instance.currentValues.saturation / 100,
+                        l: instance.currentValues.luminosity / 100,
+                        alpha: instance.currentValues.alpha / 100
+                    });
+                    break;
+                case 'hsv':
+                    color = hsv({
+                        h: instance.currentValues.hue,
+                        s: instance.currentValues.hsvSaturation / 100,
+                        v: instance.currentValues.value / 100,
+                        alpha: instance.currentValues.alpha / 100
+                    });
+                    break;
+                case 'hwb':
+                    color = hwb({
+                        h: instance.currentValues.hue,
+                        w: instance.currentValues.whiteness / 100,
+                        b: instance.currentValues.blackness / 100,
+                        alpha: instance.currentValues.alpha / 100
+                    });
+                    break;
+                case 'oklch':
+                    color = oklch({
+                        l: instance.currentValues.oklchLightness,
+                        c: instance.currentValues.oklchChroma,
+                        h: instance.currentValues.oklchHue,
+                        alpha: instance.currentValues.alpha / 100
+                    });
+                    break;
+            }
 
 			if (color) {
 				const rgbColor = rgb(color);
@@ -1198,11 +1198,11 @@
 		$swatch.css('color', color.toRgbString());
 
 		// Show/hide checkerboard based on alpha
-		if (values.alpha < 1) {
-			$swatch.addClass('has-transparency');
-		} else {
-			$swatch.removeClass('has-transparency');
-		}
+        if (values.alpha < 100) {
+            $swatch.addClass('has-transparency');
+        } else {
+            $swatch.removeClass('has-transparency');
+        }
 
 		// Update mode color inputs
 		$container.find('.mode-color-input').each(function () {
@@ -1211,32 +1211,32 @@
 			let colorString = '';
 
 			switch (mode) {
-				case 'rgb':
-					colorString = values.alpha < 1
-						? `rgba(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)} / ${values.alpha})`
-						: `rgb(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)})`;
-					break;
-				case 'hsl':
-					colorString = values.alpha < 1
-						? `hsla(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}% / ${values.alpha})`
-						: `hsl(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}%)`;
-					break;
-				case 'hsv':
-					colorString = values.alpha < 1
-						? `hsva(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}% / ${values.alpha})`
-						: `hsv(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}%)`;
-					break;
-				case 'hwb':
-					colorString = values.alpha < 1
-						? `hwba(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}% / ${values.alpha})`
-						: `hwb(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}%)`;
-					break;
-				case 'oklch':
-					colorString = values.alpha < 1
-						? `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)} / ${values.alpha})`
-						: `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)})`;
-					break;
-			}
+                case 'rgb':
+                    colorString = values.alpha < 100
+                        ? `rgba(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)} / ${values.alpha / 100})`
+                        : `rgb(${Math.round(values.red || 0)} ${Math.round(values.green || 0)} ${Math.round(values.blue || 0)})`;
+                    break;
+                case 'hsl':
+                    colorString = values.alpha < 100
+                        ? `hsla(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}% / ${values.alpha / 100})`
+                        : `hsl(${Math.round(values.hue || 0)} ${roundTo(values.saturation || 0, 1)}% ${roundTo(values.luminosity || 0, 1)}%)`;
+                    break;
+                case 'hsv':
+                    colorString = values.alpha < 100
+                        ? `hsva(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}% / ${values.alpha / 100})`
+                        : `hsv(${Math.round(values.hue || 0)} ${roundTo(values.hsvSaturation || 0, 1)}% ${roundTo(values.value || 0, 1)}%)`;
+                    break;
+                case 'hwb':
+                    colorString = values.alpha < 100
+                        ? `hwba(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}% / ${values.alpha / 100})`
+                        : `hwb(${Math.round(values.hue || 0)} ${roundTo(values.whiteness || 0, 1)}% ${roundTo(values.blackness || 0, 1)}%)`;
+                    break;
+                case 'oklch':
+                    colorString = values.alpha < 100
+                        ? `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)} / ${values.alpha / 100})`
+                        : `oklch(${roundTo(values.oklchLightness || 0, 3)} ${roundTo(values.oklchChroma || 0, 3)} ${Math.round(values.oklchHue || 0)})`;
+                    break;
+            }
 
 			$input.val(colorString);
 		});
