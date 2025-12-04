@@ -379,11 +379,13 @@
 	border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 	overflow: hidden;
 	background-color: var(--bg-secondary);
+	flex-shrink: 0;
 }
 
 .sidebarEffectsPanel .stroke-inline-up,
 .sidebarEffectsPanel .stroke-inline-down {
-	width: 24px;
+	width: 32px;
+	min-width: 32px;
 	height: 18px;
 	padding: 0;
 	margin: 0;
@@ -396,6 +398,7 @@
 	justify-content: center;
 	transition: all 0.15s ease;
 	color: var(--text-secondary);
+	flex-shrink: 0;
 }
 
 .sidebarEffectsPanel .stroke-inline-down {

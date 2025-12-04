@@ -300,8 +300,13 @@
 }
 
 .liveEffectsExpandBtn svg {
-	fill: currentColor;
+	fill: var(--text-secondary);
 	flex-shrink: 0;
+	transition: fill 0.15s ease;
+}
+
+.liveEffectsExpandBtn:hover svg {
+	fill: var(--accent-primary);
 }
 
 /* Effect parameter sliders - match sidebar slider style */
