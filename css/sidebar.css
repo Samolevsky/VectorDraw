@@ -3280,6 +3280,8 @@ body.dark-theme .sidebarFooterTooltip::after {
 	max-height: 300px;
 }
 
+.triangular-palette-list.swatchesGrid.view-list { padding-left: 0; padding-right: 0; }
+
 .swatchesGrid::-webkit-scrollbar {
 	width: 6px;
 }
@@ -3294,33 +3296,37 @@ body.dark-theme .sidebarFooterTooltip::after {
 }
 
 .swatchItem {
-	position: relative;
-	aspect-ratio: 1;
-	border-radius: var(--radius-sm);
-	overflow: hidden;
-	cursor: move;
-	transition: all 0.15s ease;
-	border: 2px solid var(--border-light);
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    cursor: move;
+    transition: all 0.15s ease;
+    border: 1px solid var(--border-light);
 }
 
 .swatchItem:hover {
-	border-color: var(--accent-primary);
-	transform: translateY(-2px);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #bfbfbf !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 /* List view specific styles */
 .swatchesGrid.view-list .swatchItem {
-	aspect-ratio: auto;
-	display: flex;
-	align-items: center;
-	gap: var(--spacing-md);
-	padding: var(--spacing-sm) var(--spacing-md);
-	cursor: pointer;
+    aspect-ratio: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    border: 1px solid var(--border-light);
 }
 
 .swatchesGrid.view-list .swatchItem:hover {
-	transform: none;
+    border-color: var(--border-medium) !important;
+    background-color: var(--bg-hover) !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 .swatchesGrid.view-list .swatchColor {
@@ -3329,6 +3335,24 @@ body.dark-theme .sidebarFooterTooltip::after {
 	flex-shrink: 0;
 	border-radius: var(--radius-sm);
 	border: 1px solid var(--border-light);
+}
+
+.swatchesGrid.view-list .swatchColor:hover {
+    border-color: var(--border-medium) !important;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08) !important;
+    outline: none !important;
+}
+
+:root.dark-theme .swatchesGrid.view-list .swatchColor:hover,
+body.dark-theme .swatchesGrid.view-list .swatchColor:hover {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--border-medium) !important;
+}
+
+:root.dark-theme .swatchesGrid.view-list .swatchItem:hover,
+body.dark-theme .swatchesGrid.view-list .swatchItem:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border-color: var(--border-medium) !important;
 }
 
 .swatchName {
@@ -3365,15 +3389,31 @@ body.dark-theme .sidebarFooterTooltip::after {
 }
 
 .swatchesGrid.view-list .swatchDeleteBtn {
-	width: 28px;
-	height: 28px;
-	background-color: transparent;
-	border: none;
-	box-shadow: none;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 0;
+}
+
+.swatchesGrid.view-list .swatchDeleteBtn {
+	color: var(--text-tertiary);
 }
 
 .swatchesGrid.view-list .swatchDeleteBtn svg {
-	fill: var(--text-tertiary);
+    fill: var(--text-tertiary);
+    color: var(--text-tertiary);
+    display: block;
+    margin: 0;
+}
+
+.swatchesGrid.view-list .swatchDeleteBtn svg path {
+    fill: var(--text-tertiary);
 }
 
 .swatchesGrid.view-list .swatchDeleteBtn:hover {
@@ -3382,8 +3422,18 @@ body.dark-theme .sidebarFooterTooltip::after {
 	transform: none;
 }
 
+.swatchesGrid.view-list .swatchDeleteBtn:hover,
 .swatchesGrid.view-list .swatchDeleteBtn:hover svg {
-	fill: white;
+	color: white;
+}
+
+.swatchesGrid.view-list .swatchDeleteBtn:hover svg {
+    fill: white;
+    color: white;
+}
+
+.swatchesGrid.view-list .swatchDeleteBtn:hover svg path {
+    fill: white;
 }
 
 .swatchColor {
@@ -3433,6 +3483,10 @@ body.dark-theme .sidebarFooterTooltip::after {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.swatchDeleteBtn {
+	color: var(--text-primary);
+}
+
 .swatchDeleteBtn:hover {
 	background-color: #ff4444;
 	border-color: #ff4444;
@@ -3440,7 +3494,12 @@ body.dark-theme .sidebarFooterTooltip::after {
 }
 
 .swatchDeleteBtn:hover svg {
-	fill: white;
+    fill: white;
+    color: white;
+}
+
+.swatchDeleteBtn:hover svg path {
+    fill: white;
 }
 
 .swatchDeleteBtn svg {
@@ -3456,7 +3515,32 @@ body.dark-theme .swatchDeleteBtn {
 
 :root.dark-theme .swatchDeleteBtn svg,
 body.dark-theme .swatchDeleteBtn svg {
-	fill: var(--text-primary);
+    fill: var(--text-primary);
+    color: var(--text-primary);
+}
+
+:root.dark-theme .swatchDeleteBtn svg path,
+:root.dark-theme .swatchDeleteBtn svg path,
+body.dark-theme .swatchDeleteBtn svg path {
+    fill: var(--text-primary);
+}
+
+.swatchesGrid.view-list .swatchDeleteBtn svg line {
+    stroke: var(--text-tertiary);
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.swatchesGrid.view-list .swatchDeleteBtn:hover svg line {
+    stroke: white;
+}
+
+.swatchDeleteBtn svg line {
+    transition: stroke 0.15s ease;
+}
+
+.swatchDeleteBtn:hover svg line {
+    stroke: white;
 }
 
 /* Sortable placeholder */

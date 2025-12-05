@@ -293,7 +293,11 @@ select:focus {
 .cursor-polygon,
 .cursor-graph,
 .cursor-triangulator {
-	cursor: crosshair;
+    cursor: crosshair;
+}
+
+.cursor-triangular {
+    cursor: crosshair;
 }
 
 .colorInputBlocker,
