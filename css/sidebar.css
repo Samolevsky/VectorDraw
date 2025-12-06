@@ -14,6 +14,22 @@
 	transition: transform 0.3s ease;
 }
 
+.sidebarResizeHandle {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 6px;
+	height: 100%;
+	cursor: col-resize;
+	background: transparent;
+	user-select: none;
+	z-index: 51;
+}
+
+.sidebarResizeHandle:hover {
+	background-color: var(--bg-hover);
+}
+
 /* Sidebar Search Bar */
 .sidebarSearchBar {
 	flex-shrink: 0;
@@ -338,6 +354,12 @@
 
 .sidebarSection[data-section="layers"]:not(.collapsed) .sidebarSectionContent {
 	flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+	.sidebarResizeHandle {
+		display: none;
+	}
 }
 
 /* Layers Panel in Sidebar */
@@ -1215,10 +1237,6 @@ body:not(.dark-theme) .layerItemRow[data-selected="true"] .itemIcon img {
 	background: var(--text-tertiary);
 }
 
-/* Adjust canvas when sidebar is open */
-body.sidebar-open #paperCanvas {
-	width: calc(100% - 320px) !important;
-}
 
 /* View Panel in Sidebar */
 .sidebarViewPanel {
@@ -5524,14 +5542,145 @@ body.dark-theme .fill-hex-input:hover {
 }
 
 .stroke-color-reset svg {
-	width: 16px;
-	height: 16px;
-	fill: currentColor;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }
 
 /* Dark theme adjustments */
 :root.dark-theme .stroke-hex-input:hover,
 body.dark-theme .stroke-hex-input:hover {
-	background-color: var(--bg-hover);
-	border-color: rgba(76, 110, 245, 0.4);
+    background-color: var(--bg-hover);
+    border-color: rgba(76, 110, 245, 0.4);
+}
+/* Blend Mode List in Appearance Panel */
+.blend-mode-list {
+    display: block;
+    flex: 1;
+    width: 100%;
+    max-height: 180px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-secondary);
+}
+
+.blend-mode-list.collapsed {
+    max-height: 36px;
+    overflow-y: hidden;
+}
+
+.blend-mode-list.collapsed .blend-mode-item { display: none; }
+.blend-mode-list.collapsed .blend-mode-item.active { display: block; }
+
+.blend-collapse-toggle {
+    margin-left: var(--spacing-sm);
+    height: 36px;
+    min-height: 36px;
+    padding: 0 var(--spacing-md);
+    font-size: 12px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-medium);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.blend-collapse-toggle.active {
+    background-color: var(--bg-tertiary);
+    color: var(--accent-primary);
+}
+
+.blend-mode-list::-webkit-scrollbar { width: 6px; }
+.blend-mode-list::-webkit-scrollbar-track { background: transparent; }
+.blend-mode-list::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 3px; }
+
+.blend-mode-item {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-primary);
+    transition: all 0.15s ease;
+    position: relative;
+    padding-right: calc(var(--spacing-md) + 28px);
+}
+
+.blend-mode-item:hover,
+.blend-mode-item:focus {
+    background-color: var(--bg-hover);
+    outline: none;
+}
+
+.blend-mode-item.active {
+    background-color: var(--bg-tertiary);
+    color: var(--accent-primary);
+}
+.blend-mode-icon-container {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translate(8px, -50%);
+    opacity: 0;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    pointer-events: none;
+}
+
+.blend-mode-item.active:hover .blend-mode-icon-container,
+.blend-mode-item.active:focus .blend-mode-icon-container {
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+
+/* Theme-colored icon via CSS mask */
+.blend-mode-icon-container::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-color: var(--accent-primary);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.blend-mode-list:not(.collapsed) .blend-mode-item.active .blend-mode-icon-container::after {
+    -webkit-mask-image: url('../assets/ui/checkmark.svg');
+    mask-image: url('../assets/ui/checkmark.svg');
+}
+
+.blend-mode-list.collapsed .blend-mode-item.active .blend-mode-icon-container::after {
+    -webkit-mask-image: url('../assets/ui/chevron--down.svg');
+    mask-image: url('../assets/ui/chevron--down.svg');
+}
+
+/* Chevron default color when list is collapsed (neutral) */
+.blend-mode-list.collapsed .blend-mode-item.active .blend-mode-icon-container::after {
+    background-color: var(--text-primary);
+}
+
+/* Chevron turns blue on hovering the list */
+.blend-mode-list.collapsed:hover .blend-mode-item.active .blend-mode-icon-container::after {
+    background-color: var(--accent-primary);
+}
+
+/* Active item text color: neutral when collapsed, accent on hover */
+.blend-mode-list.collapsed .blend-mode-item.active {
+    color: var(--text-primary);
+}
+.blend-mode-list.collapsed:hover .blend-mode-item.active {
+    color: var(--accent-primary);
+}
+/* Adjust canvas when sidebar is open */
+body.sidebar-open #paperCanvas {
+    right: var(--sidebar-width, 320px);
+    width: auto !important;
 }

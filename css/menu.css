@@ -117,9 +117,19 @@
 	padding-bottom: var(--spacing-sm);
 }
 
-.appNav .subMenu>li:not(.title):hover {
-	background-color: var(--bg-hover);
-	color: var(--text-primary);
+.appNav .subMenu>li:not(.title):not(.hasSubSubMenu):hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+/* When a section is expanded, do not highlight the whole container on hover */
+.appNav .subMenu>li.hasSubSubMenu.expanded:hover {
+    background-color: transparent !important;
+}
+
+.appNav .subMenu>li.hasSubSubMenu .menuSectionHeader:hover {
+    background-color: var(--bg-hover);
+    border-radius: var(--radius-sm);
 }
 
 .appNav .subMenu>li.title {
@@ -197,19 +207,22 @@
 
 .subSubMenu>li {
     position: static;
-    padding: var(--spacing-xs) 0;
+    padding: var(--spacing-xs) var(--spacing-sm);
     font-size: 12px;
-    transition: color 0.15s ease;
+    transition: color 0.15s ease, background-color 0.15s ease;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    cursor: default;
 }
 
 .subSubMenu>li:hover {
     color: var(--text-primary);
+    background-color: var(--bg-hover);
 }
 
 .subSubMenu>li .menuLabel {
@@ -231,6 +244,16 @@
 .subSubMenu>li:hover .menuShortcut {
     border-color: var(--accent-primary);
     opacity: 0.6;
+}
+
+/* Ensure only hovered child pills get blue outline in expanded sections */
+.appNav .subMenu>li.hasSubSubMenu.expanded .subSubMenu>li .menuShortcut {
+    border-color: var(--border-medium);
+    opacity: 0.5;
+}
+.appNav .subMenu>li.hasSubSubMenu.expanded .subSubMenu>li:hover .menuShortcut {
+    border-color: var(--accent-primary) !important;
+    opacity: 0.6 !important;
 }
 
 /* document settings panel */
@@ -307,6 +330,33 @@
 	align-items: flex-start;
 }
 
+.appNav .subMenu>li.hasSubSubMenu .menuSectionHeader {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.appNav .subMenu>li.hasSubSubMenu .menuChevron {
+	margin-left: auto;
+	color: var(--text-tertiary);
+	opacity: 0.6;
+	transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.appNav .subMenu>li.hasSubSubMenu:hover .menuChevron {
+    opacity: 0.8;
+    color: var(--accent-primary);
+}
+
+.appNav .subMenu>li.hasSubSubMenu .menuChevron svg {
+	display: block;
+	transform: rotate(0deg);
+}
+
+.appNav .subMenu>li.hasSubSubMenu.expanded .menuChevron svg {
+	transform: rotate(90deg);
+}
+
 /* Menu item label and shortcut layout */
 .appNav .subMenu>li .menuLabel {
 	flex: 0 0 auto;
@@ -326,9 +376,9 @@
 	transition: border-color 0.15s ease, opacity 0.15s ease;
 }
 
-.appNav .subMenu>li:hover .menuShortcut {
-	border-color: var(--accent-primary);
-	opacity: 0.6;
+.appNav .subMenu>li:not(.hasSubSubMenu):hover .menuShortcut {
+    border-color: var(--accent-primary);
+    opacity: 0.6;
 }
 
 .appNav .subMenu>li.halfWidth {
@@ -382,4 +432,12 @@
 
 .supportButton .supportIcon {
 	flex-shrink: 0;
+}
+.dark-theme .appNav .subMenu>li.hasSubSubMenu.expanded .subSubMenu>li .menuShortcut {
+    border-color: var(--border-medium);
+    opacity: 0.5;
+}
+.dark-theme .appNav .subMenu>li.hasSubSubMenu.expanded .subSubMenu>li:hover .menuShortcut {
+    border-color: var(--accent-primary);
+    opacity: 0.6;
 }
